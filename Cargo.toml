@@ -1,0 +1,13 @@
+[package]
+name = "iokit"
+description = "Bindings to IOKit for macOS"
+homepage = "https://github.com/jtakakura/iokit-rs"
+repository = "https://github.com/jtakakura/iokit-rs"
+version = "0.1.0"
+authors = ["Junji Takakura <j.takakura@gmail.com>"]
+license = "MIT"
+
+[dependencies]
+core-foundation = "0.4"
+libc = "0.2"
+mach = "0.0.5"
