@@ -1,6 +1,7 @@
-#[cfg(test)]
-mod tests {
-    #[test]
-    fn it_works() {
-    }
-}
+#![allow(non_camel_case_types)]
+#![allow(non_upper_case_globals)]
+
+extern crate core_foundation as cf;
+extern crate libc;
+
+pub mod base;
