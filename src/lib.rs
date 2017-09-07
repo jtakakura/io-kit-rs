@@ -5,3 +5,4 @@ extern crate core_foundation as cf;
 extern crate libc;
 
 pub mod base;
+pub mod types;
