@@ -1,9 +1,8 @@
 // exports from <IOKit/hid/IOHIDManager.h>
 
 use libc::c_void;
-use core_foundation::base::{CFRelease, TCFType};
 use core_foundation_sys::array::CFArrayRef;
-use core_foundation_sys::base::{CFAllocatorRef, CFTypeID, CFTypeRef, kCFAllocatorDefault};
+use core_foundation_sys::base::{CFAllocatorRef, CFTypeID, CFTypeRef};
 use core_foundation_sys::dictionary::CFDictionaryRef;
 use core_foundation_sys::runloop::CFRunLoopRef;
 use core_foundation_sys::set::CFSetRef;
@@ -29,31 +28,6 @@ pub struct __IOHIDManager {
     _unused: [u8; 0],
 }
 pub type IOHIDManagerRef = *mut __IOHIDManager;
-
-pub struct IOHIDManager(IOHIDManagerRef);
-
-impl Drop for IOHIDManager {
-    fn drop(&mut self) {
-        unsafe { CFRelease(self.as_CFTypeRef()) }
-    }
-}
-
-impl IOHIDManager {
-    pub fn new() -> Option<Self> {
-        let m = unsafe {
-            IOHIDManagerCreate(kCFAllocatorDefault,
-                               IOHIDManagerOptions::kIOHIDManagerOptionNone as IOOptionBits)
-        };
-
-        if m.is_null() {
-            None
-        } else {
-            Some(IOHIDManager(m))
-        }
-    }
-}
-
-impl_TCFType!(IOHIDManager, IOHIDManagerRef, IOHIDManagerGetTypeID);
 
 extern "C" {
     pub fn IOHIDManagerGetTypeID() -> CFTypeID;
