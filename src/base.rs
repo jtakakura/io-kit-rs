@@ -1,4 +1,4 @@
-use libc::{c_int, c_uint, c_ulonglong};
+use libc::{c_int, c_uchar, c_uint, c_ulonglong};
 
 // exports from `mach/i386/boolean.h`
 #[cfg(target_arch = "x86_64")]
@@ -271,6 +271,9 @@ pub type task_port_t = task_t;
 pub type pointer_t = vm_offset_t;
 pub type vm_address_t = vm_offset_t;
 pub type vm_object_offset_t = c_ulonglong;
+
+// exports from `MacTypes.h`
+pub type Boolean = c_uchar;
 
 // exports from `libdispatch`
 #[repr(C)]
