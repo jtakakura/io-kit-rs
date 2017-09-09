@@ -6,8 +6,8 @@ use core_foundation_sys::base::CFIndex;
 use core_foundation_sys::dictionary::CFDictionaryRef;
 
 use ret::IOReturn;
-use hid::keys::IOHIDReportType;
-use hid::device::IOHIDDeviceGetTypeID;
+use hid::keys::{IOHIDReportType, kIOHIDOptionsTypeNone};
+use hid::device::{IOHIDDeviceGetTypeID, IOHIDDeviceConformsTo, IOHIDDeviceClose, IOHIDDeviceOpen};
 use hid::element::IOHIDElementGetTypeID;
 use hid::value::IOHIDValueGetTypeID;
 
@@ -23,6 +23,20 @@ pub struct IOHIDDevice(IOHIDDeviceRef);
 impl Drop for IOHIDDevice {
     fn drop(&mut self) {
         unsafe { CFRelease(self.as_CFTypeRef()) }
+    }
+}
+
+impl IOHIDDevice {
+    pub fn open(&self) -> IOReturn {
+        unsafe { IOHIDDeviceOpen(self.0, kIOHIDOptionsTypeNone) }
+    }
+
+    pub fn close(&self) -> IOReturn {
+        unsafe { IOHIDDeviceClose(self.0, kIOHIDOptionsTypeNone) }
+    }
+
+    pub fn conforms_to(&self, usage_page: u32, usage: u32) -> bool {
+        unsafe { IOHIDDeviceConformsTo(self.0, usage_page, usage) != 0 }
     }
 }
 
