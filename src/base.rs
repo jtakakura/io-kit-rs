@@ -238,10 +238,49 @@ pub type mach_vm_address_t = c_uint;
 pub type mach_vm_offset_t = c_uint;
 pub type mach_vm_size_t = c_uint;
 
+// exports from `mach/message.h`
+pub type mach_msg_bits_t = c_uint;
+pub type mach_msg_size_t = natural_t;
+pub type mach_msg_id_t = c_int;
+
+#[repr(C)]
+#[derive(Debug, Copy)]
+pub struct mach_msg_header_t {
+    pub msgh_bits: mach_msg_bits_t,
+    pub msgh_size: mach_msg_size_t,
+    pub msgh_remote_port: mach_port_t,
+    pub msgh_local_port: mach_port_t,
+    pub msgh_voucher_port: mach_port_name_t,
+    pub msgh_id: mach_msg_id_t,
+}
+impl Clone for mach_msg_header_t {
+    fn clone(&self) -> Self {
+        *self
+    }
+}
+
 // exports from `mach/port.h`
 pub type mach_port_t = c_uint;
+pub type mach_port_name_t = natural_t;
+
+// exports from `mach/mach_types.h`
+pub type task_t = mach_port_t;
+pub type task_port_t = task_t;
 
 // exports from `mach/vm_types.h`
 pub type pointer_t = vm_offset_t;
 pub type vm_address_t = vm_offset_t;
 pub type vm_object_offset_t = c_ulonglong;
+
+// exports from `libdispatch`
+#[repr(C)]
+#[derive(Debug, Copy)]
+pub struct dispatch_queue_s {
+    _address: u8,
+}
+impl Clone for dispatch_queue_s {
+    fn clone(&self) -> Self {
+        *self
+    }
+}
+pub type dispatch_queue_t = *mut dispatch_queue_s;
