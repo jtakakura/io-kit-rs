@@ -9,6 +9,8 @@ pub mod keys;
 pub mod ret;
 pub mod types;
 
+pub mod hid;
+
 // exports from <IOKit/IOKitLib.h>
 
 use libc::{c_char, c_int, c_void};

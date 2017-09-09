@@ -9,4 +9,5 @@ license = "MIT"
 
 [dependencies]
 core-foundation = "0.4"
+core-foundation-sys = "0.4"
 libc = "0.2"
