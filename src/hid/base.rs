@@ -1,11 +1,15 @@
 // exports from <IOKit/hid/IOHIDBase.h>
 
 use libc::c_void;
-use core_foundation::base::CFIndex;
-use core_foundation::dictionary::CFDictionaryRef;
+use core_foundation::base::{CFRelease, TCFType};
+use core_foundation_sys::base::CFIndex;
+use core_foundation_sys::dictionary::CFDictionaryRef;
 
 use ret::IOReturn;
 use hid::keys::IOHIDReportType;
+use hid::device::IOHIDDeviceGetTypeID;
+use hid::element::IOHIDElementGetTypeID;
+use hid::value::IOHIDValueGetTypeID;
 
 #[repr(C)]
 #[derive(Debug, Copy, Clone)]
@@ -14,6 +18,16 @@ pub struct __IOHIDDevice {
 }
 pub type IOHIDDeviceRef = *mut __IOHIDDevice;
 
+pub struct IOHIDDevice(IOHIDDeviceRef);
+
+impl Drop for IOHIDDevice {
+    fn drop(&mut self) {
+        unsafe { CFRelease(self.as_CFTypeRef()) }
+    }
+}
+
+impl_TCFType!(IOHIDDevice, IOHIDDeviceRef, IOHIDDeviceGetTypeID);
+
 #[repr(C)]
 #[derive(Debug, Copy, Clone)]
 pub struct __IOHIDElement {
@@ -21,12 +35,32 @@ pub struct __IOHIDElement {
 }
 pub type IOHIDElementRef = *mut __IOHIDElement;
 
+pub struct IOHIDElement(IOHIDElementRef);
+
+impl Drop for IOHIDElement {
+    fn drop(&mut self) {
+        unsafe { CFRelease(self.as_CFTypeRef()) }
+    }
+}
+
+impl_TCFType!(IOHIDElement, IOHIDElementRef, IOHIDElementGetTypeID);
+
 #[repr(C)]
 #[derive(Debug, Copy, Clone)]
 pub struct __IOHIDValue {
     _unused: [u8; 0],
 }
 pub type IOHIDValueRef = *mut __IOHIDValue;
+
+pub struct IOHIDValue(IOHIDValueRef);
+
+impl Drop for IOHIDValue {
+    fn drop(&mut self) {
+        unsafe { CFRelease(self.as_CFTypeRef()) }
+    }
+}
+
+impl_TCFType!(IOHIDValue, IOHIDValueRef, IOHIDValueGetTypeID);
 
 pub const kIOHIDTransactionDirectionTypeInput: u32 = 0;
 pub const kIOHIDTransactionDirectionTypeOutput: u32 = 1;
