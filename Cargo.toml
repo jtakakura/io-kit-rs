@@ -6,6 +6,7 @@ repository = "https://github.com/jtakakura/iokit-rs"
 version = "0.1.0"
 authors = ["Junji Takakura <j.takakura@gmail.com>"]
 license = "MIT"
+build = "build.rs"
 
 [dependencies]
 core-foundation = "0.4"
