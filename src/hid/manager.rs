@@ -1,0 +1,88 @@
+// exports from <IOKit/hid/IOHIDManager.h>
+
+use libc::c_void;
+use cf::array::CFArrayRef;
+use cf::base::{CFAllocatorRef, CFTypeID, CFTypeRef};
+use cf::dictionary::CFDictionaryRef;
+use cf::runloop::CFRunLoopRef;
+use cf::set::CFSetRef;
+use cf::string::CFStringRef;
+
+use base::Boolean;
+use types::IOOptionBits;
+use ret::IOReturn;
+use hid::base::{IOHIDDeviceCallback, IOHIDReportCallback, IOHIDValueCallback};
+
+#[repr(u32)]
+#[derive(Debug, Copy, Clone, PartialEq, Eq, Hash)]
+pub enum IOHIDManagerOptions {
+    kIOHIDManagerOptionNone = 0x0,
+    kIOHIDManagerOptionUsePersistentProperties = 0x1,
+    kIOHIDManagerOptionDoNotLoadProperties = 0x2,
+    kIOHIDManagerOptionDoNotSaveProperties = 0x4,
+}
+
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct __IOHIDManager {
+    _unused: [u8; 0],
+}
+pub type IOHIDManagerRef = *mut __IOHIDManager;
+
+extern "C" {
+    pub fn IOHIDManagerGetTypeID() -> CFTypeID;
+
+    pub fn IOHIDManagerCreate(allocator: CFAllocatorRef, options: IOOptionBits) -> IOHIDManagerRef;
+
+    pub fn IOHIDManagerOpen(manager: IOHIDManagerRef, options: IOOptionBits) -> IOReturn;
+
+    pub fn IOHIDManagerClose(manager: IOHIDManagerRef, options: IOOptionBits) -> IOReturn;
+
+    pub fn IOHIDManagerGetProperty(manager: IOHIDManagerRef, key: CFStringRef) -> CFTypeRef;
+
+    pub fn IOHIDManagerSetProperty(manager: IOHIDManagerRef,
+                                   key: CFStringRef,
+                                   value: CFTypeRef)
+                                   -> Boolean;
+
+    pub fn IOHIDManagerScheduleWithRunLoop(manager: IOHIDManagerRef,
+                                           runLoop: CFRunLoopRef,
+                                           runLoopMode: CFStringRef);
+
+    pub fn IOHIDManagerUnscheduleFromRunLoop(manager: IOHIDManagerRef,
+                                             runLoop: CFRunLoopRef,
+                                             runLoopMode: CFStringRef);
+
+    pub fn IOHIDManagerSetDeviceMatching(manager: IOHIDManagerRef, matching: CFDictionaryRef);
+
+    pub fn IOHIDManagerSetDeviceMatchingMultiple(manager: IOHIDManagerRef, multiple: CFArrayRef);
+
+    pub fn IOHIDManagerCopyDevices(manager: IOHIDManagerRef) -> CFSetRef;
+
+    pub fn IOHIDManagerRegisterDeviceMatchingCallback(manager: IOHIDManagerRef,
+                                                      callback: IOHIDDeviceCallback,
+                                                      context: *mut c_void);
+
+    pub fn IOHIDManagerRegisterDeviceRemovalCallback(manager: IOHIDManagerRef,
+                                                     callback: IOHIDDeviceCallback,
+                                                     context: *mut c_void);
+
+    pub fn IOHIDManagerRegisterInputReportCallback(manager: IOHIDManagerRef,
+                                                   callback: IOHIDReportCallback,
+                                                   context: *mut c_void);
+
+    pub fn IOHIDManagerRegisterInputValueCallback(manager: IOHIDManagerRef,
+                                                  callback: IOHIDValueCallback,
+                                                  context: *mut c_void);
+
+    pub fn IOHIDManagerSetInputValueMatching(manager: IOHIDManagerRef, matching: CFDictionaryRef);
+
+    pub fn IOHIDManagerSetInputValueMatchingMultiple(manager: IOHIDManagerRef,
+                                                     multiple: CFArrayRef);
+
+    pub fn IOHIDManagerSaveToPropertyDomain(manager: IOHIDManagerRef,
+                                            applicationID: CFStringRef,
+                                            userName: CFStringRef,
+                                            hostName: CFStringRef,
+                                            options: IOOptionBits);
+}
