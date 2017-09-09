@@ -1,7 +1,9 @@
 #![allow(non_camel_case_types)]
 #![allow(non_upper_case_globals)]
 
-extern crate core_foundation_sys as cf;
+#[macro_use(impl_TCFType)]
+extern crate core_foundation;
+extern crate core_foundation_sys;
 extern crate libc;
 
 pub mod base;
@@ -14,10 +16,10 @@ pub mod hid;
 // exports from <IOKit/IOKitLib.h>
 
 use libc::{c_char, c_int, c_void};
-use cf::base::{CFAllocatorRef, CFTypeRef};
-use cf::dictionary::{CFDictionaryRef, CFMutableDictionaryRef};
-use cf::runloop::CFRunLoopSourceRef;
-use cf::string::CFStringRef;
+use core_foundation_sys::base::{CFAllocatorRef, CFTypeRef};
+use core_foundation_sys::dictionary::{CFDictionaryRef, CFMutableDictionaryRef};
+use core_foundation_sys::runloop::CFRunLoopSourceRef;
+use core_foundation_sys::string::CFStringRef;
 
 use base::{boolean_t, dispatch_queue_t, kern_return_t, mach_msg_header_t, mach_port_t,
            mach_timespec_t, mach_vm_address_t, mach_vm_size_t, task_port_t};

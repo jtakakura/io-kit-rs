@@ -1,8 +1,8 @@
 // exports from <IOKit/hid/IOHIDBase.h>
 
 use libc::c_void;
-use cf::base::CFIndex;
-use cf::dictionary::CFDictionaryRef;
+use core_foundation::base::CFIndex;
+use core_foundation::dictionary::CFDictionaryRef;
 
 use ret::IOReturn;
 use hid::keys::IOHIDReportType;

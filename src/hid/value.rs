@@ -1,6 +1,6 @@
 // exports from <IOKit/hid/IOHIDValue.h>
 
-use cf::base::{CFAllocatorRef, CFIndex, CFTypeID};
+use core_foundation_sys::base::{CFAllocatorRef, CFIndex, CFTypeID};
 
 use hid::base::{IOHIDElementRef, IOHIDValueRef};
 use hid::keys::IOHIDValueScaleType;

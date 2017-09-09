@@ -1,12 +1,12 @@
 // exports from <IOKit/hid/IOHIDManager.h>
 
 use libc::c_void;
-use cf::array::CFArrayRef;
-use cf::base::{CFAllocatorRef, CFTypeID, CFTypeRef};
-use cf::dictionary::CFDictionaryRef;
-use cf::runloop::CFRunLoopRef;
-use cf::set::CFSetRef;
-use cf::string::CFStringRef;
+use core_foundation_sys::array::CFArrayRef;
+use core_foundation_sys::base::{CFAllocatorRef, CFTypeID, CFTypeRef};
+use core_foundation_sys::dictionary::CFDictionaryRef;
+use core_foundation_sys::runloop::CFRunLoopRef;
+use core_foundation_sys::set::CFSetRef;
+use core_foundation_sys::string::CFStringRef;
 
 use base::Boolean;
 use types::IOOptionBits;

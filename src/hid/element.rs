@@ -1,9 +1,9 @@
 // exports from <IOKit/hid/IOHIDElement.h>
 
-use cf::array::CFArrayRef;
-use cf::base::{CFAllocatorRef, CFIndex, CFTypeID, CFTypeRef};
-use cf::dictionary::CFDictionaryRef;
-use cf::string::CFStringRef;
+use core_foundation_sys::array::CFArrayRef;
+use core_foundation_sys::base::{CFAllocatorRef, CFIndex, CFTypeID, CFTypeRef};
+use core_foundation_sys::dictionary::CFDictionaryRef;
+use core_foundation_sys::string::CFStringRef;
 
 use base::Boolean;
 use hid::base::{IOHIDDeviceRef, IOHIDElementRef};
