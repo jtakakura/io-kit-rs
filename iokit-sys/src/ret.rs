@@ -1,7 +1,7 @@
 // exports from <IOKit/IOReturn.h>
 
 use libc::c_int;
-use base::{kern_return_t, KERN_SUCCESS};
+use mach_sys::{kern_return_t, KERN_SUCCESS};
 
 // sys_iokit
 const SYS_IOKIT: c_int = (((0x38) & 0x3f) << 26);
@@ -10,7 +10,7 @@ const SUB_IOKIT_COMMON: c_int = (((0) & 0xfff) << 14);
 // IOReturn
 pub type IOReturn = kern_return_t;
 // OK
-pub const kIOReturnSuccess: IOReturn = KERN_SUCCESS;
+pub const kIOReturnSuccess: IOReturn = KERN_SUCCESS as c_int;
 // general error
 pub const kIOReturnError: IOReturn = (SYS_IOKIT | SUB_IOKIT_COMMON | 0x2bc);
 // can't allocate memory

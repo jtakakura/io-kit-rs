@@ -1,7 +1,7 @@
 // exports from <IOKit/IOTypes.h>
 
 use libc::{c_char, c_int, c_uint, c_ulonglong};
-use base::{mach_port_t, mach_vm_address_t, mach_vm_size_t};
+use mach_sys::{mach_port_t, mach_vm_address_t, mach_vm_size_t};
 
 pub type IOOptionBits = c_uint;
 pub type IOFixed = c_int;

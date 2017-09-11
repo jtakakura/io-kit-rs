@@ -1,11 +1,13 @@
 #![allow(non_camel_case_types)]
 #![allow(non_upper_case_globals)]
+#![allow(non_snake_case)]
 
 extern crate core_foundation_sys;
 extern crate libc;
 
 pub mod base;
 pub mod keys;
+pub mod mach_sys;
 pub mod ret;
 pub mod types;
 
@@ -19,7 +21,8 @@ use core_foundation_sys::dictionary::{CFDictionaryRef, CFMutableDictionaryRef};
 use core_foundation_sys::runloop::CFRunLoopSourceRef;
 use core_foundation_sys::string::CFStringRef;
 
-use base::{boolean_t, dispatch_queue_t, kern_return_t, mach_msg_header_t, mach_port_t,
+use base::dispatch_queue_t;
+use mach_sys::{boolean_t, kern_return_t, mach_msg_header_t, mach_port_t,
            mach_timespec_t, mach_vm_address_t, mach_vm_size_t, task_port_t};
 use types::{io_connect_t, io_object_t, io_registry_entry_t, io_service_t, io_iterator_t,
             IOOptionBits};
