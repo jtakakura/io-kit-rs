@@ -1,7 +1,8 @@
 // exports from <IOKit/IOReturn.h>
 
 use libc::c_int;
-use mach_sys::{kern_return_t, KERN_SUCCESS};
+use base::KERN_SUCCESS;
+use mach_sys::kern_return_t;
 
 // sys_iokit
 const SYS_IOKIT: c_int = (((0x38) & 0x3f) << 26);
