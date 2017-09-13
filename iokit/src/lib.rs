@@ -8,4 +8,5 @@ extern crate libc;
 
 extern crate iokit_sys;
 
+pub mod base;
 pub mod hid;
