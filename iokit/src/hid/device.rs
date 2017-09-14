@@ -1,10 +1,13 @@
-use core_foundation::base::{CFRelease, TCFType};
+use core_foundation::base::{CFRelease, TCFType, CFTypeID};
+use core_foundation_sys::base::kCFAllocatorDefault;
 
 use iokit_sys::ret::IOReturn;
 use iokit_sys::hid::base::IOHIDDeviceRef;
 use iokit_sys::hid::keys::kIOHIDOptionsTypeNone;
-use iokit_sys::hid::device::{IOHIDDeviceGetTypeID, IOHIDDeviceConformsTo, IOHIDDeviceClose,
-                             IOHIDDeviceOpen};
+use iokit_sys::hid::device::{IOHIDDeviceClose, IOHIDDeviceConformsTo, IOHIDDeviceCreate,
+                             IOHIDDeviceGetTypeID, IOHIDDeviceOpen};
+
+use base::{IOService, TIOObject};
 
 pub struct IOHIDDevice(IOHIDDeviceRef);
 
@@ -15,6 +18,22 @@ impl Drop for IOHIDDevice {
 }
 
 impl IOHIDDevice {
+    pub fn get_type_id() -> CFTypeID {
+        unsafe { IOHIDDeviceGetTypeID() }
+    }
+
+    pub fn create(service: IOService) -> Option<IOHIDDevice> {
+        unsafe {
+            let result = IOHIDDeviceCreate(kCFAllocatorDefault, service.as_concrete_io_object_t());
+
+            if result.is_null() {
+                None
+            } else {
+                Some(IOHIDDevice(result))
+            }
+        }
+    }
+
     pub fn open(&self) -> IOReturn {
         unsafe { IOHIDDeviceOpen(self.0, kIOHIDOptionsTypeNone) }
     }
