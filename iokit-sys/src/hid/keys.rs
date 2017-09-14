@@ -1,111 +1,192 @@
 // exports from <IOKit/hid/IOHIDKeys.h>
 
 // This is used to find HID Devices in the IORegistry
-pub const kIOHIDDeviceKey: &'static [u8; 12usize] = b"IOHIDDevice\x00";
+pub const kIOHIDDeviceKey: *const ::libc::c_char =
+    b"IOHIDDevice\x00" as *const [u8; 12usize] as *const ::libc::c_char;
 
 // HID Device Property Keys
-pub const kIOHIDTransportKey: &'static [u8; 10usize] = b"Transport\x00";
-pub const kIOHIDVendorIDKey: &'static [u8; 9usize] = b"VendorID\x00";
-pub const kIOHIDVendorIDSourceKey: &'static [u8; 15usize] = b"VendorIDSource\x00";
-pub const kIOHIDProductIDKey: &'static [u8; 10usize] = b"ProductID\x00";
-pub const kIOHIDVersionNumberKey: &'static [u8; 14usize] = b"VersionNumber\x00";
-pub const kIOHIDManufacturerKey: &'static [u8; 13usize] = b"Manufacturer\x00";
-pub const kIOHIDProductKey: &'static [u8; 8usize] = b"Product\x00";
-pub const kIOHIDSerialNumberKey: &'static [u8; 13usize] = b"SerialNumber\x00";
-pub const kIOHIDCountryCodeKey: &'static [u8; 12usize] = b"CountryCode\x00";
-pub const kIOHIDStandardTypeKey: &'static [u8; 13usize] = b"StandardType\x00";
-pub const kIOHIDLocationIDKey: &'static [u8; 11usize] = b"LocationID\x00";
-pub const kIOHIDDeviceUsageKey: &'static [u8; 12usize] = b"DeviceUsage\x00";
-pub const kIOHIDDeviceUsagePageKey: &'static [u8; 16usize] = b"DeviceUsagePage\x00";
-pub const kIOHIDDeviceUsagePairsKey: &'static [u8; 17usize] = b"DeviceUsagePairs\x00";
-pub const kIOHIDPrimaryUsageKey: &'static [u8; 13usize] = b"PrimaryUsage\x00";
-pub const kIOHIDPrimaryUsagePageKey: &'static [u8; 17usize] = b"PrimaryUsagePage\x00";
-pub const kIOHIDMaxInputReportSizeKey: &'static [u8; 19usize] = b"MaxInputReportSize\x00";
-pub const kIOHIDMaxOutputReportSizeKey: &'static [u8; 20usize] = b"MaxOutputReportSize\x00";
-pub const kIOHIDMaxFeatureReportSizeKey: &'static [u8; 21usize] = b"MaxFeatureReportSize\x00";
-pub const kIOHIDReportIntervalKey: &'static [u8; 15usize] = b"ReportInterval\x00";
-pub const kIOHIDSampleIntervalKey: &'static [u8; 15usize] = b"SampleInterval\x00";
-pub const kIOHIDBatchIntervalKey: &'static [u8; 14usize] = b"BatchInterval\x00";
-pub const kIOHIDRequestTimeoutKey: &'static [u8; 15usize] = b"RequestTimeout\x00";
-pub const kIOHIDReportDescriptorKey: &'static [u8; 17usize] = b"ReportDescriptor\x00";
-pub const kIOHIDResetKey: &'static [u8; 6usize] = b"Reset\x00";
-pub const kIOHIDKeyboardLanguageKey: &'static [u8; 17usize] = b"KeyboardLanguage\x00";
-pub const kIOHIDAltHandlerIdKey: &'static [u8; 15usize] = b"alt_handler_id\x00";
-pub const kIOHIDBuiltInKey: &'static [u8; 9usize] = b"Built-In\x00";
-pub const kIOHIDDisplayIntegratedKey: &'static [u8; 18usize] = b"DisplayIntegrated\x00";
-pub const kIOHIDProductIDMaskKey: &'static [u8; 14usize] = b"ProductIDMask\x00";
-pub const kIOHIDProductIDArrayKey: &'static [u8; 15usize] = b"ProductIDArray\x00";
-pub const kIOHIDPowerOnDelayNSKey: &'static [u8; 18usize] = b"HIDPowerOnDelayNS\x00";
-pub const kIOHIDCategoryKey: &'static [u8; 9usize] = b"Category\x00";
-pub const kIOHIDMaxResponseLatencyKey: &'static [u8; 19usize] = b"MaxResponseLatency\x00";
-pub const kIOHIDUniqueIDKey: &'static [u8; 9usize] = b"UniqueID\x00";
-pub const kIOHIDPhysicalDeviceUniqueIDKey: &'static [u8; 23usize] = b"PhysicalDeviceUniqueID\x00";
+pub const kIOHIDTransportKey: *const ::libc::c_char =
+    b"Transport\x00" as *const [u8; 10usize] as *const ::libc::c_char;
+pub const kIOHIDVendorIDKey: *const ::libc::c_char =
+    b"VendorID\x00" as *const [u8; 9usize] as *const ::libc::c_char;
+pub const kIOHIDVendorIDSourceKey: *const ::libc::c_char =
+    b"VendorIDSource\x00" as *const [u8; 15usize] as *const ::libc::c_char;
+pub const kIOHIDProductIDKey: *const ::libc::c_char =
+    b"ProductID\x00" as *const [u8; 10usize] as *const ::libc::c_char;
+pub const kIOHIDVersionNumberKey: *const ::libc::c_char =
+    b"VersionNumber\x00" as *const [u8; 14usize] as *const ::libc::c_char;
+pub const kIOHIDManufacturerKey: *const ::libc::c_char =
+    b"Manufacturer\x00" as *const [u8; 13usize] as *const ::libc::c_char;
+pub const kIOHIDProductKey: *const ::libc::c_char =
+    b"Product\x00" as *const [u8; 8usize] as *const ::libc::c_char;
+pub const kIOHIDSerialNumberKey: *const ::libc::c_char =
+    b"SerialNumber\x00" as *const [u8; 13usize] as *const ::libc::c_char;
+pub const kIOHIDCountryCodeKey: *const ::libc::c_char =
+    b"CountryCode\x00" as *const [u8; 12usize] as *const ::libc::c_char;
+pub const kIOHIDStandardTypeKey: *const ::libc::c_char =
+    b"StandardType\x00" as *const [u8; 13usize] as *const ::libc::c_char;
+pub const kIOHIDLocationIDKey: *const ::libc::c_char =
+    b"LocationID\x00" as *const [u8; 11usize] as *const ::libc::c_char;
+pub const kIOHIDDeviceUsageKey: *const ::libc::c_char =
+    b"DeviceUsage\x00" as *const [u8; 12usize] as *const ::libc::c_char;
+pub const kIOHIDDeviceUsagePageKey: *const ::libc::c_char =
+    b"DeviceUsagePage\x00" as *const [u8; 16usize] as *const ::libc::c_char;
+pub const kIOHIDDeviceUsagePairsKey: *const ::libc::c_char =
+    b"DeviceUsagePairs\x00" as *const [u8; 17usize] as *const ::libc::c_char;
+pub const kIOHIDPrimaryUsageKey: *const ::libc::c_char =
+    b"PrimaryUsage\x00" as *const [u8; 13usize] as *const ::libc::c_char;
+pub const kIOHIDPrimaryUsagePageKey: *const ::libc::c_char =
+    b"PrimaryUsagePage\x00" as *const [u8; 17usize] as *const ::libc::c_char;
+pub const kIOHIDMaxInputReportSizeKey: *const ::libc::c_char =
+    b"MaxInputReportSize\x00" as *const [u8; 19usize] as *const ::libc::c_char;
+pub const kIOHIDMaxOutputReportSizeKey: *const ::libc::c_char =
+    b"MaxOutputReportSize\x00" as *const [u8; 20usize] as *const ::libc::c_char;
+pub const kIOHIDMaxFeatureReportSizeKey: *const ::libc::c_char =
+    b"MaxFeatureReportSize\x00" as *const [u8; 21usize] as *const ::libc::c_char;
+pub const kIOHIDReportIntervalKey: *const ::libc::c_char =
+    b"ReportInterval\x00" as *const [u8; 15usize] as *const ::libc::c_char;
+pub const kIOHIDSampleIntervalKey: *const ::libc::c_char =
+    b"SampleInterval\x00" as *const [u8; 15usize] as *const ::libc::c_char;
+pub const kIOHIDBatchIntervalKey: *const ::libc::c_char =
+    b"BatchInterval\x00" as *const [u8; 14usize] as *const ::libc::c_char;
+pub const kIOHIDRequestTimeoutKey: *const ::libc::c_char =
+    b"RequestTimeout\x00" as *const [u8; 15usize] as *const ::libc::c_char;
+pub const kIOHIDReportDescriptorKey: *const ::libc::c_char =
+    b"ReportDescriptor\x00" as *const [u8; 17usize] as *const ::libc::c_char;
+pub const kIOHIDResetKey: *const ::libc::c_char =
+    b"Reset\x00" as *const [u8; 6usize] as *const ::libc::c_char;
+pub const kIOHIDKeyboardLanguageKey: *const ::libc::c_char =
+    b"KeyboardLanguage\x00" as *const [u8; 17usize] as *const ::libc::c_char;
+pub const kIOHIDAltHandlerIdKey: *const ::libc::c_char =
+    b"alt_handler_id\x00" as *const [u8; 15usize] as *const ::libc::c_char;
+pub const kIOHIDBuiltInKey: *const ::libc::c_char =
+    b"Built-In\x00" as *const [u8; 9usize] as *const ::libc::c_char;
+pub const kIOHIDDisplayIntegratedKey: *const ::libc::c_char =
+    b"DisplayIntegrated\x00" as *const [u8; 18usize] as *const ::libc::c_char;
+pub const kIOHIDProductIDMaskKey: *const ::libc::c_char =
+    b"ProductIDMask\x00" as *const [u8; 14usize] as *const ::libc::c_char;
+pub const kIOHIDProductIDArrayKey: *const ::libc::c_char =
+    b"ProductIDArray\x00" as *const [u8; 15usize] as *const ::libc::c_char;
+pub const kIOHIDPowerOnDelayNSKey: *const ::libc::c_char =
+    b"HIDPowerOnDelayNS\x00" as *const [u8; 18usize] as *const ::libc::c_char;
+pub const kIOHIDCategoryKey: *const ::libc::c_char =
+    b"Category\x00" as *const [u8; 9usize] as *const ::libc::c_char;
+pub const kIOHIDMaxResponseLatencyKey: *const ::libc::c_char =
+    b"MaxResponseLatency\x00" as *const [u8; 19usize] as *const ::libc::c_char;
+pub const kIOHIDUniqueIDKey: *const ::libc::c_char =
+    b"UniqueID\x00" as *const [u8; 9usize] as *const ::libc::c_char;
+pub const kIOHIDPhysicalDeviceUniqueIDKey: *const ::libc::c_char =
+    b"PhysicalDeviceUniqueID\x00" as *const [u8; 23usize] as *const ::libc::c_char;
 
-pub const kIOHIDTransportUSBValue: &'static [u8; 4usize] = b"USB\x00";
-pub const kIOHIDTransportBluetoothValue: &'static [u8; 10usize] = b"Bluetooth\x00";
-pub const kIOHIDTransportBluetoothLowEnergyValue: &'static [u8; 19usize] =
-    b"BluetoothLowEnergy\x00";
-pub const kIOHIDTransportAIDBValue: &'static [u8; 5usize] = b"AIDB\x00";
-pub const kIOHIDTransportI2CValue: &'static [u8; 4usize] = b"I2C\x00";
-pub const kIOHIDTransportSPIValue: &'static [u8; 4usize] = b"SPI\x00";
-pub const kIOHIDTransportSerialValue: &'static [u8; 7usize] = b"Serial\x00";
-pub const kIOHIDTransportIAPValue: &'static [u8; 4usize] = b"IAP\x00";
-pub const kIOHIDTransportAirPlayValue: &'static [u8; 8usize] = b"AirPlay\x00";
-pub const kIOHIDTransportSPUValue: &'static [u8; 4usize] = b"SPU\x00";
+pub const kIOHIDTransportUSBValue: *const ::libc::c_char =
+    b"USB\x00" as *const [u8; 4usize] as *const ::libc::c_char;
+pub const kIOHIDTransportBluetoothValue: *const ::libc::c_char =
+    b"Bluetooth\x00" as *const [u8; 10usize] as *const ::libc::c_char;
+pub const kIOHIDTransportBluetoothLowEnergyValue: *const ::libc::c_char =
+    b"BluetoothLowEnergy\x00" as *const [u8; 19usize] as *const ::libc::c_char;
+pub const kIOHIDTransportAIDBValue: *const ::libc::c_char =
+    b"AIDB\x00" as *const [u8; 5usize] as *const ::libc::c_char;
+pub const kIOHIDTransportI2CValue: *const ::libc::c_char =
+    b"I2C\x00" as *const [u8; 4usize] as *const ::libc::c_char;
+pub const kIOHIDTransportSPIValue: *const ::libc::c_char =
+    b"SPI\x00" as *const [u8; 4usize] as *const ::libc::c_char;
+pub const kIOHIDTransportSerialValue: *const ::libc::c_char =
+    b"Serial\x00" as *const [u8; 7usize] as *const ::libc::c_char;
+pub const kIOHIDTransportIAPValue: *const ::libc::c_char =
+    b"IAP\x00" as *const [u8; 4usize] as *const ::libc::c_char;
+pub const kIOHIDTransportAirPlayValue: *const ::libc::c_char =
+    b"AirPlay\x00" as *const [u8; 8usize] as *const ::libc::c_char;
+pub const kIOHIDTransportSPUValue: *const ::libc::c_char =
+    b"SPU\x00" as *const [u8; 4usize] as *const ::libc::c_char;
 
-pub const kIOHIDCategoryAutomotiveValue: &'static [u8; 11usize] = b"Automotive\x00";
+pub const kIOHIDCategoryAutomotiveValue: *const ::libc::c_char =
+    b"Automotive\x00" as *const [u8; 11usize] as *const ::libc::c_char;
 
 // HID Element Key
-pub const kIOHIDElementKey: &'static [u8; 9usize] = b"Elements\x00";
+pub const kIOHIDElementKey: *const ::libc::c_char =
+    b"Elements\x00" as *const [u8; 9usize] as *const ::libc::c_char;
 
 // HID Element Dictionary Keys
-pub const kIOHIDElementCookieKey: &'static [u8; 14usize] = b"ElementCookie\x00";
-pub const kIOHIDElementTypeKey: &'static [u8; 5usize] = b"Type\x00";
-pub const kIOHIDElementCollectionTypeKey: &'static [u8; 15usize] = b"CollectionType\x00";
-pub const kIOHIDElementUsageKey: &'static [u8; 6usize] = b"Usage\x00";
-pub const kIOHIDElementUsagePageKey: &'static [u8; 10usize] = b"UsagePage\x00";
-pub const kIOHIDElementMinKey: &'static [u8; 4usize] = b"Min\x00";
-pub const kIOHIDElementMaxKey: &'static [u8; 4usize] = b"Max\x00";
-pub const kIOHIDElementScaledMinKey: &'static [u8; 10usize] = b"ScaledMin\x00";
-pub const kIOHIDElementScaledMaxKey: &'static [u8; 10usize] = b"ScaledMax\x00";
-pub const kIOHIDElementSizeKey: &'static [u8; 5usize] = b"Size\x00";
-pub const kIOHIDElementReportSizeKey: &'static [u8; 11usize] = b"ReportSize\x00";
-pub const kIOHIDElementReportCountKey: &'static [u8; 12usize] = b"ReportCount\x00";
-pub const kIOHIDElementReportIDKey: &'static [u8; 9usize] = b"ReportID\x00";
-pub const kIOHIDElementIsArrayKey: &'static [u8; 8usize] = b"IsArray\x00";
-pub const kIOHIDElementIsRelativeKey: &'static [u8; 11usize] = b"IsRelative\x00";
-pub const kIOHIDElementIsWrappingKey: &'static [u8; 11usize] = b"IsWrapping\x00";
-pub const kIOHIDElementIsNonLinearKey: &'static [u8; 12usize] = b"IsNonLinear\x00";
-pub const kIOHIDElementHasPreferredStateKey: &'static [u8; 18usize] = b"HasPreferredState\x00";
-pub const kIOHIDElementHasNullStateKey: &'static [u8; 13usize] = b"HasNullState\x00";
-pub const kIOHIDElementFlagsKey: &'static [u8; 6usize] = b"Flags\x00";
-pub const kIOHIDElementUnitKey: &'static [u8; 5usize] = b"Unit\x00";
-pub const kIOHIDElementUnitExponentKey: &'static [u8; 13usize] = b"UnitExponent\x00";
-pub const kIOHIDElementNameKey: &'static [u8; 5usize] = b"Name\x00";
-pub const kIOHIDElementValueLocationKey: &'static [u8; 14usize] = b"ValueLocation\x00";
-pub const kIOHIDElementDuplicateIndexKey: &'static [u8; 15usize] = b"DuplicateIndex\x00";
-pub const kIOHIDElementParentCollectionKey: &'static [u8; 17usize] = b"ParentCollection\x00";
-pub const kIOHIDElementVendorSpecificKey: &'static [u8; 15usize] = b"VendorSpecific\x00";
+pub const kIOHIDElementCookieKey: *const ::libc::c_char =
+    b"ElementCookie\x00" as *const [u8; 14usize] as *const ::libc::c_char;
+pub const kIOHIDElementTypeKey: *const ::libc::c_char =
+    b"Type\x00" as *const [u8; 5usize] as *const ::libc::c_char;
+pub const kIOHIDElementCollectionTypeKey: *const ::libc::c_char =
+    b"CollectionType\x00" as *const [u8; 15usize] as *const ::libc::c_char;
+pub const kIOHIDElementUsageKey: *const ::libc::c_char =
+    b"Usage\x00" as *const [u8; 6usize] as *const ::libc::c_char;
+pub const kIOHIDElementUsagePageKey: *const ::libc::c_char =
+    b"UsagePage\x00" as *const [u8; 10usize] as *const ::libc::c_char;
+pub const kIOHIDElementMinKey: *const ::libc::c_char =
+    b"Min\x00" as *const [u8; 4usize] as *const ::libc::c_char;
+pub const kIOHIDElementMaxKey: *const ::libc::c_char =
+    b"Max\x00" as *const [u8; 4usize] as *const ::libc::c_char;
+pub const kIOHIDElementScaledMinKey: *const ::libc::c_char =
+    b"ScaledMin\x00" as *const [u8; 10usize] as *const ::libc::c_char;
+pub const kIOHIDElementScaledMaxKey: *const ::libc::c_char =
+    b"ScaledMax\x00" as *const [u8; 10usize] as *const ::libc::c_char;
+pub const kIOHIDElementSizeKey: *const ::libc::c_char =
+    b"Size\x00" as *const [u8; 5usize] as *const ::libc::c_char;
+pub const kIOHIDElementReportSizeKey: *const ::libc::c_char =
+    b"ReportSize\x00" as *const [u8; 11usize] as *const ::libc::c_char;
+pub const kIOHIDElementReportCountKey: *const ::libc::c_char =
+    b"ReportCount\x00" as *const [u8; 12usize] as *const ::libc::c_char;
+pub const kIOHIDElementReportIDKey: *const ::libc::c_char =
+    b"ReportID\x00" as *const [u8; 9usize] as *const ::libc::c_char;
+pub const kIOHIDElementIsArrayKey: *const ::libc::c_char =
+    b"IsArray\x00" as *const [u8; 8usize] as *const ::libc::c_char;
+pub const kIOHIDElementIsRelativeKey: *const ::libc::c_char =
+    b"IsRelative\x00" as *const [u8; 11usize] as *const ::libc::c_char;
+pub const kIOHIDElementIsWrappingKey: *const ::libc::c_char =
+    b"IsWrapping\x00" as *const [u8; 11usize] as *const ::libc::c_char;
+pub const kIOHIDElementIsNonLinearKey: *const ::libc::c_char =
+    b"IsNonLinear\x00" as *const [u8; 12usize] as *const ::libc::c_char;
+pub const kIOHIDElementHasPreferredStateKey: *const ::libc::c_char =
+    b"HasPreferredState\x00" as *const [u8; 18usize] as *const ::libc::c_char;
+pub const kIOHIDElementHasNullStateKey: *const ::libc::c_char =
+    b"HasNullState\x00" as *const [u8; 13usize] as *const ::libc::c_char;
+pub const kIOHIDElementFlagsKey: *const ::libc::c_char =
+    b"Flags\x00" as *const [u8; 6usize] as *const ::libc::c_char;
+pub const kIOHIDElementUnitKey: *const ::libc::c_char =
+    b"Unit\x00" as *const [u8; 5usize] as *const ::libc::c_char;
+pub const kIOHIDElementUnitExponentKey: *const ::libc::c_char =
+    b"UnitExponent\x00" as *const [u8; 13usize] as *const ::libc::c_char;
+pub const kIOHIDElementNameKey: *const ::libc::c_char =
+    b"Name\x00" as *const [u8; 5usize] as *const ::libc::c_char;
+pub const kIOHIDElementValueLocationKey: *const ::libc::c_char =
+    b"ValueLocation\x00" as *const [u8; 14usize] as *const ::libc::c_char;
+pub const kIOHIDElementDuplicateIndexKey: *const ::libc::c_char =
+    b"DuplicateIndex\x00" as *const [u8; 15usize] as *const ::libc::c_char;
+pub const kIOHIDElementParentCollectionKey: *const ::libc::c_char =
+    b"ParentCollection\x00" as *const [u8; 17usize] as *const ::libc::c_char;
+pub const kIOHIDElementVendorSpecificKey: *const ::libc::c_char =
+    b"VendorSpecific\x00" as *const [u8; 15usize] as *const ::libc::c_char;
 
 // HID Element Match Keys
-pub const kIOHIDElementCookieMinKey: &'static [u8; 17usize] = b"ElementCookieMin\x00";
-pub const kIOHIDElementCookieMaxKey: &'static [u8; 17usize] = b"ElementCookieMax\x00";
-pub const kIOHIDElementUsageMinKey: &'static [u8; 9usize] = b"UsageMin\x00";
-pub const kIOHIDElementUsageMaxKey: &'static [u8; 9usize] = b"UsageMax\x00";
+pub const kIOHIDElementCookieMinKey: *const ::libc::c_char =
+    b"ElementCookieMin\x00" as *const [u8; 17usize] as *const ::libc::c_char;
+pub const kIOHIDElementCookieMaxKey: *const ::libc::c_char =
+    b"ElementCookieMax\x00" as *const [u8; 17usize] as *const ::libc::c_char;
+pub const kIOHIDElementUsageMinKey: *const ::libc::c_char =
+    b"UsageMin\x00" as *const [u8; 9usize] as *const ::libc::c_char;
+pub const kIOHIDElementUsageMaxKey: *const ::libc::c_char =
+    b"UsageMax\x00" as *const [u8; 9usize] as *const ::libc::c_char;
 
 // HID Element Calibration Keys
-pub const kIOHIDElementCalibrationMinKey: &'static [u8; 15usize] = b"CalibrationMin\x00";
-pub const kIOHIDElementCalibrationMaxKey: &'static [u8; 15usize] = b"CalibrationMax\x00";
-pub const kIOHIDElementCalibrationSaturationMinKey: &'static [u8; 25usize] =
-    b"CalibrationSaturationMin\x00";
-pub const kIOHIDElementCalibrationSaturationMaxKey: &'static [u8; 25usize] =
-    b"CalibrationSaturationMax\x00";
-pub const kIOHIDElementCalibrationDeadZoneMinKey: &'static [u8; 23usize] =
-    b"CalibrationDeadZoneMin\x00";
-pub const kIOHIDElementCalibrationDeadZoneMaxKey: &'static [u8; 23usize] =
-    b"CalibrationDeadZoneMax\x00";
-pub const kIOHIDElementCalibrationGranularityKey: &'static [u8; 23usize] =
-    b"CalibrationGranularity\x00";
+pub const kIOHIDElementCalibrationMinKey: *const ::libc::c_char =
+    b"CalibrationMin\x00" as *const [u8; 15usize] as *const ::libc::c_char;
+pub const kIOHIDElementCalibrationMaxKey: *const ::libc::c_char =
+    b"CalibrationMax\x00" as *const [u8; 15usize] as *const ::libc::c_char;
+pub const kIOHIDElementCalibrationSaturationMinKey: *const ::libc::c_char =
+    b"CalibrationSaturationMin\x00" as *const [u8; 25usize] as *const ::libc::c_char;
+pub const kIOHIDElementCalibrationSaturationMaxKey: *const ::libc::c_char =
+    b"CalibrationSaturationMax\x00" as *const [u8; 25usize] as *const ::libc::c_char;
+pub const kIOHIDElementCalibrationDeadZoneMinKey: *const ::libc::c_char =
+    b"CalibrationDeadZoneMin\x00" as *const [u8; 23usize] as *const ::libc::c_char;
+pub const kIOHIDElementCalibrationDeadZoneMaxKey: *const ::libc::c_char =
+    b"CalibrationDeadZoneMax\x00" as *const [u8; 23usize] as *const ::libc::c_char;
+pub const kIOHIDElementCalibrationGranularityKey: *const ::libc::c_char =
+    b"CalibrationGranularity\x00" as *const [u8; 23usize] as *const ::libc::c_char;
 
 pub type IOHIDElementCookie = u32;
 
@@ -174,5 +255,5 @@ pub type IOHIDValueOptions = u32;
 pub const kIOHIDValueOptionsFlagRelativeSimple: IOHIDValueOptions = (1 << 0);
 pub const kIOHIDValueOptionsFlagPrevious: IOHIDValueOptions = (1 << 1);
 
-pub const kIOHIDDigitizerGestureCharacterStateKey: &'static [u8; 31usize] =
-    b"DigitizerCharacterGestureState\x00";
+pub const kIOHIDDigitizerGestureCharacterStateKey: *const ::libc::c_char =
+    b"DigitizerCharacterGestureState\x00" as *const [u8; 31usize] as *const ::libc::c_char;

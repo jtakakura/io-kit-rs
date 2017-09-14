@@ -1,128 +1,189 @@
 // exports from <IOKit/IOKitKeys.h>
 
 // properties found in the registry root
-pub const kIOKitBuildVersionKey: &'static [u8; 18usize] = b"IOKitBuildVersion\x00";
-pub const kIOKitDiagnosticsKey: &'static [u8; 17usize] = b"IOKitDiagnostics\x00";
+pub const kIOKitBuildVersionKey: *const ::libc::c_char =
+    b"IOKitBuildVersion\x00" as *const [u8; 18usize] as *const ::libc::c_char;
+pub const kIOKitDiagnosticsKey: *const ::libc::c_char =
+    b"IOKitDiagnostics\x00" as *const [u8; 17usize] as *const ::libc::c_char;
 // a dictionary keyed by plane name
-pub const kIORegistryPlanesKey: &'static [u8; 17usize] = b"IORegistryPlanes\x00";
-pub const kIOCatalogueKey: &'static [u8; 12usize] = b"IOCatalogue\x00";
+pub const kIORegistryPlanesKey: *const ::libc::c_char =
+    b"IORegistryPlanes\x00" as *const [u8; 17usize] as *const ::libc::c_char;
+pub const kIOCatalogueKey: *const ::libc::c_char =
+    b"IOCatalogue\x00" as *const [u8; 12usize] as *const ::libc::c_char;
 
 // registry plane names
-pub const kIOServicePlane: &'static [u8; 10usize] = b"IOService\x00";
-pub const kIOPowerPlane: &'static [u8; 8usize] = b"IOPower\x00";
-pub const kIODeviceTreePlane: &'static [u8; 13usize] = b"IODeviceTree\x00";
-pub const kIOAudioPlane: &'static [u8; 8usize] = b"IOAudio\x00";
-pub const kIOFireWirePlane: &'static [u8; 11usize] = b"IOFireWire\x00";
-pub const kIOUSBPlane: &'static [u8; 6usize] = b"IOUSB\x00";
+pub const kIOServicePlane: *const ::libc::c_char =
+    b"IOService\x00" as *const [u8; 10usize] as *const ::libc::c_char;
+pub const kIOPowerPlane: *const ::libc::c_char =
+    b"IOPower\x00" as *const [u8; 8usize] as *const ::libc::c_char;
+pub const kIODeviceTreePlane: *const ::libc::c_char =
+    b"IODeviceTree\x00" as *const [u8; 13usize] as *const ::libc::c_char;
+pub const kIOAudioPlane: *const ::libc::c_char =
+    b"IOAudio\x00" as *const [u8; 8usize] as *const ::libc::c_char;
+pub const kIOFireWirePlane: *const ::libc::c_char =
+    b"IOFireWire\x00" as *const [u8; 11usize] as *const ::libc::c_char;
+pub const kIOUSBPlane: *const ::libc::c_char =
+    b"IOUSB\x00" as *const [u8; 6usize] as *const ::libc::c_char;
 
 // registry ID number
-pub const kIORegistryEntryIDKey: &'static [u8; 18usize] = b"IORegistryEntryID\x00";
+pub const kIORegistryEntryIDKey: *const ::libc::c_char =
+    b"IORegistryEntryID\x00" as *const [u8; 18usize] as *const ::libc::c_char;
 
 // IOService class name
-pub const kIOServiceClass: &'static [u8; 10usize] = b"IOService\x00";
+pub const kIOServiceClass: *const ::libc::c_char =
+    b"IOService\x00" as *const [u8; 10usize] as *const ::libc::c_char;
 
 // IOResources class name
-pub const kIOResourcesClass: &'static [u8; 12usize] = b"IOResources\x00";
+pub const kIOResourcesClass: *const ::libc::c_char =
+    b"IOResources\x00" as *const [u8; 12usize] as *const ::libc::c_char;
 
 // IOService driver probing property names
-pub const kIOClassKey: &'static [u8; 8usize] = b"IOClass\x00";
-pub const kIOProbeScoreKey: &'static [u8; 13usize] = b"IOProbeScore\x00";
-pub const kIOKitDebugKey: &'static [u8; 11usize] = b"IOKitDebug\x00";
+pub const kIOClassKey: *const ::libc::c_char =
+    b"IOClass\x00" as *const [u8; 8usize] as *const ::libc::c_char;
+pub const kIOProbeScoreKey: *const ::libc::c_char =
+    b"IOProbeScore\x00" as *const [u8; 13usize] as *const ::libc::c_char;
+pub const kIOKitDebugKey: *const ::libc::c_char =
+    b"IOKitDebug\x00" as *const [u8; 11usize] as *const ::libc::c_char;
 
 // IOService matching property names
-pub const kIOProviderClassKey: &'static [u8; 16usize] = b"IOProviderClass\x00";
-pub const kIONameMatchKey: &'static [u8; 12usize] = b"IONameMatch\x00";
-pub const kIOPropertyMatchKey: &'static [u8; 16usize] = b"IOPropertyMatch\x00";
-pub const kIOPathMatchKey: &'static [u8; 12usize] = b"IOPathMatch\x00";
-pub const kIOLocationMatchKey: &'static [u8; 16usize] = b"IOLocationMatch\x00";
-pub const kIOParentMatchKey: &'static [u8; 14usize] = b"IOParentMatch\x00";
-pub const kIOResourceMatchKey: &'static [u8; 16usize] = b"IOResourceMatch\x00";
-pub const kIOMatchedServiceCountKey: &'static [u8; 27usize] = b"IOMatchedServiceCountMatch\x00";
+pub const kIOProviderClassKey: *const ::libc::c_char =
+    b"IOProviderClass\x00" as *const [u8; 16usize] as *const ::libc::c_char;
+pub const kIONameMatchKey: *const ::libc::c_char =
+    b"IONameMatch\x00" as *const [u8; 12usize] as *const ::libc::c_char;
+pub const kIOPropertyMatchKey: *const ::libc::c_char =
+    b"IOPropertyMatch\x00" as *const [u8; 16usize] as *const ::libc::c_char;
+pub const kIOPathMatchKey: *const ::libc::c_char =
+    b"IOPathMatch\x00" as *const [u8; 12usize] as *const ::libc::c_char;
+pub const kIOLocationMatchKey: *const ::libc::c_char =
+    b"IOLocationMatch\x00" as *const [u8; 16usize] as *const ::libc::c_char;
+pub const kIOParentMatchKey: *const ::libc::c_char =
+    b"IOParentMatch\x00" as *const [u8; 14usize] as *const ::libc::c_char;
+pub const kIOResourceMatchKey: *const ::libc::c_char =
+    b"IOResourceMatch\x00" as *const [u8; 16usize] as *const ::libc::c_char;
+pub const kIOMatchedServiceCountKey: *const ::libc::c_char =
+    b"IOMatchedServiceCountMatch\x00" as *const [u8; 27usize] as *const ::libc::c_char;
 
-pub const kIONameMatchedKey: &'static [u8; 14usize] = b"IONameMatched\x00";
+pub const kIONameMatchedKey: *const ::libc::c_char =
+    b"IONameMatched\x00" as *const [u8; 14usize] as *const ::libc::c_char;
 
-pub const kIOMatchCategoryKey: &'static [u8; 16usize] = b"IOMatchCategory\x00";
-pub const kIODefaultMatchCategoryKey: &'static [u8; 23usize] = b"IODefaultMatchCategory\x00";
+pub const kIOMatchCategoryKey: *const ::libc::c_char =
+    b"IOMatchCategory\x00" as *const [u8; 16usize] as *const ::libc::c_char;
+pub const kIODefaultMatchCategoryKey: *const ::libc::c_char =
+    b"IODefaultMatchCategory\x00" as *const [u8; 23usize] as *const ::libc::c_char;
 
 // IOService default user client class, for loadable user clients
-pub const kIOUserClientClassKey: &'static [u8; 18usize] = b"IOUserClientClass\x00";
+pub const kIOUserClientClassKey: *const ::libc::c_char =
+    b"IOUserClientClass\x00" as *const [u8; 18usize] as *const ::libc::c_char;
 
 // key to find IOMappers
-pub const kIOMapperIDKey: &'static [u8; 11usize] = b"IOMapperID\x00";
+pub const kIOMapperIDKey: *const ::libc::c_char =
+    b"IOMapperID\x00" as *const [u8; 11usize] as *const ::libc::c_char;
 
-pub const kIOUserClientCrossEndianKey: &'static [u8; 24usize] = b"IOUserClientCrossEndian\x00";
-pub const kIOUserClientCrossEndianCompatibleKey: &'static [u8; 34usize] =
-    b"IOUserClientCrossEndianCompatible\x00";
-pub const kIOUserClientSharedInstanceKey: &'static [u8; 27usize] =
-    b"IOUserClientSharedInstance\x00";
+pub const kIOUserClientCrossEndianKey: *const ::libc::c_char =
+    b"IOUserClientCrossEndian\x00" as *const [u8; 24usize] as *const ::libc::c_char;
+pub const kIOUserClientCrossEndianCompatibleKey: *const ::libc::c_char =
+    b"IOUserClientCrossEndianCompatible\x00" as *const [u8; 34usize] as *const ::libc::c_char;
+pub const kIOUserClientSharedInstanceKey: *const ::libc::c_char =
+    b"IOUserClientSharedInstance\x00" as *const [u8; 27usize] as *const ::libc::c_char;
 // diagnostic string describing the creating task
-pub const kIOUserClientCreatorKey: &'static [u8; 20usize] = b"IOUserClientCreator\x00";
+pub const kIOUserClientCreatorKey: *const ::libc::c_char =
+    b"IOUserClientCreator\x00" as *const [u8; 20usize] as *const ::libc::c_char;
 
 // IOService notification types
-pub const kIOPublishNotification: &'static [u8; 17usize] = b"IOServicePublish\x00";
-pub const kIOFirstPublishNotification: &'static [u8; 22usize] = b"IOServiceFirstPublish\x00";
-pub const kIOMatchedNotification: &'static [u8; 17usize] = b"IOServiceMatched\x00";
-pub const kIOFirstMatchNotification: &'static [u8; 20usize] = b"IOServiceFirstMatch\x00";
-pub const kIOTerminatedNotification: &'static [u8; 19usize] = b"IOServiceTerminate\x00";
+pub const kIOPublishNotification: *const ::libc::c_char =
+    b"IOServicePublish\x00" as *const [u8; 17usize] as *const ::libc::c_char;
+pub const kIOFirstPublishNotification: *const ::libc::c_char =
+    b"IOServiceFirstPublish\x00" as *const [u8; 22usize] as *const ::libc::c_char;
+pub const kIOMatchedNotification: *const ::libc::c_char =
+    b"IOServiceMatched\x00" as *const [u8; 17usize] as *const ::libc::c_char;
+pub const kIOFirstMatchNotification: *const ::libc::c_char =
+    b"IOServiceFirstMatch\x00" as *const [u8; 20usize] as *const ::libc::c_char;
+pub const kIOTerminatedNotification: *const ::libc::c_char =
+    b"IOServiceTerminate\x00" as *const [u8; 19usize] as *const ::libc::c_char;
 
 // IOService interest notification types
-pub const kIOGeneralInterest: &'static [u8; 18usize] = b"IOGeneralInterest\x00";
-pub const kIOBusyInterest: &'static [u8; 15usize] = b"IOBusyInterest\x00";
-pub const kIOAppPowerStateInterest: &'static [u8; 24usize] = b"IOAppPowerStateInterest\x00";
-pub const kIOPriorityPowerStateInterest: &'static [u8; 29usize] =
-    b"IOPriorityPowerStateInterest\x00";
+pub const kIOGeneralInterest: *const ::libc::c_char =
+    b"IOGeneralInterest\x00" as *const [u8; 18usize] as *const ::libc::c_char;
+pub const kIOBusyInterest: *const ::libc::c_char =
+    b"IOBusyInterest\x00" as *const [u8; 15usize] as *const ::libc::c_char;
+pub const kIOAppPowerStateInterest: *const ::libc::c_char =
+    b"IOAppPowerStateInterest\x00" as *const [u8; 24usize] as *const ::libc::c_char;
+pub const kIOPriorityPowerStateInterest: *const ::libc::c_char =
+    b"IOPriorityPowerStateInterest\x00" as *const [u8; 29usize] as *const ::libc::c_char;
 
-pub const kIOPlatformDeviceMessageKey: &'static [u8; 24usize] = b"IOPlatformDeviceMessage\x00";
+pub const kIOPlatformDeviceMessageKey: *const ::libc::c_char =
+    b"IOPlatformDeviceMessage\x00" as *const [u8; 24usize] as *const ::libc::c_char;
 
 // IOService interest notification types
-pub const kIOCFPlugInTypesKey: &'static [u8; 16usize] = b"IOCFPlugInTypes\x00";
+pub const kIOCFPlugInTypesKey: *const ::libc::c_char =
+    b"IOCFPlugInTypes\x00" as *const [u8; 16usize] as *const ::libc::c_char;
 
 // properties found in services that implement command pooling
-pub const kIOCommandPoolSizeKey: &'static [u8; 18usize] = b"IOCommandPoolSize\x00";
+pub const kIOCommandPoolSizeKey: *const ::libc::c_char =
+    b"IOCommandPoolSize\x00" as *const [u8; 18usize] as *const ::libc::c_char;
 
 // properties found in services that implement priority
-pub const kIOMaximumPriorityCountKey: &'static [u8; 23usize] = b"IOMaximumPriorityCount\x00";
+pub const kIOMaximumPriorityCountKey: *const ::libc::c_char =
+    b"IOMaximumPriorityCount\x00" as *const [u8; 23usize] as *const ::libc::c_char;
 
 // properties found in services that have transfer constraints
-pub const kIOMaximumBlockCountReadKey: &'static [u8; 24usize] = b"IOMaximumBlockCountRead\x00";
-pub const kIOMaximumBlockCountWriteKey: &'static [u8; 25usize] = b"IOMaximumBlockCountWrite\x00";
-pub const kIOMaximumByteCountReadKey: &'static [u8; 23usize] = b"IOMaximumByteCountRead\x00";
-pub const kIOMaximumByteCountWriteKey: &'static [u8; 24usize] = b"IOMaximumByteCountWrite\x00";
-pub const kIOMaximumSegmentCountReadKey: &'static [u8; 26usize] = b"IOMaximumSegmentCountRead\x00";
-pub const kIOMaximumSegmentCountWriteKey: &'static [u8; 27usize] =
-    b"IOMaximumSegmentCountWrite\x00";
-pub const kIOMaximumSegmentByteCountReadKey: &'static [u8; 30usize] =
-    b"IOMaximumSegmentByteCountRead\x00";
-pub const kIOMaximumSegmentByteCountWriteKey: &'static [u8; 31usize] =
-    b"IOMaximumSegmentByteCountWrite\x00";
-pub const kIOMinimumSegmentAlignmentByteCountKey: &'static [u8; 35usize] =
-    b"IOMinimumSegmentAlignmentByteCount\x00";
-pub const kIOMaximumSegmentAddressableBitCountKey: &'static [u8; 36usize] =
-    b"IOMaximumSegmentAddressableBitCount\x00";
+pub const kIOMaximumBlockCountReadKey: *const ::libc::c_char =
+    b"IOMaximumBlockCountRead\x00" as *const [u8; 24usize] as *const ::libc::c_char;
+pub const kIOMaximumBlockCountWriteKey: *const ::libc::c_char =
+    b"IOMaximumBlockCountWrite\x00" as *const [u8; 25usize] as *const ::libc::c_char;
+pub const kIOMaximumByteCountReadKey: *const ::libc::c_char =
+    b"IOMaximumByteCountRead\x00" as *const [u8; 23usize] as *const ::libc::c_char;
+pub const kIOMaximumByteCountWriteKey: *const ::libc::c_char =
+    b"IOMaximumByteCountWrite\x00" as *const [u8; 24usize] as *const ::libc::c_char;
+pub const kIOMaximumSegmentCountReadKey: *const ::libc::c_char =
+    b"IOMaximumSegmentCountRead\x00" as *const [u8; 26usize] as *const ::libc::c_char;
+pub const kIOMaximumSegmentCountWriteKey: *const ::libc::c_char =
+    b"IOMaximumSegmentCountWrite\x00" as *const [u8; 27usize] as *const ::libc::c_char;
+pub const kIOMaximumSegmentByteCountReadKey: *const ::libc::c_char =
+    b"IOMaximumSegmentByteCountRead\x00" as *const [u8; 30usize] as *const ::libc::c_char;
+pub const kIOMaximumSegmentByteCountWriteKey: *const ::libc::c_char =
+    b"IOMaximumSegmentByteCountWrite\x00" as *const [u8; 31usize] as *const ::libc::c_char;
+pub const kIOMinimumSegmentAlignmentByteCountKey: *const ::libc::c_char =
+    b"IOMinimumSegmentAlignmentByteCount\x00" as *const [u8; 35usize] as *const ::libc::c_char;
+pub const kIOMaximumSegmentAddressableBitCountKey: *const ::libc::c_char =
+    b"IOMaximumSegmentAddressableBitCount\x00" as *const [u8; 36usize] as *const ::libc::c_char;
 
 // properties found in services that wish to describe an icon
-pub const kIOIconKey: &'static [u8; 7usize] = b"IOIcon\x00";
-pub const kIOBundleResourceFileKey: &'static [u8; 21usize] = b"IOBundleResourceFile\x00";
-pub const kIOBusBadgeKey: &'static [u8; 11usize] = b"IOBusBadge\x00";
-pub const kIODeviceIconKey: &'static [u8; 13usize] = b"IODeviceIcon\x00";
+pub const kIOIconKey: *const ::libc::c_char =
+    b"IOIcon\x00" as *const [u8; 7usize] as *const ::libc::c_char;
+pub const kIOBundleResourceFileKey: *const ::libc::c_char =
+    b"IOBundleResourceFile\x00" as *const [u8; 21usize] as *const ::libc::c_char;
+pub const kIOBusBadgeKey: *const ::libc::c_char =
+    b"IOBusBadge\x00" as *const [u8; 11usize] as *const ::libc::c_char;
+pub const kIODeviceIconKey: *const ::libc::c_char =
+    b"IODeviceIcon\x00" as *const [u8; 13usize] as *const ::libc::c_char;
 
 // property of root that describes the machine's serial number as a string
-pub const kIOPlatformSerialNumberKey: &'static [u8; 23usize] = b"IOPlatformSerialNumber\x00";
+pub const kIOPlatformSerialNumberKey: *const ::libc::c_char =
+    b"IOPlatformSerialNumber\x00" as *const [u8; 23usize] as *const ::libc::c_char;
 
 // property of root that describes the machine's UUID as a string
-pub const kIOPlatformUUIDKey: &'static [u8; 15usize] = b"IOPlatformUUID\x00";
+pub const kIOPlatformUUIDKey: *const ::libc::c_char =
+    b"IOPlatformUUID\x00" as *const [u8; 15usize] as *const ::libc::c_char;
 
 // IODTNVRAM property keys
-pub const kIONVRAMDeletePropertyKey: &'static [u8; 24usize] = b"IONVRAM-DELETE-PROPERTY\x00";
-pub const kIONVRAMSyncNowPropertyKey: &'static [u8; 25usize] = b"IONVRAM-SYNCNOW-PROPERTY\x00";
-pub const kIONVRAMActivateCSRConfigPropertyKey: &'static [u8; 24usize] =
-    b"IONVRAM-ARMCSR-PROPERTY\x00";
-pub const kIODTNVRAMPanicInfoKey: &'static [u8; 16usize] = b"aapl,panic-info\x00";
+pub const kIONVRAMDeletePropertyKey: *const ::libc::c_char =
+    b"IONVRAM-DELETE-PROPERTY\x00" as *const [u8; 24usize] as *const ::libc::c_char;
+pub const kIONVRAMSyncNowPropertyKey: *const ::libc::c_char =
+    b"IONVRAM-SYNCNOW-PROPERTY\x00" as *const [u8; 25usize] as *const ::libc::c_char;
+pub const kIONVRAMActivateCSRConfigPropertyKey: *const ::libc::c_char =
+    b"IONVRAM-ARMCSR-PROPERTY\x00" as *const [u8; 24usize] as *const ::libc::c_char;
+pub const kIODTNVRAMPanicInfoKey: *const ::libc::c_char =
+    b"aapl,panic-info\x00" as *const [u8; 16usize] as *const ::libc::c_char;
 
 // keys for complex boot information
-pub const kIOBootDeviceKey: &'static [u8; 13usize] = b"IOBootDevice\x00";
-pub const kIOBootDevicePathKey: &'static [u8; 17usize] = b"IOBootDevicePath\x00";
-pub const kIOBootDeviceSizeKey: &'static [u8; 17usize] = b"IOBootDeviceSize\x00";
+pub const kIOBootDeviceKey: *const ::libc::c_char =
+    b"IOBootDevice\x00" as *const [u8; 13usize] as *const ::libc::c_char;
+pub const kIOBootDevicePathKey: *const ::libc::c_char =
+    b"IOBootDevicePath\x00" as *const [u8; 17usize] as *const ::libc::c_char;
+pub const kIOBootDeviceSizeKey: *const ::libc::c_char =
+    b"IOBootDeviceSize\x00" as *const [u8; 17usize] as *const ::libc::c_char;
 
 // keys for OS Version information
-pub const kOSBuildVersionKey: &'static [u8; 17usize] = b"OS Build Version\x00";
+pub const kOSBuildVersionKey: *const ::libc::c_char =
+    b"OS Build Version\x00" as *const [u8; 17usize] as *const ::libc::c_char;
