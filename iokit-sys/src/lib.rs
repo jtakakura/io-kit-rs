@@ -13,8 +13,6 @@ pub mod types;
 
 pub mod hid;
 
-// exports from <IOKit/IOKitLib.h>
-
 use libc::{c_char, c_int, c_void};
 use core_foundation_sys::base::{CFAllocatorRef, CFTypeRef};
 use core_foundation_sys::dictionary::{CFDictionaryRef, CFMutableDictionaryRef};
@@ -22,12 +20,22 @@ use core_foundation_sys::runloop::CFRunLoopSourceRef;
 use core_foundation_sys::string::CFStringRef;
 
 use base::dispatch_queue_t;
-use mach_sys::{boolean_t, kern_return_t, mach_msg_header_t, mach_port_t,
-           mach_timespec_t, mach_vm_address_t, mach_vm_size_t, task_port_t};
+use mach_sys::{boolean_t, kern_return_t, mach_msg_header_t, mach_port_t, mach_timespec_t,
+               mach_vm_address_t, mach_vm_size_t, task_port_t};
 use types::{io_connect_t, io_object_t, io_registry_entry_t, io_service_t, io_iterator_t,
             IOOptionBits};
 use ret::IOReturn;
 
+// exports from <CoreFoundation/CFString.h>
+extern "C" {
+    fn __CFStringMakeConstantString(cStr: *const c_char) -> CFStringRef;
+}
+
+pub fn CFSTR(cStr: *const c_char) -> CFStringRef {
+    unsafe { __CFStringMakeConstantString(cStr) }
+}
+
+// exports from <IOKit/IOKitLib.h>
 #[repr(C)]
 #[derive(Debug, Copy, Clone)]
 pub struct IONotificationPort {
