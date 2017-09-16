@@ -1,11 +1,11 @@
 use core_foundation::base::{CFRelease, TCFType, CFTypeID, kCFAllocatorDefault};
 
 pub use iokit_sys::hid::device::*;
-use iokit_sys::ret::IOReturn;
 use iokit_sys::hid::base::IOHIDDeviceRef;
 use iokit_sys::hid::keys::kIOHIDOptionsTypeNone;
 
 use base::{IOService, TIOObject};
+use ret::{IOReturn, kIOReturnSuccess};
 
 pub struct IOHIDDevice(IOHIDDeviceRef);
 
@@ -32,12 +32,29 @@ impl IOHIDDevice {
         }
     }
 
-    pub fn open(&self) -> IOReturn {
-        unsafe { IOHIDDeviceOpen(self.0, kIOHIDOptionsTypeNone) }
+    pub fn open(&self) -> Result<(), IOReturn> {
+        unsafe {
+            let result = IOHIDDeviceOpen(self.0, kIOHIDOptionsTypeNone);
+
+            if result == kIOReturnSuccess {
+                Ok(())
+            } else {
+                Err(IOReturn::from(result))
+            }
+        }
     }
 
-    pub fn close(&self) -> IOReturn {
-        unsafe { IOHIDDeviceClose(self.0, kIOHIDOptionsTypeNone) }
+    pub fn close(&self) -> Result<(), IOReturn> {
+        unsafe {
+            let result = IOHIDDeviceClose(self.0, kIOHIDOptionsTypeNone);
+
+            if result == kIOReturnSuccess {
+                Ok(())
+            } else {
+                Err(IOReturn::from(result))
+            }
+
+        }
     }
 
     pub fn conforms_to(&self, usage_page: u32, usage: u32) -> bool {
