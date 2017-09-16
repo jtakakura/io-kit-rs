@@ -1,4 +1,4 @@
-use std::ffi::{CStr, CString};
+use std::ffi::CStr;
 use std::mem;
 
 use libc::c_char;
@@ -101,7 +101,7 @@ impl IOService {
         }
     }
 
-    pub fn get_matching_services(matching: CFDictionary) -> Result<IOIterator, KernReturn> {
+    pub fn get_matching_services(matching: CFDictionary) -> Result<Vec<Self>, KernReturn> {
         unsafe {
             let mut io_iterator_t: io_iterator_t = mem::uninitialized();
 
@@ -109,11 +109,23 @@ impl IOService {
                                                       matching.as_concrete_TypeRef(),
                                                       &mut io_iterator_t);
 
-            if result == KERN_SUCCESS {
-                Ok(IOIterator(io_iterator_t))
-            } else {
-                Err(KernReturn::from(result))
+            if result != KERN_SUCCESS {
+                return Err(KernReturn::from(result));
             }
+
+            let mut v: Vec<Self> = Vec::new();
+
+            loop {
+                let result = IOIteratorNext(io_iterator_t);
+
+                if result == 0 {
+                    break;
+                }
+
+                v.push(IOService(result))
+            }
+
+            Ok(v)
         }
     }
 }
