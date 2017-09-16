@@ -9,4 +9,5 @@ extern crate libc;
 extern crate iokit_sys;
 
 pub mod base;
+pub mod mach;
 pub mod hid;
