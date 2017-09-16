@@ -211,12 +211,8 @@ pub trait TIOObject<concrete_io_object_t> {
         }
     }
 
-    fn conforms_to(&self, class_name: &str) -> bool {
-        unsafe {
-            let ptr = CString::new(class_name).unwrap().as_ptr() as *mut c_char;
-
-            IOObjectConformsTo(self.as_io_object_t(), ptr) != 0
-        }
+    fn conforms_to(&self, class_name: *mut c_char) -> bool {
+        unsafe { IOObjectConformsTo(self.as_io_object_t(), class_name) != 0 }
     }
 
     fn is_equal_to(&self, object: IOObject) -> bool {
