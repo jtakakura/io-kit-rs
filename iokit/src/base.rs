@@ -231,3 +231,15 @@ pub trait TIOObject<concrete_io_object_t> {
         unsafe { IOObjectGetRetainCount(self.as_io_object_t()) }
     }
 }
+
+pub fn io_service_matching(name: *const c_char) -> Option<CFDictionary> {
+    unsafe {
+        let result = IOServiceMatching(name);
+
+        if result.is_null() {
+            None
+        } else {
+            Some(TCFType::wrap_under_get_rule(result))
+        }
+    }
+}
