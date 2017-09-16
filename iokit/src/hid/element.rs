@@ -1,7 +1,7 @@
 use core_foundation::base::{CFRelease, TCFType};
 
+pub use iokit_sys::hid::element::*;
 use iokit_sys::hid::base::IOHIDElementRef;
-use iokit_sys::hid::element::IOHIDElementGetTypeID;
 
 pub struct IOHIDElement(IOHIDElementRef);
 

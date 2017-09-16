@@ -1,7 +1,7 @@
 use core_foundation::base::{CFRelease, TCFType};
 
+pub use iokit_sys::hid::value::*;
 use iokit_sys::hid::base::IOHIDValueRef;
-use iokit_sys::hid::value::IOHIDValueGetTypeID;
 
 pub struct IOHIDValue(IOHIDValueRef);
 

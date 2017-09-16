@@ -1,11 +1,9 @@
-use core_foundation::base::{CFRelease, TCFType, CFTypeID};
-use core_foundation_sys::base::kCFAllocatorDefault;
+use core_foundation::base::{CFRelease, TCFType, CFTypeID, kCFAllocatorDefault};
 
+pub use iokit_sys::hid::device::*;
 use iokit_sys::ret::IOReturn;
 use iokit_sys::hid::base::IOHIDDeviceRef;
 use iokit_sys::hid::keys::kIOHIDOptionsTypeNone;
-use iokit_sys::hid::device::{IOHIDDeviceClose, IOHIDDeviceConformsTo, IOHIDDeviceCreate,
-                             IOHIDDeviceGetTypeID, IOHIDDeviceOpen};
 
 use base::{IOService, TIOObject};
 

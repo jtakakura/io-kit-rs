@@ -1,9 +1,7 @@
-use core_foundation::base::{CFRelease, TCFType};
-use core_foundation_sys::base::kCFAllocatorDefault;
+use core_foundation::base::{CFRelease, TCFType, kCFAllocatorDefault};
 
+pub use iokit_sys::hid::manager::*;
 use iokit_sys::types::IOOptionBits;
-use iokit_sys::hid::manager::{IOHIDManagerCreate, IOHIDManagerGetTypeID, IOHIDManagerOptions,
-                              IOHIDManagerRef};
 
 pub struct IOHIDManager(IOHIDManagerRef);
 
