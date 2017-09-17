@@ -1,6 +1,9 @@
-use core_foundation::base::{CFRelease, TCFType, CFTypeID, kCFAllocatorDefault};
+use libc::c_char;
+
+use core_foundation::base::{CFRelease, CFType, CFTypeID, TCFType, kCFAllocatorDefault};
 
 pub use iokit_sys::hid::device::*;
+use iokit_sys::CFSTR;
 use iokit_sys::hid::base::IOHIDDeviceRef;
 use iokit_sys::hid::keys::kIOHIDOptionsTypeNone;
 
@@ -59,6 +62,18 @@ impl IOHIDDevice {
 
     pub fn conforms_to(&self, usage_page: u32, usage: u32) -> bool {
         unsafe { IOHIDDeviceConformsTo(self.0, usage_page, usage) != 0 }
+    }
+
+    pub fn get_property(&self, key: *const c_char) -> Option<CFType> {
+        unsafe {
+            let result = IOHIDDeviceGetProperty(self.0, CFSTR(key));
+
+            if result.is_null() {
+                None
+            } else {
+                Some(TCFType::wrap_under_get_rule(result))
+            }
+        }
     }
 }
 
