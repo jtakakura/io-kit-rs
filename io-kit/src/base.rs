@@ -255,7 +255,7 @@ pub fn io_service_matching(name: *const c_char) -> Option<CFDictionary> {
         if result.is_null() {
             None
         } else {
-            Some(TCFType::wrap_under_get_rule(result))
+            Some(TCFType::wrap_under_get_rule(result as *const _))
         }
     }
 }

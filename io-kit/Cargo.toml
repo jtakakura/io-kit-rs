@@ -12,6 +12,6 @@ path = "../io-kit-sys"
 version = "0.1.0"
 
 [dependencies]
-core-foundation = "0.4"
-core-foundation-sys = "0.4"
+core-foundation = "0.6"
+core-foundation-sys = "0.6"
 libc = "0.2"
