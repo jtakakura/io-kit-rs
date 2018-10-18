@@ -5,7 +5,7 @@ homepage = "https://github.com/jtakakura/io-kit-rs"
 repository = "https://github.com/jtakakura/io-kit-rs"
 version = "0.1.0"
 authors = ["Junji Takakura <j.takakura@gmail.com>"]
-license = "MIT"
+license = "MIT / Apache-2.0"
 
 [dependencies.io-kit-sys]
 path = "../io-kit-sys"
