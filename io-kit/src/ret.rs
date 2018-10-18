@@ -1,22 +1,19 @@
-pub use iokit_sys::ret::{kIOReturnSuccess, kIOReturnError, kIOReturnNoMemory,
-                         kIOReturnNoResources, kIOReturnIPCError, kIOReturnNoDevice,
-                         kIOReturnNotPrivileged, kIOReturnBadArgument, kIOReturnLockedRead,
-                         kIOReturnLockedWrite, kIOReturnExclusiveAccess, kIOReturnBadMessageID,
-                         kIOReturnUnsupported, kIOReturnVMError, kIOReturnInternalError,
-                         kIOReturnIOError, kIOReturnCannotLock, kIOReturnNotOpen,
-                         kIOReturnNotReadable, kIOReturnNotWritable, kIOReturnNotAligned,
-                         kIOReturnBadMedia, kIOReturnStillOpen, kIOReturnRLDError,
-                         kIOReturnDMAError, kIOReturnBusy, kIOReturnTimeout, kIOReturnOffline,
-                         kIOReturnNotReady, kIOReturnNotAttached, kIOReturnNoChannels,
-                         kIOReturnNoSpace, kIOReturnPortExists, kIOReturnCannotWire,
-                         kIOReturnNoInterrupt, kIOReturnNoFrames, kIOReturnMessageTooLarge,
-                         kIOReturnNotPermitted, kIOReturnNoPower, kIOReturnNoMedia,
-                         kIOReturnUnformattedMedia, kIOReturnUnsupportedMode, kIOReturnUnderrun,
-                         kIOReturnOverrun, kIOReturnDeviceError, kIOReturnNoCompletion,
-                         kIOReturnAborted, kIOReturnNoBandwidth, kIOReturnNotResponding,
-                         kIOReturnIsoTooOld, kIOReturnIsoTooNew, kIOReturnNotFound,
-                         kIOReturnInvalid};
-use iokit_sys::mach_sys::kern_return_t;
+use io_kit_sys::mach_sys::kern_return_t;
+pub use io_kit_sys::ret::{
+    kIOReturnAborted, kIOReturnBadArgument, kIOReturnBadMedia, kIOReturnBadMessageID,
+    kIOReturnBusy, kIOReturnCannotLock, kIOReturnCannotWire, kIOReturnDMAError,
+    kIOReturnDeviceError, kIOReturnError, kIOReturnExclusiveAccess, kIOReturnIOError,
+    kIOReturnIPCError, kIOReturnInternalError, kIOReturnInvalid, kIOReturnIsoTooNew,
+    kIOReturnIsoTooOld, kIOReturnLockedRead, kIOReturnLockedWrite, kIOReturnMessageTooLarge,
+    kIOReturnNoBandwidth, kIOReturnNoChannels, kIOReturnNoCompletion, kIOReturnNoDevice,
+    kIOReturnNoFrames, kIOReturnNoInterrupt, kIOReturnNoMedia, kIOReturnNoMemory, kIOReturnNoPower,
+    kIOReturnNoResources, kIOReturnNoSpace, kIOReturnNotAligned, kIOReturnNotAttached,
+    kIOReturnNotFound, kIOReturnNotOpen, kIOReturnNotPermitted, kIOReturnNotPrivileged,
+    kIOReturnNotReadable, kIOReturnNotReady, kIOReturnNotResponding, kIOReturnNotWritable,
+    kIOReturnOffline, kIOReturnOverrun, kIOReturnPortExists, kIOReturnRLDError, kIOReturnStillOpen,
+    kIOReturnSuccess, kIOReturnTimeout, kIOReturnUnderrun, kIOReturnUnformattedMedia,
+    kIOReturnUnsupported, kIOReturnUnsupportedMode, kIOReturnVMError,
+};
 
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum IOReturn {

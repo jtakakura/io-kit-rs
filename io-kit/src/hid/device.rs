@@ -1,14 +1,14 @@
 use libc::c_char;
 
-use core_foundation::base::{CFRelease, CFType, CFTypeID, TCFType, kCFAllocatorDefault};
+use core_foundation::base::{kCFAllocatorDefault, CFRelease, CFType, CFTypeID, TCFType};
 
-pub use iokit_sys::hid::device::*;
-use iokit_sys::CFSTR;
-use iokit_sys::hid::base::IOHIDDeviceRef;
-use iokit_sys::hid::keys::kIOHIDOptionsTypeNone;
+use io_kit_sys::hid::base::IOHIDDeviceRef;
+pub use io_kit_sys::hid::device::*;
+use io_kit_sys::hid::keys::kIOHIDOptionsTypeNone;
+use io_kit_sys::CFSTR;
 
 use base::{IOService, TIOObject};
-use ret::{IOReturn, kIOReturnSuccess};
+use ret::{kIOReturnSuccess, IOReturn};
 
 pub struct IOHIDDevice(IOHIDDeviceRef);
 
@@ -56,7 +56,6 @@ impl IOHIDDevice {
             } else {
                 Err(IOReturn::from(result))
             }
-
         }
     }
 

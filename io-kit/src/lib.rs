@@ -6,9 +6,9 @@ extern crate core_foundation;
 extern crate core_foundation_sys;
 extern crate libc;
 
-extern crate iokit_sys;
+extern crate io_kit_sys;
 
 pub mod base;
-pub mod mach;
 pub mod hid;
+pub mod mach;
 pub mod ret;

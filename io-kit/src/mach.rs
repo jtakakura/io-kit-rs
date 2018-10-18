@@ -1,5 +1,5 @@
-use iokit_sys::base::*;
-use iokit_sys::mach_sys::kern_return_t;
+use io_kit_sys::base::*;
+use io_kit_sys::mach_sys::kern_return_t;
 
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum KernReturn {

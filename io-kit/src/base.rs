@@ -7,9 +7,9 @@ use core_foundation::base::TCFType;
 use core_foundation::dictionary::CFDictionary;
 use core_foundation::string::CFString;
 
-use iokit_sys::*;
-use iokit_sys::base::*;
-use iokit_sys::types::{io_object_t, io_service_t, io_iterator_t};
+use io_kit_sys::base::*;
+use io_kit_sys::types::{io_iterator_t, io_object_t, io_service_t};
+use io_kit_sys::*;
 
 use mach::KernReturn;
 
@@ -90,8 +90,8 @@ impl Drop for IOService {
 impl IOService {
     pub fn get_matching_service(matching: CFDictionary) -> Option<IOService> {
         unsafe {
-            let result = IOServiceGetMatchingService(kIOMasterPortDefault,
-                                                     matching.as_concrete_TypeRef());
+            let result =
+                IOServiceGetMatchingService(kIOMasterPortDefault, matching.as_concrete_TypeRef());
 
             if result != 0 {
                 Some(IOService(result))
@@ -105,9 +105,11 @@ impl IOService {
         unsafe {
             let mut io_iterator_t: io_iterator_t = mem::uninitialized();
 
-            let result = IOServiceGetMatchingServices(kIOMasterPortDefault,
-                                                      matching.as_concrete_TypeRef(),
-                                                      &mut io_iterator_t);
+            let result = IOServiceGetMatchingServices(
+                kIOMasterPortDefault,
+                matching.as_concrete_TypeRef(),
+                &mut io_iterator_t,
+            );
 
             if result != KERN_SUCCESS {
                 return Err(KernReturn::from(result));
@@ -180,7 +182,9 @@ pub trait TIOObject<concrete_io_object_t> {
             let result = IOObjectGetClass(self.as_io_object_t(), buf.as_mut_ptr());
 
             if result == KERN_SUCCESS {
-                Ok(String::from(CStr::from_ptr(buf.as_ptr()).to_str().unwrap().to_string()))
+                Ok(String::from(
+                    CStr::from_ptr(buf.as_ptr()).to_str().unwrap().to_string(),
+                ))
             } else {
                 Err(KernReturn::from(result))
             }

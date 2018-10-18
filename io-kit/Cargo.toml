@@ -1,14 +1,14 @@
 [package]
-name = "iokit"
+name = "io-kit"
 description = "Bindings to IOKit for macOS"
-homepage = "https://github.com/jtakakura/iokit-rs"
-repository = "https://github.com/jtakakura/iokit-rs"
+homepage = "https://github.com/jtakakura/io-kit-rs"
+repository = "https://github.com/jtakakura/io-kit-rs"
 version = "0.1.0"
 authors = ["Junji Takakura <j.takakura@gmail.com>"]
 license = "MIT"
 
-[dependencies.iokit-sys]
-path = "../iokit-sys"
+[dependencies.io-kit-sys]
+path = "../io-kit-sys"
 version = "0.1.0"
 
 [dependencies]
