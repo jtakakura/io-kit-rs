@@ -1,7 +1,6 @@
 use core_foundation::base::{kCFAllocatorDefault, CFRelease, TCFType};
 
 pub use io_kit_sys::hid::manager::*;
-use io_kit_sys::types::IOOptionBits;
 
 pub struct IOHIDManager(IOHIDManagerRef);
 
@@ -13,12 +12,7 @@ impl Drop for IOHIDManager {
 
 impl IOHIDManager {
     pub fn new() -> Option<Self> {
-        let m = unsafe {
-            IOHIDManagerCreate(
-                kCFAllocatorDefault,
-                IOHIDManagerOptions::kIOHIDManagerOptionNone as IOOptionBits,
-            )
-        };
+        let m = unsafe { IOHIDManagerCreate(kCFAllocatorDefault, kIOHIDManagerOptionNone) };
 
         if m.is_null() {
             None

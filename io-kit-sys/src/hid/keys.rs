@@ -214,14 +214,11 @@ pub enum IOHIDElementCollectionType {
     kIOHIDElementCollectionTypeUsageModifier = 0x06,
 }
 
-#[repr(u32)]
-#[derive(Debug, Copy, Clone, PartialEq, Eq, Hash)]
-pub enum IOHIDReportType {
-    kIOHIDReportTypeInput = 0,
-    kIOHIDReportTypeOutput = 1,
-    kIOHIDReportTypeFeature = 2,
-    kIOHIDReportTypeCount = 3,
-}
+pub type IOHIDReportType = u32;
+pub const kIOHIDReportTypeInput: IOHIDReportType = 0;
+pub const kIOHIDReportTypeOutput: IOHIDReportType = 1;
+pub const kIOHIDReportTypeFeature: IOHIDReportType = 2;
+pub const kIOHIDReportTypeCount: IOHIDReportType = 3;
 
 pub type IOHIDOptionsType = u32;
 pub const kIOHIDOptionsTypeNone: IOHIDOptionsType = 0x00;
