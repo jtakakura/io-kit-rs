@@ -1,0 +1,7 @@
+language: rust
+rust: stable
+os: osx
+
+script:
+  - cd io-kit
+  - cargo build --verbose
