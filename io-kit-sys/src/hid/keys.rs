@@ -190,29 +190,23 @@ pub const kIOHIDElementCalibrationGranularityKey: *const ::libc::c_char =
 
 pub type IOHIDElementCookie = u32;
 
-#[repr(u32)]
-#[derive(Debug, Copy, Clone, PartialEq, Eq, Hash)]
-pub enum IOHIDElementType {
-    kIOHIDElementTypeInput_Misc = 1,
-    kIOHIDElementTypeInput_Button = 2,
-    kIOHIDElementTypeInput_Axis = 3,
-    kIOHIDElementTypeInput_ScanCodes = 4,
-    kIOHIDElementTypeOutput = 129,
-    kIOHIDElementTypeFeature = 257,
-    kIOHIDElementTypeCollection = 513,
-}
+pub type IOHIDElementType = u32;
+pub const kIOHIDElementTypeInput_Misc: IOHIDElementType = 1;
+pub const kIOHIDElementTypeInput_Button: IOHIDElementType = 2;
+pub const kIOHIDElementTypeInput_Axis: IOHIDElementType = 3;
+pub const kIOHIDElementTypeInput_ScanCodes: IOHIDElementType = 4;
+pub const kIOHIDElementTypeOutput: IOHIDElementType = 129;
+pub const kIOHIDElementTypeFeature: IOHIDElementType = 257;
+pub const kIOHIDElementTypeCollection: IOHIDElementType = 513;
 
-#[repr(u32)]
-#[derive(Debug, Copy, Clone, PartialEq, Eq, Hash)]
-pub enum IOHIDElementCollectionType {
-    kIOHIDElementCollectionTypePhysical = 0x00,
-    kIOHIDElementCollectionTypeApplication = 0x01,
-    kIOHIDElementCollectionTypeLogical = 0x02,
-    kIOHIDElementCollectionTypeReport = 0x03,
-    kIOHIDElementCollectionTypeNamedArray = 0x04,
-    kIOHIDElementCollectionTypeUsageSwitch = 0x05,
-    kIOHIDElementCollectionTypeUsageModifier = 0x06,
-}
+pub type IOHIDElementCollectionType = u32;
+pub const kIOHIDElementCollectionTypePhysical: IOHIDElementCollectionType = 0x00;
+pub const kIOHIDElementCollectionTypeApplication: IOHIDElementCollectionType = 0x01;
+pub const kIOHIDElementCollectionTypeLogical: IOHIDElementCollectionType = 0x02;
+pub const kIOHIDElementCollectionTypeReport: IOHIDElementCollectionType = 0x03;
+pub const kIOHIDElementCollectionTypeNamedArray: IOHIDElementCollectionType = 0x04;
+pub const kIOHIDElementCollectionTypeUsageSwitch: IOHIDElementCollectionType = 0x05;
+pub const kIOHIDElementCollectionTypeUsageModifier: IOHIDElementCollectionType = 0x06;
 
 pub type IOHIDReportType = u32;
 pub const kIOHIDReportTypeInput: IOHIDReportType = 0;
