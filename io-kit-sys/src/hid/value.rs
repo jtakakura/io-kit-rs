@@ -8,25 +8,28 @@ use hid::keys::IOHIDValueScaleType;
 extern "C" {
     pub fn IOHIDValueGetTypeID() -> CFTypeID;
 
-    pub fn IOHIDValueCreateWithIntegerValue(allocator: CFAllocatorRef,
-                                            element: IOHIDElementRef,
-                                            timeStamp: u64,
-                                            value: CFIndex)
-                                            -> IOHIDValueRef;
+    pub fn IOHIDValueCreateWithIntegerValue(
+        allocator: CFAllocatorRef,
+        element: IOHIDElementRef,
+        timeStamp: u64,
+        value: CFIndex,
+    ) -> IOHIDValueRef;
 
-    pub fn IOHIDValueCreateWithBytes(allocator: CFAllocatorRef,
-                                     element: IOHIDElementRef,
-                                     timeStamp: u64,
-                                     bytes: *const u8,
-                                     length: CFIndex)
-                                     -> IOHIDValueRef;
+    pub fn IOHIDValueCreateWithBytes(
+        allocator: CFAllocatorRef,
+        element: IOHIDElementRef,
+        timeStamp: u64,
+        bytes: *const u8,
+        length: CFIndex,
+    ) -> IOHIDValueRef;
 
-    pub fn IOHIDValueCreateWithBytesNoCopy(allocator: CFAllocatorRef,
-                                           element: IOHIDElementRef,
-                                           timeStamp: u64,
-                                           bytes: *const u8,
-                                           length: CFIndex)
-                                           -> IOHIDValueRef;
+    pub fn IOHIDValueCreateWithBytesNoCopy(
+        allocator: CFAllocatorRef,
+        element: IOHIDElementRef,
+        timeStamp: u64,
+        bytes: *const u8,
+        length: CFIndex,
+    ) -> IOHIDValueRef;
 
     pub fn IOHIDValueGetElement(value: IOHIDValueRef) -> IOHIDElementRef;
 

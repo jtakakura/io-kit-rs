@@ -5,13 +5,15 @@
 #[repr(C)]
 #[derive(Default)]
 pub struct __IncompleteArrayField<T>(::std::marker::PhantomData<T>);
-impl <T> __IncompleteArrayField<T> {
+impl<T> __IncompleteArrayField<T> {
     #[inline]
     pub fn new() -> Self {
         __IncompleteArrayField(::std::marker::PhantomData)
     }
     #[inline]
-    pub unsafe fn as_ptr(&self) -> *const T { ::std::mem::transmute(self) }
+    pub unsafe fn as_ptr(&self) -> *const T {
+        ::std::mem::transmute(self)
+    }
     #[inline]
     pub unsafe fn as_mut_ptr(&mut self) -> *mut T {
         ::std::mem::transmute(self)
@@ -25,16 +27,18 @@ impl <T> __IncompleteArrayField<T> {
         ::std::slice::from_raw_parts_mut(self.as_mut_ptr(), len)
     }
 }
-impl <T> ::std::fmt::Debug for __IncompleteArrayField<T> {
+impl<T> ::std::fmt::Debug for __IncompleteArrayField<T> {
     fn fmt(&self, fmt: &mut ::std::fmt::Formatter) -> ::std::fmt::Result {
         fmt.write_str("__IncompleteArrayField")
     }
 }
-impl <T> ::std::clone::Clone for __IncompleteArrayField<T> {
+impl<T> ::std::clone::Clone for __IncompleteArrayField<T> {
     #[inline]
-    fn clone(&self) -> Self { Self::new() }
+    fn clone(&self) -> Self {
+        Self::new()
+    }
 }
-impl <T> ::std::marker::Copy for __IncompleteArrayField<T> { }
+impl<T> ::std::marker::Copy for __IncompleteArrayField<T> {}
 pub const __WORDSIZE: ::libc::c_uint = 64;
 pub const __DARWIN_ONLY_64_BIT_INO_T: ::libc::c_uint = 0;
 pub const __DARWIN_ONLY_VERS_1050: ::libc::c_uint = 0;
@@ -935,8 +939,7 @@ pub const ZONE_NAME_MAX_LEN: ::libc::c_uint = 80;
 pub const MACH_ZONE_NAME_MAX_LEN: ::libc::c_uint = 80;
 pub const LOCKGROUP_MAX_NAME: ::libc::c_uint = 64;
 pub const LOCKGROUP_ATTR_STAT: ::libc::c_uint = 1;
-pub const MACH_CORE_FILEHEADER_SIGNATURE: ::libc::c_ulonglong =
-    27973006578180435;
+pub const MACH_CORE_FILEHEADER_SIGNATURE: ::libc::c_ulonglong = 27973006578180435;
 pub const host_security_MSG_COUNT: ::libc::c_uint = 2;
 pub const lock_set_MSG_COUNT: ::libc::c_uint = 6;
 pub const processor_MSG_COUNT: ::libc::c_uint = 6;
@@ -1011,7 +1014,9 @@ pub union __mbstate_t {
     _bindgen_union_align: [u64; 16usize],
 }
 impl Clone for __mbstate_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 pub type __darwin_mbstate_t = __mbstate_t;
 pub type __darwin_ptrdiff_t = ::libc::c_long;
@@ -1047,13 +1052,14 @@ pub type __darwin_uuid_string_t = [::libc::c_char; 37usize];
 #[repr(C)]
 #[derive(Copy)]
 pub struct __darwin_pthread_handler_rec {
-    pub __routine: ::std::option::Option<unsafe extern "C" fn(arg1:
-                                                                  *mut ::libc::c_void)>,
+    pub __routine: ::std::option::Option<unsafe extern "C" fn(arg1: *mut ::libc::c_void)>,
     pub __arg: *mut ::libc::c_void,
     pub __next: *mut __darwin_pthread_handler_rec,
 }
 impl Clone for __darwin_pthread_handler_rec {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -1062,7 +1068,9 @@ pub struct _opaque_pthread_attr_t {
     pub __opaque: [::libc::c_char; 56usize],
 }
 impl Clone for _opaque_pthread_attr_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -1071,7 +1079,9 @@ pub struct _opaque_pthread_cond_t {
     pub __opaque: [::libc::c_char; 40usize],
 }
 impl Clone for _opaque_pthread_cond_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -1080,7 +1090,9 @@ pub struct _opaque_pthread_condattr_t {
     pub __opaque: [::libc::c_char; 8usize],
 }
 impl Clone for _opaque_pthread_condattr_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -1089,7 +1101,9 @@ pub struct _opaque_pthread_mutex_t {
     pub __opaque: [::libc::c_char; 56usize],
 }
 impl Clone for _opaque_pthread_mutex_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -1098,7 +1112,9 @@ pub struct _opaque_pthread_mutexattr_t {
     pub __opaque: [::libc::c_char; 8usize],
 }
 impl Clone for _opaque_pthread_mutexattr_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -1107,7 +1123,9 @@ pub struct _opaque_pthread_once_t {
     pub __opaque: [::libc::c_char; 8usize],
 }
 impl Clone for _opaque_pthread_once_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -1116,7 +1134,9 @@ pub struct _opaque_pthread_rwlock_t {
     pub __opaque: [::libc::c_char; 192usize],
 }
 impl Clone for _opaque_pthread_rwlock_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -1125,7 +1145,9 @@ pub struct _opaque_pthread_rwlockattr_t {
     pub __opaque: [::libc::c_char; 16usize],
 }
 impl Clone for _opaque_pthread_rwlockattr_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -1135,7 +1157,9 @@ pub struct _opaque_pthread_t {
     pub __opaque: [::libc::c_char; 8176usize],
 }
 impl Clone for _opaque_pthread_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 pub type __darwin_pthread_attr_t = _opaque_pthread_attr_t;
 pub type __darwin_pthread_cond_t = _opaque_pthread_cond_t;
@@ -1191,7 +1215,9 @@ pub struct mach_port_status {
     pub mps_flags: natural_t,
 }
 impl Clone for mach_port_status {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 pub type mach_port_status_t = mach_port_status;
 #[repr(C)]
@@ -1200,7 +1226,9 @@ pub struct mach_port_limits {
     pub mpl_qlimit: mach_port_msgcount_t,
 }
 impl Clone for mach_port_limits {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 pub type mach_port_limits_t = mach_port_limits;
 #[repr(C)]
@@ -1211,7 +1239,9 @@ pub struct mach_port_info_ext {
     pub reserved: [u32; 6usize],
 }
 impl Clone for mach_port_info_ext {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 pub type mach_port_info_ext_t = mach_port_info_ext;
 pub type mach_port_info_t = *mut integer_t;
@@ -1223,18 +1253,20 @@ pub struct mach_port_qos {
     pub len: natural_t,
 }
 impl Clone for mach_port_qos {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 impl mach_port_qos {
     #[inline]
     pub fn name(&self) -> ::libc::c_uint {
         let mut unit_field_val: u32 = unsafe { ::std::mem::uninitialized() };
         unsafe {
-            ::std::ptr::copy_nonoverlapping(&self._bitfield_1 as *const _ as
-                                                *const u8,
-                                            &mut unit_field_val as *mut u32 as
-                                                *mut u8,
-                                            ::std::mem::size_of::<u32>())
+            ::std::ptr::copy_nonoverlapping(
+                &self._bitfield_1 as *const _ as *const u8,
+                &mut unit_field_val as *mut u32 as *mut u8,
+                ::std::mem::size_of::<u32>(),
+            )
         };
         let mask = 1u64 as u32;
         let val = (unit_field_val & mask) >> 0usize;
@@ -1246,31 +1278,31 @@ impl mach_port_qos {
         let val = val as u32 as u32;
         let mut unit_field_val: u32 = unsafe { ::std::mem::uninitialized() };
         unsafe {
-            ::std::ptr::copy_nonoverlapping(&self._bitfield_1 as *const _ as
-                                                *const u8,
-                                            &mut unit_field_val as *mut u32 as
-                                                *mut u8,
-                                            ::std::mem::size_of::<u32>())
+            ::std::ptr::copy_nonoverlapping(
+                &self._bitfield_1 as *const _ as *const u8,
+                &mut unit_field_val as *mut u32 as *mut u8,
+                ::std::mem::size_of::<u32>(),
+            )
         };
         unit_field_val &= !mask;
         unit_field_val |= (val << 0usize) & mask;
         unsafe {
-            ::std::ptr::copy_nonoverlapping(&unit_field_val as *const _ as
-                                                *const u8,
-                                            &mut self._bitfield_1 as *mut _ as
-                                                *mut u8,
-                                            ::std::mem::size_of::<u32>());
+            ::std::ptr::copy_nonoverlapping(
+                &unit_field_val as *const _ as *const u8,
+                &mut self._bitfield_1 as *mut _ as *mut u8,
+                ::std::mem::size_of::<u32>(),
+            );
         }
     }
     #[inline]
     pub fn prealloc(&self) -> ::libc::c_uint {
         let mut unit_field_val: u32 = unsafe { ::std::mem::uninitialized() };
         unsafe {
-            ::std::ptr::copy_nonoverlapping(&self._bitfield_1 as *const _ as
-                                                *const u8,
-                                            &mut unit_field_val as *mut u32 as
-                                                *mut u8,
-                                            ::std::mem::size_of::<u32>())
+            ::std::ptr::copy_nonoverlapping(
+                &self._bitfield_1 as *const _ as *const u8,
+                &mut unit_field_val as *mut u32 as *mut u8,
+                ::std::mem::size_of::<u32>(),
+            )
         };
         let mask = 2u64 as u32;
         let val = (unit_field_val & mask) >> 1usize;
@@ -1282,31 +1314,31 @@ impl mach_port_qos {
         let val = val as u32 as u32;
         let mut unit_field_val: u32 = unsafe { ::std::mem::uninitialized() };
         unsafe {
-            ::std::ptr::copy_nonoverlapping(&self._bitfield_1 as *const _ as
-                                                *const u8,
-                                            &mut unit_field_val as *mut u32 as
-                                                *mut u8,
-                                            ::std::mem::size_of::<u32>())
+            ::std::ptr::copy_nonoverlapping(
+                &self._bitfield_1 as *const _ as *const u8,
+                &mut unit_field_val as *mut u32 as *mut u8,
+                ::std::mem::size_of::<u32>(),
+            )
         };
         unit_field_val &= !mask;
         unit_field_val |= (val << 1usize) & mask;
         unsafe {
-            ::std::ptr::copy_nonoverlapping(&unit_field_val as *const _ as
-                                                *const u8,
-                                            &mut self._bitfield_1 as *mut _ as
-                                                *mut u8,
-                                            ::std::mem::size_of::<u32>());
+            ::std::ptr::copy_nonoverlapping(
+                &unit_field_val as *const _ as *const u8,
+                &mut self._bitfield_1 as *mut _ as *mut u8,
+                ::std::mem::size_of::<u32>(),
+            );
         }
     }
     #[inline]
     pub fn pad1(&self) -> boolean_t {
         let mut unit_field_val: u32 = unsafe { ::std::mem::uninitialized() };
         unsafe {
-            ::std::ptr::copy_nonoverlapping(&self._bitfield_1 as *const _ as
-                                                *const u8,
-                                            &mut unit_field_val as *mut u32 as
-                                                *mut u8,
-                                            ::std::mem::size_of::<u32>())
+            ::std::ptr::copy_nonoverlapping(
+                &self._bitfield_1 as *const _ as *const u8,
+                &mut unit_field_val as *mut u32 as *mut u8,
+                ::std::mem::size_of::<u32>(),
+            )
         };
         let mask = 4294967292u64 as u32;
         let val = (unit_field_val & mask) >> 2usize;
@@ -1318,29 +1350,28 @@ impl mach_port_qos {
         let val = val as u32 as u32;
         let mut unit_field_val: u32 = unsafe { ::std::mem::uninitialized() };
         unsafe {
-            ::std::ptr::copy_nonoverlapping(&self._bitfield_1 as *const _ as
-                                                *const u8,
-                                            &mut unit_field_val as *mut u32 as
-                                                *mut u8,
-                                            ::std::mem::size_of::<u32>())
+            ::std::ptr::copy_nonoverlapping(
+                &self._bitfield_1 as *const _ as *const u8,
+                &mut unit_field_val as *mut u32 as *mut u8,
+                ::std::mem::size_of::<u32>(),
+            )
         };
         unit_field_val &= !mask;
         unit_field_val |= (val << 2usize) & mask;
         unsafe {
-            ::std::ptr::copy_nonoverlapping(&unit_field_val as *const _ as
-                                                *const u8,
-                                            &mut self._bitfield_1 as *mut _ as
-                                                *mut u8,
-                                            ::std::mem::size_of::<u32>());
+            ::std::ptr::copy_nonoverlapping(
+                &unit_field_val as *const _ as *const u8,
+                &mut self._bitfield_1 as *mut _ as *mut u8,
+                ::std::mem::size_of::<u32>(),
+            );
         }
     }
     #[inline]
-    pub fn new_bitfield_1(name: ::libc::c_uint, prealloc: ::libc::c_uint,
-                          pad1: boolean_t) -> u32 {
+    pub fn new_bitfield_1(name: ::libc::c_uint, prealloc: ::libc::c_uint, pad1: boolean_t) -> u32 {
         ({
-             ({ ({ 0 } | ((name as u32 as u32) << 0usize) & (1u64 as u32)) } |
-                  ((prealloc as u32 as u32) << 1usize) & (2u64 as u32))
-         } | ((pad1 as u32 as u32) << 2usize) & (4294967292u64 as u32))
+            ({ ({ 0 } | ((name as u32 as u32) << 0usize) & (1u64 as u32)) }
+                | ((prealloc as u32 as u32) << 1usize) & (2u64 as u32))
+        } | ((pad1 as u32 as u32) << 2usize) & (4294967292u64 as u32))
     }
 }
 pub type mach_port_qos_t = mach_port_qos;
@@ -1352,7 +1383,9 @@ pub struct mach_port_options {
     pub reserved: [u64; 2usize],
 }
 impl Clone for mach_port_options {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 pub type mach_port_options_t = mach_port_options;
 pub type mach_port_options_ptr_t = *mut mach_port_options_t;
@@ -1390,18 +1423,20 @@ pub struct mach_msg_type_descriptor_t {
     pub _bitfield_1: u32,
 }
 impl Clone for mach_msg_type_descriptor_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 impl mach_msg_type_descriptor_t {
     #[inline]
     pub fn pad3(&self) -> ::libc::c_uint {
         let mut unit_field_val: u32 = unsafe { ::std::mem::uninitialized() };
         unsafe {
-            ::std::ptr::copy_nonoverlapping(&self._bitfield_1 as *const _ as
-                                                *const u8,
-                                            &mut unit_field_val as *mut u32 as
-                                                *mut u8,
-                                            ::std::mem::size_of::<u32>())
+            ::std::ptr::copy_nonoverlapping(
+                &self._bitfield_1 as *const _ as *const u8,
+                &mut unit_field_val as *mut u32 as *mut u8,
+                ::std::mem::size_of::<u32>(),
+            )
         };
         let mask = 16777215u64 as u32;
         let val = (unit_field_val & mask) >> 0usize;
@@ -1413,31 +1448,31 @@ impl mach_msg_type_descriptor_t {
         let val = val as u32 as u32;
         let mut unit_field_val: u32 = unsafe { ::std::mem::uninitialized() };
         unsafe {
-            ::std::ptr::copy_nonoverlapping(&self._bitfield_1 as *const _ as
-                                                *const u8,
-                                            &mut unit_field_val as *mut u32 as
-                                                *mut u8,
-                                            ::std::mem::size_of::<u32>())
+            ::std::ptr::copy_nonoverlapping(
+                &self._bitfield_1 as *const _ as *const u8,
+                &mut unit_field_val as *mut u32 as *mut u8,
+                ::std::mem::size_of::<u32>(),
+            )
         };
         unit_field_val &= !mask;
         unit_field_val |= (val << 0usize) & mask;
         unsafe {
-            ::std::ptr::copy_nonoverlapping(&unit_field_val as *const _ as
-                                                *const u8,
-                                            &mut self._bitfield_1 as *mut _ as
-                                                *mut u8,
-                                            ::std::mem::size_of::<u32>());
+            ::std::ptr::copy_nonoverlapping(
+                &unit_field_val as *const _ as *const u8,
+                &mut self._bitfield_1 as *mut _ as *mut u8,
+                ::std::mem::size_of::<u32>(),
+            );
         }
     }
     #[inline]
     pub fn type_(&self) -> mach_msg_descriptor_type_t {
         let mut unit_field_val: u32 = unsafe { ::std::mem::uninitialized() };
         unsafe {
-            ::std::ptr::copy_nonoverlapping(&self._bitfield_1 as *const _ as
-                                                *const u8,
-                                            &mut unit_field_val as *mut u32 as
-                                                *mut u8,
-                                            ::std::mem::size_of::<u32>())
+            ::std::ptr::copy_nonoverlapping(
+                &self._bitfield_1 as *const _ as *const u8,
+                &mut unit_field_val as *mut u32 as *mut u8,
+                ::std::mem::size_of::<u32>(),
+            )
         };
         let mask = 4278190080u64 as u32;
         let val = (unit_field_val & mask) >> 24usize;
@@ -1449,27 +1484,26 @@ impl mach_msg_type_descriptor_t {
         let val = val as u32 as u32;
         let mut unit_field_val: u32 = unsafe { ::std::mem::uninitialized() };
         unsafe {
-            ::std::ptr::copy_nonoverlapping(&self._bitfield_1 as *const _ as
-                                                *const u8,
-                                            &mut unit_field_val as *mut u32 as
-                                                *mut u8,
-                                            ::std::mem::size_of::<u32>())
+            ::std::ptr::copy_nonoverlapping(
+                &self._bitfield_1 as *const _ as *const u8,
+                &mut unit_field_val as *mut u32 as *mut u8,
+                ::std::mem::size_of::<u32>(),
+            )
         };
         unit_field_val &= !mask;
         unit_field_val |= (val << 24usize) & mask;
         unsafe {
-            ::std::ptr::copy_nonoverlapping(&unit_field_val as *const _ as
-                                                *const u8,
-                                            &mut self._bitfield_1 as *mut _ as
-                                                *mut u8,
-                                            ::std::mem::size_of::<u32>());
+            ::std::ptr::copy_nonoverlapping(
+                &unit_field_val as *const _ as *const u8,
+                &mut self._bitfield_1 as *mut _ as *mut u8,
+                ::std::mem::size_of::<u32>(),
+            );
         }
     }
     #[inline]
-    pub fn new_bitfield_1(pad3: ::libc::c_uint,
-                          type_: mach_msg_descriptor_type_t) -> u32 {
+    pub fn new_bitfield_1(pad3: ::libc::c_uint, type_: mach_msg_descriptor_type_t) -> u32 {
         ({ ({ 0 } | ((pad3 as u32 as u32) << 0usize) & (16777215u64 as u32)) }
-             | ((type_ as u32 as u32) << 24usize) & (4278190080u64 as u32))
+            | ((type_ as u32 as u32) << 24usize) & (4278190080u64 as u32))
     }
 }
 #[repr(C)]
@@ -1480,18 +1514,20 @@ pub struct mach_msg_port_descriptor_t {
     pub _bitfield_1: [u16; 2usize],
 }
 impl Clone for mach_msg_port_descriptor_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 impl mach_msg_port_descriptor_t {
     #[inline]
     pub fn pad2(&self) -> ::libc::c_uint {
         let mut unit_field_val: u32 = unsafe { ::std::mem::uninitialized() };
         unsafe {
-            ::std::ptr::copy_nonoverlapping(&self._bitfield_1 as *const _ as
-                                                *const u8,
-                                            &mut unit_field_val as *mut u32 as
-                                                *mut u8,
-                                            ::std::mem::size_of::<u32>())
+            ::std::ptr::copy_nonoverlapping(
+                &self._bitfield_1 as *const _ as *const u8,
+                &mut unit_field_val as *mut u32 as *mut u8,
+                ::std::mem::size_of::<u32>(),
+            )
         };
         let mask = 65535u64 as u32;
         let val = (unit_field_val & mask) >> 0usize;
@@ -1503,31 +1539,31 @@ impl mach_msg_port_descriptor_t {
         let val = val as u32 as u32;
         let mut unit_field_val: u32 = unsafe { ::std::mem::uninitialized() };
         unsafe {
-            ::std::ptr::copy_nonoverlapping(&self._bitfield_1 as *const _ as
-                                                *const u8,
-                                            &mut unit_field_val as *mut u32 as
-                                                *mut u8,
-                                            ::std::mem::size_of::<u32>())
+            ::std::ptr::copy_nonoverlapping(
+                &self._bitfield_1 as *const _ as *const u8,
+                &mut unit_field_val as *mut u32 as *mut u8,
+                ::std::mem::size_of::<u32>(),
+            )
         };
         unit_field_val &= !mask;
         unit_field_val |= (val << 0usize) & mask;
         unsafe {
-            ::std::ptr::copy_nonoverlapping(&unit_field_val as *const _ as
-                                                *const u8,
-                                            &mut self._bitfield_1 as *mut _ as
-                                                *mut u8,
-                                            ::std::mem::size_of::<u32>());
+            ::std::ptr::copy_nonoverlapping(
+                &unit_field_val as *const _ as *const u8,
+                &mut self._bitfield_1 as *mut _ as *mut u8,
+                ::std::mem::size_of::<u32>(),
+            );
         }
     }
     #[inline]
     pub fn disposition(&self) -> mach_msg_type_name_t {
         let mut unit_field_val: u32 = unsafe { ::std::mem::uninitialized() };
         unsafe {
-            ::std::ptr::copy_nonoverlapping(&self._bitfield_1 as *const _ as
-                                                *const u8,
-                                            &mut unit_field_val as *mut u32 as
-                                                *mut u8,
-                                            ::std::mem::size_of::<u32>())
+            ::std::ptr::copy_nonoverlapping(
+                &self._bitfield_1 as *const _ as *const u8,
+                &mut unit_field_val as *mut u32 as *mut u8,
+                ::std::mem::size_of::<u32>(),
+            )
         };
         let mask = 16711680u64 as u32;
         let val = (unit_field_val & mask) >> 16usize;
@@ -1539,31 +1575,31 @@ impl mach_msg_port_descriptor_t {
         let val = val as u32 as u32;
         let mut unit_field_val: u32 = unsafe { ::std::mem::uninitialized() };
         unsafe {
-            ::std::ptr::copy_nonoverlapping(&self._bitfield_1 as *const _ as
-                                                *const u8,
-                                            &mut unit_field_val as *mut u32 as
-                                                *mut u8,
-                                            ::std::mem::size_of::<u32>())
+            ::std::ptr::copy_nonoverlapping(
+                &self._bitfield_1 as *const _ as *const u8,
+                &mut unit_field_val as *mut u32 as *mut u8,
+                ::std::mem::size_of::<u32>(),
+            )
         };
         unit_field_val &= !mask;
         unit_field_val |= (val << 16usize) & mask;
         unsafe {
-            ::std::ptr::copy_nonoverlapping(&unit_field_val as *const _ as
-                                                *const u8,
-                                            &mut self._bitfield_1 as *mut _ as
-                                                *mut u8,
-                                            ::std::mem::size_of::<u32>());
+            ::std::ptr::copy_nonoverlapping(
+                &unit_field_val as *const _ as *const u8,
+                &mut self._bitfield_1 as *mut _ as *mut u8,
+                ::std::mem::size_of::<u32>(),
+            );
         }
     }
     #[inline]
     pub fn type_(&self) -> mach_msg_descriptor_type_t {
         let mut unit_field_val: u32 = unsafe { ::std::mem::uninitialized() };
         unsafe {
-            ::std::ptr::copy_nonoverlapping(&self._bitfield_1 as *const _ as
-                                                *const u8,
-                                            &mut unit_field_val as *mut u32 as
-                                                *mut u8,
-                                            ::std::mem::size_of::<u32>())
+            ::std::ptr::copy_nonoverlapping(
+                &self._bitfield_1 as *const _ as *const u8,
+                &mut unit_field_val as *mut u32 as *mut u8,
+                ::std::mem::size_of::<u32>(),
+            )
         };
         let mask = 4278190080u64 as u32;
         let val = (unit_field_val & mask) >> 24usize;
@@ -1575,34 +1611,32 @@ impl mach_msg_port_descriptor_t {
         let val = val as u32 as u32;
         let mut unit_field_val: u32 = unsafe { ::std::mem::uninitialized() };
         unsafe {
-            ::std::ptr::copy_nonoverlapping(&self._bitfield_1 as *const _ as
-                                                *const u8,
-                                            &mut unit_field_val as *mut u32 as
-                                                *mut u8,
-                                            ::std::mem::size_of::<u32>())
+            ::std::ptr::copy_nonoverlapping(
+                &self._bitfield_1 as *const _ as *const u8,
+                &mut unit_field_val as *mut u32 as *mut u8,
+                ::std::mem::size_of::<u32>(),
+            )
         };
         unit_field_val &= !mask;
         unit_field_val |= (val << 24usize) & mask;
         unsafe {
-            ::std::ptr::copy_nonoverlapping(&unit_field_val as *const _ as
-                                                *const u8,
-                                            &mut self._bitfield_1 as *mut _ as
-                                                *mut u8,
-                                            ::std::mem::size_of::<u32>());
+            ::std::ptr::copy_nonoverlapping(
+                &unit_field_val as *const _ as *const u8,
+                &mut self._bitfield_1 as *mut _ as *mut u8,
+                ::std::mem::size_of::<u32>(),
+            );
         }
     }
     #[inline]
-    pub fn new_bitfield_1(pad2: ::libc::c_uint,
-                          disposition: mach_msg_type_name_t,
-                          type_: mach_msg_descriptor_type_t) -> u32 {
+    pub fn new_bitfield_1(
+        pad2: ::libc::c_uint,
+        disposition: mach_msg_type_name_t,
+        type_: mach_msg_descriptor_type_t,
+    ) -> u32 {
         ({
-             ({
-                  ({ 0 } |
-                       ((pad2 as u32 as u32) << 0usize) & (65535u64 as u32))
-              } |
-                  ((disposition as u32 as u32) << 16usize) &
-                      (16711680u64 as u32))
-         } | ((type_ as u32 as u32) << 24usize) & (4278190080u64 as u32))
+            ({ ({ 0 } | ((pad2 as u32 as u32) << 0usize) & (65535u64 as u32)) }
+                | ((disposition as u32 as u32) << 16usize) & (16711680u64 as u32))
+        } | ((type_ as u32 as u32) << 24usize) & (4278190080u64 as u32))
     }
 }
 #[repr(C)]
@@ -1613,18 +1647,20 @@ pub struct mach_msg_ool_descriptor32_t {
     pub _bitfield_1: [u8; 4usize],
 }
 impl Clone for mach_msg_ool_descriptor32_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 impl mach_msg_ool_descriptor32_t {
     #[inline]
     pub fn deallocate(&self) -> boolean_t {
         let mut unit_field_val: u32 = unsafe { ::std::mem::uninitialized() };
         unsafe {
-            ::std::ptr::copy_nonoverlapping(&self._bitfield_1 as *const _ as
-                                                *const u8,
-                                            &mut unit_field_val as *mut u32 as
-                                                *mut u8,
-                                            ::std::mem::size_of::<u32>())
+            ::std::ptr::copy_nonoverlapping(
+                &self._bitfield_1 as *const _ as *const u8,
+                &mut unit_field_val as *mut u32 as *mut u8,
+                ::std::mem::size_of::<u32>(),
+            )
         };
         let mask = 255u64 as u32;
         let val = (unit_field_val & mask) >> 0usize;
@@ -1636,31 +1672,31 @@ impl mach_msg_ool_descriptor32_t {
         let val = val as u32 as u32;
         let mut unit_field_val: u32 = unsafe { ::std::mem::uninitialized() };
         unsafe {
-            ::std::ptr::copy_nonoverlapping(&self._bitfield_1 as *const _ as
-                                                *const u8,
-                                            &mut unit_field_val as *mut u32 as
-                                                *mut u8,
-                                            ::std::mem::size_of::<u32>())
+            ::std::ptr::copy_nonoverlapping(
+                &self._bitfield_1 as *const _ as *const u8,
+                &mut unit_field_val as *mut u32 as *mut u8,
+                ::std::mem::size_of::<u32>(),
+            )
         };
         unit_field_val &= !mask;
         unit_field_val |= (val << 0usize) & mask;
         unsafe {
-            ::std::ptr::copy_nonoverlapping(&unit_field_val as *const _ as
-                                                *const u8,
-                                            &mut self._bitfield_1 as *mut _ as
-                                                *mut u8,
-                                            ::std::mem::size_of::<u32>());
+            ::std::ptr::copy_nonoverlapping(
+                &unit_field_val as *const _ as *const u8,
+                &mut self._bitfield_1 as *mut _ as *mut u8,
+                ::std::mem::size_of::<u32>(),
+            );
         }
     }
     #[inline]
     pub fn copy(&self) -> mach_msg_copy_options_t {
         let mut unit_field_val: u32 = unsafe { ::std::mem::uninitialized() };
         unsafe {
-            ::std::ptr::copy_nonoverlapping(&self._bitfield_1 as *const _ as
-                                                *const u8,
-                                            &mut unit_field_val as *mut u32 as
-                                                *mut u8,
-                                            ::std::mem::size_of::<u32>())
+            ::std::ptr::copy_nonoverlapping(
+                &self._bitfield_1 as *const _ as *const u8,
+                &mut unit_field_val as *mut u32 as *mut u8,
+                ::std::mem::size_of::<u32>(),
+            )
         };
         let mask = 65280u64 as u32;
         let val = (unit_field_val & mask) >> 8usize;
@@ -1672,31 +1708,31 @@ impl mach_msg_ool_descriptor32_t {
         let val = val as u32 as u32;
         let mut unit_field_val: u32 = unsafe { ::std::mem::uninitialized() };
         unsafe {
-            ::std::ptr::copy_nonoverlapping(&self._bitfield_1 as *const _ as
-                                                *const u8,
-                                            &mut unit_field_val as *mut u32 as
-                                                *mut u8,
-                                            ::std::mem::size_of::<u32>())
+            ::std::ptr::copy_nonoverlapping(
+                &self._bitfield_1 as *const _ as *const u8,
+                &mut unit_field_val as *mut u32 as *mut u8,
+                ::std::mem::size_of::<u32>(),
+            )
         };
         unit_field_val &= !mask;
         unit_field_val |= (val << 8usize) & mask;
         unsafe {
-            ::std::ptr::copy_nonoverlapping(&unit_field_val as *const _ as
-                                                *const u8,
-                                            &mut self._bitfield_1 as *mut _ as
-                                                *mut u8,
-                                            ::std::mem::size_of::<u32>());
+            ::std::ptr::copy_nonoverlapping(
+                &unit_field_val as *const _ as *const u8,
+                &mut self._bitfield_1 as *mut _ as *mut u8,
+                ::std::mem::size_of::<u32>(),
+            );
         }
     }
     #[inline]
     pub fn pad1(&self) -> ::libc::c_uint {
         let mut unit_field_val: u32 = unsafe { ::std::mem::uninitialized() };
         unsafe {
-            ::std::ptr::copy_nonoverlapping(&self._bitfield_1 as *const _ as
-                                                *const u8,
-                                            &mut unit_field_val as *mut u32 as
-                                                *mut u8,
-                                            ::std::mem::size_of::<u32>())
+            ::std::ptr::copy_nonoverlapping(
+                &self._bitfield_1 as *const _ as *const u8,
+                &mut unit_field_val as *mut u32 as *mut u8,
+                ::std::mem::size_of::<u32>(),
+            )
         };
         let mask = 16711680u64 as u32;
         let val = (unit_field_val & mask) >> 16usize;
@@ -1708,31 +1744,31 @@ impl mach_msg_ool_descriptor32_t {
         let val = val as u32 as u32;
         let mut unit_field_val: u32 = unsafe { ::std::mem::uninitialized() };
         unsafe {
-            ::std::ptr::copy_nonoverlapping(&self._bitfield_1 as *const _ as
-                                                *const u8,
-                                            &mut unit_field_val as *mut u32 as
-                                                *mut u8,
-                                            ::std::mem::size_of::<u32>())
+            ::std::ptr::copy_nonoverlapping(
+                &self._bitfield_1 as *const _ as *const u8,
+                &mut unit_field_val as *mut u32 as *mut u8,
+                ::std::mem::size_of::<u32>(),
+            )
         };
         unit_field_val &= !mask;
         unit_field_val |= (val << 16usize) & mask;
         unsafe {
-            ::std::ptr::copy_nonoverlapping(&unit_field_val as *const _ as
-                                                *const u8,
-                                            &mut self._bitfield_1 as *mut _ as
-                                                *mut u8,
-                                            ::std::mem::size_of::<u32>());
+            ::std::ptr::copy_nonoverlapping(
+                &unit_field_val as *const _ as *const u8,
+                &mut self._bitfield_1 as *mut _ as *mut u8,
+                ::std::mem::size_of::<u32>(),
+            );
         }
     }
     #[inline]
     pub fn type_(&self) -> mach_msg_descriptor_type_t {
         let mut unit_field_val: u32 = unsafe { ::std::mem::uninitialized() };
         unsafe {
-            ::std::ptr::copy_nonoverlapping(&self._bitfield_1 as *const _ as
-                                                *const u8,
-                                            &mut unit_field_val as *mut u32 as
-                                                *mut u8,
-                                            ::std::mem::size_of::<u32>())
+            ::std::ptr::copy_nonoverlapping(
+                &self._bitfield_1 as *const _ as *const u8,
+                &mut unit_field_val as *mut u32 as *mut u8,
+                ::std::mem::size_of::<u32>(),
+            )
         };
         let mask = 4278190080u64 as u32;
         let val = (unit_field_val & mask) >> 24usize;
@@ -1744,35 +1780,35 @@ impl mach_msg_ool_descriptor32_t {
         let val = val as u32 as u32;
         let mut unit_field_val: u32 = unsafe { ::std::mem::uninitialized() };
         unsafe {
-            ::std::ptr::copy_nonoverlapping(&self._bitfield_1 as *const _ as
-                                                *const u8,
-                                            &mut unit_field_val as *mut u32 as
-                                                *mut u8,
-                                            ::std::mem::size_of::<u32>())
+            ::std::ptr::copy_nonoverlapping(
+                &self._bitfield_1 as *const _ as *const u8,
+                &mut unit_field_val as *mut u32 as *mut u8,
+                ::std::mem::size_of::<u32>(),
+            )
         };
         unit_field_val &= !mask;
         unit_field_val |= (val << 24usize) & mask;
         unsafe {
-            ::std::ptr::copy_nonoverlapping(&unit_field_val as *const _ as
-                                                *const u8,
-                                            &mut self._bitfield_1 as *mut _ as
-                                                *mut u8,
-                                            ::std::mem::size_of::<u32>());
+            ::std::ptr::copy_nonoverlapping(
+                &unit_field_val as *const _ as *const u8,
+                &mut self._bitfield_1 as *mut _ as *mut u8,
+                ::std::mem::size_of::<u32>(),
+            );
         }
     }
     #[inline]
-    pub fn new_bitfield_1(deallocate: boolean_t,
-                          copy: mach_msg_copy_options_t, pad1: ::libc::c_uint,
-                          type_: mach_msg_descriptor_type_t) -> u32 {
+    pub fn new_bitfield_1(
+        deallocate: boolean_t,
+        copy: mach_msg_copy_options_t,
+        pad1: ::libc::c_uint,
+        type_: mach_msg_descriptor_type_t,
+    ) -> u32 {
         ({
-             ({
-                  ({
-                       ({ 0 } |
-                            ((deallocate as u32 as u32) << 0usize) &
-                                (255u64 as u32))
-                   } | ((copy as u32 as u32) << 8usize) & (65280u64 as u32))
-              } | ((pad1 as u32 as u32) << 16usize) & (16711680u64 as u32))
-         } | ((type_ as u32 as u32) << 24usize) & (4278190080u64 as u32))
+            ({
+                ({ ({ 0 } | ((deallocate as u32 as u32) << 0usize) & (255u64 as u32)) }
+                    | ((copy as u32 as u32) << 8usize) & (65280u64 as u32))
+            } | ((pad1 as u32 as u32) << 16usize) & (16711680u64 as u32))
+        } | ((type_ as u32 as u32) << 24usize) & (4278190080u64 as u32))
     }
 }
 #[repr(C)]
@@ -1783,18 +1819,20 @@ pub struct mach_msg_ool_descriptor64_t {
     pub size: mach_msg_size_t,
 }
 impl Clone for mach_msg_ool_descriptor64_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 impl mach_msg_ool_descriptor64_t {
     #[inline]
     pub fn deallocate(&self) -> boolean_t {
         let mut unit_field_val: u32 = unsafe { ::std::mem::uninitialized() };
         unsafe {
-            ::std::ptr::copy_nonoverlapping(&self._bitfield_1 as *const _ as
-                                                *const u8,
-                                            &mut unit_field_val as *mut u32 as
-                                                *mut u8,
-                                            ::std::mem::size_of::<u32>())
+            ::std::ptr::copy_nonoverlapping(
+                &self._bitfield_1 as *const _ as *const u8,
+                &mut unit_field_val as *mut u32 as *mut u8,
+                ::std::mem::size_of::<u32>(),
+            )
         };
         let mask = 255u64 as u32;
         let val = (unit_field_val & mask) >> 0usize;
@@ -1806,31 +1844,31 @@ impl mach_msg_ool_descriptor64_t {
         let val = val as u32 as u32;
         let mut unit_field_val: u32 = unsafe { ::std::mem::uninitialized() };
         unsafe {
-            ::std::ptr::copy_nonoverlapping(&self._bitfield_1 as *const _ as
-                                                *const u8,
-                                            &mut unit_field_val as *mut u32 as
-                                                *mut u8,
-                                            ::std::mem::size_of::<u32>())
+            ::std::ptr::copy_nonoverlapping(
+                &self._bitfield_1 as *const _ as *const u8,
+                &mut unit_field_val as *mut u32 as *mut u8,
+                ::std::mem::size_of::<u32>(),
+            )
         };
         unit_field_val &= !mask;
         unit_field_val |= (val << 0usize) & mask;
         unsafe {
-            ::std::ptr::copy_nonoverlapping(&unit_field_val as *const _ as
-                                                *const u8,
-                                            &mut self._bitfield_1 as *mut _ as
-                                                *mut u8,
-                                            ::std::mem::size_of::<u32>());
+            ::std::ptr::copy_nonoverlapping(
+                &unit_field_val as *const _ as *const u8,
+                &mut self._bitfield_1 as *mut _ as *mut u8,
+                ::std::mem::size_of::<u32>(),
+            );
         }
     }
     #[inline]
     pub fn copy(&self) -> mach_msg_copy_options_t {
         let mut unit_field_val: u32 = unsafe { ::std::mem::uninitialized() };
         unsafe {
-            ::std::ptr::copy_nonoverlapping(&self._bitfield_1 as *const _ as
-                                                *const u8,
-                                            &mut unit_field_val as *mut u32 as
-                                                *mut u8,
-                                            ::std::mem::size_of::<u32>())
+            ::std::ptr::copy_nonoverlapping(
+                &self._bitfield_1 as *const _ as *const u8,
+                &mut unit_field_val as *mut u32 as *mut u8,
+                ::std::mem::size_of::<u32>(),
+            )
         };
         let mask = 65280u64 as u32;
         let val = (unit_field_val & mask) >> 8usize;
@@ -1842,31 +1880,31 @@ impl mach_msg_ool_descriptor64_t {
         let val = val as u32 as u32;
         let mut unit_field_val: u32 = unsafe { ::std::mem::uninitialized() };
         unsafe {
-            ::std::ptr::copy_nonoverlapping(&self._bitfield_1 as *const _ as
-                                                *const u8,
-                                            &mut unit_field_val as *mut u32 as
-                                                *mut u8,
-                                            ::std::mem::size_of::<u32>())
+            ::std::ptr::copy_nonoverlapping(
+                &self._bitfield_1 as *const _ as *const u8,
+                &mut unit_field_val as *mut u32 as *mut u8,
+                ::std::mem::size_of::<u32>(),
+            )
         };
         unit_field_val &= !mask;
         unit_field_val |= (val << 8usize) & mask;
         unsafe {
-            ::std::ptr::copy_nonoverlapping(&unit_field_val as *const _ as
-                                                *const u8,
-                                            &mut self._bitfield_1 as *mut _ as
-                                                *mut u8,
-                                            ::std::mem::size_of::<u32>());
+            ::std::ptr::copy_nonoverlapping(
+                &unit_field_val as *const _ as *const u8,
+                &mut self._bitfield_1 as *mut _ as *mut u8,
+                ::std::mem::size_of::<u32>(),
+            );
         }
     }
     #[inline]
     pub fn pad1(&self) -> ::libc::c_uint {
         let mut unit_field_val: u32 = unsafe { ::std::mem::uninitialized() };
         unsafe {
-            ::std::ptr::copy_nonoverlapping(&self._bitfield_1 as *const _ as
-                                                *const u8,
-                                            &mut unit_field_val as *mut u32 as
-                                                *mut u8,
-                                            ::std::mem::size_of::<u32>())
+            ::std::ptr::copy_nonoverlapping(
+                &self._bitfield_1 as *const _ as *const u8,
+                &mut unit_field_val as *mut u32 as *mut u8,
+                ::std::mem::size_of::<u32>(),
+            )
         };
         let mask = 16711680u64 as u32;
         let val = (unit_field_val & mask) >> 16usize;
@@ -1878,31 +1916,31 @@ impl mach_msg_ool_descriptor64_t {
         let val = val as u32 as u32;
         let mut unit_field_val: u32 = unsafe { ::std::mem::uninitialized() };
         unsafe {
-            ::std::ptr::copy_nonoverlapping(&self._bitfield_1 as *const _ as
-                                                *const u8,
-                                            &mut unit_field_val as *mut u32 as
-                                                *mut u8,
-                                            ::std::mem::size_of::<u32>())
+            ::std::ptr::copy_nonoverlapping(
+                &self._bitfield_1 as *const _ as *const u8,
+                &mut unit_field_val as *mut u32 as *mut u8,
+                ::std::mem::size_of::<u32>(),
+            )
         };
         unit_field_val &= !mask;
         unit_field_val |= (val << 16usize) & mask;
         unsafe {
-            ::std::ptr::copy_nonoverlapping(&unit_field_val as *const _ as
-                                                *const u8,
-                                            &mut self._bitfield_1 as *mut _ as
-                                                *mut u8,
-                                            ::std::mem::size_of::<u32>());
+            ::std::ptr::copy_nonoverlapping(
+                &unit_field_val as *const _ as *const u8,
+                &mut self._bitfield_1 as *mut _ as *mut u8,
+                ::std::mem::size_of::<u32>(),
+            );
         }
     }
     #[inline]
     pub fn type_(&self) -> mach_msg_descriptor_type_t {
         let mut unit_field_val: u32 = unsafe { ::std::mem::uninitialized() };
         unsafe {
-            ::std::ptr::copy_nonoverlapping(&self._bitfield_1 as *const _ as
-                                                *const u8,
-                                            &mut unit_field_val as *mut u32 as
-                                                *mut u8,
-                                            ::std::mem::size_of::<u32>())
+            ::std::ptr::copy_nonoverlapping(
+                &self._bitfield_1 as *const _ as *const u8,
+                &mut unit_field_val as *mut u32 as *mut u8,
+                ::std::mem::size_of::<u32>(),
+            )
         };
         let mask = 4278190080u64 as u32;
         let val = (unit_field_val & mask) >> 24usize;
@@ -1914,35 +1952,35 @@ impl mach_msg_ool_descriptor64_t {
         let val = val as u32 as u32;
         let mut unit_field_val: u32 = unsafe { ::std::mem::uninitialized() };
         unsafe {
-            ::std::ptr::copy_nonoverlapping(&self._bitfield_1 as *const _ as
-                                                *const u8,
-                                            &mut unit_field_val as *mut u32 as
-                                                *mut u8,
-                                            ::std::mem::size_of::<u32>())
+            ::std::ptr::copy_nonoverlapping(
+                &self._bitfield_1 as *const _ as *const u8,
+                &mut unit_field_val as *mut u32 as *mut u8,
+                ::std::mem::size_of::<u32>(),
+            )
         };
         unit_field_val &= !mask;
         unit_field_val |= (val << 24usize) & mask;
         unsafe {
-            ::std::ptr::copy_nonoverlapping(&unit_field_val as *const _ as
-                                                *const u8,
-                                            &mut self._bitfield_1 as *mut _ as
-                                                *mut u8,
-                                            ::std::mem::size_of::<u32>());
+            ::std::ptr::copy_nonoverlapping(
+                &unit_field_val as *const _ as *const u8,
+                &mut self._bitfield_1 as *mut _ as *mut u8,
+                ::std::mem::size_of::<u32>(),
+            );
         }
     }
     #[inline]
-    pub fn new_bitfield_1(deallocate: boolean_t,
-                          copy: mach_msg_copy_options_t, pad1: ::libc::c_uint,
-                          type_: mach_msg_descriptor_type_t) -> u32 {
+    pub fn new_bitfield_1(
+        deallocate: boolean_t,
+        copy: mach_msg_copy_options_t,
+        pad1: ::libc::c_uint,
+        type_: mach_msg_descriptor_type_t,
+    ) -> u32 {
         ({
-             ({
-                  ({
-                       ({ 0 } |
-                            ((deallocate as u32 as u32) << 0usize) &
-                                (255u64 as u32))
-                   } | ((copy as u32 as u32) << 8usize) & (65280u64 as u32))
-              } | ((pad1 as u32 as u32) << 16usize) & (16711680u64 as u32))
-         } | ((type_ as u32 as u32) << 24usize) & (4278190080u64 as u32))
+            ({
+                ({ ({ 0 } | ((deallocate as u32 as u32) << 0usize) & (255u64 as u32)) }
+                    | ((copy as u32 as u32) << 8usize) & (65280u64 as u32))
+            } | ((pad1 as u32 as u32) << 16usize) & (16711680u64 as u32))
+        } | ((type_ as u32 as u32) << 24usize) & (4278190080u64 as u32))
     }
 }
 #[repr(C)]
@@ -1953,18 +1991,20 @@ pub struct mach_msg_ool_descriptor_t {
     pub size: mach_msg_size_t,
 }
 impl Clone for mach_msg_ool_descriptor_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 impl mach_msg_ool_descriptor_t {
     #[inline]
     pub fn deallocate(&self) -> boolean_t {
         let mut unit_field_val: u32 = unsafe { ::std::mem::uninitialized() };
         unsafe {
-            ::std::ptr::copy_nonoverlapping(&self._bitfield_1 as *const _ as
-                                                *const u8,
-                                            &mut unit_field_val as *mut u32 as
-                                                *mut u8,
-                                            ::std::mem::size_of::<u32>())
+            ::std::ptr::copy_nonoverlapping(
+                &self._bitfield_1 as *const _ as *const u8,
+                &mut unit_field_val as *mut u32 as *mut u8,
+                ::std::mem::size_of::<u32>(),
+            )
         };
         let mask = 255u64 as u32;
         let val = (unit_field_val & mask) >> 0usize;
@@ -1976,31 +2016,31 @@ impl mach_msg_ool_descriptor_t {
         let val = val as u32 as u32;
         let mut unit_field_val: u32 = unsafe { ::std::mem::uninitialized() };
         unsafe {
-            ::std::ptr::copy_nonoverlapping(&self._bitfield_1 as *const _ as
-                                                *const u8,
-                                            &mut unit_field_val as *mut u32 as
-                                                *mut u8,
-                                            ::std::mem::size_of::<u32>())
+            ::std::ptr::copy_nonoverlapping(
+                &self._bitfield_1 as *const _ as *const u8,
+                &mut unit_field_val as *mut u32 as *mut u8,
+                ::std::mem::size_of::<u32>(),
+            )
         };
         unit_field_val &= !mask;
         unit_field_val |= (val << 0usize) & mask;
         unsafe {
-            ::std::ptr::copy_nonoverlapping(&unit_field_val as *const _ as
-                                                *const u8,
-                                            &mut self._bitfield_1 as *mut _ as
-                                                *mut u8,
-                                            ::std::mem::size_of::<u32>());
+            ::std::ptr::copy_nonoverlapping(
+                &unit_field_val as *const _ as *const u8,
+                &mut self._bitfield_1 as *mut _ as *mut u8,
+                ::std::mem::size_of::<u32>(),
+            );
         }
     }
     #[inline]
     pub fn copy(&self) -> mach_msg_copy_options_t {
         let mut unit_field_val: u32 = unsafe { ::std::mem::uninitialized() };
         unsafe {
-            ::std::ptr::copy_nonoverlapping(&self._bitfield_1 as *const _ as
-                                                *const u8,
-                                            &mut unit_field_val as *mut u32 as
-                                                *mut u8,
-                                            ::std::mem::size_of::<u32>())
+            ::std::ptr::copy_nonoverlapping(
+                &self._bitfield_1 as *const _ as *const u8,
+                &mut unit_field_val as *mut u32 as *mut u8,
+                ::std::mem::size_of::<u32>(),
+            )
         };
         let mask = 65280u64 as u32;
         let val = (unit_field_val & mask) >> 8usize;
@@ -2012,31 +2052,31 @@ impl mach_msg_ool_descriptor_t {
         let val = val as u32 as u32;
         let mut unit_field_val: u32 = unsafe { ::std::mem::uninitialized() };
         unsafe {
-            ::std::ptr::copy_nonoverlapping(&self._bitfield_1 as *const _ as
-                                                *const u8,
-                                            &mut unit_field_val as *mut u32 as
-                                                *mut u8,
-                                            ::std::mem::size_of::<u32>())
+            ::std::ptr::copy_nonoverlapping(
+                &self._bitfield_1 as *const _ as *const u8,
+                &mut unit_field_val as *mut u32 as *mut u8,
+                ::std::mem::size_of::<u32>(),
+            )
         };
         unit_field_val &= !mask;
         unit_field_val |= (val << 8usize) & mask;
         unsafe {
-            ::std::ptr::copy_nonoverlapping(&unit_field_val as *const _ as
-                                                *const u8,
-                                            &mut self._bitfield_1 as *mut _ as
-                                                *mut u8,
-                                            ::std::mem::size_of::<u32>());
+            ::std::ptr::copy_nonoverlapping(
+                &unit_field_val as *const _ as *const u8,
+                &mut self._bitfield_1 as *mut _ as *mut u8,
+                ::std::mem::size_of::<u32>(),
+            );
         }
     }
     #[inline]
     pub fn pad1(&self) -> ::libc::c_uint {
         let mut unit_field_val: u32 = unsafe { ::std::mem::uninitialized() };
         unsafe {
-            ::std::ptr::copy_nonoverlapping(&self._bitfield_1 as *const _ as
-                                                *const u8,
-                                            &mut unit_field_val as *mut u32 as
-                                                *mut u8,
-                                            ::std::mem::size_of::<u32>())
+            ::std::ptr::copy_nonoverlapping(
+                &self._bitfield_1 as *const _ as *const u8,
+                &mut unit_field_val as *mut u32 as *mut u8,
+                ::std::mem::size_of::<u32>(),
+            )
         };
         let mask = 16711680u64 as u32;
         let val = (unit_field_val & mask) >> 16usize;
@@ -2048,31 +2088,31 @@ impl mach_msg_ool_descriptor_t {
         let val = val as u32 as u32;
         let mut unit_field_val: u32 = unsafe { ::std::mem::uninitialized() };
         unsafe {
-            ::std::ptr::copy_nonoverlapping(&self._bitfield_1 as *const _ as
-                                                *const u8,
-                                            &mut unit_field_val as *mut u32 as
-                                                *mut u8,
-                                            ::std::mem::size_of::<u32>())
+            ::std::ptr::copy_nonoverlapping(
+                &self._bitfield_1 as *const _ as *const u8,
+                &mut unit_field_val as *mut u32 as *mut u8,
+                ::std::mem::size_of::<u32>(),
+            )
         };
         unit_field_val &= !mask;
         unit_field_val |= (val << 16usize) & mask;
         unsafe {
-            ::std::ptr::copy_nonoverlapping(&unit_field_val as *const _ as
-                                                *const u8,
-                                            &mut self._bitfield_1 as *mut _ as
-                                                *mut u8,
-                                            ::std::mem::size_of::<u32>());
+            ::std::ptr::copy_nonoverlapping(
+                &unit_field_val as *const _ as *const u8,
+                &mut self._bitfield_1 as *mut _ as *mut u8,
+                ::std::mem::size_of::<u32>(),
+            );
         }
     }
     #[inline]
     pub fn type_(&self) -> mach_msg_descriptor_type_t {
         let mut unit_field_val: u32 = unsafe { ::std::mem::uninitialized() };
         unsafe {
-            ::std::ptr::copy_nonoverlapping(&self._bitfield_1 as *const _ as
-                                                *const u8,
-                                            &mut unit_field_val as *mut u32 as
-                                                *mut u8,
-                                            ::std::mem::size_of::<u32>())
+            ::std::ptr::copy_nonoverlapping(
+                &self._bitfield_1 as *const _ as *const u8,
+                &mut unit_field_val as *mut u32 as *mut u8,
+                ::std::mem::size_of::<u32>(),
+            )
         };
         let mask = 4278190080u64 as u32;
         let val = (unit_field_val & mask) >> 24usize;
@@ -2084,35 +2124,35 @@ impl mach_msg_ool_descriptor_t {
         let val = val as u32 as u32;
         let mut unit_field_val: u32 = unsafe { ::std::mem::uninitialized() };
         unsafe {
-            ::std::ptr::copy_nonoverlapping(&self._bitfield_1 as *const _ as
-                                                *const u8,
-                                            &mut unit_field_val as *mut u32 as
-                                                *mut u8,
-                                            ::std::mem::size_of::<u32>())
+            ::std::ptr::copy_nonoverlapping(
+                &self._bitfield_1 as *const _ as *const u8,
+                &mut unit_field_val as *mut u32 as *mut u8,
+                ::std::mem::size_of::<u32>(),
+            )
         };
         unit_field_val &= !mask;
         unit_field_val |= (val << 24usize) & mask;
         unsafe {
-            ::std::ptr::copy_nonoverlapping(&unit_field_val as *const _ as
-                                                *const u8,
-                                            &mut self._bitfield_1 as *mut _ as
-                                                *mut u8,
-                                            ::std::mem::size_of::<u32>());
+            ::std::ptr::copy_nonoverlapping(
+                &unit_field_val as *const _ as *const u8,
+                &mut self._bitfield_1 as *mut _ as *mut u8,
+                ::std::mem::size_of::<u32>(),
+            );
         }
     }
     #[inline]
-    pub fn new_bitfield_1(deallocate: boolean_t,
-                          copy: mach_msg_copy_options_t, pad1: ::libc::c_uint,
-                          type_: mach_msg_descriptor_type_t) -> u32 {
+    pub fn new_bitfield_1(
+        deallocate: boolean_t,
+        copy: mach_msg_copy_options_t,
+        pad1: ::libc::c_uint,
+        type_: mach_msg_descriptor_type_t,
+    ) -> u32 {
         ({
-             ({
-                  ({
-                       ({ 0 } |
-                            ((deallocate as u32 as u32) << 0usize) &
-                                (255u64 as u32))
-                   } | ((copy as u32 as u32) << 8usize) & (65280u64 as u32))
-              } | ((pad1 as u32 as u32) << 16usize) & (16711680u64 as u32))
-         } | ((type_ as u32 as u32) << 24usize) & (4278190080u64 as u32))
+            ({
+                ({ ({ 0 } | ((deallocate as u32 as u32) << 0usize) & (255u64 as u32)) }
+                    | ((copy as u32 as u32) << 8usize) & (65280u64 as u32))
+            } | ((pad1 as u32 as u32) << 16usize) & (16711680u64 as u32))
+        } | ((type_ as u32 as u32) << 24usize) & (4278190080u64 as u32))
     }
 }
 #[repr(C)]
@@ -2123,18 +2163,20 @@ pub struct mach_msg_ool_ports_descriptor32_t {
     pub _bitfield_1: [u8; 4usize],
 }
 impl Clone for mach_msg_ool_ports_descriptor32_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 impl mach_msg_ool_ports_descriptor32_t {
     #[inline]
     pub fn deallocate(&self) -> boolean_t {
         let mut unit_field_val: u32 = unsafe { ::std::mem::uninitialized() };
         unsafe {
-            ::std::ptr::copy_nonoverlapping(&self._bitfield_1 as *const _ as
-                                                *const u8,
-                                            &mut unit_field_val as *mut u32 as
-                                                *mut u8,
-                                            ::std::mem::size_of::<u32>())
+            ::std::ptr::copy_nonoverlapping(
+                &self._bitfield_1 as *const _ as *const u8,
+                &mut unit_field_val as *mut u32 as *mut u8,
+                ::std::mem::size_of::<u32>(),
+            )
         };
         let mask = 255u64 as u32;
         let val = (unit_field_val & mask) >> 0usize;
@@ -2146,31 +2188,31 @@ impl mach_msg_ool_ports_descriptor32_t {
         let val = val as u32 as u32;
         let mut unit_field_val: u32 = unsafe { ::std::mem::uninitialized() };
         unsafe {
-            ::std::ptr::copy_nonoverlapping(&self._bitfield_1 as *const _ as
-                                                *const u8,
-                                            &mut unit_field_val as *mut u32 as
-                                                *mut u8,
-                                            ::std::mem::size_of::<u32>())
+            ::std::ptr::copy_nonoverlapping(
+                &self._bitfield_1 as *const _ as *const u8,
+                &mut unit_field_val as *mut u32 as *mut u8,
+                ::std::mem::size_of::<u32>(),
+            )
         };
         unit_field_val &= !mask;
         unit_field_val |= (val << 0usize) & mask;
         unsafe {
-            ::std::ptr::copy_nonoverlapping(&unit_field_val as *const _ as
-                                                *const u8,
-                                            &mut self._bitfield_1 as *mut _ as
-                                                *mut u8,
-                                            ::std::mem::size_of::<u32>());
+            ::std::ptr::copy_nonoverlapping(
+                &unit_field_val as *const _ as *const u8,
+                &mut self._bitfield_1 as *mut _ as *mut u8,
+                ::std::mem::size_of::<u32>(),
+            );
         }
     }
     #[inline]
     pub fn copy(&self) -> mach_msg_copy_options_t {
         let mut unit_field_val: u32 = unsafe { ::std::mem::uninitialized() };
         unsafe {
-            ::std::ptr::copy_nonoverlapping(&self._bitfield_1 as *const _ as
-                                                *const u8,
-                                            &mut unit_field_val as *mut u32 as
-                                                *mut u8,
-                                            ::std::mem::size_of::<u32>())
+            ::std::ptr::copy_nonoverlapping(
+                &self._bitfield_1 as *const _ as *const u8,
+                &mut unit_field_val as *mut u32 as *mut u8,
+                ::std::mem::size_of::<u32>(),
+            )
         };
         let mask = 65280u64 as u32;
         let val = (unit_field_val & mask) >> 8usize;
@@ -2182,31 +2224,31 @@ impl mach_msg_ool_ports_descriptor32_t {
         let val = val as u32 as u32;
         let mut unit_field_val: u32 = unsafe { ::std::mem::uninitialized() };
         unsafe {
-            ::std::ptr::copy_nonoverlapping(&self._bitfield_1 as *const _ as
-                                                *const u8,
-                                            &mut unit_field_val as *mut u32 as
-                                                *mut u8,
-                                            ::std::mem::size_of::<u32>())
+            ::std::ptr::copy_nonoverlapping(
+                &self._bitfield_1 as *const _ as *const u8,
+                &mut unit_field_val as *mut u32 as *mut u8,
+                ::std::mem::size_of::<u32>(),
+            )
         };
         unit_field_val &= !mask;
         unit_field_val |= (val << 8usize) & mask;
         unsafe {
-            ::std::ptr::copy_nonoverlapping(&unit_field_val as *const _ as
-                                                *const u8,
-                                            &mut self._bitfield_1 as *mut _ as
-                                                *mut u8,
-                                            ::std::mem::size_of::<u32>());
+            ::std::ptr::copy_nonoverlapping(
+                &unit_field_val as *const _ as *const u8,
+                &mut self._bitfield_1 as *mut _ as *mut u8,
+                ::std::mem::size_of::<u32>(),
+            );
         }
     }
     #[inline]
     pub fn disposition(&self) -> mach_msg_type_name_t {
         let mut unit_field_val: u32 = unsafe { ::std::mem::uninitialized() };
         unsafe {
-            ::std::ptr::copy_nonoverlapping(&self._bitfield_1 as *const _ as
-                                                *const u8,
-                                            &mut unit_field_val as *mut u32 as
-                                                *mut u8,
-                                            ::std::mem::size_of::<u32>())
+            ::std::ptr::copy_nonoverlapping(
+                &self._bitfield_1 as *const _ as *const u8,
+                &mut unit_field_val as *mut u32 as *mut u8,
+                ::std::mem::size_of::<u32>(),
+            )
         };
         let mask = 16711680u64 as u32;
         let val = (unit_field_val & mask) >> 16usize;
@@ -2218,31 +2260,31 @@ impl mach_msg_ool_ports_descriptor32_t {
         let val = val as u32 as u32;
         let mut unit_field_val: u32 = unsafe { ::std::mem::uninitialized() };
         unsafe {
-            ::std::ptr::copy_nonoverlapping(&self._bitfield_1 as *const _ as
-                                                *const u8,
-                                            &mut unit_field_val as *mut u32 as
-                                                *mut u8,
-                                            ::std::mem::size_of::<u32>())
+            ::std::ptr::copy_nonoverlapping(
+                &self._bitfield_1 as *const _ as *const u8,
+                &mut unit_field_val as *mut u32 as *mut u8,
+                ::std::mem::size_of::<u32>(),
+            )
         };
         unit_field_val &= !mask;
         unit_field_val |= (val << 16usize) & mask;
         unsafe {
-            ::std::ptr::copy_nonoverlapping(&unit_field_val as *const _ as
-                                                *const u8,
-                                            &mut self._bitfield_1 as *mut _ as
-                                                *mut u8,
-                                            ::std::mem::size_of::<u32>());
+            ::std::ptr::copy_nonoverlapping(
+                &unit_field_val as *const _ as *const u8,
+                &mut self._bitfield_1 as *mut _ as *mut u8,
+                ::std::mem::size_of::<u32>(),
+            );
         }
     }
     #[inline]
     pub fn type_(&self) -> mach_msg_descriptor_type_t {
         let mut unit_field_val: u32 = unsafe { ::std::mem::uninitialized() };
         unsafe {
-            ::std::ptr::copy_nonoverlapping(&self._bitfield_1 as *const _ as
-                                                *const u8,
-                                            &mut unit_field_val as *mut u32 as
-                                                *mut u8,
-                                            ::std::mem::size_of::<u32>())
+            ::std::ptr::copy_nonoverlapping(
+                &self._bitfield_1 as *const _ as *const u8,
+                &mut unit_field_val as *mut u32 as *mut u8,
+                ::std::mem::size_of::<u32>(),
+            )
         };
         let mask = 4278190080u64 as u32;
         let val = (unit_field_val & mask) >> 24usize;
@@ -2254,38 +2296,35 @@ impl mach_msg_ool_ports_descriptor32_t {
         let val = val as u32 as u32;
         let mut unit_field_val: u32 = unsafe { ::std::mem::uninitialized() };
         unsafe {
-            ::std::ptr::copy_nonoverlapping(&self._bitfield_1 as *const _ as
-                                                *const u8,
-                                            &mut unit_field_val as *mut u32 as
-                                                *mut u8,
-                                            ::std::mem::size_of::<u32>())
+            ::std::ptr::copy_nonoverlapping(
+                &self._bitfield_1 as *const _ as *const u8,
+                &mut unit_field_val as *mut u32 as *mut u8,
+                ::std::mem::size_of::<u32>(),
+            )
         };
         unit_field_val &= !mask;
         unit_field_val |= (val << 24usize) & mask;
         unsafe {
-            ::std::ptr::copy_nonoverlapping(&unit_field_val as *const _ as
-                                                *const u8,
-                                            &mut self._bitfield_1 as *mut _ as
-                                                *mut u8,
-                                            ::std::mem::size_of::<u32>());
+            ::std::ptr::copy_nonoverlapping(
+                &unit_field_val as *const _ as *const u8,
+                &mut self._bitfield_1 as *mut _ as *mut u8,
+                ::std::mem::size_of::<u32>(),
+            );
         }
     }
     #[inline]
-    pub fn new_bitfield_1(deallocate: boolean_t,
-                          copy: mach_msg_copy_options_t,
-                          disposition: mach_msg_type_name_t,
-                          type_: mach_msg_descriptor_type_t) -> u32 {
+    pub fn new_bitfield_1(
+        deallocate: boolean_t,
+        copy: mach_msg_copy_options_t,
+        disposition: mach_msg_type_name_t,
+        type_: mach_msg_descriptor_type_t,
+    ) -> u32 {
         ({
-             ({
-                  ({
-                       ({ 0 } |
-                            ((deallocate as u32 as u32) << 0usize) &
-                                (255u64 as u32))
-                   } | ((copy as u32 as u32) << 8usize) & (65280u64 as u32))
-              } |
-                  ((disposition as u32 as u32) << 16usize) &
-                      (16711680u64 as u32))
-         } | ((type_ as u32 as u32) << 24usize) & (4278190080u64 as u32))
+            ({
+                ({ ({ 0 } | ((deallocate as u32 as u32) << 0usize) & (255u64 as u32)) }
+                    | ((copy as u32 as u32) << 8usize) & (65280u64 as u32))
+            } | ((disposition as u32 as u32) << 16usize) & (16711680u64 as u32))
+        } | ((type_ as u32 as u32) << 24usize) & (4278190080u64 as u32))
     }
 }
 #[repr(C)]
@@ -2296,18 +2335,20 @@ pub struct mach_msg_ool_ports_descriptor64_t {
     pub count: mach_msg_size_t,
 }
 impl Clone for mach_msg_ool_ports_descriptor64_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 impl mach_msg_ool_ports_descriptor64_t {
     #[inline]
     pub fn deallocate(&self) -> boolean_t {
         let mut unit_field_val: u32 = unsafe { ::std::mem::uninitialized() };
         unsafe {
-            ::std::ptr::copy_nonoverlapping(&self._bitfield_1 as *const _ as
-                                                *const u8,
-                                            &mut unit_field_val as *mut u32 as
-                                                *mut u8,
-                                            ::std::mem::size_of::<u32>())
+            ::std::ptr::copy_nonoverlapping(
+                &self._bitfield_1 as *const _ as *const u8,
+                &mut unit_field_val as *mut u32 as *mut u8,
+                ::std::mem::size_of::<u32>(),
+            )
         };
         let mask = 255u64 as u32;
         let val = (unit_field_val & mask) >> 0usize;
@@ -2319,31 +2360,31 @@ impl mach_msg_ool_ports_descriptor64_t {
         let val = val as u32 as u32;
         let mut unit_field_val: u32 = unsafe { ::std::mem::uninitialized() };
         unsafe {
-            ::std::ptr::copy_nonoverlapping(&self._bitfield_1 as *const _ as
-                                                *const u8,
-                                            &mut unit_field_val as *mut u32 as
-                                                *mut u8,
-                                            ::std::mem::size_of::<u32>())
+            ::std::ptr::copy_nonoverlapping(
+                &self._bitfield_1 as *const _ as *const u8,
+                &mut unit_field_val as *mut u32 as *mut u8,
+                ::std::mem::size_of::<u32>(),
+            )
         };
         unit_field_val &= !mask;
         unit_field_val |= (val << 0usize) & mask;
         unsafe {
-            ::std::ptr::copy_nonoverlapping(&unit_field_val as *const _ as
-                                                *const u8,
-                                            &mut self._bitfield_1 as *mut _ as
-                                                *mut u8,
-                                            ::std::mem::size_of::<u32>());
+            ::std::ptr::copy_nonoverlapping(
+                &unit_field_val as *const _ as *const u8,
+                &mut self._bitfield_1 as *mut _ as *mut u8,
+                ::std::mem::size_of::<u32>(),
+            );
         }
     }
     #[inline]
     pub fn copy(&self) -> mach_msg_copy_options_t {
         let mut unit_field_val: u32 = unsafe { ::std::mem::uninitialized() };
         unsafe {
-            ::std::ptr::copy_nonoverlapping(&self._bitfield_1 as *const _ as
-                                                *const u8,
-                                            &mut unit_field_val as *mut u32 as
-                                                *mut u8,
-                                            ::std::mem::size_of::<u32>())
+            ::std::ptr::copy_nonoverlapping(
+                &self._bitfield_1 as *const _ as *const u8,
+                &mut unit_field_val as *mut u32 as *mut u8,
+                ::std::mem::size_of::<u32>(),
+            )
         };
         let mask = 65280u64 as u32;
         let val = (unit_field_val & mask) >> 8usize;
@@ -2355,31 +2396,31 @@ impl mach_msg_ool_ports_descriptor64_t {
         let val = val as u32 as u32;
         let mut unit_field_val: u32 = unsafe { ::std::mem::uninitialized() };
         unsafe {
-            ::std::ptr::copy_nonoverlapping(&self._bitfield_1 as *const _ as
-                                                *const u8,
-                                            &mut unit_field_val as *mut u32 as
-                                                *mut u8,
-                                            ::std::mem::size_of::<u32>())
+            ::std::ptr::copy_nonoverlapping(
+                &self._bitfield_1 as *const _ as *const u8,
+                &mut unit_field_val as *mut u32 as *mut u8,
+                ::std::mem::size_of::<u32>(),
+            )
         };
         unit_field_val &= !mask;
         unit_field_val |= (val << 8usize) & mask;
         unsafe {
-            ::std::ptr::copy_nonoverlapping(&unit_field_val as *const _ as
-                                                *const u8,
-                                            &mut self._bitfield_1 as *mut _ as
-                                                *mut u8,
-                                            ::std::mem::size_of::<u32>());
+            ::std::ptr::copy_nonoverlapping(
+                &unit_field_val as *const _ as *const u8,
+                &mut self._bitfield_1 as *mut _ as *mut u8,
+                ::std::mem::size_of::<u32>(),
+            );
         }
     }
     #[inline]
     pub fn disposition(&self) -> mach_msg_type_name_t {
         let mut unit_field_val: u32 = unsafe { ::std::mem::uninitialized() };
         unsafe {
-            ::std::ptr::copy_nonoverlapping(&self._bitfield_1 as *const _ as
-                                                *const u8,
-                                            &mut unit_field_val as *mut u32 as
-                                                *mut u8,
-                                            ::std::mem::size_of::<u32>())
+            ::std::ptr::copy_nonoverlapping(
+                &self._bitfield_1 as *const _ as *const u8,
+                &mut unit_field_val as *mut u32 as *mut u8,
+                ::std::mem::size_of::<u32>(),
+            )
         };
         let mask = 16711680u64 as u32;
         let val = (unit_field_val & mask) >> 16usize;
@@ -2391,31 +2432,31 @@ impl mach_msg_ool_ports_descriptor64_t {
         let val = val as u32 as u32;
         let mut unit_field_val: u32 = unsafe { ::std::mem::uninitialized() };
         unsafe {
-            ::std::ptr::copy_nonoverlapping(&self._bitfield_1 as *const _ as
-                                                *const u8,
-                                            &mut unit_field_val as *mut u32 as
-                                                *mut u8,
-                                            ::std::mem::size_of::<u32>())
+            ::std::ptr::copy_nonoverlapping(
+                &self._bitfield_1 as *const _ as *const u8,
+                &mut unit_field_val as *mut u32 as *mut u8,
+                ::std::mem::size_of::<u32>(),
+            )
         };
         unit_field_val &= !mask;
         unit_field_val |= (val << 16usize) & mask;
         unsafe {
-            ::std::ptr::copy_nonoverlapping(&unit_field_val as *const _ as
-                                                *const u8,
-                                            &mut self._bitfield_1 as *mut _ as
-                                                *mut u8,
-                                            ::std::mem::size_of::<u32>());
+            ::std::ptr::copy_nonoverlapping(
+                &unit_field_val as *const _ as *const u8,
+                &mut self._bitfield_1 as *mut _ as *mut u8,
+                ::std::mem::size_of::<u32>(),
+            );
         }
     }
     #[inline]
     pub fn type_(&self) -> mach_msg_descriptor_type_t {
         let mut unit_field_val: u32 = unsafe { ::std::mem::uninitialized() };
         unsafe {
-            ::std::ptr::copy_nonoverlapping(&self._bitfield_1 as *const _ as
-                                                *const u8,
-                                            &mut unit_field_val as *mut u32 as
-                                                *mut u8,
-                                            ::std::mem::size_of::<u32>())
+            ::std::ptr::copy_nonoverlapping(
+                &self._bitfield_1 as *const _ as *const u8,
+                &mut unit_field_val as *mut u32 as *mut u8,
+                ::std::mem::size_of::<u32>(),
+            )
         };
         let mask = 4278190080u64 as u32;
         let val = (unit_field_val & mask) >> 24usize;
@@ -2427,38 +2468,35 @@ impl mach_msg_ool_ports_descriptor64_t {
         let val = val as u32 as u32;
         let mut unit_field_val: u32 = unsafe { ::std::mem::uninitialized() };
         unsafe {
-            ::std::ptr::copy_nonoverlapping(&self._bitfield_1 as *const _ as
-                                                *const u8,
-                                            &mut unit_field_val as *mut u32 as
-                                                *mut u8,
-                                            ::std::mem::size_of::<u32>())
+            ::std::ptr::copy_nonoverlapping(
+                &self._bitfield_1 as *const _ as *const u8,
+                &mut unit_field_val as *mut u32 as *mut u8,
+                ::std::mem::size_of::<u32>(),
+            )
         };
         unit_field_val &= !mask;
         unit_field_val |= (val << 24usize) & mask;
         unsafe {
-            ::std::ptr::copy_nonoverlapping(&unit_field_val as *const _ as
-                                                *const u8,
-                                            &mut self._bitfield_1 as *mut _ as
-                                                *mut u8,
-                                            ::std::mem::size_of::<u32>());
+            ::std::ptr::copy_nonoverlapping(
+                &unit_field_val as *const _ as *const u8,
+                &mut self._bitfield_1 as *mut _ as *mut u8,
+                ::std::mem::size_of::<u32>(),
+            );
         }
     }
     #[inline]
-    pub fn new_bitfield_1(deallocate: boolean_t,
-                          copy: mach_msg_copy_options_t,
-                          disposition: mach_msg_type_name_t,
-                          type_: mach_msg_descriptor_type_t) -> u32 {
+    pub fn new_bitfield_1(
+        deallocate: boolean_t,
+        copy: mach_msg_copy_options_t,
+        disposition: mach_msg_type_name_t,
+        type_: mach_msg_descriptor_type_t,
+    ) -> u32 {
         ({
-             ({
-                  ({
-                       ({ 0 } |
-                            ((deallocate as u32 as u32) << 0usize) &
-                                (255u64 as u32))
-                   } | ((copy as u32 as u32) << 8usize) & (65280u64 as u32))
-              } |
-                  ((disposition as u32 as u32) << 16usize) &
-                      (16711680u64 as u32))
-         } | ((type_ as u32 as u32) << 24usize) & (4278190080u64 as u32))
+            ({
+                ({ ({ 0 } | ((deallocate as u32 as u32) << 0usize) & (255u64 as u32)) }
+                    | ((copy as u32 as u32) << 8usize) & (65280u64 as u32))
+            } | ((disposition as u32 as u32) << 16usize) & (16711680u64 as u32))
+        } | ((type_ as u32 as u32) << 24usize) & (4278190080u64 as u32))
     }
 }
 #[repr(C)]
@@ -2469,18 +2507,20 @@ pub struct mach_msg_ool_ports_descriptor_t {
     pub count: mach_msg_size_t,
 }
 impl Clone for mach_msg_ool_ports_descriptor_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 impl mach_msg_ool_ports_descriptor_t {
     #[inline]
     pub fn deallocate(&self) -> boolean_t {
         let mut unit_field_val: u32 = unsafe { ::std::mem::uninitialized() };
         unsafe {
-            ::std::ptr::copy_nonoverlapping(&self._bitfield_1 as *const _ as
-                                                *const u8,
-                                            &mut unit_field_val as *mut u32 as
-                                                *mut u8,
-                                            ::std::mem::size_of::<u32>())
+            ::std::ptr::copy_nonoverlapping(
+                &self._bitfield_1 as *const _ as *const u8,
+                &mut unit_field_val as *mut u32 as *mut u8,
+                ::std::mem::size_of::<u32>(),
+            )
         };
         let mask = 255u64 as u32;
         let val = (unit_field_val & mask) >> 0usize;
@@ -2492,31 +2532,31 @@ impl mach_msg_ool_ports_descriptor_t {
         let val = val as u32 as u32;
         let mut unit_field_val: u32 = unsafe { ::std::mem::uninitialized() };
         unsafe {
-            ::std::ptr::copy_nonoverlapping(&self._bitfield_1 as *const _ as
-                                                *const u8,
-                                            &mut unit_field_val as *mut u32 as
-                                                *mut u8,
-                                            ::std::mem::size_of::<u32>())
+            ::std::ptr::copy_nonoverlapping(
+                &self._bitfield_1 as *const _ as *const u8,
+                &mut unit_field_val as *mut u32 as *mut u8,
+                ::std::mem::size_of::<u32>(),
+            )
         };
         unit_field_val &= !mask;
         unit_field_val |= (val << 0usize) & mask;
         unsafe {
-            ::std::ptr::copy_nonoverlapping(&unit_field_val as *const _ as
-                                                *const u8,
-                                            &mut self._bitfield_1 as *mut _ as
-                                                *mut u8,
-                                            ::std::mem::size_of::<u32>());
+            ::std::ptr::copy_nonoverlapping(
+                &unit_field_val as *const _ as *const u8,
+                &mut self._bitfield_1 as *mut _ as *mut u8,
+                ::std::mem::size_of::<u32>(),
+            );
         }
     }
     #[inline]
     pub fn copy(&self) -> mach_msg_copy_options_t {
         let mut unit_field_val: u32 = unsafe { ::std::mem::uninitialized() };
         unsafe {
-            ::std::ptr::copy_nonoverlapping(&self._bitfield_1 as *const _ as
-                                                *const u8,
-                                            &mut unit_field_val as *mut u32 as
-                                                *mut u8,
-                                            ::std::mem::size_of::<u32>())
+            ::std::ptr::copy_nonoverlapping(
+                &self._bitfield_1 as *const _ as *const u8,
+                &mut unit_field_val as *mut u32 as *mut u8,
+                ::std::mem::size_of::<u32>(),
+            )
         };
         let mask = 65280u64 as u32;
         let val = (unit_field_val & mask) >> 8usize;
@@ -2528,31 +2568,31 @@ impl mach_msg_ool_ports_descriptor_t {
         let val = val as u32 as u32;
         let mut unit_field_val: u32 = unsafe { ::std::mem::uninitialized() };
         unsafe {
-            ::std::ptr::copy_nonoverlapping(&self._bitfield_1 as *const _ as
-                                                *const u8,
-                                            &mut unit_field_val as *mut u32 as
-                                                *mut u8,
-                                            ::std::mem::size_of::<u32>())
+            ::std::ptr::copy_nonoverlapping(
+                &self._bitfield_1 as *const _ as *const u8,
+                &mut unit_field_val as *mut u32 as *mut u8,
+                ::std::mem::size_of::<u32>(),
+            )
         };
         unit_field_val &= !mask;
         unit_field_val |= (val << 8usize) & mask;
         unsafe {
-            ::std::ptr::copy_nonoverlapping(&unit_field_val as *const _ as
-                                                *const u8,
-                                            &mut self._bitfield_1 as *mut _ as
-                                                *mut u8,
-                                            ::std::mem::size_of::<u32>());
+            ::std::ptr::copy_nonoverlapping(
+                &unit_field_val as *const _ as *const u8,
+                &mut self._bitfield_1 as *mut _ as *mut u8,
+                ::std::mem::size_of::<u32>(),
+            );
         }
     }
     #[inline]
     pub fn disposition(&self) -> mach_msg_type_name_t {
         let mut unit_field_val: u32 = unsafe { ::std::mem::uninitialized() };
         unsafe {
-            ::std::ptr::copy_nonoverlapping(&self._bitfield_1 as *const _ as
-                                                *const u8,
-                                            &mut unit_field_val as *mut u32 as
-                                                *mut u8,
-                                            ::std::mem::size_of::<u32>())
+            ::std::ptr::copy_nonoverlapping(
+                &self._bitfield_1 as *const _ as *const u8,
+                &mut unit_field_val as *mut u32 as *mut u8,
+                ::std::mem::size_of::<u32>(),
+            )
         };
         let mask = 16711680u64 as u32;
         let val = (unit_field_val & mask) >> 16usize;
@@ -2564,31 +2604,31 @@ impl mach_msg_ool_ports_descriptor_t {
         let val = val as u32 as u32;
         let mut unit_field_val: u32 = unsafe { ::std::mem::uninitialized() };
         unsafe {
-            ::std::ptr::copy_nonoverlapping(&self._bitfield_1 as *const _ as
-                                                *const u8,
-                                            &mut unit_field_val as *mut u32 as
-                                                *mut u8,
-                                            ::std::mem::size_of::<u32>())
+            ::std::ptr::copy_nonoverlapping(
+                &self._bitfield_1 as *const _ as *const u8,
+                &mut unit_field_val as *mut u32 as *mut u8,
+                ::std::mem::size_of::<u32>(),
+            )
         };
         unit_field_val &= !mask;
         unit_field_val |= (val << 16usize) & mask;
         unsafe {
-            ::std::ptr::copy_nonoverlapping(&unit_field_val as *const _ as
-                                                *const u8,
-                                            &mut self._bitfield_1 as *mut _ as
-                                                *mut u8,
-                                            ::std::mem::size_of::<u32>());
+            ::std::ptr::copy_nonoverlapping(
+                &unit_field_val as *const _ as *const u8,
+                &mut self._bitfield_1 as *mut _ as *mut u8,
+                ::std::mem::size_of::<u32>(),
+            );
         }
     }
     #[inline]
     pub fn type_(&self) -> mach_msg_descriptor_type_t {
         let mut unit_field_val: u32 = unsafe { ::std::mem::uninitialized() };
         unsafe {
-            ::std::ptr::copy_nonoverlapping(&self._bitfield_1 as *const _ as
-                                                *const u8,
-                                            &mut unit_field_val as *mut u32 as
-                                                *mut u8,
-                                            ::std::mem::size_of::<u32>())
+            ::std::ptr::copy_nonoverlapping(
+                &self._bitfield_1 as *const _ as *const u8,
+                &mut unit_field_val as *mut u32 as *mut u8,
+                ::std::mem::size_of::<u32>(),
+            )
         };
         let mask = 4278190080u64 as u32;
         let val = (unit_field_val & mask) >> 24usize;
@@ -2600,38 +2640,35 @@ impl mach_msg_ool_ports_descriptor_t {
         let val = val as u32 as u32;
         let mut unit_field_val: u32 = unsafe { ::std::mem::uninitialized() };
         unsafe {
-            ::std::ptr::copy_nonoverlapping(&self._bitfield_1 as *const _ as
-                                                *const u8,
-                                            &mut unit_field_val as *mut u32 as
-                                                *mut u8,
-                                            ::std::mem::size_of::<u32>())
+            ::std::ptr::copy_nonoverlapping(
+                &self._bitfield_1 as *const _ as *const u8,
+                &mut unit_field_val as *mut u32 as *mut u8,
+                ::std::mem::size_of::<u32>(),
+            )
         };
         unit_field_val &= !mask;
         unit_field_val |= (val << 24usize) & mask;
         unsafe {
-            ::std::ptr::copy_nonoverlapping(&unit_field_val as *const _ as
-                                                *const u8,
-                                            &mut self._bitfield_1 as *mut _ as
-                                                *mut u8,
-                                            ::std::mem::size_of::<u32>());
+            ::std::ptr::copy_nonoverlapping(
+                &unit_field_val as *const _ as *const u8,
+                &mut self._bitfield_1 as *mut _ as *mut u8,
+                ::std::mem::size_of::<u32>(),
+            );
         }
     }
     #[inline]
-    pub fn new_bitfield_1(deallocate: boolean_t,
-                          copy: mach_msg_copy_options_t,
-                          disposition: mach_msg_type_name_t,
-                          type_: mach_msg_descriptor_type_t) -> u32 {
+    pub fn new_bitfield_1(
+        deallocate: boolean_t,
+        copy: mach_msg_copy_options_t,
+        disposition: mach_msg_type_name_t,
+        type_: mach_msg_descriptor_type_t,
+    ) -> u32 {
         ({
-             ({
-                  ({
-                       ({ 0 } |
-                            ((deallocate as u32 as u32) << 0usize) &
-                                (255u64 as u32))
-                   } | ((copy as u32 as u32) << 8usize) & (65280u64 as u32))
-              } |
-                  ((disposition as u32 as u32) << 16usize) &
-                      (16711680u64 as u32))
-         } | ((type_ as u32 as u32) << 24usize) & (4278190080u64 as u32))
+            ({
+                ({ ({ 0 } | ((deallocate as u32 as u32) << 0usize) & (255u64 as u32)) }
+                    | ((copy as u32 as u32) << 8usize) & (65280u64 as u32))
+            } | ((disposition as u32 as u32) << 16usize) & (16711680u64 as u32))
+        } | ((type_ as u32 as u32) << 24usize) & (4278190080u64 as u32))
     }
 }
 #[repr(C)]
@@ -2644,7 +2681,9 @@ pub union mach_msg_descriptor_t {
     _bindgen_union_align: [u32; 4usize],
 }
 impl Clone for mach_msg_descriptor_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -2652,7 +2691,9 @@ pub struct mach_msg_body_t {
     pub msgh_descriptor_count: mach_msg_size_t,
 }
 impl Clone for mach_msg_body_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -2665,7 +2706,9 @@ pub struct mach_msg_header_t {
     pub msgh_id: mach_msg_id_t,
 }
 impl Clone for mach_msg_header_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -2674,7 +2717,9 @@ pub struct mach_msg_base_t {
     pub body: mach_msg_body_t,
 }
 impl Clone for mach_msg_base_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 pub type mach_msg_trailer_type_t = ::libc::c_uint;
 pub type mach_msg_trailer_size_t = ::libc::c_uint;
@@ -2686,7 +2731,9 @@ pub struct mach_msg_trailer_t {
     pub msgh_trailer_size: mach_msg_trailer_size_t,
 }
 impl Clone for mach_msg_trailer_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -2696,7 +2743,9 @@ pub struct mach_msg_seqno_trailer_t {
     pub msgh_seqno: mach_port_seqno_t,
 }
 impl Clone for mach_msg_seqno_trailer_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -2704,7 +2753,9 @@ pub struct security_token_t {
     pub val: [::libc::c_uint; 2usize],
 }
 impl Clone for security_token_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -2715,7 +2766,9 @@ pub struct mach_msg_security_trailer_t {
     pub msgh_sender: security_token_t,
 }
 impl Clone for mach_msg_security_trailer_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -2723,7 +2776,9 @@ pub struct audit_token_t {
     pub val: [::libc::c_uint; 8usize],
 }
 impl Clone for audit_token_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -2735,7 +2790,9 @@ pub struct mach_msg_audit_trailer_t {
     pub msgh_audit: audit_token_t,
 }
 impl Clone for mach_msg_audit_trailer_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -2748,7 +2805,9 @@ pub struct mach_msg_context_trailer_t {
     pub msgh_context: mach_port_context_t,
 }
 impl Clone for mach_msg_context_trailer_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -2756,7 +2815,9 @@ pub struct msg_labels_t {
     pub sender: mach_port_name_t,
 }
 impl Clone for msg_labels_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -2771,7 +2832,9 @@ pub struct mach_msg_mac_trailer_t {
     pub msgh_labels: msg_labels_t,
 }
 impl Clone for mach_msg_mac_trailer_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 pub type mach_msg_max_trailer_t = mach_msg_mac_trailer_t;
 pub type mach_msg_format_0_trailer_t = mach_msg_security_trailer_t;
@@ -2790,7 +2853,9 @@ pub struct mach_msg_empty_send_t {
     pub header: mach_msg_header_t,
 }
 impl Clone for mach_msg_empty_send_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -2799,7 +2864,9 @@ pub struct mach_msg_empty_rcv_t {
     pub trailer: mach_msg_trailer_t,
 }
 impl Clone for mach_msg_empty_rcv_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -2809,33 +2876,40 @@ pub union mach_msg_empty_t {
     _bindgen_union_align: [u32; 8usize],
 }
 impl Clone for mach_msg_empty_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 pub type mach_msg_type_size_t = natural_t;
 pub type mach_msg_type_number_t = natural_t;
 pub type mach_msg_option_t = integer_t;
 pub type mach_msg_return_t = kern_return_t;
 extern "C" {
-    pub fn mach_msg_overwrite(msg: *mut mach_msg_header_t,
-                              option: mach_msg_option_t,
-                              send_size: mach_msg_size_t,
-                              rcv_size: mach_msg_size_t,
-                              rcv_name: mach_port_name_t,
-                              timeout: mach_msg_timeout_t,
-                              notify: mach_port_name_t,
-                              rcv_msg: *mut mach_msg_header_t,
-                              rcv_limit: mach_msg_size_t)
-     -> mach_msg_return_t;
+    pub fn mach_msg_overwrite(
+        msg: *mut mach_msg_header_t,
+        option: mach_msg_option_t,
+        send_size: mach_msg_size_t,
+        rcv_size: mach_msg_size_t,
+        rcv_name: mach_port_name_t,
+        timeout: mach_msg_timeout_t,
+        notify: mach_port_name_t,
+        rcv_msg: *mut mach_msg_header_t,
+        rcv_limit: mach_msg_size_t,
+    ) -> mach_msg_return_t;
 }
 extern "C" {
-    pub fn mach_msg(msg: *mut mach_msg_header_t, option: mach_msg_option_t,
-                    send_size: mach_msg_size_t, rcv_size: mach_msg_size_t,
-                    rcv_name: mach_port_name_t, timeout: mach_msg_timeout_t,
-                    notify: mach_port_name_t) -> mach_msg_return_t;
+    pub fn mach_msg(
+        msg: *mut mach_msg_header_t,
+        option: mach_msg_option_t,
+        send_size: mach_msg_size_t,
+        rcv_size: mach_msg_size_t,
+        rcv_name: mach_port_name_t,
+        timeout: mach_msg_timeout_t,
+        notify: mach_port_name_t,
+    ) -> mach_msg_return_t;
 }
 extern "C" {
-    pub fn mach_voucher_deallocate(voucher: mach_port_name_t)
-     -> kern_return_t;
+    pub fn mach_voucher_deallocate(voucher: mach_port_name_t) -> kern_return_t;
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -2857,7 +2931,9 @@ pub struct vm_statistics {
     pub speculative_count: natural_t,
 }
 impl Clone for vm_statistics {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 pub type vm_statistics_t = *mut vm_statistics;
 pub type vm_statistics_data_t = vm_statistics;
@@ -2890,7 +2966,9 @@ pub struct vm_statistics64 {
     pub total_uncompressed_pages_in_compressor: u64,
 }
 impl Clone for vm_statistics64 {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 pub type vm_statistics64_t = *mut vm_statistics64;
 pub type vm_statistics64_data_t = vm_statistics64;
@@ -2905,7 +2983,9 @@ pub struct vm_extmod_statistics {
     pub thread_set_state_caller_count: i64,
 }
 impl Clone for vm_extmod_statistics {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 pub type vm_extmod_statistics_t = *mut vm_extmod_statistics;
 pub type vm_extmod_statistics_data_t = vm_extmod_statistics;
@@ -2916,7 +2996,9 @@ pub struct vm_purgeable_stat {
     pub size: u64,
 }
 impl Clone for vm_purgeable_stat {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 pub type vm_purgeable_stat_t = vm_purgeable_stat;
 #[repr(C)]
@@ -2927,7 +3009,9 @@ pub struct vm_purgeable_info {
     pub lifo_data: [vm_purgeable_stat_t; 8usize],
 }
 impl Clone for vm_purgeable_info {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 pub type vm_purgeable_info_t = *mut vm_purgeable_info;
 pub type cpu_type_t = integer_t;
@@ -2940,7 +3024,9 @@ pub struct time_value {
     pub microseconds: integer_t,
 }
 impl Clone for time_value {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 pub type time_value_t = time_value;
 pub type host_info_t = *mut integer_t;
@@ -2965,7 +3051,9 @@ pub struct host_basic_info {
     pub max_mem: u64,
 }
 impl Clone for host_basic_info {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 pub type host_basic_info_data_t = host_basic_info;
 pub type host_basic_info_t = *mut host_basic_info;
@@ -2976,7 +3064,9 @@ pub struct host_sched_info {
     pub min_quantum: integer_t,
 }
 impl Clone for host_sched_info {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 pub type host_sched_info_data_t = host_sched_info;
 pub type host_sched_info_t = *mut host_sched_info;
@@ -2990,7 +3080,9 @@ pub struct kernel_resource_sizes {
     pub memory_object: natural_t,
 }
 impl Clone for kernel_resource_sizes {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 pub type kernel_resource_sizes_data_t = kernel_resource_sizes;
 pub type kernel_resource_sizes_t = *mut kernel_resource_sizes;
@@ -3007,7 +3099,9 @@ pub struct host_priority_info {
     pub maximum_priority: integer_t,
 }
 impl Clone for host_priority_info {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 pub type host_priority_info_data_t = host_priority_info;
 pub type host_priority_info_t = *mut host_priority_info;
@@ -3018,7 +3112,9 @@ pub struct host_load_info {
     pub mach_factor: [integer_t; 3usize],
 }
 impl Clone for host_load_info {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 pub type host_load_info_data_t = host_load_info;
 pub type host_load_info_t = *mut host_load_info;
@@ -3030,7 +3126,9 @@ pub struct host_cpu_load_info {
     pub cpu_ticks: [natural_t; 4usize],
 }
 impl Clone for host_cpu_load_info {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 pub type host_cpu_load_info_data_t = host_cpu_load_info;
 pub type host_cpu_load_info_t = *mut host_cpu_load_info;
@@ -3058,7 +3156,9 @@ pub struct memory_object_perf_info {
     pub may_cache: boolean_t,
 }
 impl Clone for memory_object_perf_info {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -3069,7 +3169,9 @@ pub struct memory_object_attr_info {
     pub temporary: boolean_t,
 }
 impl Clone for memory_object_attr_info {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -3081,7 +3183,9 @@ pub struct memory_object_behave_info {
     pub advisory_pageout: boolean_t,
 }
 impl Clone for memory_object_behave_info {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 pub type memory_object_behave_info_t = *mut memory_object_behave_info;
 pub type memory_object_behave_info_data_t = memory_object_behave_info;
@@ -3110,7 +3214,9 @@ pub struct __darwin_i386_thread_state {
     pub __gs: ::libc::c_uint,
 }
 impl Clone for __darwin_i386_thread_state {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -3119,18 +3225,20 @@ pub struct __darwin_fp_control {
     pub __bindgen_align: [u16; 0usize],
 }
 impl Clone for __darwin_fp_control {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 impl __darwin_fp_control {
     #[inline]
     pub fn __invalid(&self) -> ::libc::c_ushort {
         let mut unit_field_val: u16 = unsafe { ::std::mem::uninitialized() };
         unsafe {
-            ::std::ptr::copy_nonoverlapping(&self._bitfield_1 as *const _ as
-                                                *const u8,
-                                            &mut unit_field_val as *mut u16 as
-                                                *mut u8,
-                                            ::std::mem::size_of::<u16>())
+            ::std::ptr::copy_nonoverlapping(
+                &self._bitfield_1 as *const _ as *const u8,
+                &mut unit_field_val as *mut u16 as *mut u8,
+                ::std::mem::size_of::<u16>(),
+            )
         };
         let mask = 1u64 as u16;
         let val = (unit_field_val & mask) >> 0usize;
@@ -3142,31 +3250,31 @@ impl __darwin_fp_control {
         let val = val as u16 as u16;
         let mut unit_field_val: u16 = unsafe { ::std::mem::uninitialized() };
         unsafe {
-            ::std::ptr::copy_nonoverlapping(&self._bitfield_1 as *const _ as
-                                                *const u8,
-                                            &mut unit_field_val as *mut u16 as
-                                                *mut u8,
-                                            ::std::mem::size_of::<u16>())
+            ::std::ptr::copy_nonoverlapping(
+                &self._bitfield_1 as *const _ as *const u8,
+                &mut unit_field_val as *mut u16 as *mut u8,
+                ::std::mem::size_of::<u16>(),
+            )
         };
         unit_field_val &= !mask;
         unit_field_val |= (val << 0usize) & mask;
         unsafe {
-            ::std::ptr::copy_nonoverlapping(&unit_field_val as *const _ as
-                                                *const u8,
-                                            &mut self._bitfield_1 as *mut _ as
-                                                *mut u8,
-                                            ::std::mem::size_of::<u16>());
+            ::std::ptr::copy_nonoverlapping(
+                &unit_field_val as *const _ as *const u8,
+                &mut self._bitfield_1 as *mut _ as *mut u8,
+                ::std::mem::size_of::<u16>(),
+            );
         }
     }
     #[inline]
     pub fn __denorm(&self) -> ::libc::c_ushort {
         let mut unit_field_val: u16 = unsafe { ::std::mem::uninitialized() };
         unsafe {
-            ::std::ptr::copy_nonoverlapping(&self._bitfield_1 as *const _ as
-                                                *const u8,
-                                            &mut unit_field_val as *mut u16 as
-                                                *mut u8,
-                                            ::std::mem::size_of::<u16>())
+            ::std::ptr::copy_nonoverlapping(
+                &self._bitfield_1 as *const _ as *const u8,
+                &mut unit_field_val as *mut u16 as *mut u8,
+                ::std::mem::size_of::<u16>(),
+            )
         };
         let mask = 2u64 as u16;
         let val = (unit_field_val & mask) >> 1usize;
@@ -3178,31 +3286,31 @@ impl __darwin_fp_control {
         let val = val as u16 as u16;
         let mut unit_field_val: u16 = unsafe { ::std::mem::uninitialized() };
         unsafe {
-            ::std::ptr::copy_nonoverlapping(&self._bitfield_1 as *const _ as
-                                                *const u8,
-                                            &mut unit_field_val as *mut u16 as
-                                                *mut u8,
-                                            ::std::mem::size_of::<u16>())
+            ::std::ptr::copy_nonoverlapping(
+                &self._bitfield_1 as *const _ as *const u8,
+                &mut unit_field_val as *mut u16 as *mut u8,
+                ::std::mem::size_of::<u16>(),
+            )
         };
         unit_field_val &= !mask;
         unit_field_val |= (val << 1usize) & mask;
         unsafe {
-            ::std::ptr::copy_nonoverlapping(&unit_field_val as *const _ as
-                                                *const u8,
-                                            &mut self._bitfield_1 as *mut _ as
-                                                *mut u8,
-                                            ::std::mem::size_of::<u16>());
+            ::std::ptr::copy_nonoverlapping(
+                &unit_field_val as *const _ as *const u8,
+                &mut self._bitfield_1 as *mut _ as *mut u8,
+                ::std::mem::size_of::<u16>(),
+            );
         }
     }
     #[inline]
     pub fn __zdiv(&self) -> ::libc::c_ushort {
         let mut unit_field_val: u16 = unsafe { ::std::mem::uninitialized() };
         unsafe {
-            ::std::ptr::copy_nonoverlapping(&self._bitfield_1 as *const _ as
-                                                *const u8,
-                                            &mut unit_field_val as *mut u16 as
-                                                *mut u8,
-                                            ::std::mem::size_of::<u16>())
+            ::std::ptr::copy_nonoverlapping(
+                &self._bitfield_1 as *const _ as *const u8,
+                &mut unit_field_val as *mut u16 as *mut u8,
+                ::std::mem::size_of::<u16>(),
+            )
         };
         let mask = 4u64 as u16;
         let val = (unit_field_val & mask) >> 2usize;
@@ -3214,31 +3322,31 @@ impl __darwin_fp_control {
         let val = val as u16 as u16;
         let mut unit_field_val: u16 = unsafe { ::std::mem::uninitialized() };
         unsafe {
-            ::std::ptr::copy_nonoverlapping(&self._bitfield_1 as *const _ as
-                                                *const u8,
-                                            &mut unit_field_val as *mut u16 as
-                                                *mut u8,
-                                            ::std::mem::size_of::<u16>())
+            ::std::ptr::copy_nonoverlapping(
+                &self._bitfield_1 as *const _ as *const u8,
+                &mut unit_field_val as *mut u16 as *mut u8,
+                ::std::mem::size_of::<u16>(),
+            )
         };
         unit_field_val &= !mask;
         unit_field_val |= (val << 2usize) & mask;
         unsafe {
-            ::std::ptr::copy_nonoverlapping(&unit_field_val as *const _ as
-                                                *const u8,
-                                            &mut self._bitfield_1 as *mut _ as
-                                                *mut u8,
-                                            ::std::mem::size_of::<u16>());
+            ::std::ptr::copy_nonoverlapping(
+                &unit_field_val as *const _ as *const u8,
+                &mut self._bitfield_1 as *mut _ as *mut u8,
+                ::std::mem::size_of::<u16>(),
+            );
         }
     }
     #[inline]
     pub fn __ovrfl(&self) -> ::libc::c_ushort {
         let mut unit_field_val: u16 = unsafe { ::std::mem::uninitialized() };
         unsafe {
-            ::std::ptr::copy_nonoverlapping(&self._bitfield_1 as *const _ as
-                                                *const u8,
-                                            &mut unit_field_val as *mut u16 as
-                                                *mut u8,
-                                            ::std::mem::size_of::<u16>())
+            ::std::ptr::copy_nonoverlapping(
+                &self._bitfield_1 as *const _ as *const u8,
+                &mut unit_field_val as *mut u16 as *mut u8,
+                ::std::mem::size_of::<u16>(),
+            )
         };
         let mask = 8u64 as u16;
         let val = (unit_field_val & mask) >> 3usize;
@@ -3250,31 +3358,31 @@ impl __darwin_fp_control {
         let val = val as u16 as u16;
         let mut unit_field_val: u16 = unsafe { ::std::mem::uninitialized() };
         unsafe {
-            ::std::ptr::copy_nonoverlapping(&self._bitfield_1 as *const _ as
-                                                *const u8,
-                                            &mut unit_field_val as *mut u16 as
-                                                *mut u8,
-                                            ::std::mem::size_of::<u16>())
+            ::std::ptr::copy_nonoverlapping(
+                &self._bitfield_1 as *const _ as *const u8,
+                &mut unit_field_val as *mut u16 as *mut u8,
+                ::std::mem::size_of::<u16>(),
+            )
         };
         unit_field_val &= !mask;
         unit_field_val |= (val << 3usize) & mask;
         unsafe {
-            ::std::ptr::copy_nonoverlapping(&unit_field_val as *const _ as
-                                                *const u8,
-                                            &mut self._bitfield_1 as *mut _ as
-                                                *mut u8,
-                                            ::std::mem::size_of::<u16>());
+            ::std::ptr::copy_nonoverlapping(
+                &unit_field_val as *const _ as *const u8,
+                &mut self._bitfield_1 as *mut _ as *mut u8,
+                ::std::mem::size_of::<u16>(),
+            );
         }
     }
     #[inline]
     pub fn __undfl(&self) -> ::libc::c_ushort {
         let mut unit_field_val: u16 = unsafe { ::std::mem::uninitialized() };
         unsafe {
-            ::std::ptr::copy_nonoverlapping(&self._bitfield_1 as *const _ as
-                                                *const u8,
-                                            &mut unit_field_val as *mut u16 as
-                                                *mut u8,
-                                            ::std::mem::size_of::<u16>())
+            ::std::ptr::copy_nonoverlapping(
+                &self._bitfield_1 as *const _ as *const u8,
+                &mut unit_field_val as *mut u16 as *mut u8,
+                ::std::mem::size_of::<u16>(),
+            )
         };
         let mask = 16u64 as u16;
         let val = (unit_field_val & mask) >> 4usize;
@@ -3286,31 +3394,31 @@ impl __darwin_fp_control {
         let val = val as u16 as u16;
         let mut unit_field_val: u16 = unsafe { ::std::mem::uninitialized() };
         unsafe {
-            ::std::ptr::copy_nonoverlapping(&self._bitfield_1 as *const _ as
-                                                *const u8,
-                                            &mut unit_field_val as *mut u16 as
-                                                *mut u8,
-                                            ::std::mem::size_of::<u16>())
+            ::std::ptr::copy_nonoverlapping(
+                &self._bitfield_1 as *const _ as *const u8,
+                &mut unit_field_val as *mut u16 as *mut u8,
+                ::std::mem::size_of::<u16>(),
+            )
         };
         unit_field_val &= !mask;
         unit_field_val |= (val << 4usize) & mask;
         unsafe {
-            ::std::ptr::copy_nonoverlapping(&unit_field_val as *const _ as
-                                                *const u8,
-                                            &mut self._bitfield_1 as *mut _ as
-                                                *mut u8,
-                                            ::std::mem::size_of::<u16>());
+            ::std::ptr::copy_nonoverlapping(
+                &unit_field_val as *const _ as *const u8,
+                &mut self._bitfield_1 as *mut _ as *mut u8,
+                ::std::mem::size_of::<u16>(),
+            );
         }
     }
     #[inline]
     pub fn __precis(&self) -> ::libc::c_ushort {
         let mut unit_field_val: u16 = unsafe { ::std::mem::uninitialized() };
         unsafe {
-            ::std::ptr::copy_nonoverlapping(&self._bitfield_1 as *const _ as
-                                                *const u8,
-                                            &mut unit_field_val as *mut u16 as
-                                                *mut u8,
-                                            ::std::mem::size_of::<u16>())
+            ::std::ptr::copy_nonoverlapping(
+                &self._bitfield_1 as *const _ as *const u8,
+                &mut unit_field_val as *mut u16 as *mut u8,
+                ::std::mem::size_of::<u16>(),
+            )
         };
         let mask = 32u64 as u16;
         let val = (unit_field_val & mask) >> 5usize;
@@ -3322,31 +3430,31 @@ impl __darwin_fp_control {
         let val = val as u16 as u16;
         let mut unit_field_val: u16 = unsafe { ::std::mem::uninitialized() };
         unsafe {
-            ::std::ptr::copy_nonoverlapping(&self._bitfield_1 as *const _ as
-                                                *const u8,
-                                            &mut unit_field_val as *mut u16 as
-                                                *mut u8,
-                                            ::std::mem::size_of::<u16>())
+            ::std::ptr::copy_nonoverlapping(
+                &self._bitfield_1 as *const _ as *const u8,
+                &mut unit_field_val as *mut u16 as *mut u8,
+                ::std::mem::size_of::<u16>(),
+            )
         };
         unit_field_val &= !mask;
         unit_field_val |= (val << 5usize) & mask;
         unsafe {
-            ::std::ptr::copy_nonoverlapping(&unit_field_val as *const _ as
-                                                *const u8,
-                                            &mut self._bitfield_1 as *mut _ as
-                                                *mut u8,
-                                            ::std::mem::size_of::<u16>());
+            ::std::ptr::copy_nonoverlapping(
+                &unit_field_val as *const _ as *const u8,
+                &mut self._bitfield_1 as *mut _ as *mut u8,
+                ::std::mem::size_of::<u16>(),
+            );
         }
     }
     #[inline]
     pub fn __pc(&self) -> ::libc::c_ushort {
         let mut unit_field_val: u16 = unsafe { ::std::mem::uninitialized() };
         unsafe {
-            ::std::ptr::copy_nonoverlapping(&self._bitfield_1 as *const _ as
-                                                *const u8,
-                                            &mut unit_field_val as *mut u16 as
-                                                *mut u8,
-                                            ::std::mem::size_of::<u16>())
+            ::std::ptr::copy_nonoverlapping(
+                &self._bitfield_1 as *const _ as *const u8,
+                &mut unit_field_val as *mut u16 as *mut u8,
+                ::std::mem::size_of::<u16>(),
+            )
         };
         let mask = 768u64 as u16;
         let val = (unit_field_val & mask) >> 8usize;
@@ -3358,31 +3466,31 @@ impl __darwin_fp_control {
         let val = val as u16 as u16;
         let mut unit_field_val: u16 = unsafe { ::std::mem::uninitialized() };
         unsafe {
-            ::std::ptr::copy_nonoverlapping(&self._bitfield_1 as *const _ as
-                                                *const u8,
-                                            &mut unit_field_val as *mut u16 as
-                                                *mut u8,
-                                            ::std::mem::size_of::<u16>())
+            ::std::ptr::copy_nonoverlapping(
+                &self._bitfield_1 as *const _ as *const u8,
+                &mut unit_field_val as *mut u16 as *mut u8,
+                ::std::mem::size_of::<u16>(),
+            )
         };
         unit_field_val &= !mask;
         unit_field_val |= (val << 8usize) & mask;
         unsafe {
-            ::std::ptr::copy_nonoverlapping(&unit_field_val as *const _ as
-                                                *const u8,
-                                            &mut self._bitfield_1 as *mut _ as
-                                                *mut u8,
-                                            ::std::mem::size_of::<u16>());
+            ::std::ptr::copy_nonoverlapping(
+                &unit_field_val as *const _ as *const u8,
+                &mut self._bitfield_1 as *mut _ as *mut u8,
+                ::std::mem::size_of::<u16>(),
+            );
         }
     }
     #[inline]
     pub fn __rc(&self) -> ::libc::c_ushort {
         let mut unit_field_val: u16 = unsafe { ::std::mem::uninitialized() };
         unsafe {
-            ::std::ptr::copy_nonoverlapping(&self._bitfield_1 as *const _ as
-                                                *const u8,
-                                            &mut unit_field_val as *mut u16 as
-                                                *mut u8,
-                                            ::std::mem::size_of::<u16>())
+            ::std::ptr::copy_nonoverlapping(
+                &self._bitfield_1 as *const _ as *const u8,
+                &mut unit_field_val as *mut u16 as *mut u8,
+                ::std::mem::size_of::<u16>(),
+            )
         };
         let mask = 3072u64 as u16;
         let val = (unit_field_val & mask) >> 10usize;
@@ -3394,54 +3502,48 @@ impl __darwin_fp_control {
         let val = val as u16 as u16;
         let mut unit_field_val: u16 = unsafe { ::std::mem::uninitialized() };
         unsafe {
-            ::std::ptr::copy_nonoverlapping(&self._bitfield_1 as *const _ as
-                                                *const u8,
-                                            &mut unit_field_val as *mut u16 as
-                                                *mut u8,
-                                            ::std::mem::size_of::<u16>())
+            ::std::ptr::copy_nonoverlapping(
+                &self._bitfield_1 as *const _ as *const u8,
+                &mut unit_field_val as *mut u16 as *mut u8,
+                ::std::mem::size_of::<u16>(),
+            )
         };
         unit_field_val &= !mask;
         unit_field_val |= (val << 10usize) & mask;
         unsafe {
-            ::std::ptr::copy_nonoverlapping(&unit_field_val as *const _ as
-                                                *const u8,
-                                            &mut self._bitfield_1 as *mut _ as
-                                                *mut u8,
-                                            ::std::mem::size_of::<u16>());
+            ::std::ptr::copy_nonoverlapping(
+                &unit_field_val as *const _ as *const u8,
+                &mut self._bitfield_1 as *mut _ as *mut u8,
+                ::std::mem::size_of::<u16>(),
+            );
         }
     }
     #[inline]
-    pub fn new_bitfield_1(__invalid: ::libc::c_ushort,
-                          __denorm: ::libc::c_ushort,
-                          __zdiv: ::libc::c_ushort, __ovrfl: ::libc::c_ushort,
-                          __undfl: ::libc::c_ushort,
-                          __precis: ::libc::c_ushort, __pc: ::libc::c_ushort,
-                          __rc: ::libc::c_ushort) -> u16 {
+    pub fn new_bitfield_1(
+        __invalid: ::libc::c_ushort,
+        __denorm: ::libc::c_ushort,
+        __zdiv: ::libc::c_ushort,
+        __ovrfl: ::libc::c_ushort,
+        __undfl: ::libc::c_ushort,
+        __precis: ::libc::c_ushort,
+        __pc: ::libc::c_ushort,
+        __rc: ::libc::c_ushort,
+    ) -> u16 {
         ({
-             ({
-                  ({
-                       ({
+            ({
+                ({
+                    ({
+                        ({
                             ({
-                                 ({
-                                      ({
-                                           ({ 0 } |
-                                                ((__invalid as u16 as u16) <<
-                                                     0usize) & (1u64 as u16))
-                                       } |
-                                           ((__denorm as u16 as u16) <<
-                                                1usize) & (2u64 as u16))
-                                  } |
-                                      ((__zdiv as u16 as u16) << 2usize) &
-                                          (4u64 as u16))
-                             } |
-                                 ((__ovrfl as u16 as u16) << 3usize) &
-                                     (8u64 as u16))
-                        } |
-                            ((__undfl as u16 as u16) << 4usize) &
-                                (16u64 as u16))
-                   } | ((__precis as u16 as u16) << 5usize) & (32u64 as u16))
-              } | ((__pc as u16 as u16) << 8usize) & (768u64 as u16))
-         } | ((__rc as u16 as u16) << 10usize) & (3072u64 as u16))
+                                ({
+                                    ({ 0 } | ((__invalid as u16 as u16) << 0usize) & (1u64 as u16))
+                                } | ((__denorm as u16 as u16) << 1usize) & (2u64 as u16))
+                            } | ((__zdiv as u16 as u16) << 2usize) & (4u64 as u16))
+                        } | ((__ovrfl as u16 as u16) << 3usize) & (8u64 as u16))
+                    } | ((__undfl as u16 as u16) << 4usize) & (16u64 as u16))
+                } | ((__precis as u16 as u16) << 5usize) & (32u64 as u16))
+            } | ((__pc as u16 as u16) << 8usize) & (768u64 as u16))
+        } | ((__rc as u16 as u16) << 10usize) & (3072u64 as u16))
     }
 }
 pub type __darwin_fp_control_t = __darwin_fp_control;
@@ -3452,18 +3554,20 @@ pub struct __darwin_fp_status {
     pub __bindgen_align: [u16; 0usize],
 }
 impl Clone for __darwin_fp_status {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 impl __darwin_fp_status {
     #[inline]
     pub fn __invalid(&self) -> ::libc::c_ushort {
         let mut unit_field_val: u16 = unsafe { ::std::mem::uninitialized() };
         unsafe {
-            ::std::ptr::copy_nonoverlapping(&self._bitfield_1 as *const _ as
-                                                *const u8,
-                                            &mut unit_field_val as *mut u16 as
-                                                *mut u8,
-                                            ::std::mem::size_of::<u16>())
+            ::std::ptr::copy_nonoverlapping(
+                &self._bitfield_1 as *const _ as *const u8,
+                &mut unit_field_val as *mut u16 as *mut u8,
+                ::std::mem::size_of::<u16>(),
+            )
         };
         let mask = 1u64 as u16;
         let val = (unit_field_val & mask) >> 0usize;
@@ -3475,31 +3579,31 @@ impl __darwin_fp_status {
         let val = val as u16 as u16;
         let mut unit_field_val: u16 = unsafe { ::std::mem::uninitialized() };
         unsafe {
-            ::std::ptr::copy_nonoverlapping(&self._bitfield_1 as *const _ as
-                                                *const u8,
-                                            &mut unit_field_val as *mut u16 as
-                                                *mut u8,
-                                            ::std::mem::size_of::<u16>())
+            ::std::ptr::copy_nonoverlapping(
+                &self._bitfield_1 as *const _ as *const u8,
+                &mut unit_field_val as *mut u16 as *mut u8,
+                ::std::mem::size_of::<u16>(),
+            )
         };
         unit_field_val &= !mask;
         unit_field_val |= (val << 0usize) & mask;
         unsafe {
-            ::std::ptr::copy_nonoverlapping(&unit_field_val as *const _ as
-                                                *const u8,
-                                            &mut self._bitfield_1 as *mut _ as
-                                                *mut u8,
-                                            ::std::mem::size_of::<u16>());
+            ::std::ptr::copy_nonoverlapping(
+                &unit_field_val as *const _ as *const u8,
+                &mut self._bitfield_1 as *mut _ as *mut u8,
+                ::std::mem::size_of::<u16>(),
+            );
         }
     }
     #[inline]
     pub fn __denorm(&self) -> ::libc::c_ushort {
         let mut unit_field_val: u16 = unsafe { ::std::mem::uninitialized() };
         unsafe {
-            ::std::ptr::copy_nonoverlapping(&self._bitfield_1 as *const _ as
-                                                *const u8,
-                                            &mut unit_field_val as *mut u16 as
-                                                *mut u8,
-                                            ::std::mem::size_of::<u16>())
+            ::std::ptr::copy_nonoverlapping(
+                &self._bitfield_1 as *const _ as *const u8,
+                &mut unit_field_val as *mut u16 as *mut u8,
+                ::std::mem::size_of::<u16>(),
+            )
         };
         let mask = 2u64 as u16;
         let val = (unit_field_val & mask) >> 1usize;
@@ -3511,31 +3615,31 @@ impl __darwin_fp_status {
         let val = val as u16 as u16;
         let mut unit_field_val: u16 = unsafe { ::std::mem::uninitialized() };
         unsafe {
-            ::std::ptr::copy_nonoverlapping(&self._bitfield_1 as *const _ as
-                                                *const u8,
-                                            &mut unit_field_val as *mut u16 as
-                                                *mut u8,
-                                            ::std::mem::size_of::<u16>())
+            ::std::ptr::copy_nonoverlapping(
+                &self._bitfield_1 as *const _ as *const u8,
+                &mut unit_field_val as *mut u16 as *mut u8,
+                ::std::mem::size_of::<u16>(),
+            )
         };
         unit_field_val &= !mask;
         unit_field_val |= (val << 1usize) & mask;
         unsafe {
-            ::std::ptr::copy_nonoverlapping(&unit_field_val as *const _ as
-                                                *const u8,
-                                            &mut self._bitfield_1 as *mut _ as
-                                                *mut u8,
-                                            ::std::mem::size_of::<u16>());
+            ::std::ptr::copy_nonoverlapping(
+                &unit_field_val as *const _ as *const u8,
+                &mut self._bitfield_1 as *mut _ as *mut u8,
+                ::std::mem::size_of::<u16>(),
+            );
         }
     }
     #[inline]
     pub fn __zdiv(&self) -> ::libc::c_ushort {
         let mut unit_field_val: u16 = unsafe { ::std::mem::uninitialized() };
         unsafe {
-            ::std::ptr::copy_nonoverlapping(&self._bitfield_1 as *const _ as
-                                                *const u8,
-                                            &mut unit_field_val as *mut u16 as
-                                                *mut u8,
-                                            ::std::mem::size_of::<u16>())
+            ::std::ptr::copy_nonoverlapping(
+                &self._bitfield_1 as *const _ as *const u8,
+                &mut unit_field_val as *mut u16 as *mut u8,
+                ::std::mem::size_of::<u16>(),
+            )
         };
         let mask = 4u64 as u16;
         let val = (unit_field_val & mask) >> 2usize;
@@ -3547,31 +3651,31 @@ impl __darwin_fp_status {
         let val = val as u16 as u16;
         let mut unit_field_val: u16 = unsafe { ::std::mem::uninitialized() };
         unsafe {
-            ::std::ptr::copy_nonoverlapping(&self._bitfield_1 as *const _ as
-                                                *const u8,
-                                            &mut unit_field_val as *mut u16 as
-                                                *mut u8,
-                                            ::std::mem::size_of::<u16>())
+            ::std::ptr::copy_nonoverlapping(
+                &self._bitfield_1 as *const _ as *const u8,
+                &mut unit_field_val as *mut u16 as *mut u8,
+                ::std::mem::size_of::<u16>(),
+            )
         };
         unit_field_val &= !mask;
         unit_field_val |= (val << 2usize) & mask;
         unsafe {
-            ::std::ptr::copy_nonoverlapping(&unit_field_val as *const _ as
-                                                *const u8,
-                                            &mut self._bitfield_1 as *mut _ as
-                                                *mut u8,
-                                            ::std::mem::size_of::<u16>());
+            ::std::ptr::copy_nonoverlapping(
+                &unit_field_val as *const _ as *const u8,
+                &mut self._bitfield_1 as *mut _ as *mut u8,
+                ::std::mem::size_of::<u16>(),
+            );
         }
     }
     #[inline]
     pub fn __ovrfl(&self) -> ::libc::c_ushort {
         let mut unit_field_val: u16 = unsafe { ::std::mem::uninitialized() };
         unsafe {
-            ::std::ptr::copy_nonoverlapping(&self._bitfield_1 as *const _ as
-                                                *const u8,
-                                            &mut unit_field_val as *mut u16 as
-                                                *mut u8,
-                                            ::std::mem::size_of::<u16>())
+            ::std::ptr::copy_nonoverlapping(
+                &self._bitfield_1 as *const _ as *const u8,
+                &mut unit_field_val as *mut u16 as *mut u8,
+                ::std::mem::size_of::<u16>(),
+            )
         };
         let mask = 8u64 as u16;
         let val = (unit_field_val & mask) >> 3usize;
@@ -3583,31 +3687,31 @@ impl __darwin_fp_status {
         let val = val as u16 as u16;
         let mut unit_field_val: u16 = unsafe { ::std::mem::uninitialized() };
         unsafe {
-            ::std::ptr::copy_nonoverlapping(&self._bitfield_1 as *const _ as
-                                                *const u8,
-                                            &mut unit_field_val as *mut u16 as
-                                                *mut u8,
-                                            ::std::mem::size_of::<u16>())
+            ::std::ptr::copy_nonoverlapping(
+                &self._bitfield_1 as *const _ as *const u8,
+                &mut unit_field_val as *mut u16 as *mut u8,
+                ::std::mem::size_of::<u16>(),
+            )
         };
         unit_field_val &= !mask;
         unit_field_val |= (val << 3usize) & mask;
         unsafe {
-            ::std::ptr::copy_nonoverlapping(&unit_field_val as *const _ as
-                                                *const u8,
-                                            &mut self._bitfield_1 as *mut _ as
-                                                *mut u8,
-                                            ::std::mem::size_of::<u16>());
+            ::std::ptr::copy_nonoverlapping(
+                &unit_field_val as *const _ as *const u8,
+                &mut self._bitfield_1 as *mut _ as *mut u8,
+                ::std::mem::size_of::<u16>(),
+            );
         }
     }
     #[inline]
     pub fn __undfl(&self) -> ::libc::c_ushort {
         let mut unit_field_val: u16 = unsafe { ::std::mem::uninitialized() };
         unsafe {
-            ::std::ptr::copy_nonoverlapping(&self._bitfield_1 as *const _ as
-                                                *const u8,
-                                            &mut unit_field_val as *mut u16 as
-                                                *mut u8,
-                                            ::std::mem::size_of::<u16>())
+            ::std::ptr::copy_nonoverlapping(
+                &self._bitfield_1 as *const _ as *const u8,
+                &mut unit_field_val as *mut u16 as *mut u8,
+                ::std::mem::size_of::<u16>(),
+            )
         };
         let mask = 16u64 as u16;
         let val = (unit_field_val & mask) >> 4usize;
@@ -3619,31 +3723,31 @@ impl __darwin_fp_status {
         let val = val as u16 as u16;
         let mut unit_field_val: u16 = unsafe { ::std::mem::uninitialized() };
         unsafe {
-            ::std::ptr::copy_nonoverlapping(&self._bitfield_1 as *const _ as
-                                                *const u8,
-                                            &mut unit_field_val as *mut u16 as
-                                                *mut u8,
-                                            ::std::mem::size_of::<u16>())
+            ::std::ptr::copy_nonoverlapping(
+                &self._bitfield_1 as *const _ as *const u8,
+                &mut unit_field_val as *mut u16 as *mut u8,
+                ::std::mem::size_of::<u16>(),
+            )
         };
         unit_field_val &= !mask;
         unit_field_val |= (val << 4usize) & mask;
         unsafe {
-            ::std::ptr::copy_nonoverlapping(&unit_field_val as *const _ as
-                                                *const u8,
-                                            &mut self._bitfield_1 as *mut _ as
-                                                *mut u8,
-                                            ::std::mem::size_of::<u16>());
+            ::std::ptr::copy_nonoverlapping(
+                &unit_field_val as *const _ as *const u8,
+                &mut self._bitfield_1 as *mut _ as *mut u8,
+                ::std::mem::size_of::<u16>(),
+            );
         }
     }
     #[inline]
     pub fn __precis(&self) -> ::libc::c_ushort {
         let mut unit_field_val: u16 = unsafe { ::std::mem::uninitialized() };
         unsafe {
-            ::std::ptr::copy_nonoverlapping(&self._bitfield_1 as *const _ as
-                                                *const u8,
-                                            &mut unit_field_val as *mut u16 as
-                                                *mut u8,
-                                            ::std::mem::size_of::<u16>())
+            ::std::ptr::copy_nonoverlapping(
+                &self._bitfield_1 as *const _ as *const u8,
+                &mut unit_field_val as *mut u16 as *mut u8,
+                ::std::mem::size_of::<u16>(),
+            )
         };
         let mask = 32u64 as u16;
         let val = (unit_field_val & mask) >> 5usize;
@@ -3655,31 +3759,31 @@ impl __darwin_fp_status {
         let val = val as u16 as u16;
         let mut unit_field_val: u16 = unsafe { ::std::mem::uninitialized() };
         unsafe {
-            ::std::ptr::copy_nonoverlapping(&self._bitfield_1 as *const _ as
-                                                *const u8,
-                                            &mut unit_field_val as *mut u16 as
-                                                *mut u8,
-                                            ::std::mem::size_of::<u16>())
+            ::std::ptr::copy_nonoverlapping(
+                &self._bitfield_1 as *const _ as *const u8,
+                &mut unit_field_val as *mut u16 as *mut u8,
+                ::std::mem::size_of::<u16>(),
+            )
         };
         unit_field_val &= !mask;
         unit_field_val |= (val << 5usize) & mask;
         unsafe {
-            ::std::ptr::copy_nonoverlapping(&unit_field_val as *const _ as
-                                                *const u8,
-                                            &mut self._bitfield_1 as *mut _ as
-                                                *mut u8,
-                                            ::std::mem::size_of::<u16>());
+            ::std::ptr::copy_nonoverlapping(
+                &unit_field_val as *const _ as *const u8,
+                &mut self._bitfield_1 as *mut _ as *mut u8,
+                ::std::mem::size_of::<u16>(),
+            );
         }
     }
     #[inline]
     pub fn __stkflt(&self) -> ::libc::c_ushort {
         let mut unit_field_val: u16 = unsafe { ::std::mem::uninitialized() };
         unsafe {
-            ::std::ptr::copy_nonoverlapping(&self._bitfield_1 as *const _ as
-                                                *const u8,
-                                            &mut unit_field_val as *mut u16 as
-                                                *mut u8,
-                                            ::std::mem::size_of::<u16>())
+            ::std::ptr::copy_nonoverlapping(
+                &self._bitfield_1 as *const _ as *const u8,
+                &mut unit_field_val as *mut u16 as *mut u8,
+                ::std::mem::size_of::<u16>(),
+            )
         };
         let mask = 64u64 as u16;
         let val = (unit_field_val & mask) >> 6usize;
@@ -3691,31 +3795,31 @@ impl __darwin_fp_status {
         let val = val as u16 as u16;
         let mut unit_field_val: u16 = unsafe { ::std::mem::uninitialized() };
         unsafe {
-            ::std::ptr::copy_nonoverlapping(&self._bitfield_1 as *const _ as
-                                                *const u8,
-                                            &mut unit_field_val as *mut u16 as
-                                                *mut u8,
-                                            ::std::mem::size_of::<u16>())
+            ::std::ptr::copy_nonoverlapping(
+                &self._bitfield_1 as *const _ as *const u8,
+                &mut unit_field_val as *mut u16 as *mut u8,
+                ::std::mem::size_of::<u16>(),
+            )
         };
         unit_field_val &= !mask;
         unit_field_val |= (val << 6usize) & mask;
         unsafe {
-            ::std::ptr::copy_nonoverlapping(&unit_field_val as *const _ as
-                                                *const u8,
-                                            &mut self._bitfield_1 as *mut _ as
-                                                *mut u8,
-                                            ::std::mem::size_of::<u16>());
+            ::std::ptr::copy_nonoverlapping(
+                &unit_field_val as *const _ as *const u8,
+                &mut self._bitfield_1 as *mut _ as *mut u8,
+                ::std::mem::size_of::<u16>(),
+            );
         }
     }
     #[inline]
     pub fn __errsumm(&self) -> ::libc::c_ushort {
         let mut unit_field_val: u16 = unsafe { ::std::mem::uninitialized() };
         unsafe {
-            ::std::ptr::copy_nonoverlapping(&self._bitfield_1 as *const _ as
-                                                *const u8,
-                                            &mut unit_field_val as *mut u16 as
-                                                *mut u8,
-                                            ::std::mem::size_of::<u16>())
+            ::std::ptr::copy_nonoverlapping(
+                &self._bitfield_1 as *const _ as *const u8,
+                &mut unit_field_val as *mut u16 as *mut u8,
+                ::std::mem::size_of::<u16>(),
+            )
         };
         let mask = 128u64 as u16;
         let val = (unit_field_val & mask) >> 7usize;
@@ -3727,31 +3831,31 @@ impl __darwin_fp_status {
         let val = val as u16 as u16;
         let mut unit_field_val: u16 = unsafe { ::std::mem::uninitialized() };
         unsafe {
-            ::std::ptr::copy_nonoverlapping(&self._bitfield_1 as *const _ as
-                                                *const u8,
-                                            &mut unit_field_val as *mut u16 as
-                                                *mut u8,
-                                            ::std::mem::size_of::<u16>())
+            ::std::ptr::copy_nonoverlapping(
+                &self._bitfield_1 as *const _ as *const u8,
+                &mut unit_field_val as *mut u16 as *mut u8,
+                ::std::mem::size_of::<u16>(),
+            )
         };
         unit_field_val &= !mask;
         unit_field_val |= (val << 7usize) & mask;
         unsafe {
-            ::std::ptr::copy_nonoverlapping(&unit_field_val as *const _ as
-                                                *const u8,
-                                            &mut self._bitfield_1 as *mut _ as
-                                                *mut u8,
-                                            ::std::mem::size_of::<u16>());
+            ::std::ptr::copy_nonoverlapping(
+                &unit_field_val as *const _ as *const u8,
+                &mut self._bitfield_1 as *mut _ as *mut u8,
+                ::std::mem::size_of::<u16>(),
+            );
         }
     }
     #[inline]
     pub fn __c0(&self) -> ::libc::c_ushort {
         let mut unit_field_val: u16 = unsafe { ::std::mem::uninitialized() };
         unsafe {
-            ::std::ptr::copy_nonoverlapping(&self._bitfield_1 as *const _ as
-                                                *const u8,
-                                            &mut unit_field_val as *mut u16 as
-                                                *mut u8,
-                                            ::std::mem::size_of::<u16>())
+            ::std::ptr::copy_nonoverlapping(
+                &self._bitfield_1 as *const _ as *const u8,
+                &mut unit_field_val as *mut u16 as *mut u8,
+                ::std::mem::size_of::<u16>(),
+            )
         };
         let mask = 256u64 as u16;
         let val = (unit_field_val & mask) >> 8usize;
@@ -3763,31 +3867,31 @@ impl __darwin_fp_status {
         let val = val as u16 as u16;
         let mut unit_field_val: u16 = unsafe { ::std::mem::uninitialized() };
         unsafe {
-            ::std::ptr::copy_nonoverlapping(&self._bitfield_1 as *const _ as
-                                                *const u8,
-                                            &mut unit_field_val as *mut u16 as
-                                                *mut u8,
-                                            ::std::mem::size_of::<u16>())
+            ::std::ptr::copy_nonoverlapping(
+                &self._bitfield_1 as *const _ as *const u8,
+                &mut unit_field_val as *mut u16 as *mut u8,
+                ::std::mem::size_of::<u16>(),
+            )
         };
         unit_field_val &= !mask;
         unit_field_val |= (val << 8usize) & mask;
         unsafe {
-            ::std::ptr::copy_nonoverlapping(&unit_field_val as *const _ as
-                                                *const u8,
-                                            &mut self._bitfield_1 as *mut _ as
-                                                *mut u8,
-                                            ::std::mem::size_of::<u16>());
+            ::std::ptr::copy_nonoverlapping(
+                &unit_field_val as *const _ as *const u8,
+                &mut self._bitfield_1 as *mut _ as *mut u8,
+                ::std::mem::size_of::<u16>(),
+            );
         }
     }
     #[inline]
     pub fn __c1(&self) -> ::libc::c_ushort {
         let mut unit_field_val: u16 = unsafe { ::std::mem::uninitialized() };
         unsafe {
-            ::std::ptr::copy_nonoverlapping(&self._bitfield_1 as *const _ as
-                                                *const u8,
-                                            &mut unit_field_val as *mut u16 as
-                                                *mut u8,
-                                            ::std::mem::size_of::<u16>())
+            ::std::ptr::copy_nonoverlapping(
+                &self._bitfield_1 as *const _ as *const u8,
+                &mut unit_field_val as *mut u16 as *mut u8,
+                ::std::mem::size_of::<u16>(),
+            )
         };
         let mask = 512u64 as u16;
         let val = (unit_field_val & mask) >> 9usize;
@@ -3799,31 +3903,31 @@ impl __darwin_fp_status {
         let val = val as u16 as u16;
         let mut unit_field_val: u16 = unsafe { ::std::mem::uninitialized() };
         unsafe {
-            ::std::ptr::copy_nonoverlapping(&self._bitfield_1 as *const _ as
-                                                *const u8,
-                                            &mut unit_field_val as *mut u16 as
-                                                *mut u8,
-                                            ::std::mem::size_of::<u16>())
+            ::std::ptr::copy_nonoverlapping(
+                &self._bitfield_1 as *const _ as *const u8,
+                &mut unit_field_val as *mut u16 as *mut u8,
+                ::std::mem::size_of::<u16>(),
+            )
         };
         unit_field_val &= !mask;
         unit_field_val |= (val << 9usize) & mask;
         unsafe {
-            ::std::ptr::copy_nonoverlapping(&unit_field_val as *const _ as
-                                                *const u8,
-                                            &mut self._bitfield_1 as *mut _ as
-                                                *mut u8,
-                                            ::std::mem::size_of::<u16>());
+            ::std::ptr::copy_nonoverlapping(
+                &unit_field_val as *const _ as *const u8,
+                &mut self._bitfield_1 as *mut _ as *mut u8,
+                ::std::mem::size_of::<u16>(),
+            );
         }
     }
     #[inline]
     pub fn __c2(&self) -> ::libc::c_ushort {
         let mut unit_field_val: u16 = unsafe { ::std::mem::uninitialized() };
         unsafe {
-            ::std::ptr::copy_nonoverlapping(&self._bitfield_1 as *const _ as
-                                                *const u8,
-                                            &mut unit_field_val as *mut u16 as
-                                                *mut u8,
-                                            ::std::mem::size_of::<u16>())
+            ::std::ptr::copy_nonoverlapping(
+                &self._bitfield_1 as *const _ as *const u8,
+                &mut unit_field_val as *mut u16 as *mut u8,
+                ::std::mem::size_of::<u16>(),
+            )
         };
         let mask = 1024u64 as u16;
         let val = (unit_field_val & mask) >> 10usize;
@@ -3835,31 +3939,31 @@ impl __darwin_fp_status {
         let val = val as u16 as u16;
         let mut unit_field_val: u16 = unsafe { ::std::mem::uninitialized() };
         unsafe {
-            ::std::ptr::copy_nonoverlapping(&self._bitfield_1 as *const _ as
-                                                *const u8,
-                                            &mut unit_field_val as *mut u16 as
-                                                *mut u8,
-                                            ::std::mem::size_of::<u16>())
+            ::std::ptr::copy_nonoverlapping(
+                &self._bitfield_1 as *const _ as *const u8,
+                &mut unit_field_val as *mut u16 as *mut u8,
+                ::std::mem::size_of::<u16>(),
+            )
         };
         unit_field_val &= !mask;
         unit_field_val |= (val << 10usize) & mask;
         unsafe {
-            ::std::ptr::copy_nonoverlapping(&unit_field_val as *const _ as
-                                                *const u8,
-                                            &mut self._bitfield_1 as *mut _ as
-                                                *mut u8,
-                                            ::std::mem::size_of::<u16>());
+            ::std::ptr::copy_nonoverlapping(
+                &unit_field_val as *const _ as *const u8,
+                &mut self._bitfield_1 as *mut _ as *mut u8,
+                ::std::mem::size_of::<u16>(),
+            );
         }
     }
     #[inline]
     pub fn __tos(&self) -> ::libc::c_ushort {
         let mut unit_field_val: u16 = unsafe { ::std::mem::uninitialized() };
         unsafe {
-            ::std::ptr::copy_nonoverlapping(&self._bitfield_1 as *const _ as
-                                                *const u8,
-                                            &mut unit_field_val as *mut u16 as
-                                                *mut u8,
-                                            ::std::mem::size_of::<u16>())
+            ::std::ptr::copy_nonoverlapping(
+                &self._bitfield_1 as *const _ as *const u8,
+                &mut unit_field_val as *mut u16 as *mut u8,
+                ::std::mem::size_of::<u16>(),
+            )
         };
         let mask = 14336u64 as u16;
         let val = (unit_field_val & mask) >> 11usize;
@@ -3871,31 +3975,31 @@ impl __darwin_fp_status {
         let val = val as u16 as u16;
         let mut unit_field_val: u16 = unsafe { ::std::mem::uninitialized() };
         unsafe {
-            ::std::ptr::copy_nonoverlapping(&self._bitfield_1 as *const _ as
-                                                *const u8,
-                                            &mut unit_field_val as *mut u16 as
-                                                *mut u8,
-                                            ::std::mem::size_of::<u16>())
+            ::std::ptr::copy_nonoverlapping(
+                &self._bitfield_1 as *const _ as *const u8,
+                &mut unit_field_val as *mut u16 as *mut u8,
+                ::std::mem::size_of::<u16>(),
+            )
         };
         unit_field_val &= !mask;
         unit_field_val |= (val << 11usize) & mask;
         unsafe {
-            ::std::ptr::copy_nonoverlapping(&unit_field_val as *const _ as
-                                                *const u8,
-                                            &mut self._bitfield_1 as *mut _ as
-                                                *mut u8,
-                                            ::std::mem::size_of::<u16>());
+            ::std::ptr::copy_nonoverlapping(
+                &unit_field_val as *const _ as *const u8,
+                &mut self._bitfield_1 as *mut _ as *mut u8,
+                ::std::mem::size_of::<u16>(),
+            );
         }
     }
     #[inline]
     pub fn __c3(&self) -> ::libc::c_ushort {
         let mut unit_field_val: u16 = unsafe { ::std::mem::uninitialized() };
         unsafe {
-            ::std::ptr::copy_nonoverlapping(&self._bitfield_1 as *const _ as
-                                                *const u8,
-                                            &mut unit_field_val as *mut u16 as
-                                                *mut u8,
-                                            ::std::mem::size_of::<u16>())
+            ::std::ptr::copy_nonoverlapping(
+                &self._bitfield_1 as *const _ as *const u8,
+                &mut unit_field_val as *mut u16 as *mut u8,
+                ::std::mem::size_of::<u16>(),
+            )
         };
         let mask = 16384u64 as u16;
         let val = (unit_field_val & mask) >> 14usize;
@@ -3907,31 +4011,31 @@ impl __darwin_fp_status {
         let val = val as u16 as u16;
         let mut unit_field_val: u16 = unsafe { ::std::mem::uninitialized() };
         unsafe {
-            ::std::ptr::copy_nonoverlapping(&self._bitfield_1 as *const _ as
-                                                *const u8,
-                                            &mut unit_field_val as *mut u16 as
-                                                *mut u8,
-                                            ::std::mem::size_of::<u16>())
+            ::std::ptr::copy_nonoverlapping(
+                &self._bitfield_1 as *const _ as *const u8,
+                &mut unit_field_val as *mut u16 as *mut u8,
+                ::std::mem::size_of::<u16>(),
+            )
         };
         unit_field_val &= !mask;
         unit_field_val |= (val << 14usize) & mask;
         unsafe {
-            ::std::ptr::copy_nonoverlapping(&unit_field_val as *const _ as
-                                                *const u8,
-                                            &mut self._bitfield_1 as *mut _ as
-                                                *mut u8,
-                                            ::std::mem::size_of::<u16>());
+            ::std::ptr::copy_nonoverlapping(
+                &unit_field_val as *const _ as *const u8,
+                &mut self._bitfield_1 as *mut _ as *mut u8,
+                ::std::mem::size_of::<u16>(),
+            );
         }
     }
     #[inline]
     pub fn __busy(&self) -> ::libc::c_ushort {
         let mut unit_field_val: u16 = unsafe { ::std::mem::uninitialized() };
         unsafe {
-            ::std::ptr::copy_nonoverlapping(&self._bitfield_1 as *const _ as
-                                                *const u8,
-                                            &mut unit_field_val as *mut u16 as
-                                                *mut u8,
-                                            ::std::mem::size_of::<u16>())
+            ::std::ptr::copy_nonoverlapping(
+                &self._bitfield_1 as *const _ as *const u8,
+                &mut unit_field_val as *mut u16 as *mut u8,
+                ::std::mem::size_of::<u16>(),
+            )
         };
         let mask = 32768u64 as u16;
         let val = (unit_field_val & mask) >> 15usize;
@@ -3943,118 +4047,73 @@ impl __darwin_fp_status {
         let val = val as u16 as u16;
         let mut unit_field_val: u16 = unsafe { ::std::mem::uninitialized() };
         unsafe {
-            ::std::ptr::copy_nonoverlapping(&self._bitfield_1 as *const _ as
-                                                *const u8,
-                                            &mut unit_field_val as *mut u16 as
-                                                *mut u8,
-                                            ::std::mem::size_of::<u16>())
+            ::std::ptr::copy_nonoverlapping(
+                &self._bitfield_1 as *const _ as *const u8,
+                &mut unit_field_val as *mut u16 as *mut u8,
+                ::std::mem::size_of::<u16>(),
+            )
         };
         unit_field_val &= !mask;
         unit_field_val |= (val << 15usize) & mask;
         unsafe {
-            ::std::ptr::copy_nonoverlapping(&unit_field_val as *const _ as
-                                                *const u8,
-                                            &mut self._bitfield_1 as *mut _ as
-                                                *mut u8,
-                                            ::std::mem::size_of::<u16>());
+            ::std::ptr::copy_nonoverlapping(
+                &unit_field_val as *const _ as *const u8,
+                &mut self._bitfield_1 as *mut _ as *mut u8,
+                ::std::mem::size_of::<u16>(),
+            );
         }
     }
     #[inline]
-    pub fn new_bitfield_1(__invalid: ::libc::c_ushort,
-                          __denorm: ::libc::c_ushort,
-                          __zdiv: ::libc::c_ushort, __ovrfl: ::libc::c_ushort,
-                          __undfl: ::libc::c_ushort,
-                          __precis: ::libc::c_ushort,
-                          __stkflt: ::libc::c_ushort,
-                          __errsumm: ::libc::c_ushort, __c0: ::libc::c_ushort,
-                          __c1: ::libc::c_ushort, __c2: ::libc::c_ushort,
-                          __tos: ::libc::c_ushort, __c3: ::libc::c_ushort,
-                          __busy: ::libc::c_ushort) -> u16 {
+    pub fn new_bitfield_1(
+        __invalid: ::libc::c_ushort,
+        __denorm: ::libc::c_ushort,
+        __zdiv: ::libc::c_ushort,
+        __ovrfl: ::libc::c_ushort,
+        __undfl: ::libc::c_ushort,
+        __precis: ::libc::c_ushort,
+        __stkflt: ::libc::c_ushort,
+        __errsumm: ::libc::c_ushort,
+        __c0: ::libc::c_ushort,
+        __c1: ::libc::c_ushort,
+        __c2: ::libc::c_ushort,
+        __tos: ::libc::c_ushort,
+        __c3: ::libc::c_ushort,
+        __busy: ::libc::c_ushort,
+    ) -> u16 {
         ({
-             ({
-                  ({
-                       ({
+            ({
+                ({
+                    ({
+                        ({
                             ({
-                                 ({
-                                      ({
-                                           ({
+                                ({
+                                    ({
+                                        ({
+                                            ({
                                                 ({
-                                                     ({
-                                                          ({
-                                                               ({
-                                                                    ({
-                                                                         ({
-                                                                              0
-                                                                          } |
-                                                                              ((__invalid
-                                                                                    as
-                                                                                    u16
-                                                                                    as
-                                                                                    u16)
-                                                                                   <<
-                                                                                   0usize)
-                                                                                  &
-                                                                                  (1u64
-                                                                                       as
-                                                                                       u16))
-                                                                     } |
-                                                                         ((__denorm
-                                                                               as
-                                                                               u16
-                                                                               as
-                                                                               u16)
-                                                                              <<
-                                                                              1usize)
-                                                                             &
-                                                                             (2u64
-                                                                                  as
-                                                                                  u16))
-                                                                } |
-                                                                    ((__zdiv
-                                                                          as
-                                                                          u16
-                                                                          as
-                                                                          u16)
-                                                                         <<
-                                                                         2usize)
-                                                                        &
-                                                                        (4u64
-                                                                             as
-                                                                             u16))
-                                                           } |
-                                                               ((__ovrfl as
-                                                                     u16 as
-                                                                     u16) <<
-                                                                    3usize) &
-                                                                   (8u64 as
-                                                                        u16))
-                                                      } |
-                                                          ((__undfl as u16 as
-                                                                u16) <<
-                                                               4usize) &
-                                                              (16u64 as u16))
-                                                 } |
-                                                     ((__precis as u16 as u16)
-                                                          << 5usize) &
-                                                         (32u64 as u16))
-                                            } |
-                                                ((__stkflt as u16 as u16) <<
-                                                     6usize) & (64u64 as u16))
-                                       } |
-                                           ((__errsumm as u16 as u16) <<
-                                                7usize) & (128u64 as u16))
-                                  } |
-                                      ((__c0 as u16 as u16) << 8usize) &
-                                          (256u64 as u16))
-                             } |
-                                 ((__c1 as u16 as u16) << 9usize) &
-                                     (512u64 as u16))
-                        } |
-                            ((__c2 as u16 as u16) << 10usize) &
-                                (1024u64 as u16))
-                   } | ((__tos as u16 as u16) << 11usize) & (14336u64 as u16))
-              } | ((__c3 as u16 as u16) << 14usize) & (16384u64 as u16))
-         } | ((__busy as u16 as u16) << 15usize) & (32768u64 as u16))
+                                                    ({
+                                                        ({
+                                                            ({ 0 }
+                                                                | ((__invalid as u16 as u16)
+                                                                    << 0usize)
+                                                                    & (1u64 as u16))
+                                                        } | ((__denorm as u16 as u16) << 1usize)
+                                                            & (2u64 as u16))
+                                                    } | ((__zdiv as u16 as u16) << 2usize)
+                                                        & (4u64 as u16))
+                                                } | ((__ovrfl as u16 as u16) << 3usize)
+                                                    & (8u64 as u16))
+                                            } | ((__undfl as u16 as u16) << 4usize)
+                                                & (16u64 as u16))
+                                        } | ((__precis as u16 as u16) << 5usize) & (32u64 as u16))
+                                    } | ((__stkflt as u16 as u16) << 6usize) & (64u64 as u16))
+                                } | ((__errsumm as u16 as u16) << 7usize) & (128u64 as u16))
+                            } | ((__c0 as u16 as u16) << 8usize) & (256u64 as u16))
+                        } | ((__c1 as u16 as u16) << 9usize) & (512u64 as u16))
+                    } | ((__c2 as u16 as u16) << 10usize) & (1024u64 as u16))
+                } | ((__tos as u16 as u16) << 11usize) & (14336u64 as u16))
+            } | ((__c3 as u16 as u16) << 14usize) & (16384u64 as u16))
+        } | ((__busy as u16 as u16) << 15usize) & (32768u64 as u16))
     }
 }
 pub type __darwin_fp_status_t = __darwin_fp_status;
@@ -4065,7 +4124,9 @@ pub struct __darwin_mmst_reg {
     pub __mmst_rsrv: [::libc::c_char; 6usize],
 }
 impl Clone for __darwin_mmst_reg {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -4073,7 +4134,9 @@ pub struct __darwin_xmm_reg {
     pub __xmm_reg: [::libc::c_char; 16usize],
 }
 impl Clone for __darwin_xmm_reg {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -4112,7 +4175,9 @@ pub struct __darwin_i386_float_state {
     pub __fpu_reserved1: ::libc::c_int,
 }
 impl Clone for __darwin_i386_float_state {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -4160,7 +4225,9 @@ pub struct __darwin_i386_avx_state {
     pub __fpu_ymmh7: __darwin_xmm_reg,
 }
 impl Clone for __darwin_i386_avx_state {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -4171,7 +4238,9 @@ pub struct __darwin_i386_exception_state {
     pub __faultvaddr: __uint32_t,
 }
 impl Clone for __darwin_i386_exception_state {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -4186,7 +4255,9 @@ pub struct __darwin_x86_debug_state32 {
     pub __dr7: ::libc::c_uint,
 }
 impl Clone for __darwin_x86_debug_state32 {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -4214,7 +4285,9 @@ pub struct __darwin_x86_thread_state64 {
     pub __gs: __uint64_t,
 }
 impl Clone for __darwin_x86_thread_state64 {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -4261,7 +4334,9 @@ pub struct __darwin_x86_float_state64 {
     pub __fpu_reserved1: ::libc::c_int,
 }
 impl Clone for __darwin_x86_float_state64 {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -4325,7 +4400,9 @@ pub struct __darwin_x86_avx_state64 {
     pub __fpu_ymmh15: __darwin_xmm_reg,
 }
 impl Clone for __darwin_x86_avx_state64 {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -4336,7 +4413,9 @@ pub struct __darwin_x86_exception_state64 {
     pub __faultvaddr: __uint64_t,
 }
 impl Clone for __darwin_x86_exception_state64 {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -4351,7 +4430,9 @@ pub struct __darwin_x86_debug_state64 {
     pub __dr7: __uint64_t,
 }
 impl Clone for __darwin_x86_debug_state64 {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -4360,7 +4441,9 @@ pub struct x86_state_hdr {
     pub count: ::libc::c_int,
 }
 impl Clone for x86_state_hdr {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 pub type x86_state_hdr_t = x86_state_hdr;
 pub type i386_thread_state_t = __darwin_i386_thread_state;
@@ -4390,10 +4473,14 @@ pub union x86_thread_state__bindgen_ty_1 {
     _bindgen_union_align: [u64; 21usize],
 }
 impl Clone for x86_thread_state__bindgen_ty_1 {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 impl Clone for x86_thread_state {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -4409,10 +4496,14 @@ pub union x86_float_state__bindgen_ty_1 {
     _bindgen_union_align: [u32; 131usize],
 }
 impl Clone for x86_float_state__bindgen_ty_1 {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 impl Clone for x86_float_state {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -4428,10 +4519,14 @@ pub union x86_exception_state__bindgen_ty_1 {
     _bindgen_union_align: [u64; 2usize],
 }
 impl Clone for x86_exception_state__bindgen_ty_1 {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 impl Clone for x86_exception_state {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -4447,10 +4542,14 @@ pub union x86_debug_state__bindgen_ty_1 {
     _bindgen_union_align: [u64; 8usize],
 }
 impl Clone for x86_debug_state__bindgen_ty_1 {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 impl Clone for x86_debug_state {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -4466,10 +4565,14 @@ pub union x86_avx_state__bindgen_ty_1 {
     _bindgen_union_align: [u32; 211usize],
 }
 impl Clone for x86_avx_state__bindgen_ty_1 {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 impl Clone for x86_avx_state {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 pub type x86_thread_state_t = x86_thread_state;
 pub type x86_float_state_t = x86_float_state;
@@ -4504,8 +4607,7 @@ pub type mach_voucher_attr_content_t = *mut u8;
 pub type mach_voucher_attr_content_size_t = u32;
 pub type mach_voucher_attr_command_t = u32;
 pub type mach_voucher_attr_recipe_command_t = u32;
-pub type mach_voucher_attr_recipe_command_array_t =
-    *mut mach_voucher_attr_recipe_command_t;
+pub type mach_voucher_attr_recipe_command_array_t = *mut mach_voucher_attr_recipe_command_t;
 #[repr(C)]
 pub struct mach_voucher_attr_recipe_data {
     pub key: mach_voucher_attr_key_t,
@@ -4518,8 +4620,7 @@ pub type mach_voucher_attr_recipe_data_t = mach_voucher_attr_recipe_data;
 pub type mach_voucher_attr_recipe_t = *mut mach_voucher_attr_recipe_data_t;
 pub type mach_voucher_attr_recipe_size_t = mach_msg_type_number_t;
 pub type mach_voucher_attr_raw_recipe_t = *mut u8;
-pub type mach_voucher_attr_raw_recipe_array_t =
-    mach_voucher_attr_raw_recipe_t;
+pub type mach_voucher_attr_raw_recipe_array_t = mach_voucher_attr_raw_recipe_t;
 pub type mach_voucher_attr_raw_recipe_size_t = mach_msg_type_number_t;
 pub type mach_voucher_attr_raw_recipe_array_size_t = mach_msg_type_number_t;
 pub type mach_voucher_attr_manager_t = mach_port_t;
@@ -4527,8 +4628,7 @@ pub type mach_voucher_attr_control_t = mach_port_t;
 pub type ipc_voucher_attr_manager_t = mach_port_t;
 pub type ipc_voucher_attr_control_t = mach_port_t;
 pub type mach_voucher_attr_value_handle_t = u64;
-pub type mach_voucher_attr_value_handle_array_t =
-    *mut mach_voucher_attr_value_handle_t;
+pub type mach_voucher_attr_value_handle_array_t = *mut mach_voucher_attr_value_handle_t;
 pub type mach_voucher_attr_value_handle_array_size_t = mach_msg_type_number_t;
 pub type mach_voucher_attr_value_reference_t = u32;
 pub type mach_voucher_attr_value_flags_t = u32;
@@ -4550,7 +4650,9 @@ pub struct processor_basic_info {
     pub is_master: boolean_t,
 }
 impl Clone for processor_basic_info {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 pub type processor_basic_info_data_t = processor_basic_info;
 pub type processor_basic_info_t = *mut processor_basic_info;
@@ -4560,7 +4662,9 @@ pub struct processor_cpu_load_info {
     pub cpu_ticks: [::libc::c_uint; 4usize],
 }
 impl Clone for processor_cpu_load_info {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 pub type processor_cpu_load_info_data_t = processor_cpu_load_info;
 pub type processor_cpu_load_info_t = *mut processor_cpu_load_info;
@@ -4572,7 +4676,9 @@ pub struct processor_set_basic_info {
     pub default_policy: ::libc::c_int,
 }
 impl Clone for processor_set_basic_info {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 pub type processor_set_basic_info_data_t = processor_set_basic_info;
 pub type processor_set_basic_info_t = *mut processor_set_basic_info;
@@ -4585,7 +4691,9 @@ pub struct processor_set_load_info {
     pub mach_factor: integer_t,
 }
 impl Clone for processor_set_load_info {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 pub type processor_set_load_info_data_t = processor_set_load_info;
 pub type processor_set_load_info_t = *mut processor_set_load_info;
@@ -4599,7 +4707,9 @@ pub struct policy_timeshare_base {
     pub base_priority: integer_t,
 }
 impl Clone for policy_timeshare_base {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -4607,7 +4717,9 @@ pub struct policy_timeshare_limit {
     pub max_priority: integer_t,
 }
 impl Clone for policy_timeshare_limit {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -4619,7 +4731,9 @@ pub struct policy_timeshare_info {
     pub depress_priority: integer_t,
 }
 impl Clone for policy_timeshare_info {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 pub type policy_timeshare_base_t = *mut policy_timeshare_base;
 pub type policy_timeshare_limit_t = *mut policy_timeshare_limit;
@@ -4634,7 +4748,9 @@ pub struct policy_rr_base {
     pub quantum: integer_t,
 }
 impl Clone for policy_rr_base {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -4642,7 +4758,9 @@ pub struct policy_rr_limit {
     pub max_priority: integer_t,
 }
 impl Clone for policy_rr_limit {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -4654,7 +4772,9 @@ pub struct policy_rr_info {
     pub depress_priority: integer_t,
 }
 impl Clone for policy_rr_info {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 pub type policy_rr_base_t = *mut policy_rr_base;
 pub type policy_rr_limit_t = *mut policy_rr_limit;
@@ -4668,7 +4788,9 @@ pub struct policy_fifo_base {
     pub base_priority: integer_t,
 }
 impl Clone for policy_fifo_base {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -4676,7 +4798,9 @@ pub struct policy_fifo_limit {
     pub max_priority: integer_t,
 }
 impl Clone for policy_fifo_limit {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -4687,7 +4811,9 @@ pub struct policy_fifo_info {
     pub depress_priority: integer_t,
 }
 impl Clone for policy_fifo_info {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 pub type policy_fifo_base_t = *mut policy_fifo_base;
 pub type policy_fifo_limit_t = *mut policy_fifo_limit;
@@ -4703,7 +4829,9 @@ pub struct policy_bases {
     pub fifo: policy_fifo_base_data_t,
 }
 impl Clone for policy_bases {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -4713,7 +4841,9 @@ pub struct policy_limits {
     pub fifo: policy_fifo_limit_data_t,
 }
 impl Clone for policy_limits {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -4723,7 +4853,9 @@ pub struct policy_infos {
     pub fifo: policy_fifo_info_data_t,
 }
 impl Clone for policy_infos {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 pub type policy_base_data_t = policy_bases;
 pub type policy_limit_data_t = policy_limits;
@@ -4742,7 +4874,9 @@ pub struct task_basic_info_32 {
     pub policy: policy_t,
 }
 impl Clone for task_basic_info_32 {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 pub type task_basic_info_32_data_t = task_basic_info_32;
 pub type task_basic_info_32_t = *mut task_basic_info_32;
@@ -4757,7 +4891,9 @@ pub struct task_basic_info_64 {
     pub policy: policy_t,
 }
 impl Clone for task_basic_info_64 {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 pub type task_basic_info_64_data_t = task_basic_info_64;
 pub type task_basic_info_64_t = *mut task_basic_info_64;
@@ -4772,7 +4908,9 @@ pub struct task_basic_info {
     pub policy: policy_t,
 }
 impl Clone for task_basic_info {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 pub type task_basic_info_data_t = task_basic_info;
 pub type task_basic_info_t = *mut task_basic_info;
@@ -4789,7 +4927,9 @@ pub struct task_events_info {
     pub csw: integer_t,
 }
 impl Clone for task_events_info {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 pub type task_events_info_data_t = task_events_info;
 pub type task_events_info_t = *mut task_events_info;
@@ -4800,7 +4940,9 @@ pub struct task_thread_times_info {
     pub system_time: time_value_t,
 }
 impl Clone for task_thread_times_info {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 pub type task_thread_times_info_data_t = task_thread_times_info;
 pub type task_thread_times_info_t = *mut task_thread_times_info;
@@ -4813,7 +4955,9 @@ pub struct task_absolutetime_info {
     pub threads_system: u64,
 }
 impl Clone for task_absolutetime_info {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 pub type task_absolutetime_info_data_t = task_absolutetime_info;
 pub type task_absolutetime_info_t = *mut task_absolutetime_info;
@@ -4826,7 +4970,9 @@ pub struct task_kernelmemory_info {
     pub total_sfree: u64,
 }
 impl Clone for task_kernelmemory_info {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 pub type task_kernelmemory_info_data_t = task_kernelmemory_info;
 pub type task_kernelmemory_info_t = *mut task_kernelmemory_info;
@@ -4839,7 +4985,9 @@ pub struct task_affinity_tag_info {
     pub task_count: integer_t,
 }
 impl Clone for task_affinity_tag_info {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 pub type task_affinity_tag_info_data_t = task_affinity_tag_info;
 pub type task_affinity_tag_info_t = *mut task_affinity_tag_info;
@@ -4851,7 +4999,9 @@ pub struct task_dyld_info {
     pub all_image_info_format: integer_t,
 }
 impl Clone for task_dyld_info {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 pub type task_dyld_info_data_t = task_dyld_info;
 pub type task_dyld_info_t = *mut task_dyld_info;
@@ -4862,7 +5012,9 @@ pub struct task_extmod_info {
     pub extmod_statistics: vm_extmod_statistics_data_t,
 }
 impl Clone for task_extmod_info {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 pub type task_extmod_info_data_t = task_extmod_info;
 pub type task_extmod_info_t = *mut task_extmod_info;
@@ -4878,7 +5030,9 @@ pub struct mach_task_basic_info {
     pub suspend_count: integer_t,
 }
 impl Clone for mach_task_basic_info {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 pub type mach_task_basic_info_data_t = mach_task_basic_info;
 pub type mach_task_basic_info_t = *mut mach_task_basic_info;
@@ -4893,7 +5047,9 @@ pub struct task_power_info {
     pub task_timer_wakeups_bin_2: u64,
 }
 impl Clone for task_power_info {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 pub type task_power_info_data_t = task_power_info;
 pub type task_power_info_t = *mut task_power_info;
@@ -4922,7 +5078,9 @@ pub struct task_vm_info {
     pub phys_footprint: mach_vm_size_t,
 }
 impl Clone for task_vm_info {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 pub type task_vm_info_data_t = task_vm_info;
 pub type task_vm_info_t = *mut task_vm_info;
@@ -4935,7 +5093,9 @@ pub struct task_trace_memory_info {
     pub mailbox_array_size: u64,
 }
 impl Clone for task_trace_memory_info {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 pub type task_trace_memory_info_data_t = task_trace_memory_info;
 pub type task_trace_memory_info_t = *mut task_trace_memory_info;
@@ -4947,7 +5107,9 @@ pub struct task_wait_state_info {
     pub _reserved: [u32; 4usize],
 }
 impl Clone for task_wait_state_info {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 pub type task_wait_state_info_data_t = task_wait_state_info;
 pub type task_wait_state_info_t = *mut task_wait_state_info;
@@ -4960,7 +5122,9 @@ pub struct gpu_energy_data {
     pub task_gpu_stat_reserved2: u64,
 }
 impl Clone for gpu_energy_data {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 pub type gpu_energy_data_t = *mut gpu_energy_data;
 #[repr(C)]
@@ -4970,7 +5134,9 @@ pub struct task_power_info_v2 {
     pub gpu_energy: gpu_energy_data,
 }
 impl Clone for task_power_info_v2 {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 pub type task_power_info_v2_data_t = task_power_info_v2;
 pub type task_power_info_v2_t = *mut task_power_info_v2;
@@ -4980,7 +5146,9 @@ pub struct task_flags_info {
     pub flags: u32,
 }
 impl Clone for task_flags_info {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 pub type task_flags_info_data_t = task_flags_info;
 pub type task_flags_info_t = *mut task_flags_info;
@@ -5006,7 +5174,9 @@ pub struct task_category_policy {
     pub role: task_role_t,
 }
 impl Clone for task_category_policy {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 pub type task_category_policy_data_t = task_category_policy;
 pub type task_category_policy_t = *mut task_category_policy;
@@ -5041,7 +5211,9 @@ pub struct task_qos_policy {
     pub task_throughput_qos_tier: task_throughput_qos_t,
 }
 impl Clone for task_qos_policy {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 pub type task_qos_policy_t = *mut task_qos_policy;
 pub type task_special_port_t = ::libc::c_int;
@@ -5061,7 +5233,9 @@ pub struct thread_basic_info {
     pub sleep_time: integer_t,
 }
 impl Clone for thread_basic_info {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 pub type thread_basic_info_data_t = thread_basic_info;
 pub type thread_basic_info_t = *mut thread_basic_info;
@@ -5073,7 +5247,9 @@ pub struct thread_identifier_info {
     pub dispatch_qaddr: u64,
 }
 impl Clone for thread_identifier_info {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 pub type thread_identifier_info_data_t = thread_identifier_info;
 pub type thread_identifier_info_t = *mut thread_identifier_info;
@@ -5093,7 +5269,9 @@ pub struct thread_extended_info {
     pub pth_name: [::libc::c_char; 64usize],
 }
 impl Clone for thread_extended_info {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 pub type thread_extended_info_data_t = thread_extended_info;
 pub type thread_extended_info_t = *mut thread_extended_info;
@@ -5104,7 +5282,9 @@ pub struct io_stat_entry {
     pub size: u64,
 }
 impl Clone for io_stat_entry {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -5116,7 +5296,9 @@ pub struct io_stat_info {
     pub total_io: io_stat_entry,
 }
 impl Clone for io_stat_info {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 pub type io_stat_info_t = *mut io_stat_info;
 pub type thread_policy_flavor_t = natural_t;
@@ -5127,7 +5309,9 @@ pub struct thread_standard_policy {
     pub no_data: natural_t,
 }
 impl Clone for thread_standard_policy {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 pub type thread_standard_policy_data_t = thread_standard_policy;
 pub type thread_standard_policy_t = *mut thread_standard_policy;
@@ -5137,7 +5321,9 @@ pub struct thread_extended_policy {
     pub timeshare: boolean_t,
 }
 impl Clone for thread_extended_policy {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 pub type thread_extended_policy_data_t = thread_extended_policy;
 pub type thread_extended_policy_t = *mut thread_extended_policy;
@@ -5150,7 +5336,9 @@ pub struct thread_time_constraint_policy {
     pub preemptible: boolean_t,
 }
 impl Clone for thread_time_constraint_policy {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 pub type thread_time_constraint_policy_data_t = thread_time_constraint_policy;
 pub type thread_time_constraint_policy_t = *mut thread_time_constraint_policy;
@@ -5160,7 +5348,9 @@ pub struct thread_precedence_policy {
     pub importance: integer_t,
 }
 impl Clone for thread_precedence_policy {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 pub type thread_precedence_policy_data_t = thread_precedence_policy;
 pub type thread_precedence_policy_t = *mut thread_precedence_policy;
@@ -5170,7 +5360,9 @@ pub struct thread_affinity_policy {
     pub affinity_tag: integer_t,
 }
 impl Clone for thread_affinity_policy {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 pub type thread_affinity_policy_data_t = thread_affinity_policy;
 pub type thread_affinity_policy_t = *mut thread_affinity_policy;
@@ -5180,7 +5372,9 @@ pub struct thread_background_policy {
     pub priority: integer_t,
 }
 impl Clone for thread_background_policy {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 pub type thread_background_policy_data_t = thread_background_policy;
 pub type thread_background_policy_t = *mut thread_background_policy;
@@ -5191,7 +5385,9 @@ pub struct thread_latency_qos_policy {
     pub thread_latency_qos_tier: thread_latency_qos_t,
 }
 impl Clone for thread_latency_qos_policy {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 pub type thread_latency_qos_policy_data_t = thread_latency_qos_policy;
 pub type thread_latency_qos_policy_t = *mut thread_latency_qos_policy;
@@ -5202,7 +5398,9 @@ pub struct thread_throughput_qos_policy {
     pub thread_throughput_qos_tier: thread_throughput_qos_t,
 }
 impl Clone for thread_throughput_qos_policy {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 pub type thread_throughput_qos_policy_data_t = thread_throughput_qos_policy;
 pub type thread_throughput_qos_policy_t = *mut thread_throughput_qos_policy;
@@ -5219,7 +5417,9 @@ pub struct mach_timespec {
     pub tv_nsec: clock_res_t,
 }
 impl Clone for mach_timespec {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 pub type mach_timespec_t = mach_timespec;
 pub type vm_machine_attribute_t = ::libc::c_uint;
@@ -5247,7 +5447,9 @@ pub struct vm_region_basic_info_64 {
     pub user_wired_count: ::libc::c_ushort,
 }
 impl Clone for vm_region_basic_info_64 {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 pub type vm_region_basic_info_64_t = *mut vm_region_basic_info_64;
 pub type vm_region_basic_info_data_64_t = vm_region_basic_info_64;
@@ -5264,7 +5466,9 @@ pub struct vm_region_basic_info {
     pub user_wired_count: ::libc::c_ushort,
 }
 impl Clone for vm_region_basic_info {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 pub type vm_region_basic_info_t = *mut vm_region_basic_info;
 pub type vm_region_basic_info_data_t = vm_region_basic_info;
@@ -5284,7 +5488,9 @@ pub struct vm_region_extended_info {
     pub pages_reusable: ::libc::c_uint,
 }
 impl Clone for vm_region_extended_info {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 pub type vm_region_extended_info_t = *mut vm_region_extended_info;
 pub type vm_region_extended_info_data_t = vm_region_extended_info;
@@ -5298,7 +5504,9 @@ pub struct vm_region_top_info {
     pub share_mode: ::libc::c_uchar,
 }
 impl Clone for vm_region_top_info {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 pub type vm_region_top_info_t = *mut vm_region_top_info;
 pub type vm_region_top_info_data_t = vm_region_top_info;
@@ -5324,7 +5532,9 @@ pub struct vm_region_submap_info {
     pub user_wired_count: ::libc::c_ushort,
 }
 impl Clone for vm_region_submap_info {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 pub type vm_region_submap_info_t = *mut vm_region_submap_info;
 pub type vm_region_submap_info_data_t = vm_region_submap_info;
@@ -5351,7 +5561,9 @@ pub struct vm_region_submap_info_64 {
     pub pages_reusable: ::libc::c_uint,
 }
 impl Clone for vm_region_submap_info_64 {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 pub type vm_region_submap_info_64_t = *mut vm_region_submap_info_64;
 pub type vm_region_submap_info_data_64_t = vm_region_submap_info_64;
@@ -5373,12 +5585,12 @@ pub struct vm_region_submap_short_info_64 {
     pub user_wired_count: ::libc::c_ushort,
 }
 impl Clone for vm_region_submap_short_info_64 {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
-pub type vm_region_submap_short_info_64_t =
-    *mut vm_region_submap_short_info_64;
-pub type vm_region_submap_short_info_data_64_t =
-    vm_region_submap_short_info_64;
+pub type vm_region_submap_short_info_64_t = *mut vm_region_submap_short_info_64;
+pub type vm_region_submap_short_info_data_64_t = vm_region_submap_short_info_64;
 #[repr(C)]
 #[derive(Copy)]
 pub struct mach_vm_read_entry {
@@ -5386,7 +5598,9 @@ pub struct mach_vm_read_entry {
     pub size: mach_vm_size_t,
 }
 impl Clone for mach_vm_read_entry {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -5395,7 +5609,9 @@ pub struct vm_read_entry {
     pub size: vm_size_t,
 }
 impl Clone for vm_read_entry {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 pub type mach_vm_read_entry_t = [mach_vm_read_entry; 256usize];
 pub type vm_read_entry_t = [vm_read_entry; 256usize];
@@ -5413,7 +5629,9 @@ pub struct vm_page_info_basic {
     pub __pad: ::libc::c_int,
 }
 impl Clone for vm_page_info_basic {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 pub type vm_page_info_basic_t = *mut vm_page_info_basic;
 pub type vm_page_info_basic_data_t = vm_page_info_basic;
@@ -5435,16 +5653,16 @@ pub struct kmod_info {
     pub stop: kmod_stop_func_t,
 }
 impl Clone for kmod_info {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
-pub type kmod_start_func_t =
-    ::std::option::Option<unsafe extern "C" fn(ki: *mut kmod_info,
-                                               data: *mut ::libc::c_void)
-                              -> kern_return_t>;
-pub type kmod_stop_func_t =
-    ::std::option::Option<unsafe extern "C" fn(ki: *mut kmod_info,
-                                               data: *mut ::libc::c_void)
-                              -> kern_return_t>;
+pub type kmod_start_func_t = ::std::option::Option<
+    unsafe extern "C" fn(ki: *mut kmod_info, data: *mut ::libc::c_void) -> kern_return_t,
+>;
+pub type kmod_stop_func_t = ::std::option::Option<
+    unsafe extern "C" fn(ki: *mut kmod_info, data: *mut ::libc::c_void) -> kern_return_t,
+>;
 #[repr(C)]
 #[derive(Copy)]
 pub struct kmod_reference {
@@ -5452,7 +5670,9 @@ pub struct kmod_reference {
     pub info: *mut kmod_info,
 }
 impl Clone for kmod_reference {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 pub type kmod_reference_t = kmod_reference;
 pub type kmod_info_t = kmod_info;
@@ -5473,7 +5693,9 @@ pub struct kmod_info_32_v1 {
     pub stop_addr: u32,
 }
 impl Clone for kmod_info_32_v1 {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 pub type kmod_info_32_v1_t = kmod_info_32_v1;
 #[repr(C)]
@@ -5493,7 +5715,9 @@ pub struct kmod_info_64_v1 {
     pub stop_addr: u64,
 }
 impl Clone for kmod_info_64_v1 {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 pub type kmod_info_64_v1_t = kmod_info_64_v1;
 pub type kmod_args_t = *mut ::libc::c_void;
@@ -5567,48 +5791,57 @@ pub type __darwin_nl_item = ::libc::c_int;
 pub type __darwin_wctrans_t = ::libc::c_int;
 pub type __darwin_wctype_t = __uint32_t;
 extern "C" {
-    pub fn memchr(arg1: *const ::libc::c_void, arg2: ::libc::c_int,
-                  arg3: usize) -> *mut ::libc::c_void;
+    pub fn memchr(
+        arg1: *const ::libc::c_void,
+        arg2: ::libc::c_int,
+        arg3: usize,
+    ) -> *mut ::libc::c_void;
 }
 extern "C" {
-    pub fn memcmp(arg1: *const ::libc::c_void, arg2: *const ::libc::c_void,
-                  arg3: usize) -> ::libc::c_int;
+    pub fn memcmp(
+        arg1: *const ::libc::c_void,
+        arg2: *const ::libc::c_void,
+        arg3: usize,
+    ) -> ::libc::c_int;
 }
 extern "C" {
-    pub fn memcpy(arg1: *mut ::libc::c_void, arg2: *const ::libc::c_void,
-                  arg3: usize) -> *mut ::libc::c_void;
+    pub fn memcpy(
+        arg1: *mut ::libc::c_void,
+        arg2: *const ::libc::c_void,
+        arg3: usize,
+    ) -> *mut ::libc::c_void;
 }
 extern "C" {
-    pub fn memmove(arg1: *mut ::libc::c_void, arg2: *const ::libc::c_void,
-                   arg3: usize) -> *mut ::libc::c_void;
+    pub fn memmove(
+        arg1: *mut ::libc::c_void,
+        arg2: *const ::libc::c_void,
+        arg3: usize,
+    ) -> *mut ::libc::c_void;
 }
 extern "C" {
-    pub fn memset(arg1: *mut ::libc::c_void, arg2: ::libc::c_int, arg3: usize)
-     -> *mut ::libc::c_void;
+    pub fn memset(
+        arg1: *mut ::libc::c_void,
+        arg2: ::libc::c_int,
+        arg3: usize,
+    ) -> *mut ::libc::c_void;
 }
 extern "C" {
-    pub fn strcat(arg1: *mut ::libc::c_char, arg2: *const ::libc::c_char)
-     -> *mut ::libc::c_char;
+    pub fn strcat(arg1: *mut ::libc::c_char, arg2: *const ::libc::c_char) -> *mut ::libc::c_char;
 }
 extern "C" {
-    pub fn strchr(arg1: *const ::libc::c_char, arg2: ::libc::c_int)
-     -> *mut ::libc::c_char;
+    pub fn strchr(arg1: *const ::libc::c_char, arg2: ::libc::c_int) -> *mut ::libc::c_char;
 }
 extern "C" {
-    pub fn strcmp(arg1: *const ::libc::c_char, arg2: *const ::libc::c_char)
-     -> ::libc::c_int;
+    pub fn strcmp(arg1: *const ::libc::c_char, arg2: *const ::libc::c_char) -> ::libc::c_int;
 }
 extern "C" {
-    pub fn strcoll(arg1: *const ::libc::c_char, arg2: *const ::libc::c_char)
-     -> ::libc::c_int;
+    pub fn strcoll(arg1: *const ::libc::c_char, arg2: *const ::libc::c_char) -> ::libc::c_int;
 }
 extern "C" {
-    pub fn strcpy(arg1: *mut ::libc::c_char, arg2: *const ::libc::c_char)
-     -> *mut ::libc::c_char;
+    pub fn strcpy(arg1: *mut ::libc::c_char, arg2: *const ::libc::c_char) -> *mut ::libc::c_char;
 }
 extern "C" {
-    pub fn strcspn(arg1: *const ::libc::c_char, arg2: *const ::libc::c_char)
-     -> ::libc::c_ulong;
+    pub fn strcspn(arg1: *const ::libc::c_char, arg2: *const ::libc::c_char) -> ::libc::c_ulong;
 }
 extern "C" {
     pub fn strerror(arg1: ::libc::c_int) -> *mut ::libc::c_char;
@@ -5617,67 +5850,83 @@ extern "C" {
     pub fn strlen(arg1: *const ::libc::c_char) -> ::libc::c_ulong;
 }
 extern "C" {
-    pub fn strncat(arg1: *mut ::libc::c_char, arg2: *const ::libc::c_char,
-                   arg3: usize) -> *mut ::libc::c_char;
+    pub fn strncat(
+        arg1: *mut ::libc::c_char,
+        arg2: *const ::libc::c_char,
+        arg3: usize,
+    ) -> *mut ::libc::c_char;
 }
 extern "C" {
-    pub fn strncmp(arg1: *const ::libc::c_char, arg2: *const ::libc::c_char,
-                   arg3: usize) -> ::libc::c_int;
+    pub fn strncmp(
+        arg1: *const ::libc::c_char,
+        arg2: *const ::libc::c_char,
+        arg3: usize,
+    ) -> ::libc::c_int;
 }
 extern "C" {
-    pub fn strncpy(arg1: *mut ::libc::c_char, arg2: *const ::libc::c_char,
-                   arg3: usize) -> *mut ::libc::c_char;
+    pub fn strncpy(
+        arg1: *mut ::libc::c_char,
+        arg2: *const ::libc::c_char,
+        arg3: usize,
+    ) -> *mut ::libc::c_char;
 }
 extern "C" {
     pub fn strpbrk(arg1: *const ::libc::c_char, arg2: *const ::libc::c_char)
-     -> *mut ::libc::c_char;
+        -> *mut ::libc::c_char;
 }
 extern "C" {
-    pub fn strrchr(arg1: *const ::libc::c_char, arg2: ::libc::c_int)
-     -> *mut ::libc::c_char;
+    pub fn strrchr(arg1: *const ::libc::c_char, arg2: ::libc::c_int) -> *mut ::libc::c_char;
 }
 extern "C" {
-    pub fn strspn(arg1: *const ::libc::c_char, arg2: *const ::libc::c_char)
-     -> ::libc::c_ulong;
+    pub fn strspn(arg1: *const ::libc::c_char, arg2: *const ::libc::c_char) -> ::libc::c_ulong;
 }
 extern "C" {
-    pub fn strstr(arg1: *const ::libc::c_char, arg2: *const ::libc::c_char)
-     -> *mut ::libc::c_char;
+    pub fn strstr(arg1: *const ::libc::c_char, arg2: *const ::libc::c_char) -> *mut ::libc::c_char;
 }
 extern "C" {
-    pub fn strtok(arg1: *mut ::libc::c_char, arg2: *const ::libc::c_char)
-     -> *mut ::libc::c_char;
+    pub fn strtok(arg1: *mut ::libc::c_char, arg2: *const ::libc::c_char) -> *mut ::libc::c_char;
 }
 extern "C" {
-    pub fn strxfrm(arg1: *mut ::libc::c_char, arg2: *const ::libc::c_char,
-                   arg3: usize) -> ::libc::c_ulong;
+    pub fn strxfrm(
+        arg1: *mut ::libc::c_char,
+        arg2: *const ::libc::c_char,
+        arg3: usize,
+    ) -> ::libc::c_ulong;
 }
 extern "C" {
-    pub fn strtok_r(arg1: *mut ::libc::c_char, arg2: *const ::libc::c_char,
-                    arg3: *mut *mut ::libc::c_char) -> *mut ::libc::c_char;
+    pub fn strtok_r(
+        arg1: *mut ::libc::c_char,
+        arg2: *const ::libc::c_char,
+        arg3: *mut *mut ::libc::c_char,
+    ) -> *mut ::libc::c_char;
 }
 extern "C" {
-    pub fn strerror_r(arg1: ::libc::c_int, arg2: *mut ::libc::c_char,
-                      arg3: usize) -> ::libc::c_int;
+    pub fn strerror_r(arg1: ::libc::c_int, arg2: *mut ::libc::c_char, arg3: usize)
+        -> ::libc::c_int;
 }
 extern "C" {
     pub fn strdup(arg1: *const ::libc::c_char) -> *mut ::libc::c_char;
 }
 extern "C" {
-    pub fn memccpy(arg1: *mut ::libc::c_void, arg2: *const ::libc::c_void,
-                   arg3: ::libc::c_int, arg4: usize) -> *mut ::libc::c_void;
+    pub fn memccpy(
+        arg1: *mut ::libc::c_void,
+        arg2: *const ::libc::c_void,
+        arg3: ::libc::c_int,
+        arg4: usize,
+    ) -> *mut ::libc::c_void;
 }
 extern "C" {
-    pub fn stpcpy(arg1: *mut ::libc::c_char, arg2: *const ::libc::c_char)
-     -> *mut ::libc::c_char;
+    pub fn stpcpy(arg1: *mut ::libc::c_char, arg2: *const ::libc::c_char) -> *mut ::libc::c_char;
 }
 extern "C" {
-    pub fn stpncpy(arg1: *mut ::libc::c_char, arg2: *const ::libc::c_char,
-                   arg3: usize) -> *mut ::libc::c_char;
+    pub fn stpncpy(
+        arg1: *mut ::libc::c_char,
+        arg2: *const ::libc::c_char,
+        arg3: usize,
+    ) -> *mut ::libc::c_char;
 }
 extern "C" {
-    pub fn strndup(arg1: *const ::libc::c_char, arg2: usize)
-     -> *mut ::libc::c_char;
+    pub fn strndup(arg1: *const ::libc::c_char, arg2: usize) -> *mut ::libc::c_char;
 }
 extern "C" {
     pub fn strnlen(arg1: *const ::libc::c_char, arg2: usize) -> usize;
@@ -5688,83 +5937,100 @@ extern "C" {
 pub type rsize_t = __darwin_size_t;
 pub type errno_t = ::libc::c_int;
 extern "C" {
-    pub fn memset_s(arg1: *mut ::libc::c_void, arg2: rsize_t,
-                    arg3: ::libc::c_int, arg4: rsize_t) -> errno_t;
+    pub fn memset_s(
+        arg1: *mut ::libc::c_void,
+        arg2: rsize_t,
+        arg3: ::libc::c_int,
+        arg4: rsize_t,
+    ) -> errno_t;
 }
 extern "C" {
-    pub fn memmem(arg1: *const ::libc::c_void, arg2: usize,
-                  arg3: *const ::libc::c_void, arg4: usize)
-     -> *mut ::libc::c_void;
+    pub fn memmem(
+        arg1: *const ::libc::c_void,
+        arg2: usize,
+        arg3: *const ::libc::c_void,
+        arg4: usize,
+    ) -> *mut ::libc::c_void;
 }
 extern "C" {
-    pub fn memset_pattern4(arg1: *mut ::libc::c_void,
-                           arg2: *const ::libc::c_void, arg3: usize);
+    pub fn memset_pattern4(arg1: *mut ::libc::c_void, arg2: *const ::libc::c_void, arg3: usize);
 }
 extern "C" {
-    pub fn memset_pattern8(arg1: *mut ::libc::c_void,
-                           arg2: *const ::libc::c_void, arg3: usize);
+    pub fn memset_pattern8(arg1: *mut ::libc::c_void, arg2: *const ::libc::c_void, arg3: usize);
 }
 extern "C" {
-    pub fn memset_pattern16(arg1: *mut ::libc::c_void,
-                            arg2: *const ::libc::c_void, arg3: usize);
+    pub fn memset_pattern16(arg1: *mut ::libc::c_void, arg2: *const ::libc::c_void, arg3: usize);
 }
 extern "C" {
-    pub fn strcasestr(arg1: *const ::libc::c_char,
-                      arg2: *const ::libc::c_char) -> *mut ::libc::c_char;
+    pub fn strcasestr(
+        arg1: *const ::libc::c_char,
+        arg2: *const ::libc::c_char,
+    ) -> *mut ::libc::c_char;
 }
 extern "C" {
-    pub fn strnstr(arg1: *const ::libc::c_char, arg2: *const ::libc::c_char,
-                   arg3: usize) -> *mut ::libc::c_char;
+    pub fn strnstr(
+        arg1: *const ::libc::c_char,
+        arg2: *const ::libc::c_char,
+        arg3: usize,
+    ) -> *mut ::libc::c_char;
 }
 extern "C" {
-    pub fn strlcat(arg1: *mut ::libc::c_char, arg2: *const ::libc::c_char,
-                   arg3: usize) -> ::libc::c_ulong;
+    pub fn strlcat(
+        arg1: *mut ::libc::c_char,
+        arg2: *const ::libc::c_char,
+        arg3: usize,
+    ) -> ::libc::c_ulong;
 }
 extern "C" {
-    pub fn strlcpy(arg1: *mut ::libc::c_char, arg2: *const ::libc::c_char,
-                   arg3: usize) -> ::libc::c_ulong;
+    pub fn strlcpy(
+        arg1: *mut ::libc::c_char,
+        arg2: *const ::libc::c_char,
+        arg3: usize,
+    ) -> ::libc::c_ulong;
 }
 extern "C" {
     pub fn strmode(arg1: ::libc::c_int, arg2: *mut ::libc::c_char);
 }
 extern "C" {
-    pub fn strsep(arg1: *mut *mut ::libc::c_char, arg2: *const ::libc::c_char)
-     -> *mut ::libc::c_char;
+    pub fn strsep(
+        arg1: *mut *mut ::libc::c_char,
+        arg2: *const ::libc::c_char,
+    ) -> *mut ::libc::c_char;
 }
 extern "C" {
-    pub fn swab(arg1: *const ::libc::c_void, arg2: *mut ::libc::c_void,
-                arg3: isize);
+    pub fn swab(arg1: *const ::libc::c_void, arg2: *mut ::libc::c_void, arg3: isize);
 }
 extern "C" {
-    pub fn bcmp(arg1: *const ::libc::c_void, arg2: *const ::libc::c_void,
-                arg3: usize) -> ::libc::c_int;
+    pub fn bcmp(
+        arg1: *const ::libc::c_void,
+        arg2: *const ::libc::c_void,
+        arg3: usize,
+    ) -> ::libc::c_int;
 }
 extern "C" {
-    pub fn bcopy(arg1: *const ::libc::c_void, arg2: *mut ::libc::c_void,
-                 arg3: usize);
+    pub fn bcopy(arg1: *const ::libc::c_void, arg2: *mut ::libc::c_void, arg3: usize);
 }
 extern "C" {
     pub fn bzero(arg1: *mut ::libc::c_void, arg2: usize);
 }
 extern "C" {
-    pub fn index(arg1: *const ::libc::c_char, arg2: ::libc::c_int)
-     -> *mut ::libc::c_char;
+    pub fn index(arg1: *const ::libc::c_char, arg2: ::libc::c_int) -> *mut ::libc::c_char;
 }
 extern "C" {
-    pub fn rindex(arg1: *const ::libc::c_char, arg2: ::libc::c_int)
-     -> *mut ::libc::c_char;
+    pub fn rindex(arg1: *const ::libc::c_char, arg2: ::libc::c_int) -> *mut ::libc::c_char;
 }
 extern "C" {
     pub fn ffs(arg1: ::libc::c_int) -> ::libc::c_int;
 }
 extern "C" {
-    pub fn strcasecmp(arg1: *const ::libc::c_char,
-                      arg2: *const ::libc::c_char) -> ::libc::c_int;
+    pub fn strcasecmp(arg1: *const ::libc::c_char, arg2: *const ::libc::c_char) -> ::libc::c_int;
 }
 extern "C" {
-    pub fn strncasecmp(arg1: *const ::libc::c_char,
-                       arg2: *const ::libc::c_char, arg3: usize)
-     -> ::libc::c_int;
+    pub fn strncasecmp(
+        arg1: *const ::libc::c_char,
+        arg2: *const ::libc::c_char,
+        arg3: usize,
+    ) -> ::libc::c_int;
 }
 extern "C" {
     pub fn ffsl(arg1: ::libc::c_long) -> ::libc::c_int;
@@ -5781,8 +6047,7 @@ extern "C" {
 extern "C" {
     pub fn flsll(arg1: ::libc::c_longlong) -> ::libc::c_int;
 }
-pub const OSUnknownByteOrder: _bindgen_ty_1 =
-    _bindgen_ty_1::OSUnknownByteOrder;
+pub const OSUnknownByteOrder: _bindgen_ty_1 = _bindgen_ty_1::OSUnknownByteOrder;
 pub const OSLittleEndian: _bindgen_ty_1 = _bindgen_ty_1::OSLittleEndian;
 pub const OSBigEndian: _bindgen_ty_1 = _bindgen_ty_1::OSBigEndian;
 #[repr(u32)]
@@ -5805,7 +6070,9 @@ pub struct NDR_record_t {
     pub reserved2: ::libc::c_uchar,
 }
 impl Clone for NDR_record_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 extern "C" {
     #[link_name = "NDR_record"]
@@ -5821,7 +6088,9 @@ pub struct mach_port_deleted_notification_t {
     pub trailer: mach_msg_format_0_trailer_t,
 }
 impl Clone for mach_port_deleted_notification_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -5832,7 +6101,9 @@ pub struct mach_send_possible_notification_t {
     pub trailer: mach_msg_format_0_trailer_t,
 }
 impl Clone for mach_send_possible_notification_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -5843,7 +6114,9 @@ pub struct mach_port_destroyed_notification_t {
     pub trailer: mach_msg_format_0_trailer_t,
 }
 impl Clone for mach_port_destroyed_notification_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -5854,7 +6127,9 @@ pub struct mach_no_senders_notification_t {
     pub trailer: mach_msg_format_0_trailer_t,
 }
 impl Clone for mach_no_senders_notification_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -5863,7 +6138,9 @@ pub struct mach_send_once_notification_t {
     pub trailer: mach_msg_format_0_trailer_t,
 }
 impl Clone for mach_send_once_notification_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -5874,20 +6151,17 @@ pub struct mach_dead_name_notification_t {
     pub trailer: mach_msg_format_0_trailer_t,
 }
 impl Clone for mach_dead_name_notification_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
-pub type mig_stub_routine_t =
-    ::std::option::Option<unsafe extern "C" fn(InHeadP:
-                                                   *mut mach_msg_header_t,
-                                               OutHeadP:
-                                                   *mut mach_msg_header_t)>;
+pub type mig_stub_routine_t = ::std::option::Option<
+    unsafe extern "C" fn(InHeadP: *mut mach_msg_header_t, OutHeadP: *mut mach_msg_header_t),
+>;
 pub type mig_routine_t = mig_stub_routine_t;
 pub type mig_server_routine_t =
-    ::std::option::Option<unsafe extern "C" fn(InHeadP:
-                                                   *mut mach_msg_header_t)
-                              -> mig_routine_t>;
-pub type mig_impl_routine_t =
-    ::std::option::Option<unsafe extern "C" fn() -> kern_return_t>;
+    ::std::option::Option<unsafe extern "C" fn(InHeadP: *mut mach_msg_header_t) -> mig_routine_t>;
+pub type mig_impl_routine_t = ::std::option::Option<unsafe extern "C" fn() -> kern_return_t>;
 pub type routine_arg_descriptor = mach_msg_type_descriptor_t;
 pub type routine_arg_descriptor_t = *mut mach_msg_type_descriptor_t;
 pub type mig_routine_arg_descriptor_t = *mut mach_msg_type_descriptor_t;
@@ -5902,7 +6176,9 @@ pub struct routine_descriptor {
     pub max_reply_msg: ::libc::c_uint,
 }
 impl Clone for routine_descriptor {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 pub type routine_descriptor_t = *mut routine_descriptor;
 pub type mig_routine_descriptor = routine_descriptor;
@@ -5918,7 +6194,9 @@ pub struct mig_subsystem {
     pub routine: [mig_routine_descriptor; 1usize],
 }
 impl Clone for mig_subsystem {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 pub type mig_subsystem_t = *mut mig_subsystem;
 #[repr(C)]
@@ -5929,7 +6207,9 @@ pub struct mig_symtab {
     pub ms_routine: ::std::option::Option<unsafe extern "C" fn()>,
 }
 impl Clone for mig_symtab {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 pub type mig_symtab_t = mig_symtab;
 extern "C" {
@@ -5942,8 +6222,11 @@ extern "C" {
     pub fn mig_put_reply_port(reply_port: mach_port_t);
 }
 extern "C" {
-    pub fn mig_strncpy(dest: *mut ::libc::c_char, src: *const ::libc::c_char,
-                       len: ::libc::c_int) -> ::libc::c_int;
+    pub fn mig_strncpy(
+        dest: *mut ::libc::c_char,
+        src: *const ::libc::c_char,
+        len: ::libc::c_int,
+    ) -> ::libc::c_int;
 }
 extern "C" {
     pub fn mig_allocate(arg1: *mut vm_address_t, arg2: vm_size_t);
@@ -5959,18 +6242,20 @@ pub struct mig_reply_error_t {
     pub RetCode: kern_return_t,
 }
 impl Clone for mig_reply_error_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 extern "C" {
-    pub fn clock_set_time(clock_ctrl: clock_ctrl_t, new_time: mach_timespec_t)
-     -> kern_return_t;
+    pub fn clock_set_time(clock_ctrl: clock_ctrl_t, new_time: mach_timespec_t) -> kern_return_t;
 }
 extern "C" {
-    pub fn clock_set_attributes(clock_ctrl: clock_ctrl_t,
-                                flavor: clock_flavor_t,
-                                clock_attr: clock_attr_t,
-                                clock_attrCnt: mach_msg_type_number_t)
-     -> kern_return_t;
+    pub fn clock_set_attributes(
+        clock_ctrl: clock_ctrl_t,
+        flavor: clock_flavor_t,
+        clock_attr: clock_attr_t,
+        clock_attrCnt: mach_msg_type_number_t,
+    ) -> kern_return_t;
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -5980,7 +6265,9 @@ pub struct __Request__clock_set_time_t {
     pub new_time: mach_timespec_t,
 }
 impl Clone for __Request__clock_set_time_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -5992,7 +6279,9 @@ pub struct __Request__clock_set_attributes_t {
     pub clock_attr: [::libc::c_int; 1usize],
 }
 impl Clone for __Request__clock_set_attributes_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -6002,7 +6291,9 @@ pub union __RequestUnion__clock_priv_subsystem {
     _bindgen_union_align: [u32; 11usize],
 }
 impl Clone for __RequestUnion__clock_priv_subsystem {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -6012,7 +6303,9 @@ pub struct __Reply__clock_set_time_t {
     pub RetCode: kern_return_t,
 }
 impl Clone for __Reply__clock_set_time_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -6022,7 +6315,9 @@ pub struct __Reply__clock_set_attributes_t {
     pub RetCode: kern_return_t,
 }
 impl Clone for __Reply__clock_set_attributes_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -6032,7 +6327,9 @@ pub union __ReplyUnion__clock_priv_subsystem {
     _bindgen_union_align: [u32; 9usize],
 }
 impl Clone for __ReplyUnion__clock_priv_subsystem {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -6045,7 +6342,9 @@ pub struct ipc_info_space {
     pub iis_tree_hash: natural_t,
 }
 impl Clone for ipc_info_space {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 pub type ipc_info_space_t = ipc_info_space;
 #[repr(C)]
@@ -6058,7 +6357,9 @@ pub struct ipc_info_space_basic {
     pub iisb_reserved: [natural_t; 2usize],
 }
 impl Clone for ipc_info_space_basic {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 pub type ipc_info_space_basic_t = ipc_info_space_basic;
 #[repr(C)]
@@ -6073,7 +6374,9 @@ pub struct ipc_info_name {
     pub iin_hash: natural_t,
 }
 impl Clone for ipc_info_name {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 pub type ipc_info_name_t = ipc_info_name;
 pub type ipc_info_name_array_t = *mut ipc_info_name_t;
@@ -6085,7 +6388,9 @@ pub struct ipc_info_tree_name {
     pub iitn_rchild: mach_port_name_t,
 }
 impl Clone for ipc_info_tree_name {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 pub type ipc_info_tree_name_t = ipc_info_tree_name;
 pub type ipc_info_tree_name_array_t = *mut ipc_info_tree_name_t;
@@ -6104,7 +6409,9 @@ pub struct mach_vm_info_region {
     pub vir_user_wired_count: natural_t,
 }
 impl Clone for mach_vm_info_region {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 pub type mach_vm_info_region_t = mach_vm_info_region;
 #[repr(C)]
@@ -6122,7 +6429,9 @@ pub struct vm_info_region_64 {
     pub vir_user_wired_count: natural_t,
 }
 impl Clone for vm_info_region_64 {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 pub type vm_info_region_64_t = vm_info_region_64;
 #[repr(C)]
@@ -6140,7 +6449,9 @@ pub struct vm_info_region {
     pub vir_user_wired_count: natural_t,
 }
 impl Clone for vm_info_region {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 pub type vm_info_region_t = vm_info_region;
 #[repr(C)]
@@ -6169,7 +6480,9 @@ pub struct vm_info_object {
     pub vio_purgable_volatile: boolean_t,
 }
 impl Clone for vm_info_object {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 pub type vm_info_object_t = vm_info_object;
 pub type vm_info_object_array_t = *mut vm_info_object_t;
@@ -6179,7 +6492,9 @@ pub struct zone_name {
     pub zn_name: [::libc::c_char; 80usize],
 }
 impl Clone for zone_name {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 pub type zone_name_t = zone_name;
 pub type zone_name_array_t = *mut zone_name_t;
@@ -6197,7 +6512,9 @@ pub struct zone_info {
     pub zi_collectable: integer_t,
 }
 impl Clone for zone_info {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 pub type zone_info_t = zone_info;
 pub type zone_info_array_t = *mut zone_info_t;
@@ -6207,7 +6524,9 @@ pub struct mach_zone_name {
     pub mzn_name: [::libc::c_char; 80usize],
 }
 impl Clone for mach_zone_name {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 pub type mach_zone_name_t = mach_zone_name;
 pub type mach_zone_name_array_t = *mut mach_zone_name_t;
@@ -6224,7 +6543,9 @@ pub struct mach_zone_info_data {
     pub mzi_collectable: u64,
 }
 impl Clone for mach_zone_info_data {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 pub type mach_zone_info_t = mach_zone_info_data;
 pub type mach_zone_info_array_t = *mut mach_zone_info_t;
@@ -6244,7 +6565,9 @@ pub struct task_zone_info_data {
     pub tzi_task_free: u64,
 }
 impl Clone for task_zone_info_data {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 pub type task_zone_info_t = task_zone_info_data;
 pub type task_zone_info_array_t = *mut task_zone_info_t;
@@ -6259,7 +6582,9 @@ pub struct mach_memory_info {
     pub _resv: [u64; 3usize],
 }
 impl Clone for mach_memory_info {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 pub type mach_memory_info_t = mach_memory_info;
 pub type mach_memory_info_array_t = *mut mach_memory_info_t;
@@ -6270,7 +6595,9 @@ pub struct hash_info_bucket {
     pub hib_count: natural_t,
 }
 impl Clone for hash_info_bucket {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 pub type hash_info_bucket_t = hash_info_bucket;
 pub type hash_info_bucket_array_t = *mut hash_info_bucket_t;
@@ -6305,7 +6632,9 @@ pub struct lockgroup_info {
     pub lock_rw_wait_cum: u64,
 }
 impl Clone for lockgroup_info {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 pub type lockgroup_info_t = lockgroup_info;
 pub type lockgroup_info_array_t = *mut lockgroup_info_t;
@@ -6320,156 +6649,188 @@ pub struct mach_core_fileheader {
     pub gzip_length: u64,
 }
 impl Clone for mach_core_fileheader {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 extern "C" {
-    pub fn host_get_boot_info(host_priv: host_priv_t,
-                              boot_info: *mut ::libc::c_char)
-     -> kern_return_t;
+    pub fn host_get_boot_info(
+        host_priv: host_priv_t,
+        boot_info: *mut ::libc::c_char,
+    ) -> kern_return_t;
 }
 extern "C" {
-    pub fn host_reboot(host_priv: host_priv_t, options: ::libc::c_int)
-     -> kern_return_t;
+    pub fn host_reboot(host_priv: host_priv_t, options: ::libc::c_int) -> kern_return_t;
 }
 extern "C" {
-    pub fn host_priv_statistics(host_priv: host_priv_t, flavor: host_flavor_t,
-                                host_info_out: host_info_t,
-                                host_info_outCnt: *mut mach_msg_type_number_t)
-     -> kern_return_t;
+    pub fn host_priv_statistics(
+        host_priv: host_priv_t,
+        flavor: host_flavor_t,
+        host_info_out: host_info_t,
+        host_info_outCnt: *mut mach_msg_type_number_t,
+    ) -> kern_return_t;
 }
 extern "C" {
-    pub fn host_default_memory_manager(host_priv: host_priv_t,
-                                       default_manager:
-                                           *mut memory_object_default_t,
-                                       cluster_size:
-                                           memory_object_cluster_size_t)
-     -> kern_return_t;
+    pub fn host_default_memory_manager(
+        host_priv: host_priv_t,
+        default_manager: *mut memory_object_default_t,
+        cluster_size: memory_object_cluster_size_t,
+    ) -> kern_return_t;
 }
 extern "C" {
-    pub fn vm_wire(host_priv: host_priv_t, task: vm_map_t,
-                   address: vm_address_t, size: vm_size_t,
-                   desired_access: vm_prot_t) -> kern_return_t;
+    pub fn vm_wire(
+        host_priv: host_priv_t,
+        task: vm_map_t,
+        address: vm_address_t,
+        size: vm_size_t,
+        desired_access: vm_prot_t,
+    ) -> kern_return_t;
 }
 extern "C" {
-    pub fn thread_wire(host_priv: host_priv_t, thread: thread_act_t,
-                       wired: boolean_t) -> kern_return_t;
+    pub fn thread_wire(
+        host_priv: host_priv_t,
+        thread: thread_act_t,
+        wired: boolean_t,
+    ) -> kern_return_t;
 }
 extern "C" {
-    pub fn vm_allocate_cpm(host_priv: host_priv_t, task: vm_map_t,
-                           address: *mut vm_address_t, size: vm_size_t,
-                           flags: ::libc::c_int) -> kern_return_t;
+    pub fn vm_allocate_cpm(
+        host_priv: host_priv_t,
+        task: vm_map_t,
+        address: *mut vm_address_t,
+        size: vm_size_t,
+        flags: ::libc::c_int,
+    ) -> kern_return_t;
 }
 extern "C" {
-    pub fn host_processors(host_priv: host_priv_t,
-                           out_processor_list: *mut processor_array_t,
-                           out_processor_listCnt: *mut mach_msg_type_number_t)
-     -> kern_return_t;
+    pub fn host_processors(
+        host_priv: host_priv_t,
+        out_processor_list: *mut processor_array_t,
+        out_processor_listCnt: *mut mach_msg_type_number_t,
+    ) -> kern_return_t;
 }
 extern "C" {
-    pub fn host_get_clock_control(host_priv: host_priv_t,
-                                  clock_id: clock_id_t,
-                                  clock_ctrl: *mut clock_ctrl_t)
-     -> kern_return_t;
+    pub fn host_get_clock_control(
+        host_priv: host_priv_t,
+        clock_id: clock_id_t,
+        clock_ctrl: *mut clock_ctrl_t,
+    ) -> kern_return_t;
 }
 extern "C" {
-    pub fn kmod_create(host_priv: host_priv_t, info: vm_address_t,
-                       module: *mut kmod_t) -> kern_return_t;
+    pub fn kmod_create(
+        host_priv: host_priv_t,
+        info: vm_address_t,
+        module: *mut kmod_t,
+    ) -> kern_return_t;
 }
 extern "C" {
-    pub fn kmod_destroy(host_priv: host_priv_t, module: kmod_t)
-     -> kern_return_t;
+    pub fn kmod_destroy(host_priv: host_priv_t, module: kmod_t) -> kern_return_t;
 }
 extern "C" {
-    pub fn kmod_control(host_priv: host_priv_t, module: kmod_t,
-                        flavor: kmod_control_flavor_t, data: *mut kmod_args_t,
-                        dataCnt: *mut mach_msg_type_number_t)
-     -> kern_return_t;
+    pub fn kmod_control(
+        host_priv: host_priv_t,
+        module: kmod_t,
+        flavor: kmod_control_flavor_t,
+        data: *mut kmod_args_t,
+        dataCnt: *mut mach_msg_type_number_t,
+    ) -> kern_return_t;
 }
 extern "C" {
-    pub fn host_get_special_port(host_priv: host_priv_t, node: ::libc::c_int,
-                                 which: ::libc::c_int, port: *mut mach_port_t)
-     -> kern_return_t;
+    pub fn host_get_special_port(
+        host_priv: host_priv_t,
+        node: ::libc::c_int,
+        which: ::libc::c_int,
+        port: *mut mach_port_t,
+    ) -> kern_return_t;
 }
 extern "C" {
-    pub fn host_set_special_port(host_priv: host_priv_t, which: ::libc::c_int,
-                                 port: mach_port_t) -> kern_return_t;
+    pub fn host_set_special_port(
+        host_priv: host_priv_t,
+        which: ::libc::c_int,
+        port: mach_port_t,
+    ) -> kern_return_t;
 }
 extern "C" {
-    pub fn host_set_exception_ports(host_priv: host_priv_t,
-                                    exception_mask: exception_mask_t,
-                                    new_port: mach_port_t,
-                                    behavior: exception_behavior_t,
-                                    new_flavor: thread_state_flavor_t)
-     -> kern_return_t;
+    pub fn host_set_exception_ports(
+        host_priv: host_priv_t,
+        exception_mask: exception_mask_t,
+        new_port: mach_port_t,
+        behavior: exception_behavior_t,
+        new_flavor: thread_state_flavor_t,
+    ) -> kern_return_t;
 }
 extern "C" {
-    pub fn host_get_exception_ports(host_priv: host_priv_t,
-                                    exception_mask: exception_mask_t,
-                                    masks: exception_mask_array_t,
-                                    masksCnt: *mut mach_msg_type_number_t,
-                                    old_handlers: exception_handler_array_t,
-                                    old_behaviors: exception_behavior_array_t,
-                                    old_flavors: exception_flavor_array_t)
-     -> kern_return_t;
+    pub fn host_get_exception_ports(
+        host_priv: host_priv_t,
+        exception_mask: exception_mask_t,
+        masks: exception_mask_array_t,
+        masksCnt: *mut mach_msg_type_number_t,
+        old_handlers: exception_handler_array_t,
+        old_behaviors: exception_behavior_array_t,
+        old_flavors: exception_flavor_array_t,
+    ) -> kern_return_t;
 }
 extern "C" {
-    pub fn host_swap_exception_ports(host_priv: host_priv_t,
-                                     exception_mask: exception_mask_t,
-                                     new_port: mach_port_t,
-                                     behavior: exception_behavior_t,
-                                     new_flavor: thread_state_flavor_t,
-                                     masks: exception_mask_array_t,
-                                     masksCnt: *mut mach_msg_type_number_t,
-                                     old_handlerss: exception_handler_array_t,
-                                     old_behaviors:
-                                         exception_behavior_array_t,
-                                     old_flavors: exception_flavor_array_t)
-     -> kern_return_t;
+    pub fn host_swap_exception_ports(
+        host_priv: host_priv_t,
+        exception_mask: exception_mask_t,
+        new_port: mach_port_t,
+        behavior: exception_behavior_t,
+        new_flavor: thread_state_flavor_t,
+        masks: exception_mask_array_t,
+        masksCnt: *mut mach_msg_type_number_t,
+        old_handlerss: exception_handler_array_t,
+        old_behaviors: exception_behavior_array_t,
+        old_flavors: exception_flavor_array_t,
+    ) -> kern_return_t;
 }
 extern "C" {
-    pub fn mach_vm_wire(host_priv: host_priv_t, task: vm_map_t,
-                        address: mach_vm_address_t, size: mach_vm_size_t,
-                        desired_access: vm_prot_t) -> kern_return_t;
+    pub fn mach_vm_wire(
+        host_priv: host_priv_t,
+        task: vm_map_t,
+        address: mach_vm_address_t,
+        size: mach_vm_size_t,
+        desired_access: vm_prot_t,
+    ) -> kern_return_t;
 }
 extern "C" {
-    pub fn host_processor_sets(host_priv: host_priv_t,
-                               processor_sets:
-                                   *mut processor_set_name_array_t,
-                               processor_setsCnt: *mut mach_msg_type_number_t)
-     -> kern_return_t;
+    pub fn host_processor_sets(
+        host_priv: host_priv_t,
+        processor_sets: *mut processor_set_name_array_t,
+        processor_setsCnt: *mut mach_msg_type_number_t,
+    ) -> kern_return_t;
 }
 extern "C" {
-    pub fn host_processor_set_priv(host_priv: host_priv_t,
-                                   set_name: processor_set_name_t,
-                                   set: *mut processor_set_t)
-     -> kern_return_t;
+    pub fn host_processor_set_priv(
+        host_priv: host_priv_t,
+        set_name: processor_set_name_t,
+        set: *mut processor_set_t,
+    ) -> kern_return_t;
 }
 extern "C" {
-    pub fn set_dp_control_port(host: host_priv_t, control_port: mach_port_t)
-     -> kern_return_t;
+    pub fn set_dp_control_port(host: host_priv_t, control_port: mach_port_t) -> kern_return_t;
 }
 extern "C" {
-    pub fn get_dp_control_port(host: host_priv_t,
-                               contorl_port: *mut mach_port_t)
-     -> kern_return_t;
+    pub fn get_dp_control_port(host: host_priv_t, contorl_port: *mut mach_port_t) -> kern_return_t;
 }
 extern "C" {
-    pub fn host_set_UNDServer(host: host_priv_t, server: UNDServerRef)
-     -> kern_return_t;
+    pub fn host_set_UNDServer(host: host_priv_t, server: UNDServerRef) -> kern_return_t;
 }
 extern "C" {
-    pub fn host_get_UNDServer(host: host_priv_t, server: *mut UNDServerRef)
-     -> kern_return_t;
+    pub fn host_get_UNDServer(host: host_priv_t, server: *mut UNDServerRef) -> kern_return_t;
 }
 extern "C" {
-    pub fn kext_request(host_priv: host_priv_t, user_log_flags: u32,
-                        request_data: vm_offset_t,
-                        request_dataCnt: mach_msg_type_number_t,
-                        response_data: *mut vm_offset_t,
-                        response_dataCnt: *mut mach_msg_type_number_t,
-                        log_data: *mut vm_offset_t,
-                        log_dataCnt: *mut mach_msg_type_number_t,
-                        op_result: *mut kern_return_t) -> kern_return_t;
+    pub fn kext_request(
+        host_priv: host_priv_t,
+        user_log_flags: u32,
+        request_data: vm_offset_t,
+        request_dataCnt: mach_msg_type_number_t,
+        response_data: *mut vm_offset_t,
+        response_dataCnt: *mut mach_msg_type_number_t,
+        log_data: *mut vm_offset_t,
+        log_dataCnt: *mut mach_msg_type_number_t,
+        op_result: *mut kern_return_t,
+    ) -> kern_return_t;
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -6477,7 +6838,9 @@ pub struct __Request__host_get_boot_info_t {
     pub Head: mach_msg_header_t,
 }
 impl Clone for __Request__host_get_boot_info_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -6487,7 +6850,9 @@ pub struct __Request__host_reboot_t {
     pub options: ::libc::c_int,
 }
 impl Clone for __Request__host_reboot_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -6498,7 +6863,9 @@ pub struct __Request__host_priv_statistics_t {
     pub host_info_outCnt: mach_msg_type_number_t,
 }
 impl Clone for __Request__host_priv_statistics_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -6510,7 +6877,9 @@ pub struct __Request__host_default_memory_manager_t {
     pub cluster_size: memory_object_cluster_size_t,
 }
 impl Clone for __Request__host_default_memory_manager_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -6524,7 +6893,9 @@ pub struct __Request__vm_wire_t {
     pub desired_access: vm_prot_t,
 }
 impl Clone for __Request__vm_wire_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -6536,7 +6907,9 @@ pub struct __Request__thread_wire_t {
     pub wired: boolean_t,
 }
 impl Clone for __Request__thread_wire_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -6550,7 +6923,9 @@ pub struct __Request__vm_allocate_cpm_t {
     pub flags: ::libc::c_int,
 }
 impl Clone for __Request__vm_allocate_cpm_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -6558,7 +6933,9 @@ pub struct __Request__host_processors_t {
     pub Head: mach_msg_header_t,
 }
 impl Clone for __Request__host_processors_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -6568,7 +6945,9 @@ pub struct __Request__host_get_clock_control_t {
     pub clock_id: clock_id_t,
 }
 impl Clone for __Request__host_get_clock_control_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -6578,7 +6957,9 @@ pub struct __Request__kmod_create_t {
     pub info: vm_address_t,
 }
 impl Clone for __Request__kmod_create_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -6588,7 +6969,9 @@ pub struct __Request__kmod_destroy_t {
     pub module: kmod_t,
 }
 impl Clone for __Request__kmod_destroy_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -6602,7 +6985,9 @@ pub struct __Request__kmod_control_t {
     pub dataCnt: mach_msg_type_number_t,
 }
 impl Clone for __Request__kmod_control_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -6613,7 +6998,9 @@ pub struct __Request__host_get_special_port_t {
     pub which: ::libc::c_int,
 }
 impl Clone for __Request__host_get_special_port_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -6625,7 +7012,9 @@ pub struct __Request__host_set_special_port_t {
     pub which: ::libc::c_int,
 }
 impl Clone for __Request__host_set_special_port_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -6639,7 +7028,9 @@ pub struct __Request__host_set_exception_ports_t {
     pub new_flavor: thread_state_flavor_t,
 }
 impl Clone for __Request__host_set_exception_ports_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -6649,7 +7040,9 @@ pub struct __Request__host_get_exception_ports_t {
     pub exception_mask: exception_mask_t,
 }
 impl Clone for __Request__host_get_exception_ports_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -6663,7 +7056,9 @@ pub struct __Request__host_swap_exception_ports_t {
     pub new_flavor: thread_state_flavor_t,
 }
 impl Clone for __Request__host_swap_exception_ports_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -6677,7 +7072,9 @@ pub struct __Request__mach_vm_wire_t {
     pub desired_access: vm_prot_t,
 }
 impl Clone for __Request__mach_vm_wire_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -6685,7 +7082,9 @@ pub struct __Request__host_processor_sets_t {
     pub Head: mach_msg_header_t,
 }
 impl Clone for __Request__host_processor_sets_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -6695,7 +7094,9 @@ pub struct __Request__host_processor_set_priv_t {
     pub set_name: mach_msg_port_descriptor_t,
 }
 impl Clone for __Request__host_processor_set_priv_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -6705,7 +7106,9 @@ pub struct __Request__set_dp_control_port_t {
     pub control_port: mach_msg_port_descriptor_t,
 }
 impl Clone for __Request__set_dp_control_port_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -6713,7 +7116,9 @@ pub struct __Request__get_dp_control_port_t {
     pub Head: mach_msg_header_t,
 }
 impl Clone for __Request__get_dp_control_port_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -6723,7 +7128,9 @@ pub struct __Request__host_set_UNDServer_t {
     pub server: mach_msg_port_descriptor_t,
 }
 impl Clone for __Request__host_set_UNDServer_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -6731,7 +7138,9 @@ pub struct __Request__host_get_UNDServer_t {
     pub Head: mach_msg_header_t,
 }
 impl Clone for __Request__host_get_UNDServer_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -6744,7 +7153,9 @@ pub struct __Request__kext_request_t {
     pub request_dataCnt: mach_msg_type_number_t,
 }
 impl Clone for __Request__kext_request_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -6777,7 +7188,9 @@ pub union __RequestUnion__host_priv_subsystem {
     _bindgen_union_align: [u32; 17usize],
 }
 impl Clone for __RequestUnion__host_priv_subsystem {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -6790,7 +7203,9 @@ pub struct __Reply__host_get_boot_info_t {
     pub boot_info: [::libc::c_char; 4096usize],
 }
 impl Clone for __Reply__host_get_boot_info_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -6800,7 +7215,9 @@ pub struct __Reply__host_reboot_t {
     pub RetCode: kern_return_t,
 }
 impl Clone for __Reply__host_reboot_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -6812,7 +7229,9 @@ pub struct __Reply__host_priv_statistics_t {
     pub host_info_out: [integer_t; 68usize],
 }
 impl Clone for __Reply__host_priv_statistics_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -6822,7 +7241,9 @@ pub struct __Reply__host_default_memory_manager_t {
     pub default_manager: mach_msg_port_descriptor_t,
 }
 impl Clone for __Reply__host_default_memory_manager_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -6832,7 +7253,9 @@ pub struct __Reply__vm_wire_t {
     pub RetCode: kern_return_t,
 }
 impl Clone for __Reply__vm_wire_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -6842,7 +7265,9 @@ pub struct __Reply__thread_wire_t {
     pub RetCode: kern_return_t,
 }
 impl Clone for __Reply__thread_wire_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -6853,7 +7278,9 @@ pub struct __Reply__vm_allocate_cpm_t {
     pub address: vm_address_t,
 }
 impl Clone for __Reply__vm_allocate_cpm_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -6865,7 +7292,9 @@ pub struct __Reply__host_processors_t {
     pub out_processor_listCnt: mach_msg_type_number_t,
 }
 impl Clone for __Reply__host_processors_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -6875,7 +7304,9 @@ pub struct __Reply__host_get_clock_control_t {
     pub clock_ctrl: mach_msg_port_descriptor_t,
 }
 impl Clone for __Reply__host_get_clock_control_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -6886,7 +7317,9 @@ pub struct __Reply__kmod_create_t {
     pub module: kmod_t,
 }
 impl Clone for __Reply__kmod_create_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -6896,7 +7329,9 @@ pub struct __Reply__kmod_destroy_t {
     pub RetCode: kern_return_t,
 }
 impl Clone for __Reply__kmod_destroy_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -6908,7 +7343,9 @@ pub struct __Reply__kmod_control_t {
     pub dataCnt: mach_msg_type_number_t,
 }
 impl Clone for __Reply__kmod_control_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -6918,7 +7355,9 @@ pub struct __Reply__host_get_special_port_t {
     pub port: mach_msg_port_descriptor_t,
 }
 impl Clone for __Reply__host_get_special_port_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -6928,7 +7367,9 @@ pub struct __Reply__host_set_special_port_t {
     pub RetCode: kern_return_t,
 }
 impl Clone for __Reply__host_set_special_port_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -6938,7 +7379,9 @@ pub struct __Reply__host_set_exception_ports_t {
     pub RetCode: kern_return_t,
 }
 impl Clone for __Reply__host_set_exception_ports_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -6953,7 +7396,9 @@ pub struct __Reply__host_get_exception_ports_t {
     pub old_flavors: [thread_state_flavor_t; 32usize],
 }
 impl Clone for __Reply__host_get_exception_ports_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -6968,7 +7413,9 @@ pub struct __Reply__host_swap_exception_ports_t {
     pub old_flavors: [thread_state_flavor_t; 32usize],
 }
 impl Clone for __Reply__host_swap_exception_ports_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -6978,7 +7425,9 @@ pub struct __Reply__mach_vm_wire_t {
     pub RetCode: kern_return_t,
 }
 impl Clone for __Reply__mach_vm_wire_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -6990,7 +7439,9 @@ pub struct __Reply__host_processor_sets_t {
     pub processor_setsCnt: mach_msg_type_number_t,
 }
 impl Clone for __Reply__host_processor_sets_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -7000,7 +7451,9 @@ pub struct __Reply__host_processor_set_priv_t {
     pub set: mach_msg_port_descriptor_t,
 }
 impl Clone for __Reply__host_processor_set_priv_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -7010,7 +7463,9 @@ pub struct __Reply__set_dp_control_port_t {
     pub RetCode: kern_return_t,
 }
 impl Clone for __Reply__set_dp_control_port_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -7020,7 +7475,9 @@ pub struct __Reply__get_dp_control_port_t {
     pub contorl_port: mach_msg_port_descriptor_t,
 }
 impl Clone for __Reply__get_dp_control_port_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -7030,7 +7487,9 @@ pub struct __Reply__host_set_UNDServer_t {
     pub RetCode: kern_return_t,
 }
 impl Clone for __Reply__host_set_UNDServer_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -7040,7 +7499,9 @@ pub struct __Reply__host_get_UNDServer_t {
     pub server: mach_msg_port_descriptor_t,
 }
 impl Clone for __Reply__host_get_UNDServer_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -7055,7 +7516,9 @@ pub struct __Reply__kext_request_t {
     pub op_result: kern_return_t,
 }
 impl Clone for __Reply__kext_request_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -7088,26 +7551,31 @@ pub union __ReplyUnion__host_priv_subsystem {
     _bindgen_union_align: [u32; 1035usize],
 }
 impl Clone for __ReplyUnion__host_priv_subsystem {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 extern "C" {
-    pub fn host_security_create_task_token(host_security: host_security_t,
-                                           parent_task: task_t,
-                                           sec_token: security_token_t,
-                                           audit_token: audit_token_t,
-                                           host: host_t,
-                                           ledgers: ledger_array_t,
-                                           ledgersCnt: mach_msg_type_number_t,
-                                           inherit_memory: boolean_t,
-                                           child_task: *mut task_t)
-     -> kern_return_t;
+    pub fn host_security_create_task_token(
+        host_security: host_security_t,
+        parent_task: task_t,
+        sec_token: security_token_t,
+        audit_token: audit_token_t,
+        host: host_t,
+        ledgers: ledger_array_t,
+        ledgersCnt: mach_msg_type_number_t,
+        inherit_memory: boolean_t,
+        child_task: *mut task_t,
+    ) -> kern_return_t;
 }
 extern "C" {
-    pub fn host_security_set_task_token(host_security: host_security_t,
-                                        target_task: task_t,
-                                        sec_token: security_token_t,
-                                        audit_token: audit_token_t,
-                                        host: host_t) -> kern_return_t;
+    pub fn host_security_set_task_token(
+        host_security: host_security_t,
+        target_task: task_t,
+        sec_token: security_token_t,
+        audit_token: audit_token_t,
+        host: host_t,
+    ) -> kern_return_t;
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -7124,7 +7592,9 @@ pub struct __Request__host_security_create_task_token_t {
     pub inherit_memory: boolean_t,
 }
 impl Clone for __Request__host_security_create_task_token_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -7138,7 +7608,9 @@ pub struct __Request__host_security_set_task_token_t {
     pub audit_token: audit_token_t,
 }
 impl Clone for __Request__host_security_set_task_token_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -7148,7 +7620,9 @@ pub union __RequestUnion__host_security_subsystem {
     _bindgen_union_align: [u32; 31usize],
 }
 impl Clone for __RequestUnion__host_security_subsystem {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -7158,7 +7632,9 @@ pub struct __Reply__host_security_create_task_token_t {
     pub child_task: mach_msg_port_descriptor_t,
 }
 impl Clone for __Reply__host_security_create_task_token_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -7168,7 +7644,9 @@ pub struct __Reply__host_security_set_task_token_t {
     pub RetCode: kern_return_t,
 }
 impl Clone for __Reply__host_security_set_task_token_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -7178,31 +7656,27 @@ pub union __ReplyUnion__host_security_subsystem {
     _bindgen_union_align: [u32; 10usize],
 }
 impl Clone for __ReplyUnion__host_security_subsystem {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 extern "C" {
-    pub fn lock_acquire(lock_set: lock_set_t, lock_id: ::libc::c_int)
-     -> kern_return_t;
+    pub fn lock_acquire(lock_set: lock_set_t, lock_id: ::libc::c_int) -> kern_return_t;
 }
 extern "C" {
-    pub fn lock_release(lock_set: lock_set_t, lock_id: ::libc::c_int)
-     -> kern_return_t;
+    pub fn lock_release(lock_set: lock_set_t, lock_id: ::libc::c_int) -> kern_return_t;
 }
 extern "C" {
-    pub fn lock_try(lock_set: lock_set_t, lock_id: ::libc::c_int)
-     -> kern_return_t;
+    pub fn lock_try(lock_set: lock_set_t, lock_id: ::libc::c_int) -> kern_return_t;
 }
 extern "C" {
-    pub fn lock_make_stable(lock_set: lock_set_t, lock_id: ::libc::c_int)
-     -> kern_return_t;
+    pub fn lock_make_stable(lock_set: lock_set_t, lock_id: ::libc::c_int) -> kern_return_t;
 }
 extern "C" {
-    pub fn lock_handoff(lock_set: lock_set_t, lock_id: ::libc::c_int)
-     -> kern_return_t;
+    pub fn lock_handoff(lock_set: lock_set_t, lock_id: ::libc::c_int) -> kern_return_t;
 }
 extern "C" {
-    pub fn lock_handoff_accept(lock_set: lock_set_t, lock_id: ::libc::c_int)
-     -> kern_return_t;
+    pub fn lock_handoff_accept(lock_set: lock_set_t, lock_id: ::libc::c_int) -> kern_return_t;
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -7212,7 +7686,9 @@ pub struct __Request__lock_acquire_t {
     pub lock_id: ::libc::c_int,
 }
 impl Clone for __Request__lock_acquire_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -7222,7 +7698,9 @@ pub struct __Request__lock_release_t {
     pub lock_id: ::libc::c_int,
 }
 impl Clone for __Request__lock_release_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -7232,7 +7710,9 @@ pub struct __Request__lock_try_t {
     pub lock_id: ::libc::c_int,
 }
 impl Clone for __Request__lock_try_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -7242,7 +7722,9 @@ pub struct __Request__lock_make_stable_t {
     pub lock_id: ::libc::c_int,
 }
 impl Clone for __Request__lock_make_stable_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -7252,7 +7734,9 @@ pub struct __Request__lock_handoff_t {
     pub lock_id: ::libc::c_int,
 }
 impl Clone for __Request__lock_handoff_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -7262,7 +7746,9 @@ pub struct __Request__lock_handoff_accept_t {
     pub lock_id: ::libc::c_int,
 }
 impl Clone for __Request__lock_handoff_accept_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -7276,7 +7762,9 @@ pub union __RequestUnion__lock_set_subsystem {
     _bindgen_union_align: [u32; 9usize],
 }
 impl Clone for __RequestUnion__lock_set_subsystem {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -7286,7 +7774,9 @@ pub struct __Reply__lock_acquire_t {
     pub RetCode: kern_return_t,
 }
 impl Clone for __Reply__lock_acquire_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -7296,7 +7786,9 @@ pub struct __Reply__lock_release_t {
     pub RetCode: kern_return_t,
 }
 impl Clone for __Reply__lock_release_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -7306,7 +7798,9 @@ pub struct __Reply__lock_try_t {
     pub RetCode: kern_return_t,
 }
 impl Clone for __Reply__lock_try_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -7316,7 +7810,9 @@ pub struct __Reply__lock_make_stable_t {
     pub RetCode: kern_return_t,
 }
 impl Clone for __Reply__lock_make_stable_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -7326,7 +7822,9 @@ pub struct __Reply__lock_handoff_t {
     pub RetCode: kern_return_t,
 }
 impl Clone for __Reply__lock_handoff_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -7336,7 +7834,9 @@ pub struct __Reply__lock_handoff_accept_t {
     pub RetCode: kern_return_t,
 }
 impl Clone for __Reply__lock_handoff_accept_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -7350,7 +7850,9 @@ pub union __ReplyUnion__lock_set_subsystem {
     _bindgen_union_align: [u32; 9usize],
 }
 impl Clone for __ReplyUnion__lock_set_subsystem {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 extern "C" {
     pub fn processor_start(processor: processor_t) -> kern_return_t;
@@ -7359,26 +7861,33 @@ extern "C" {
     pub fn processor_exit(processor: processor_t) -> kern_return_t;
 }
 extern "C" {
-    pub fn processor_info(processor: processor_t, flavor: processor_flavor_t,
-                          host: *mut host_t,
-                          processor_info_out: processor_info_t,
-                          processor_info_outCnt: *mut mach_msg_type_number_t)
-     -> kern_return_t;
+    pub fn processor_info(
+        processor: processor_t,
+        flavor: processor_flavor_t,
+        host: *mut host_t,
+        processor_info_out: processor_info_t,
+        processor_info_outCnt: *mut mach_msg_type_number_t,
+    ) -> kern_return_t;
 }
 extern "C" {
-    pub fn processor_control(processor: processor_t,
-                             processor_cmd: processor_info_t,
-                             processor_cmdCnt: mach_msg_type_number_t)
-     -> kern_return_t;
+    pub fn processor_control(
+        processor: processor_t,
+        processor_cmd: processor_info_t,
+        processor_cmdCnt: mach_msg_type_number_t,
+    ) -> kern_return_t;
 }
 extern "C" {
-    pub fn processor_assign(processor: processor_t, new_set: processor_set_t,
-                            wait: boolean_t) -> kern_return_t;
+    pub fn processor_assign(
+        processor: processor_t,
+        new_set: processor_set_t,
+        wait: boolean_t,
+    ) -> kern_return_t;
 }
 extern "C" {
-    pub fn processor_get_assignment(processor: processor_t,
-                                    assigned_set: *mut processor_set_name_t)
-     -> kern_return_t;
+    pub fn processor_get_assignment(
+        processor: processor_t,
+        assigned_set: *mut processor_set_name_t,
+    ) -> kern_return_t;
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -7386,7 +7895,9 @@ pub struct __Request__processor_start_t {
     pub Head: mach_msg_header_t,
 }
 impl Clone for __Request__processor_start_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -7394,7 +7905,9 @@ pub struct __Request__processor_exit_t {
     pub Head: mach_msg_header_t,
 }
 impl Clone for __Request__processor_exit_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -7405,7 +7918,9 @@ pub struct __Request__processor_info_t {
     pub processor_info_outCnt: mach_msg_type_number_t,
 }
 impl Clone for __Request__processor_info_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -7416,7 +7931,9 @@ pub struct __Request__processor_control_t {
     pub processor_cmd: [integer_t; 12usize],
 }
 impl Clone for __Request__processor_control_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -7428,7 +7945,9 @@ pub struct __Request__processor_assign_t {
     pub wait: boolean_t,
 }
 impl Clone for __Request__processor_assign_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -7436,7 +7955,9 @@ pub struct __Request__processor_get_assignment_t {
     pub Head: mach_msg_header_t,
 }
 impl Clone for __Request__processor_get_assignment_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -7450,7 +7971,9 @@ pub union __RequestUnion__processor_subsystem {
     _bindgen_union_align: [u32; 21usize],
 }
 impl Clone for __RequestUnion__processor_subsystem {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -7460,7 +7983,9 @@ pub struct __Reply__processor_start_t {
     pub RetCode: kern_return_t,
 }
 impl Clone for __Reply__processor_start_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -7470,7 +7995,9 @@ pub struct __Reply__processor_exit_t {
     pub RetCode: kern_return_t,
 }
 impl Clone for __Reply__processor_exit_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -7483,7 +8010,9 @@ pub struct __Reply__processor_info_t {
     pub processor_info_out: [integer_t; 12usize],
 }
 impl Clone for __Reply__processor_info_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -7493,7 +8022,9 @@ pub struct __Reply__processor_control_t {
     pub RetCode: kern_return_t,
 }
 impl Clone for __Reply__processor_control_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -7503,7 +8034,9 @@ pub struct __Reply__processor_assign_t {
     pub RetCode: kern_return_t,
 }
 impl Clone for __Reply__processor_assign_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -7513,7 +8046,9 @@ pub struct __Reply__processor_get_assignment_t {
     pub assigned_set: mach_msg_port_descriptor_t,
 }
 impl Clone for __Reply__processor_get_assignment_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -7527,70 +8062,82 @@ pub union __ReplyUnion__processor_subsystem {
     _bindgen_union_align: [u32; 25usize],
 }
 impl Clone for __ReplyUnion__processor_subsystem {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 extern "C" {
-    pub fn processor_set_statistics(pset: processor_set_name_t,
-                                    flavor: processor_set_flavor_t,
-                                    info_out: processor_set_info_t,
-                                    info_outCnt: *mut mach_msg_type_number_t)
-     -> kern_return_t;
+    pub fn processor_set_statistics(
+        pset: processor_set_name_t,
+        flavor: processor_set_flavor_t,
+        info_out: processor_set_info_t,
+        info_outCnt: *mut mach_msg_type_number_t,
+    ) -> kern_return_t;
 }
 extern "C" {
     pub fn processor_set_destroy(set: processor_set_t) -> kern_return_t;
 }
 extern "C" {
-    pub fn processor_set_max_priority(processor_set: processor_set_t,
-                                      max_priority: ::libc::c_int,
-                                      change_threads: boolean_t)
-     -> kern_return_t;
+    pub fn processor_set_max_priority(
+        processor_set: processor_set_t,
+        max_priority: ::libc::c_int,
+        change_threads: boolean_t,
+    ) -> kern_return_t;
 }
 extern "C" {
-    pub fn processor_set_policy_enable(processor_set: processor_set_t,
-                                       policy: ::libc::c_int)
-     -> kern_return_t;
+    pub fn processor_set_policy_enable(
+        processor_set: processor_set_t,
+        policy: ::libc::c_int,
+    ) -> kern_return_t;
 }
 extern "C" {
-    pub fn processor_set_policy_disable(processor_set: processor_set_t,
-                                        policy: ::libc::c_int,
-                                        change_threads: boolean_t)
-     -> kern_return_t;
+    pub fn processor_set_policy_disable(
+        processor_set: processor_set_t,
+        policy: ::libc::c_int,
+        change_threads: boolean_t,
+    ) -> kern_return_t;
 }
 extern "C" {
-    pub fn processor_set_tasks(processor_set: processor_set_t,
-                               task_list: *mut task_array_t,
-                               task_listCnt: *mut mach_msg_type_number_t)
-     -> kern_return_t;
+    pub fn processor_set_tasks(
+        processor_set: processor_set_t,
+        task_list: *mut task_array_t,
+        task_listCnt: *mut mach_msg_type_number_t,
+    ) -> kern_return_t;
 }
 extern "C" {
-    pub fn processor_set_threads(processor_set: processor_set_t,
-                                 thread_list: *mut thread_act_array_t,
-                                 thread_listCnt: *mut mach_msg_type_number_t)
-     -> kern_return_t;
+    pub fn processor_set_threads(
+        processor_set: processor_set_t,
+        thread_list: *mut thread_act_array_t,
+        thread_listCnt: *mut mach_msg_type_number_t,
+    ) -> kern_return_t;
 }
 extern "C" {
-    pub fn processor_set_policy_control(pset: processor_set_t,
-                                        flavor: processor_set_flavor_t,
-                                        policy_info: processor_set_info_t,
-                                        policy_infoCnt:
-                                            mach_msg_type_number_t,
-                                        change: boolean_t) -> kern_return_t;
+    pub fn processor_set_policy_control(
+        pset: processor_set_t,
+        flavor: processor_set_flavor_t,
+        policy_info: processor_set_info_t,
+        policy_infoCnt: mach_msg_type_number_t,
+        change: boolean_t,
+    ) -> kern_return_t;
 }
 extern "C" {
-    pub fn processor_set_stack_usage(pset: processor_set_t,
-                                     ltotal: *mut ::libc::c_uint,
-                                     space: *mut vm_size_t,
-                                     resident: *mut vm_size_t,
-                                     maxusage: *mut vm_size_t,
-                                     maxstack: *mut vm_offset_t)
-     -> kern_return_t;
+    pub fn processor_set_stack_usage(
+        pset: processor_set_t,
+        ltotal: *mut ::libc::c_uint,
+        space: *mut vm_size_t,
+        resident: *mut vm_size_t,
+        maxusage: *mut vm_size_t,
+        maxstack: *mut vm_offset_t,
+    ) -> kern_return_t;
 }
 extern "C" {
-    pub fn processor_set_info(set_name: processor_set_name_t,
-                              flavor: ::libc::c_int, host: *mut host_t,
-                              info_out: processor_set_info_t,
-                              info_outCnt: *mut mach_msg_type_number_t)
-     -> kern_return_t;
+    pub fn processor_set_info(
+        set_name: processor_set_name_t,
+        flavor: ::libc::c_int,
+        host: *mut host_t,
+        info_out: processor_set_info_t,
+        info_outCnt: *mut mach_msg_type_number_t,
+    ) -> kern_return_t;
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -7601,7 +8148,9 @@ pub struct __Request__processor_set_statistics_t {
     pub info_outCnt: mach_msg_type_number_t,
 }
 impl Clone for __Request__processor_set_statistics_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -7609,7 +8158,9 @@ pub struct __Request__processor_set_destroy_t {
     pub Head: mach_msg_header_t,
 }
 impl Clone for __Request__processor_set_destroy_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -7620,7 +8171,9 @@ pub struct __Request__processor_set_max_priority_t {
     pub change_threads: boolean_t,
 }
 impl Clone for __Request__processor_set_max_priority_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -7630,7 +8183,9 @@ pub struct __Request__processor_set_policy_enable_t {
     pub policy: ::libc::c_int,
 }
 impl Clone for __Request__processor_set_policy_enable_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -7641,7 +8196,9 @@ pub struct __Request__processor_set_policy_disable_t {
     pub change_threads: boolean_t,
 }
 impl Clone for __Request__processor_set_policy_disable_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -7649,7 +8206,9 @@ pub struct __Request__processor_set_tasks_t {
     pub Head: mach_msg_header_t,
 }
 impl Clone for __Request__processor_set_tasks_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -7657,7 +8216,9 @@ pub struct __Request__processor_set_threads_t {
     pub Head: mach_msg_header_t,
 }
 impl Clone for __Request__processor_set_threads_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -7670,7 +8231,9 @@ pub struct __Request__processor_set_policy_control_t {
     pub change: boolean_t,
 }
 impl Clone for __Request__processor_set_policy_control_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -7678,7 +8241,9 @@ pub struct __Request__processor_set_stack_usage_t {
     pub Head: mach_msg_header_t,
 }
 impl Clone for __Request__processor_set_stack_usage_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -7689,7 +8254,9 @@ pub struct __Request__processor_set_info_t {
     pub info_outCnt: mach_msg_type_number_t,
 }
 impl Clone for __Request__processor_set_info_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -7707,7 +8274,9 @@ pub union __RequestUnion__processor_set_subsystem {
     _bindgen_union_align: [u32; 16usize],
 }
 impl Clone for __RequestUnion__processor_set_subsystem {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -7719,7 +8288,9 @@ pub struct __Reply__processor_set_statistics_t {
     pub info_out: [integer_t; 5usize],
 }
 impl Clone for __Reply__processor_set_statistics_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -7729,7 +8300,9 @@ pub struct __Reply__processor_set_destroy_t {
     pub RetCode: kern_return_t,
 }
 impl Clone for __Reply__processor_set_destroy_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -7739,7 +8312,9 @@ pub struct __Reply__processor_set_max_priority_t {
     pub RetCode: kern_return_t,
 }
 impl Clone for __Reply__processor_set_max_priority_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -7749,7 +8324,9 @@ pub struct __Reply__processor_set_policy_enable_t {
     pub RetCode: kern_return_t,
 }
 impl Clone for __Reply__processor_set_policy_enable_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -7759,7 +8336,9 @@ pub struct __Reply__processor_set_policy_disable_t {
     pub RetCode: kern_return_t,
 }
 impl Clone for __Reply__processor_set_policy_disable_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -7771,7 +8350,9 @@ pub struct __Reply__processor_set_tasks_t {
     pub task_listCnt: mach_msg_type_number_t,
 }
 impl Clone for __Reply__processor_set_tasks_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -7783,7 +8364,9 @@ pub struct __Reply__processor_set_threads_t {
     pub thread_listCnt: mach_msg_type_number_t,
 }
 impl Clone for __Reply__processor_set_threads_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -7793,7 +8376,9 @@ pub struct __Reply__processor_set_policy_control_t {
     pub RetCode: kern_return_t,
 }
 impl Clone for __Reply__processor_set_policy_control_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -7808,7 +8393,9 @@ pub struct __Reply__processor_set_stack_usage_t {
     pub maxstack: vm_offset_t,
 }
 impl Clone for __Reply__processor_set_stack_usage_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -7821,7 +8408,9 @@ pub struct __Reply__processor_set_info_t {
     pub info_out: [integer_t; 5usize],
 }
 impl Clone for __Reply__processor_set_info_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -7839,7 +8428,9 @@ pub union __ReplyUnion__processor_set_subsystem {
     _bindgen_union_align: [u32; 18usize],
 }
 impl Clone for __ReplyUnion__processor_set_subsystem {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 pub type sync_policy_t = ::libc::c_int;
 extern "C" {
@@ -7852,62 +8443,73 @@ extern "C" {
     pub fn semaphore_wait(semaphore: semaphore_t) -> kern_return_t;
 }
 extern "C" {
-    pub fn semaphore_timedwait(semaphore: semaphore_t,
-                               wait_time: mach_timespec_t) -> kern_return_t;
+    pub fn semaphore_timedwait(semaphore: semaphore_t, wait_time: mach_timespec_t)
+        -> kern_return_t;
 }
 extern "C" {
-    pub fn semaphore_timedwait_signal(wait_semaphore: semaphore_t,
-                                      signal_semaphore: semaphore_t,
-                                      wait_time: mach_timespec_t)
-     -> kern_return_t;
+    pub fn semaphore_timedwait_signal(
+        wait_semaphore: semaphore_t,
+        signal_semaphore: semaphore_t,
+        wait_time: mach_timespec_t,
+    ) -> kern_return_t;
 }
 extern "C" {
-    pub fn semaphore_wait_signal(wait_semaphore: semaphore_t,
-                                 signal_semaphore: semaphore_t)
-     -> kern_return_t;
+    pub fn semaphore_wait_signal(
+        wait_semaphore: semaphore_t,
+        signal_semaphore: semaphore_t,
+    ) -> kern_return_t;
 }
 extern "C" {
-    pub fn semaphore_signal_thread(semaphore: semaphore_t, thread: thread_t)
-     -> kern_return_t;
+    pub fn semaphore_signal_thread(semaphore: semaphore_t, thread: thread_t) -> kern_return_t;
 }
 extern "C" {
-    pub fn task_create(target_task: task_t, ledgers: ledger_array_t,
-                       ledgersCnt: mach_msg_type_number_t,
-                       inherit_memory: boolean_t, child_task: *mut task_t)
-     -> kern_return_t;
+    pub fn task_create(
+        target_task: task_t,
+        ledgers: ledger_array_t,
+        ledgersCnt: mach_msg_type_number_t,
+        inherit_memory: boolean_t,
+        child_task: *mut task_t,
+    ) -> kern_return_t;
 }
 extern "C" {
     pub fn task_terminate(target_task: task_t) -> kern_return_t;
 }
 extern "C" {
-    pub fn task_threads(target_task: task_t,
-                        act_list: *mut thread_act_array_t,
-                        act_listCnt: *mut mach_msg_type_number_t)
-     -> kern_return_t;
+    pub fn task_threads(
+        target_task: task_t,
+        act_list: *mut thread_act_array_t,
+        act_listCnt: *mut mach_msg_type_number_t,
+    ) -> kern_return_t;
 }
 extern "C" {
-    pub fn mach_ports_register(target_task: task_t,
-                               init_port_set: mach_port_array_t,
-                               init_port_setCnt: mach_msg_type_number_t)
-     -> kern_return_t;
+    pub fn mach_ports_register(
+        target_task: task_t,
+        init_port_set: mach_port_array_t,
+        init_port_setCnt: mach_msg_type_number_t,
+    ) -> kern_return_t;
 }
 extern "C" {
-    pub fn mach_ports_lookup(target_task: task_t,
-                             init_port_set: *mut mach_port_array_t,
-                             init_port_setCnt: *mut mach_msg_type_number_t)
-     -> kern_return_t;
+    pub fn mach_ports_lookup(
+        target_task: task_t,
+        init_port_set: *mut mach_port_array_t,
+        init_port_setCnt: *mut mach_msg_type_number_t,
+    ) -> kern_return_t;
 }
 extern "C" {
-    pub fn task_info(target_task: task_name_t, flavor: task_flavor_t,
-                     task_info_out: task_info_t,
-                     task_info_outCnt: *mut mach_msg_type_number_t)
-     -> kern_return_t;
+    pub fn task_info(
+        target_task: task_name_t,
+        flavor: task_flavor_t,
+        task_info_out: task_info_t,
+        task_info_outCnt: *mut mach_msg_type_number_t,
+    ) -> kern_return_t;
 }
 extern "C" {
-    pub fn task_set_info(target_task: task_t, flavor: task_flavor_t,
-                         task_info_in: task_info_t,
-                         task_info_inCnt: mach_msg_type_number_t)
-     -> kern_return_t;
+    pub fn task_set_info(
+        target_task: task_t,
+        flavor: task_flavor_t,
+        task_info_in: task_info_t,
+        task_info_inCnt: mach_msg_type_number_t,
+    ) -> kern_return_t;
 }
 extern "C" {
     pub fn task_suspend(target_task: task_t) -> kern_return_t;
@@ -7916,195 +8518,235 @@ extern "C" {
     pub fn task_resume(target_task: task_t) -> kern_return_t;
 }
 extern "C" {
-    pub fn task_get_special_port(task: task_t, which_port: ::libc::c_int,
-                                 special_port: *mut mach_port_t)
-     -> kern_return_t;
+    pub fn task_get_special_port(
+        task: task_t,
+        which_port: ::libc::c_int,
+        special_port: *mut mach_port_t,
+    ) -> kern_return_t;
 }
 extern "C" {
-    pub fn task_set_special_port(task: task_t, which_port: ::libc::c_int,
-                                 special_port: mach_port_t) -> kern_return_t;
+    pub fn task_set_special_port(
+        task: task_t,
+        which_port: ::libc::c_int,
+        special_port: mach_port_t,
+    ) -> kern_return_t;
 }
 extern "C" {
-    pub fn thread_create(parent_task: task_t, child_act: *mut thread_act_t)
-     -> kern_return_t;
+    pub fn thread_create(parent_task: task_t, child_act: *mut thread_act_t) -> kern_return_t;
 }
 extern "C" {
-    pub fn thread_create_running(parent_task: task_t,
-                                 flavor: thread_state_flavor_t,
-                                 new_state: thread_state_t,
-                                 new_stateCnt: mach_msg_type_number_t,
-                                 child_act: *mut thread_act_t)
-     -> kern_return_t;
+    pub fn thread_create_running(
+        parent_task: task_t,
+        flavor: thread_state_flavor_t,
+        new_state: thread_state_t,
+        new_stateCnt: mach_msg_type_number_t,
+        child_act: *mut thread_act_t,
+    ) -> kern_return_t;
 }
 extern "C" {
-    pub fn task_set_exception_ports(task: task_t,
-                                    exception_mask: exception_mask_t,
-                                    new_port: mach_port_t,
-                                    behavior: exception_behavior_t,
-                                    new_flavor: thread_state_flavor_t)
-     -> kern_return_t;
+    pub fn task_set_exception_ports(
+        task: task_t,
+        exception_mask: exception_mask_t,
+        new_port: mach_port_t,
+        behavior: exception_behavior_t,
+        new_flavor: thread_state_flavor_t,
+    ) -> kern_return_t;
 }
 extern "C" {
-    pub fn task_get_exception_ports(task: task_t,
-                                    exception_mask: exception_mask_t,
-                                    masks: exception_mask_array_t,
-                                    masksCnt: *mut mach_msg_type_number_t,
-                                    old_handlers: exception_handler_array_t,
-                                    old_behaviors: exception_behavior_array_t,
-                                    old_flavors: exception_flavor_array_t)
-     -> kern_return_t;
+    pub fn task_get_exception_ports(
+        task: task_t,
+        exception_mask: exception_mask_t,
+        masks: exception_mask_array_t,
+        masksCnt: *mut mach_msg_type_number_t,
+        old_handlers: exception_handler_array_t,
+        old_behaviors: exception_behavior_array_t,
+        old_flavors: exception_flavor_array_t,
+    ) -> kern_return_t;
 }
 extern "C" {
-    pub fn task_swap_exception_ports(task: task_t,
-                                     exception_mask: exception_mask_t,
-                                     new_port: mach_port_t,
-                                     behavior: exception_behavior_t,
-                                     new_flavor: thread_state_flavor_t,
-                                     masks: exception_mask_array_t,
-                                     masksCnt: *mut mach_msg_type_number_t,
-                                     old_handlerss: exception_handler_array_t,
-                                     old_behaviors:
-                                         exception_behavior_array_t,
-                                     old_flavors: exception_flavor_array_t)
-     -> kern_return_t;
+    pub fn task_swap_exception_ports(
+        task: task_t,
+        exception_mask: exception_mask_t,
+        new_port: mach_port_t,
+        behavior: exception_behavior_t,
+        new_flavor: thread_state_flavor_t,
+        masks: exception_mask_array_t,
+        masksCnt: *mut mach_msg_type_number_t,
+        old_handlerss: exception_handler_array_t,
+        old_behaviors: exception_behavior_array_t,
+        old_flavors: exception_flavor_array_t,
+    ) -> kern_return_t;
 }
 extern "C" {
-    pub fn lock_set_create(task: task_t, new_lock_set: *mut lock_set_t,
-                           n_ulocks: ::libc::c_int, policy: ::libc::c_int)
-     -> kern_return_t;
+    pub fn lock_set_create(
+        task: task_t,
+        new_lock_set: *mut lock_set_t,
+        n_ulocks: ::libc::c_int,
+        policy: ::libc::c_int,
+    ) -> kern_return_t;
 }
 extern "C" {
-    pub fn lock_set_destroy(task: task_t, lock_set: lock_set_t)
-     -> kern_return_t;
+    pub fn lock_set_destroy(task: task_t, lock_set: lock_set_t) -> kern_return_t;
 }
 extern "C" {
-    pub fn semaphore_create(task: task_t, semaphore: *mut semaphore_t,
-                            policy: ::libc::c_int, value: ::libc::c_int)
-     -> kern_return_t;
+    pub fn semaphore_create(
+        task: task_t,
+        semaphore: *mut semaphore_t,
+        policy: ::libc::c_int,
+        value: ::libc::c_int,
+    ) -> kern_return_t;
 }
 extern "C" {
-    pub fn semaphore_destroy(task: task_t, semaphore: semaphore_t)
-     -> kern_return_t;
+    pub fn semaphore_destroy(task: task_t, semaphore: semaphore_t) -> kern_return_t;
 }
 extern "C" {
-    pub fn task_policy_set(task: task_t, flavor: task_policy_flavor_t,
-                           policy_info: task_policy_t,
-                           policy_infoCnt: mach_msg_type_number_t)
-     -> kern_return_t;
+    pub fn task_policy_set(
+        task: task_t,
+        flavor: task_policy_flavor_t,
+        policy_info: task_policy_t,
+        policy_infoCnt: mach_msg_type_number_t,
+    ) -> kern_return_t;
 }
 extern "C" {
-    pub fn task_policy_get(task: task_t, flavor: task_policy_flavor_t,
-                           policy_info: task_policy_t,
-                           policy_infoCnt: *mut mach_msg_type_number_t,
-                           get_default: *mut boolean_t) -> kern_return_t;
+    pub fn task_policy_get(
+        task: task_t,
+        flavor: task_policy_flavor_t,
+        policy_info: task_policy_t,
+        policy_infoCnt: *mut mach_msg_type_number_t,
+        get_default: *mut boolean_t,
+    ) -> kern_return_t;
 }
 extern "C" {
     pub fn task_sample(task: task_t, reply: mach_port_t) -> kern_return_t;
 }
 extern "C" {
-    pub fn task_policy(task: task_t, policy: policy_t, base: policy_base_t,
-                       baseCnt: mach_msg_type_number_t, set_limit: boolean_t,
-                       change: boolean_t) -> kern_return_t;
+    pub fn task_policy(
+        task: task_t,
+        policy: policy_t,
+        base: policy_base_t,
+        baseCnt: mach_msg_type_number_t,
+        set_limit: boolean_t,
+        change: boolean_t,
+    ) -> kern_return_t;
 }
 extern "C" {
-    pub fn task_set_emulation(target_port: task_t,
-                              routine_entry_pt: vm_address_t,
-                              routine_number: ::libc::c_int) -> kern_return_t;
+    pub fn task_set_emulation(
+        target_port: task_t,
+        routine_entry_pt: vm_address_t,
+        routine_number: ::libc::c_int,
+    ) -> kern_return_t;
 }
 extern "C" {
-    pub fn task_get_emulation_vector(task: task_t,
-                                     vector_start: *mut ::libc::c_int,
-                                     emulation_vector:
-                                         *mut emulation_vector_t,
-                                     emulation_vectorCnt:
-                                         *mut mach_msg_type_number_t)
-     -> kern_return_t;
+    pub fn task_get_emulation_vector(
+        task: task_t,
+        vector_start: *mut ::libc::c_int,
+        emulation_vector: *mut emulation_vector_t,
+        emulation_vectorCnt: *mut mach_msg_type_number_t,
+    ) -> kern_return_t;
 }
 extern "C" {
-    pub fn task_set_emulation_vector(task: task_t,
-                                     vector_start: ::libc::c_int,
-                                     emulation_vector: emulation_vector_t,
-                                     emulation_vectorCnt:
-                                         mach_msg_type_number_t)
-     -> kern_return_t;
+    pub fn task_set_emulation_vector(
+        task: task_t,
+        vector_start: ::libc::c_int,
+        emulation_vector: emulation_vector_t,
+        emulation_vectorCnt: mach_msg_type_number_t,
+    ) -> kern_return_t;
 }
 extern "C" {
-    pub fn task_set_ras_pc(target_task: task_t, basepc: vm_address_t,
-                           boundspc: vm_address_t) -> kern_return_t;
+    pub fn task_set_ras_pc(
+        target_task: task_t,
+        basepc: vm_address_t,
+        boundspc: vm_address_t,
+    ) -> kern_return_t;
 }
 extern "C" {
-    pub fn task_zone_info(target_task: task_t,
-                          names: *mut mach_zone_name_array_t,
-                          namesCnt: *mut mach_msg_type_number_t,
-                          info: *mut task_zone_info_array_t,
-                          infoCnt: *mut mach_msg_type_number_t)
-     -> kern_return_t;
+    pub fn task_zone_info(
+        target_task: task_t,
+        names: *mut mach_zone_name_array_t,
+        namesCnt: *mut mach_msg_type_number_t,
+        info: *mut task_zone_info_array_t,
+        infoCnt: *mut mach_msg_type_number_t,
+    ) -> kern_return_t;
 }
 extern "C" {
-    pub fn task_assign(task: task_t, new_set: processor_set_t,
-                       assign_threads: boolean_t) -> kern_return_t;
+    pub fn task_assign(
+        task: task_t,
+        new_set: processor_set_t,
+        assign_threads: boolean_t,
+    ) -> kern_return_t;
 }
 extern "C" {
-    pub fn task_assign_default(task: task_t, assign_threads: boolean_t)
-     -> kern_return_t;
+    pub fn task_assign_default(task: task_t, assign_threads: boolean_t) -> kern_return_t;
 }
 extern "C" {
-    pub fn task_get_assignment(task: task_t,
-                               assigned_set: *mut processor_set_name_t)
-     -> kern_return_t;
+    pub fn task_get_assignment(
+        task: task_t,
+        assigned_set: *mut processor_set_name_t,
+    ) -> kern_return_t;
 }
 extern "C" {
-    pub fn task_set_policy(task: task_t, pset: processor_set_t,
-                           policy: policy_t, base: policy_base_t,
-                           baseCnt: mach_msg_type_number_t,
-                           limit: policy_limit_t,
-                           limitCnt: mach_msg_type_number_t,
-                           change: boolean_t) -> kern_return_t;
+    pub fn task_set_policy(
+        task: task_t,
+        pset: processor_set_t,
+        policy: policy_t,
+        base: policy_base_t,
+        baseCnt: mach_msg_type_number_t,
+        limit: policy_limit_t,
+        limitCnt: mach_msg_type_number_t,
+        change: boolean_t,
+    ) -> kern_return_t;
 }
 extern "C" {
-    pub fn task_get_state(task: task_t, flavor: thread_state_flavor_t,
-                          old_state: thread_state_t,
-                          old_stateCnt: *mut mach_msg_type_number_t)
-     -> kern_return_t;
+    pub fn task_get_state(
+        task: task_t,
+        flavor: thread_state_flavor_t,
+        old_state: thread_state_t,
+        old_stateCnt: *mut mach_msg_type_number_t,
+    ) -> kern_return_t;
 }
 extern "C" {
-    pub fn task_set_state(task: task_t, flavor: thread_state_flavor_t,
-                          new_state: thread_state_t,
-                          new_stateCnt: mach_msg_type_number_t)
-     -> kern_return_t;
+    pub fn task_set_state(
+        task: task_t,
+        flavor: thread_state_flavor_t,
+        new_state: thread_state_t,
+        new_stateCnt: mach_msg_type_number_t,
+    ) -> kern_return_t;
 }
 extern "C" {
-    pub fn task_set_phys_footprint_limit(task: task_t,
-                                         new_limit: ::libc::c_int,
-                                         old_limit: *mut ::libc::c_int)
-     -> kern_return_t;
+    pub fn task_set_phys_footprint_limit(
+        task: task_t,
+        new_limit: ::libc::c_int,
+        old_limit: *mut ::libc::c_int,
+    ) -> kern_return_t;
 }
 extern "C" {
-    pub fn task_suspend2(target_task: task_t,
-                         suspend_token: *mut task_suspension_token_t)
-     -> kern_return_t;
+    pub fn task_suspend2(
+        target_task: task_t,
+        suspend_token: *mut task_suspension_token_t,
+    ) -> kern_return_t;
 }
 extern "C" {
-    pub fn task_resume2(suspend_token: task_suspension_token_t)
-     -> kern_return_t;
+    pub fn task_resume2(suspend_token: task_suspension_token_t) -> kern_return_t;
 }
 extern "C" {
-    pub fn task_purgable_info(task: task_t, stats: *mut task_purgable_info_t)
-     -> kern_return_t;
+    pub fn task_purgable_info(task: task_t, stats: *mut task_purgable_info_t) -> kern_return_t;
 }
 extern "C" {
-    pub fn task_get_mach_voucher(task: task_t, which: mach_voucher_selector_t,
-                                 voucher: *mut ipc_voucher_t)
-     -> kern_return_t;
+    pub fn task_get_mach_voucher(
+        task: task_t,
+        which: mach_voucher_selector_t,
+        voucher: *mut ipc_voucher_t,
+    ) -> kern_return_t;
 }
 extern "C" {
-    pub fn task_set_mach_voucher(task: task_t, voucher: ipc_voucher_t)
-     -> kern_return_t;
+    pub fn task_set_mach_voucher(task: task_t, voucher: ipc_voucher_t) -> kern_return_t;
 }
 extern "C" {
-    pub fn task_swap_mach_voucher(task: task_t, new_voucher: ipc_voucher_t,
-                                  old_voucher: *mut ipc_voucher_t)
-     -> kern_return_t;
+    pub fn task_swap_mach_voucher(
+        task: task_t,
+        new_voucher: ipc_voucher_t,
+        old_voucher: *mut ipc_voucher_t,
+    ) -> kern_return_t;
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -8117,7 +8759,9 @@ pub struct __Request__task_create_t {
     pub inherit_memory: boolean_t,
 }
 impl Clone for __Request__task_create_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -8125,7 +8769,9 @@ pub struct __Request__task_terminate_t {
     pub Head: mach_msg_header_t,
 }
 impl Clone for __Request__task_terminate_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -8133,7 +8779,9 @@ pub struct __Request__task_threads_t {
     pub Head: mach_msg_header_t,
 }
 impl Clone for __Request__task_threads_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -8145,7 +8793,9 @@ pub struct __Request__mach_ports_register_t {
     pub init_port_setCnt: mach_msg_type_number_t,
 }
 impl Clone for __Request__mach_ports_register_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -8153,7 +8803,9 @@ pub struct __Request__mach_ports_lookup_t {
     pub Head: mach_msg_header_t,
 }
 impl Clone for __Request__mach_ports_lookup_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -8164,7 +8816,9 @@ pub struct __Request__task_info_t {
     pub task_info_outCnt: mach_msg_type_number_t,
 }
 impl Clone for __Request__task_info_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -8176,7 +8830,9 @@ pub struct __Request__task_set_info_t {
     pub task_info_in: [integer_t; 52usize],
 }
 impl Clone for __Request__task_set_info_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -8184,7 +8840,9 @@ pub struct __Request__task_suspend_t {
     pub Head: mach_msg_header_t,
 }
 impl Clone for __Request__task_suspend_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -8192,7 +8850,9 @@ pub struct __Request__task_resume_t {
     pub Head: mach_msg_header_t,
 }
 impl Clone for __Request__task_resume_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -8202,7 +8862,9 @@ pub struct __Request__task_get_special_port_t {
     pub which_port: ::libc::c_int,
 }
 impl Clone for __Request__task_get_special_port_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -8214,7 +8876,9 @@ pub struct __Request__task_set_special_port_t {
     pub which_port: ::libc::c_int,
 }
 impl Clone for __Request__task_set_special_port_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -8222,7 +8886,9 @@ pub struct __Request__thread_create_t {
     pub Head: mach_msg_header_t,
 }
 impl Clone for __Request__thread_create_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -8234,7 +8900,9 @@ pub struct __Request__thread_create_running_t {
     pub new_state: [natural_t; 224usize],
 }
 impl Clone for __Request__thread_create_running_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -8248,7 +8916,9 @@ pub struct __Request__task_set_exception_ports_t {
     pub new_flavor: thread_state_flavor_t,
 }
 impl Clone for __Request__task_set_exception_ports_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -8258,7 +8928,9 @@ pub struct __Request__task_get_exception_ports_t {
     pub exception_mask: exception_mask_t,
 }
 impl Clone for __Request__task_get_exception_ports_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -8272,7 +8944,9 @@ pub struct __Request__task_swap_exception_ports_t {
     pub new_flavor: thread_state_flavor_t,
 }
 impl Clone for __Request__task_swap_exception_ports_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -8283,7 +8957,9 @@ pub struct __Request__lock_set_create_t {
     pub policy: ::libc::c_int,
 }
 impl Clone for __Request__lock_set_create_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -8293,7 +8969,9 @@ pub struct __Request__lock_set_destroy_t {
     pub lock_set: mach_msg_port_descriptor_t,
 }
 impl Clone for __Request__lock_set_destroy_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -8304,7 +8982,9 @@ pub struct __Request__semaphore_create_t {
     pub value: ::libc::c_int,
 }
 impl Clone for __Request__semaphore_create_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -8314,7 +8994,9 @@ pub struct __Request__semaphore_destroy_t {
     pub semaphore: mach_msg_port_descriptor_t,
 }
 impl Clone for __Request__semaphore_destroy_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -8326,7 +9008,9 @@ pub struct __Request__task_policy_set_t {
     pub policy_info: [integer_t; 16usize],
 }
 impl Clone for __Request__task_policy_set_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -8338,7 +9022,9 @@ pub struct __Request__task_policy_get_t {
     pub get_default: boolean_t,
 }
 impl Clone for __Request__task_policy_get_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -8348,7 +9034,9 @@ pub struct __Request__task_sample_t {
     pub reply: mach_msg_port_descriptor_t,
 }
 impl Clone for __Request__task_sample_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -8362,7 +9050,9 @@ pub struct __Request__task_policy_t {
     pub change: boolean_t,
 }
 impl Clone for __Request__task_policy_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -8373,7 +9063,9 @@ pub struct __Request__task_set_emulation_t {
     pub routine_number: ::libc::c_int,
 }
 impl Clone for __Request__task_set_emulation_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -8381,7 +9073,9 @@ pub struct __Request__task_get_emulation_vector_t {
     pub Head: mach_msg_header_t,
 }
 impl Clone for __Request__task_get_emulation_vector_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -8394,7 +9088,9 @@ pub struct __Request__task_set_emulation_vector_t {
     pub emulation_vectorCnt: mach_msg_type_number_t,
 }
 impl Clone for __Request__task_set_emulation_vector_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -8405,7 +9101,9 @@ pub struct __Request__task_set_ras_pc_t {
     pub boundspc: vm_address_t,
 }
 impl Clone for __Request__task_set_ras_pc_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -8413,7 +9111,9 @@ pub struct __Request__task_zone_info_t {
     pub Head: mach_msg_header_t,
 }
 impl Clone for __Request__task_zone_info_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -8425,7 +9125,9 @@ pub struct __Request__task_assign_t {
     pub assign_threads: boolean_t,
 }
 impl Clone for __Request__task_assign_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -8435,7 +9137,9 @@ pub struct __Request__task_assign_default_t {
     pub assign_threads: boolean_t,
 }
 impl Clone for __Request__task_assign_default_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -8443,7 +9147,9 @@ pub struct __Request__task_get_assignment_t {
     pub Head: mach_msg_header_t,
 }
 impl Clone for __Request__task_get_assignment_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -8460,7 +9166,9 @@ pub struct __Request__task_set_policy_t {
     pub change: boolean_t,
 }
 impl Clone for __Request__task_set_policy_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -8471,7 +9179,9 @@ pub struct __Request__task_get_state_t {
     pub old_stateCnt: mach_msg_type_number_t,
 }
 impl Clone for __Request__task_get_state_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -8483,7 +9193,9 @@ pub struct __Request__task_set_state_t {
     pub new_state: [natural_t; 224usize],
 }
 impl Clone for __Request__task_set_state_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -8493,7 +9205,9 @@ pub struct __Request__task_set_phys_footprint_limit_t {
     pub new_limit: ::libc::c_int,
 }
 impl Clone for __Request__task_set_phys_footprint_limit_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -8501,7 +9215,9 @@ pub struct __Request__task_suspend2_t {
     pub Head: mach_msg_header_t,
 }
 impl Clone for __Request__task_suspend2_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -8509,7 +9225,9 @@ pub struct __Request__task_resume2_t {
     pub Head: mach_msg_header_t,
 }
 impl Clone for __Request__task_resume2_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -8517,7 +9235,9 @@ pub struct __Request__task_purgable_info_t {
     pub Head: mach_msg_header_t,
 }
 impl Clone for __Request__task_purgable_info_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -8527,7 +9247,9 @@ pub struct __Request__task_get_mach_voucher_t {
     pub which: mach_voucher_selector_t,
 }
 impl Clone for __Request__task_get_mach_voucher_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -8537,7 +9259,9 @@ pub struct __Request__task_set_mach_voucher_t {
     pub voucher: mach_msg_port_descriptor_t,
 }
 impl Clone for __Request__task_set_mach_voucher_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -8548,7 +9272,9 @@ pub struct __Request__task_swap_mach_voucher_t {
     pub old_voucher: mach_msg_port_descriptor_t,
 }
 impl Clone for __Request__task_swap_mach_voucher_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -8598,7 +9324,9 @@ pub union __RequestUnion__task_subsystem {
     _bindgen_union_align: [u32; 234usize],
 }
 impl Clone for __RequestUnion__task_subsystem {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -8608,7 +9336,9 @@ pub struct __Reply__task_create_t {
     pub child_task: mach_msg_port_descriptor_t,
 }
 impl Clone for __Reply__task_create_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -8618,7 +9348,9 @@ pub struct __Reply__task_terminate_t {
     pub RetCode: kern_return_t,
 }
 impl Clone for __Reply__task_terminate_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -8630,7 +9362,9 @@ pub struct __Reply__task_threads_t {
     pub act_listCnt: mach_msg_type_number_t,
 }
 impl Clone for __Reply__task_threads_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -8640,7 +9374,9 @@ pub struct __Reply__mach_ports_register_t {
     pub RetCode: kern_return_t,
 }
 impl Clone for __Reply__mach_ports_register_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -8652,7 +9388,9 @@ pub struct __Reply__mach_ports_lookup_t {
     pub init_port_setCnt: mach_msg_type_number_t,
 }
 impl Clone for __Reply__mach_ports_lookup_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -8664,7 +9402,9 @@ pub struct __Reply__task_info_t {
     pub task_info_out: [integer_t; 52usize],
 }
 impl Clone for __Reply__task_info_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -8674,7 +9414,9 @@ pub struct __Reply__task_set_info_t {
     pub RetCode: kern_return_t,
 }
 impl Clone for __Reply__task_set_info_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -8684,7 +9426,9 @@ pub struct __Reply__task_suspend_t {
     pub RetCode: kern_return_t,
 }
 impl Clone for __Reply__task_suspend_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -8694,7 +9438,9 @@ pub struct __Reply__task_resume_t {
     pub RetCode: kern_return_t,
 }
 impl Clone for __Reply__task_resume_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -8704,7 +9450,9 @@ pub struct __Reply__task_get_special_port_t {
     pub special_port: mach_msg_port_descriptor_t,
 }
 impl Clone for __Reply__task_get_special_port_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -8714,7 +9462,9 @@ pub struct __Reply__task_set_special_port_t {
     pub RetCode: kern_return_t,
 }
 impl Clone for __Reply__task_set_special_port_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -8724,7 +9474,9 @@ pub struct __Reply__thread_create_t {
     pub child_act: mach_msg_port_descriptor_t,
 }
 impl Clone for __Reply__thread_create_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -8734,7 +9486,9 @@ pub struct __Reply__thread_create_running_t {
     pub child_act: mach_msg_port_descriptor_t,
 }
 impl Clone for __Reply__thread_create_running_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -8744,7 +9498,9 @@ pub struct __Reply__task_set_exception_ports_t {
     pub RetCode: kern_return_t,
 }
 impl Clone for __Reply__task_set_exception_ports_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -8759,7 +9515,9 @@ pub struct __Reply__task_get_exception_ports_t {
     pub old_flavors: [thread_state_flavor_t; 32usize],
 }
 impl Clone for __Reply__task_get_exception_ports_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -8774,7 +9532,9 @@ pub struct __Reply__task_swap_exception_ports_t {
     pub old_flavors: [thread_state_flavor_t; 32usize],
 }
 impl Clone for __Reply__task_swap_exception_ports_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -8784,7 +9544,9 @@ pub struct __Reply__lock_set_create_t {
     pub new_lock_set: mach_msg_port_descriptor_t,
 }
 impl Clone for __Reply__lock_set_create_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -8794,7 +9556,9 @@ pub struct __Reply__lock_set_destroy_t {
     pub RetCode: kern_return_t,
 }
 impl Clone for __Reply__lock_set_destroy_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -8804,7 +9568,9 @@ pub struct __Reply__semaphore_create_t {
     pub semaphore: mach_msg_port_descriptor_t,
 }
 impl Clone for __Reply__semaphore_create_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -8814,7 +9580,9 @@ pub struct __Reply__semaphore_destroy_t {
     pub RetCode: kern_return_t,
 }
 impl Clone for __Reply__semaphore_destroy_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -8824,7 +9592,9 @@ pub struct __Reply__task_policy_set_t {
     pub RetCode: kern_return_t,
 }
 impl Clone for __Reply__task_policy_set_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -8837,7 +9607,9 @@ pub struct __Reply__task_policy_get_t {
     pub get_default: boolean_t,
 }
 impl Clone for __Reply__task_policy_get_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -8847,7 +9619,9 @@ pub struct __Reply__task_sample_t {
     pub RetCode: kern_return_t,
 }
 impl Clone for __Reply__task_sample_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -8857,7 +9631,9 @@ pub struct __Reply__task_policy_t {
     pub RetCode: kern_return_t,
 }
 impl Clone for __Reply__task_policy_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -8867,7 +9643,9 @@ pub struct __Reply__task_set_emulation_t {
     pub RetCode: kern_return_t,
 }
 impl Clone for __Reply__task_set_emulation_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -8880,7 +9658,9 @@ pub struct __Reply__task_get_emulation_vector_t {
     pub emulation_vectorCnt: mach_msg_type_number_t,
 }
 impl Clone for __Reply__task_get_emulation_vector_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -8890,7 +9670,9 @@ pub struct __Reply__task_set_emulation_vector_t {
     pub RetCode: kern_return_t,
 }
 impl Clone for __Reply__task_set_emulation_vector_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -8900,7 +9682,9 @@ pub struct __Reply__task_set_ras_pc_t {
     pub RetCode: kern_return_t,
 }
 impl Clone for __Reply__task_set_ras_pc_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -8914,7 +9698,9 @@ pub struct __Reply__task_zone_info_t {
     pub infoCnt: mach_msg_type_number_t,
 }
 impl Clone for __Reply__task_zone_info_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -8924,7 +9710,9 @@ pub struct __Reply__task_assign_t {
     pub RetCode: kern_return_t,
 }
 impl Clone for __Reply__task_assign_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -8934,7 +9722,9 @@ pub struct __Reply__task_assign_default_t {
     pub RetCode: kern_return_t,
 }
 impl Clone for __Reply__task_assign_default_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -8944,7 +9734,9 @@ pub struct __Reply__task_get_assignment_t {
     pub assigned_set: mach_msg_port_descriptor_t,
 }
 impl Clone for __Reply__task_get_assignment_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -8954,7 +9746,9 @@ pub struct __Reply__task_set_policy_t {
     pub RetCode: kern_return_t,
 }
 impl Clone for __Reply__task_set_policy_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -8966,7 +9760,9 @@ pub struct __Reply__task_get_state_t {
     pub old_state: [natural_t; 224usize],
 }
 impl Clone for __Reply__task_get_state_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -8976,7 +9772,9 @@ pub struct __Reply__task_set_state_t {
     pub RetCode: kern_return_t,
 }
 impl Clone for __Reply__task_set_state_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -8987,7 +9785,9 @@ pub struct __Reply__task_set_phys_footprint_limit_t {
     pub old_limit: ::libc::c_int,
 }
 impl Clone for __Reply__task_set_phys_footprint_limit_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -8997,7 +9797,9 @@ pub struct __Reply__task_suspend2_t {
     pub suspend_token: mach_msg_port_descriptor_t,
 }
 impl Clone for __Reply__task_suspend2_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -9007,7 +9809,9 @@ pub struct __Reply__task_resume2_t {
     pub RetCode: kern_return_t,
 }
 impl Clone for __Reply__task_resume2_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -9018,7 +9822,9 @@ pub struct __Reply__task_purgable_info_t {
     pub stats: task_purgable_info_t,
 }
 impl Clone for __Reply__task_purgable_info_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -9028,7 +9834,9 @@ pub struct __Reply__task_get_mach_voucher_t {
     pub voucher: mach_msg_port_descriptor_t,
 }
 impl Clone for __Reply__task_get_mach_voucher_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -9038,7 +9846,9 @@ pub struct __Reply__task_set_mach_voucher_t {
     pub RetCode: kern_return_t,
 }
 impl Clone for __Reply__task_set_mach_voucher_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -9048,7 +9858,9 @@ pub struct __Reply__task_swap_mach_voucher_t {
     pub old_voucher: mach_msg_port_descriptor_t,
 }
 impl Clone for __Reply__task_swap_mach_voucher_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -9098,36 +9910,44 @@ pub union __ReplyUnion__task_subsystem {
     _bindgen_union_align: [u32; 234usize],
 }
 impl Clone for __ReplyUnion__task_subsystem {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 extern "C" {
     pub fn thread_terminate(target_act: thread_act_t) -> kern_return_t;
 }
 extern "C" {
-    pub fn act_get_state(target_act: thread_act_t, flavor: ::libc::c_int,
-                         old_state: thread_state_t,
-                         old_stateCnt: *mut mach_msg_type_number_t)
-     -> kern_return_t;
+    pub fn act_get_state(
+        target_act: thread_act_t,
+        flavor: ::libc::c_int,
+        old_state: thread_state_t,
+        old_stateCnt: *mut mach_msg_type_number_t,
+    ) -> kern_return_t;
 }
 extern "C" {
-    pub fn act_set_state(target_act: thread_act_t, flavor: ::libc::c_int,
-                         new_state: thread_state_t,
-                         new_stateCnt: mach_msg_type_number_t)
-     -> kern_return_t;
+    pub fn act_set_state(
+        target_act: thread_act_t,
+        flavor: ::libc::c_int,
+        new_state: thread_state_t,
+        new_stateCnt: mach_msg_type_number_t,
+    ) -> kern_return_t;
 }
 extern "C" {
-    pub fn thread_get_state(target_act: thread_act_t,
-                            flavor: thread_state_flavor_t,
-                            old_state: thread_state_t,
-                            old_stateCnt: *mut mach_msg_type_number_t)
-     -> kern_return_t;
+    pub fn thread_get_state(
+        target_act: thread_act_t,
+        flavor: thread_state_flavor_t,
+        old_state: thread_state_t,
+        old_stateCnt: *mut mach_msg_type_number_t,
+    ) -> kern_return_t;
 }
 extern "C" {
-    pub fn thread_set_state(target_act: thread_act_t,
-                            flavor: thread_state_flavor_t,
-                            new_state: thread_state_t,
-                            new_stateCnt: mach_msg_type_number_t)
-     -> kern_return_t;
+    pub fn thread_set_state(
+        target_act: thread_act_t,
+        flavor: thread_state_flavor_t,
+        new_state: thread_state_t,
+        new_stateCnt: mach_msg_type_number_t,
+    ) -> kern_return_t;
 }
 extern "C" {
     pub fn thread_suspend(target_act: thread_act_t) -> kern_return_t;
@@ -9145,119 +9965,132 @@ extern "C" {
     pub fn thread_depress_abort(thread: thread_act_t) -> kern_return_t;
 }
 extern "C" {
-    pub fn thread_get_special_port(thr_act: thread_act_t,
-                                   which_port: ::libc::c_int,
-                                   special_port: *mut mach_port_t)
-     -> kern_return_t;
+    pub fn thread_get_special_port(
+        thr_act: thread_act_t,
+        which_port: ::libc::c_int,
+        special_port: *mut mach_port_t,
+    ) -> kern_return_t;
 }
 extern "C" {
-    pub fn thread_set_special_port(thr_act: thread_act_t,
-                                   which_port: ::libc::c_int,
-                                   special_port: mach_port_t)
-     -> kern_return_t;
+    pub fn thread_set_special_port(
+        thr_act: thread_act_t,
+        which_port: ::libc::c_int,
+        special_port: mach_port_t,
+    ) -> kern_return_t;
 }
 extern "C" {
-    pub fn thread_info(target_act: thread_act_t, flavor: thread_flavor_t,
-                       thread_info_out: thread_info_t,
-                       thread_info_outCnt: *mut mach_msg_type_number_t)
-     -> kern_return_t;
+    pub fn thread_info(
+        target_act: thread_act_t,
+        flavor: thread_flavor_t,
+        thread_info_out: thread_info_t,
+        thread_info_outCnt: *mut mach_msg_type_number_t,
+    ) -> kern_return_t;
 }
 extern "C" {
-    pub fn thread_set_exception_ports(thread: thread_act_t,
-                                      exception_mask: exception_mask_t,
-                                      new_port: mach_port_t,
-                                      behavior: exception_behavior_t,
-                                      new_flavor: thread_state_flavor_t)
-     -> kern_return_t;
+    pub fn thread_set_exception_ports(
+        thread: thread_act_t,
+        exception_mask: exception_mask_t,
+        new_port: mach_port_t,
+        behavior: exception_behavior_t,
+        new_flavor: thread_state_flavor_t,
+    ) -> kern_return_t;
 }
 extern "C" {
-    pub fn thread_get_exception_ports(thread: thread_act_t,
-                                      exception_mask: exception_mask_t,
-                                      masks: exception_mask_array_t,
-                                      masksCnt: *mut mach_msg_type_number_t,
-                                      old_handlers: exception_handler_array_t,
-                                      old_behaviors:
-                                          exception_behavior_array_t,
-                                      old_flavors: exception_flavor_array_t)
-     -> kern_return_t;
+    pub fn thread_get_exception_ports(
+        thread: thread_act_t,
+        exception_mask: exception_mask_t,
+        masks: exception_mask_array_t,
+        masksCnt: *mut mach_msg_type_number_t,
+        old_handlers: exception_handler_array_t,
+        old_behaviors: exception_behavior_array_t,
+        old_flavors: exception_flavor_array_t,
+    ) -> kern_return_t;
 }
 extern "C" {
-    pub fn thread_swap_exception_ports(thread: thread_act_t,
-                                       exception_mask: exception_mask_t,
-                                       new_port: mach_port_t,
-                                       behavior: exception_behavior_t,
-                                       new_flavor: thread_state_flavor_t,
-                                       masks: exception_mask_array_t,
-                                       masksCnt: *mut mach_msg_type_number_t,
-                                       old_handlers:
-                                           exception_handler_array_t,
-                                       old_behaviors:
-                                           exception_behavior_array_t,
-                                       old_flavors: exception_flavor_array_t)
-     -> kern_return_t;
+    pub fn thread_swap_exception_ports(
+        thread: thread_act_t,
+        exception_mask: exception_mask_t,
+        new_port: mach_port_t,
+        behavior: exception_behavior_t,
+        new_flavor: thread_state_flavor_t,
+        masks: exception_mask_array_t,
+        masksCnt: *mut mach_msg_type_number_t,
+        old_handlers: exception_handler_array_t,
+        old_behaviors: exception_behavior_array_t,
+        old_flavors: exception_flavor_array_t,
+    ) -> kern_return_t;
 }
 extern "C" {
-    pub fn thread_policy(thr_act: thread_act_t, policy: policy_t,
-                         base: policy_base_t, baseCnt: mach_msg_type_number_t,
-                         set_limit: boolean_t) -> kern_return_t;
+    pub fn thread_policy(
+        thr_act: thread_act_t,
+        policy: policy_t,
+        base: policy_base_t,
+        baseCnt: mach_msg_type_number_t,
+        set_limit: boolean_t,
+    ) -> kern_return_t;
 }
 extern "C" {
-    pub fn thread_policy_set(thread: thread_act_t,
-                             flavor: thread_policy_flavor_t,
-                             policy_info: thread_policy_t,
-                             policy_infoCnt: mach_msg_type_number_t)
-     -> kern_return_t;
+    pub fn thread_policy_set(
+        thread: thread_act_t,
+        flavor: thread_policy_flavor_t,
+        policy_info: thread_policy_t,
+        policy_infoCnt: mach_msg_type_number_t,
+    ) -> kern_return_t;
 }
 extern "C" {
-    pub fn thread_policy_get(thread: thread_act_t,
-                             flavor: thread_policy_flavor_t,
-                             policy_info: thread_policy_t,
-                             policy_infoCnt: *mut mach_msg_type_number_t,
-                             get_default: *mut boolean_t) -> kern_return_t;
+    pub fn thread_policy_get(
+        thread: thread_act_t,
+        flavor: thread_policy_flavor_t,
+        policy_info: thread_policy_t,
+        policy_infoCnt: *mut mach_msg_type_number_t,
+        get_default: *mut boolean_t,
+    ) -> kern_return_t;
 }
 extern "C" {
-    pub fn thread_sample(thread: thread_act_t, reply: mach_port_t)
-     -> kern_return_t;
+    pub fn thread_sample(thread: thread_act_t, reply: mach_port_t) -> kern_return_t;
 }
 extern "C" {
-    pub fn etap_trace_thread(target_act: thread_act_t,
-                             trace_status: boolean_t) -> kern_return_t;
+    pub fn etap_trace_thread(target_act: thread_act_t, trace_status: boolean_t) -> kern_return_t;
 }
 extern "C" {
-    pub fn thread_assign(thread: thread_act_t, new_set: processor_set_t)
-     -> kern_return_t;
+    pub fn thread_assign(thread: thread_act_t, new_set: processor_set_t) -> kern_return_t;
 }
 extern "C" {
     pub fn thread_assign_default(thread: thread_act_t) -> kern_return_t;
 }
 extern "C" {
-    pub fn thread_get_assignment(thread: thread_act_t,
-                                 assigned_set: *mut processor_set_name_t)
-     -> kern_return_t;
+    pub fn thread_get_assignment(
+        thread: thread_act_t,
+        assigned_set: *mut processor_set_name_t,
+    ) -> kern_return_t;
 }
 extern "C" {
-    pub fn thread_set_policy(thr_act: thread_act_t, pset: processor_set_t,
-                             policy: policy_t, base: policy_base_t,
-                             baseCnt: mach_msg_type_number_t,
-                             limit: policy_limit_t,
-                             limitCnt: mach_msg_type_number_t)
-     -> kern_return_t;
+    pub fn thread_set_policy(
+        thr_act: thread_act_t,
+        pset: processor_set_t,
+        policy: policy_t,
+        base: policy_base_t,
+        baseCnt: mach_msg_type_number_t,
+        limit: policy_limit_t,
+        limitCnt: mach_msg_type_number_t,
+    ) -> kern_return_t;
 }
 extern "C" {
-    pub fn thread_get_mach_voucher(thr_act: thread_act_t,
-                                   which: mach_voucher_selector_t,
-                                   voucher: *mut ipc_voucher_t)
-     -> kern_return_t;
+    pub fn thread_get_mach_voucher(
+        thr_act: thread_act_t,
+        which: mach_voucher_selector_t,
+        voucher: *mut ipc_voucher_t,
+    ) -> kern_return_t;
 }
 extern "C" {
-    pub fn thread_set_mach_voucher(thr_act: thread_act_t,
-                                   voucher: ipc_voucher_t) -> kern_return_t;
+    pub fn thread_set_mach_voucher(thr_act: thread_act_t, voucher: ipc_voucher_t) -> kern_return_t;
 }
 extern "C" {
-    pub fn thread_swap_mach_voucher(thr_act: thread_act_t,
-                                    new_voucher: ipc_voucher_t,
-                                    old_voucher: *mut ipc_voucher_t)
-     -> kern_return_t;
+    pub fn thread_swap_mach_voucher(
+        thr_act: thread_act_t,
+        new_voucher: ipc_voucher_t,
+        old_voucher: *mut ipc_voucher_t,
+    ) -> kern_return_t;
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -9265,7 +10098,9 @@ pub struct __Request__thread_terminate_t {
     pub Head: mach_msg_header_t,
 }
 impl Clone for __Request__thread_terminate_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -9276,7 +10111,9 @@ pub struct __Request__act_get_state_t {
     pub old_stateCnt: mach_msg_type_number_t,
 }
 impl Clone for __Request__act_get_state_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -9288,7 +10125,9 @@ pub struct __Request__act_set_state_t {
     pub new_state: [natural_t; 224usize],
 }
 impl Clone for __Request__act_set_state_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -9299,7 +10138,9 @@ pub struct __Request__thread_get_state_t {
     pub old_stateCnt: mach_msg_type_number_t,
 }
 impl Clone for __Request__thread_get_state_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -9311,7 +10152,9 @@ pub struct __Request__thread_set_state_t {
     pub new_state: [natural_t; 224usize],
 }
 impl Clone for __Request__thread_set_state_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -9319,7 +10162,9 @@ pub struct __Request__thread_suspend_t {
     pub Head: mach_msg_header_t,
 }
 impl Clone for __Request__thread_suspend_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -9327,7 +10172,9 @@ pub struct __Request__thread_resume_t {
     pub Head: mach_msg_header_t,
 }
 impl Clone for __Request__thread_resume_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -9335,7 +10182,9 @@ pub struct __Request__thread_abort_t {
     pub Head: mach_msg_header_t,
 }
 impl Clone for __Request__thread_abort_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -9343,7 +10192,9 @@ pub struct __Request__thread_abort_safely_t {
     pub Head: mach_msg_header_t,
 }
 impl Clone for __Request__thread_abort_safely_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -9351,7 +10202,9 @@ pub struct __Request__thread_depress_abort_t {
     pub Head: mach_msg_header_t,
 }
 impl Clone for __Request__thread_depress_abort_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -9361,7 +10214,9 @@ pub struct __Request__thread_get_special_port_t {
     pub which_port: ::libc::c_int,
 }
 impl Clone for __Request__thread_get_special_port_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -9373,7 +10228,9 @@ pub struct __Request__thread_set_special_port_t {
     pub which_port: ::libc::c_int,
 }
 impl Clone for __Request__thread_set_special_port_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -9384,7 +10241,9 @@ pub struct __Request__thread_info_t {
     pub thread_info_outCnt: mach_msg_type_number_t,
 }
 impl Clone for __Request__thread_info_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -9398,7 +10257,9 @@ pub struct __Request__thread_set_exception_ports_t {
     pub new_flavor: thread_state_flavor_t,
 }
 impl Clone for __Request__thread_set_exception_ports_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -9408,7 +10269,9 @@ pub struct __Request__thread_get_exception_ports_t {
     pub exception_mask: exception_mask_t,
 }
 impl Clone for __Request__thread_get_exception_ports_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -9422,7 +10285,9 @@ pub struct __Request__thread_swap_exception_ports_t {
     pub new_flavor: thread_state_flavor_t,
 }
 impl Clone for __Request__thread_swap_exception_ports_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -9435,7 +10300,9 @@ pub struct __Request__thread_policy_t {
     pub set_limit: boolean_t,
 }
 impl Clone for __Request__thread_policy_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -9447,7 +10314,9 @@ pub struct __Request__thread_policy_set_t {
     pub policy_info: [integer_t; 16usize],
 }
 impl Clone for __Request__thread_policy_set_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -9459,7 +10328,9 @@ pub struct __Request__thread_policy_get_t {
     pub get_default: boolean_t,
 }
 impl Clone for __Request__thread_policy_get_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -9469,7 +10340,9 @@ pub struct __Request__thread_sample_t {
     pub reply: mach_msg_port_descriptor_t,
 }
 impl Clone for __Request__thread_sample_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -9479,7 +10352,9 @@ pub struct __Request__etap_trace_thread_t {
     pub trace_status: boolean_t,
 }
 impl Clone for __Request__etap_trace_thread_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -9489,7 +10364,9 @@ pub struct __Request__thread_assign_t {
     pub new_set: mach_msg_port_descriptor_t,
 }
 impl Clone for __Request__thread_assign_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -9497,7 +10374,9 @@ pub struct __Request__thread_assign_default_t {
     pub Head: mach_msg_header_t,
 }
 impl Clone for __Request__thread_assign_default_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -9505,7 +10384,9 @@ pub struct __Request__thread_get_assignment_t {
     pub Head: mach_msg_header_t,
 }
 impl Clone for __Request__thread_get_assignment_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -9521,7 +10402,9 @@ pub struct __Request__thread_set_policy_t {
     pub limit: [integer_t; 1usize],
 }
 impl Clone for __Request__thread_set_policy_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -9531,7 +10414,9 @@ pub struct __Request__thread_get_mach_voucher_t {
     pub which: mach_voucher_selector_t,
 }
 impl Clone for __Request__thread_get_mach_voucher_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -9541,7 +10426,9 @@ pub struct __Request__thread_set_mach_voucher_t {
     pub voucher: mach_msg_port_descriptor_t,
 }
 impl Clone for __Request__thread_set_mach_voucher_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -9552,7 +10439,9 @@ pub struct __Request__thread_swap_mach_voucher_t {
     pub old_voucher: mach_msg_port_descriptor_t,
 }
 impl Clone for __Request__thread_swap_mach_voucher_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -9588,7 +10477,9 @@ pub union __RequestUnion__thread_act_subsystem {
     _bindgen_union_align: [u32; 234usize],
 }
 impl Clone for __RequestUnion__thread_act_subsystem {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -9598,7 +10489,9 @@ pub struct __Reply__thread_terminate_t {
     pub RetCode: kern_return_t,
 }
 impl Clone for __Reply__thread_terminate_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -9610,7 +10503,9 @@ pub struct __Reply__act_get_state_t {
     pub old_state: [natural_t; 224usize],
 }
 impl Clone for __Reply__act_get_state_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -9620,7 +10515,9 @@ pub struct __Reply__act_set_state_t {
     pub RetCode: kern_return_t,
 }
 impl Clone for __Reply__act_set_state_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -9632,7 +10529,9 @@ pub struct __Reply__thread_get_state_t {
     pub old_state: [natural_t; 224usize],
 }
 impl Clone for __Reply__thread_get_state_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -9642,7 +10541,9 @@ pub struct __Reply__thread_set_state_t {
     pub RetCode: kern_return_t,
 }
 impl Clone for __Reply__thread_set_state_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -9652,7 +10553,9 @@ pub struct __Reply__thread_suspend_t {
     pub RetCode: kern_return_t,
 }
 impl Clone for __Reply__thread_suspend_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -9662,7 +10565,9 @@ pub struct __Reply__thread_resume_t {
     pub RetCode: kern_return_t,
 }
 impl Clone for __Reply__thread_resume_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -9672,7 +10577,9 @@ pub struct __Reply__thread_abort_t {
     pub RetCode: kern_return_t,
 }
 impl Clone for __Reply__thread_abort_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -9682,7 +10589,9 @@ pub struct __Reply__thread_abort_safely_t {
     pub RetCode: kern_return_t,
 }
 impl Clone for __Reply__thread_abort_safely_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -9692,7 +10601,9 @@ pub struct __Reply__thread_depress_abort_t {
     pub RetCode: kern_return_t,
 }
 impl Clone for __Reply__thread_depress_abort_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -9702,7 +10613,9 @@ pub struct __Reply__thread_get_special_port_t {
     pub special_port: mach_msg_port_descriptor_t,
 }
 impl Clone for __Reply__thread_get_special_port_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -9712,7 +10625,9 @@ pub struct __Reply__thread_set_special_port_t {
     pub RetCode: kern_return_t,
 }
 impl Clone for __Reply__thread_set_special_port_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -9724,7 +10639,9 @@ pub struct __Reply__thread_info_t {
     pub thread_info_out: [integer_t; 32usize],
 }
 impl Clone for __Reply__thread_info_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -9734,7 +10651,9 @@ pub struct __Reply__thread_set_exception_ports_t {
     pub RetCode: kern_return_t,
 }
 impl Clone for __Reply__thread_set_exception_ports_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -9749,7 +10668,9 @@ pub struct __Reply__thread_get_exception_ports_t {
     pub old_flavors: [thread_state_flavor_t; 32usize],
 }
 impl Clone for __Reply__thread_get_exception_ports_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -9764,7 +10685,9 @@ pub struct __Reply__thread_swap_exception_ports_t {
     pub old_flavors: [thread_state_flavor_t; 32usize],
 }
 impl Clone for __Reply__thread_swap_exception_ports_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -9774,7 +10697,9 @@ pub struct __Reply__thread_policy_t {
     pub RetCode: kern_return_t,
 }
 impl Clone for __Reply__thread_policy_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -9784,7 +10709,9 @@ pub struct __Reply__thread_policy_set_t {
     pub RetCode: kern_return_t,
 }
 impl Clone for __Reply__thread_policy_set_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -9797,7 +10724,9 @@ pub struct __Reply__thread_policy_get_t {
     pub get_default: boolean_t,
 }
 impl Clone for __Reply__thread_policy_get_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -9807,7 +10736,9 @@ pub struct __Reply__thread_sample_t {
     pub RetCode: kern_return_t,
 }
 impl Clone for __Reply__thread_sample_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -9817,7 +10748,9 @@ pub struct __Reply__etap_trace_thread_t {
     pub RetCode: kern_return_t,
 }
 impl Clone for __Reply__etap_trace_thread_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -9827,7 +10760,9 @@ pub struct __Reply__thread_assign_t {
     pub RetCode: kern_return_t,
 }
 impl Clone for __Reply__thread_assign_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -9837,7 +10772,9 @@ pub struct __Reply__thread_assign_default_t {
     pub RetCode: kern_return_t,
 }
 impl Clone for __Reply__thread_assign_default_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -9847,7 +10784,9 @@ pub struct __Reply__thread_get_assignment_t {
     pub assigned_set: mach_msg_port_descriptor_t,
 }
 impl Clone for __Reply__thread_get_assignment_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -9857,7 +10796,9 @@ pub struct __Reply__thread_set_policy_t {
     pub RetCode: kern_return_t,
 }
 impl Clone for __Reply__thread_set_policy_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -9867,7 +10808,9 @@ pub struct __Reply__thread_get_mach_voucher_t {
     pub voucher: mach_msg_port_descriptor_t,
 }
 impl Clone for __Reply__thread_get_mach_voucher_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -9877,7 +10820,9 @@ pub struct __Reply__thread_set_mach_voucher_t {
     pub RetCode: kern_return_t,
 }
 impl Clone for __Reply__thread_set_mach_voucher_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -9887,7 +10832,9 @@ pub struct __Reply__thread_swap_mach_voucher_t {
     pub old_voucher: mach_msg_port_descriptor_t,
 }
 impl Clone for __Reply__thread_swap_mach_voucher_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -9923,171 +10870,258 @@ pub union __ReplyUnion__thread_act_subsystem {
     _bindgen_union_align: [u32; 234usize],
 }
 impl Clone for __ReplyUnion__thread_act_subsystem {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 extern "C" {
-    pub fn vm_region(target_task: vm_map_t, address: *mut vm_address_t,
-                     size: *mut vm_size_t, flavor: vm_region_flavor_t,
-                     info: vm_region_info_t,
-                     infoCnt: *mut mach_msg_type_number_t,
-                     object_name: *mut mach_port_t) -> kern_return_t;
+    pub fn vm_region(
+        target_task: vm_map_t,
+        address: *mut vm_address_t,
+        size: *mut vm_size_t,
+        flavor: vm_region_flavor_t,
+        info: vm_region_info_t,
+        infoCnt: *mut mach_msg_type_number_t,
+        object_name: *mut mach_port_t,
+    ) -> kern_return_t;
 }
 extern "C" {
-    pub fn vm_allocate(target_task: vm_map_t, address: *mut vm_address_t,
-                       size: vm_size_t, flags: ::libc::c_int)
-     -> kern_return_t;
+    pub fn vm_allocate(
+        target_task: vm_map_t,
+        address: *mut vm_address_t,
+        size: vm_size_t,
+        flags: ::libc::c_int,
+    ) -> kern_return_t;
 }
 extern "C" {
-    pub fn vm_deallocate(target_task: vm_map_t, address: vm_address_t,
-                         size: vm_size_t) -> kern_return_t;
+    pub fn vm_deallocate(
+        target_task: vm_map_t,
+        address: vm_address_t,
+        size: vm_size_t,
+    ) -> kern_return_t;
 }
 extern "C" {
-    pub fn vm_protect(target_task: vm_map_t, address: vm_address_t,
-                      size: vm_size_t, set_maximum: boolean_t,
-                      new_protection: vm_prot_t) -> kern_return_t;
+    pub fn vm_protect(
+        target_task: vm_map_t,
+        address: vm_address_t,
+        size: vm_size_t,
+        set_maximum: boolean_t,
+        new_protection: vm_prot_t,
+    ) -> kern_return_t;
 }
 extern "C" {
-    pub fn vm_inherit(target_task: vm_map_t, address: vm_address_t,
-                      size: vm_size_t, new_inheritance: vm_inherit_t)
-     -> kern_return_t;
+    pub fn vm_inherit(
+        target_task: vm_map_t,
+        address: vm_address_t,
+        size: vm_size_t,
+        new_inheritance: vm_inherit_t,
+    ) -> kern_return_t;
 }
 extern "C" {
-    pub fn vm_read(target_task: vm_map_t, address: vm_address_t,
-                   size: vm_size_t, data: *mut vm_offset_t,
-                   dataCnt: *mut mach_msg_type_number_t) -> kern_return_t;
+    pub fn vm_read(
+        target_task: vm_map_t,
+        address: vm_address_t,
+        size: vm_size_t,
+        data: *mut vm_offset_t,
+        dataCnt: *mut mach_msg_type_number_t,
+    ) -> kern_return_t;
 }
 extern "C" {
-    pub fn vm_read_list(target_task: vm_map_t, data_list: *mut vm_read_entry,
-                        count: natural_t) -> kern_return_t;
+    pub fn vm_read_list(
+        target_task: vm_map_t,
+        data_list: *mut vm_read_entry,
+        count: natural_t,
+    ) -> kern_return_t;
 }
 extern "C" {
-    pub fn vm_write(target_task: vm_map_t, address: vm_address_t,
-                    data: vm_offset_t, dataCnt: mach_msg_type_number_t)
-     -> kern_return_t;
+    pub fn vm_write(
+        target_task: vm_map_t,
+        address: vm_address_t,
+        data: vm_offset_t,
+        dataCnt: mach_msg_type_number_t,
+    ) -> kern_return_t;
 }
 extern "C" {
-    pub fn vm_copy(target_task: vm_map_t, source_address: vm_address_t,
-                   size: vm_size_t, dest_address: vm_address_t)
-     -> kern_return_t;
+    pub fn vm_copy(
+        target_task: vm_map_t,
+        source_address: vm_address_t,
+        size: vm_size_t,
+        dest_address: vm_address_t,
+    ) -> kern_return_t;
 }
 extern "C" {
-    pub fn vm_read_overwrite(target_task: vm_map_t, address: vm_address_t,
-                             size: vm_size_t, data: vm_address_t,
-                             outsize: *mut vm_size_t) -> kern_return_t;
+    pub fn vm_read_overwrite(
+        target_task: vm_map_t,
+        address: vm_address_t,
+        size: vm_size_t,
+        data: vm_address_t,
+        outsize: *mut vm_size_t,
+    ) -> kern_return_t;
 }
 extern "C" {
-    pub fn vm_msync(target_task: vm_map_t, address: vm_address_t,
-                    size: vm_size_t, sync_flags: vm_sync_t) -> kern_return_t;
+    pub fn vm_msync(
+        target_task: vm_map_t,
+        address: vm_address_t,
+        size: vm_size_t,
+        sync_flags: vm_sync_t,
+    ) -> kern_return_t;
 }
 extern "C" {
-    pub fn vm_behavior_set(target_task: vm_map_t, address: vm_address_t,
-                           size: vm_size_t, new_behavior: vm_behavior_t)
-     -> kern_return_t;
+    pub fn vm_behavior_set(
+        target_task: vm_map_t,
+        address: vm_address_t,
+        size: vm_size_t,
+        new_behavior: vm_behavior_t,
+    ) -> kern_return_t;
 }
 extern "C" {
-    pub fn vm_map(target_task: vm_map_t, address: *mut vm_address_t,
-                  size: vm_size_t, mask: vm_address_t, flags: ::libc::c_int,
-                  object: mem_entry_name_port_t, offset: vm_offset_t,
-                  copy: boolean_t, cur_protection: vm_prot_t,
-                  max_protection: vm_prot_t, inheritance: vm_inherit_t)
-     -> kern_return_t;
+    pub fn vm_map(
+        target_task: vm_map_t,
+        address: *mut vm_address_t,
+        size: vm_size_t,
+        mask: vm_address_t,
+        flags: ::libc::c_int,
+        object: mem_entry_name_port_t,
+        offset: vm_offset_t,
+        copy: boolean_t,
+        cur_protection: vm_prot_t,
+        max_protection: vm_prot_t,
+        inheritance: vm_inherit_t,
+    ) -> kern_return_t;
 }
 extern "C" {
-    pub fn vm_machine_attribute(target_task: vm_map_t, address: vm_address_t,
-                                size: vm_size_t,
-                                attribute: vm_machine_attribute_t,
-                                value: *mut vm_machine_attribute_val_t)
-     -> kern_return_t;
+    pub fn vm_machine_attribute(
+        target_task: vm_map_t,
+        address: vm_address_t,
+        size: vm_size_t,
+        attribute: vm_machine_attribute_t,
+        value: *mut vm_machine_attribute_val_t,
+    ) -> kern_return_t;
 }
 extern "C" {
-    pub fn vm_remap(target_task: vm_map_t, target_address: *mut vm_address_t,
-                    size: vm_size_t, mask: vm_address_t, flags: ::libc::c_int,
-                    src_task: vm_map_t, src_address: vm_address_t,
-                    copy: boolean_t, cur_protection: *mut vm_prot_t,
-                    max_protection: *mut vm_prot_t, inheritance: vm_inherit_t)
-     -> kern_return_t;
+    pub fn vm_remap(
+        target_task: vm_map_t,
+        target_address: *mut vm_address_t,
+        size: vm_size_t,
+        mask: vm_address_t,
+        flags: ::libc::c_int,
+        src_task: vm_map_t,
+        src_address: vm_address_t,
+        copy: boolean_t,
+        cur_protection: *mut vm_prot_t,
+        max_protection: *mut vm_prot_t,
+        inheritance: vm_inherit_t,
+    ) -> kern_return_t;
 }
 extern "C" {
-    pub fn task_wire(target_task: vm_map_t, must_wire: boolean_t)
-     -> kern_return_t;
+    pub fn task_wire(target_task: vm_map_t, must_wire: boolean_t) -> kern_return_t;
 }
 extern "C" {
-    pub fn mach_make_memory_entry(target_task: vm_map_t, size: *mut vm_size_t,
-                                  offset: vm_offset_t, permission: vm_prot_t,
-                                  object_handle: *mut mem_entry_name_port_t,
-                                  parent_entry: mem_entry_name_port_t)
-     -> kern_return_t;
+    pub fn mach_make_memory_entry(
+        target_task: vm_map_t,
+        size: *mut vm_size_t,
+        offset: vm_offset_t,
+        permission: vm_prot_t,
+        object_handle: *mut mem_entry_name_port_t,
+        parent_entry: mem_entry_name_port_t,
+    ) -> kern_return_t;
 }
 extern "C" {
-    pub fn vm_map_page_query(target_map: vm_map_t, offset: vm_offset_t,
-                             disposition: *mut integer_t,
-                             ref_count: *mut integer_t) -> kern_return_t;
+    pub fn vm_map_page_query(
+        target_map: vm_map_t,
+        offset: vm_offset_t,
+        disposition: *mut integer_t,
+        ref_count: *mut integer_t,
+    ) -> kern_return_t;
 }
 extern "C" {
-    pub fn mach_vm_region_info(task: vm_map_t, address: vm_address_t,
-                               region: *mut vm_info_region_t,
-                               objects: *mut vm_info_object_array_t,
-                               objectsCnt: *mut mach_msg_type_number_t)
-     -> kern_return_t;
+    pub fn mach_vm_region_info(
+        task: vm_map_t,
+        address: vm_address_t,
+        region: *mut vm_info_region_t,
+        objects: *mut vm_info_object_array_t,
+        objectsCnt: *mut mach_msg_type_number_t,
+    ) -> kern_return_t;
 }
 extern "C" {
-    pub fn vm_mapped_pages_info(task: vm_map_t,
-                                pages: *mut page_address_array_t,
-                                pagesCnt: *mut mach_msg_type_number_t)
-     -> kern_return_t;
+    pub fn vm_mapped_pages_info(
+        task: vm_map_t,
+        pages: *mut page_address_array_t,
+        pagesCnt: *mut mach_msg_type_number_t,
+    ) -> kern_return_t;
 }
 extern "C" {
-    pub fn vm_region_recurse(target_task: vm_map_t,
-                             address: *mut vm_address_t, size: *mut vm_size_t,
-                             nesting_depth: *mut natural_t,
-                             info: vm_region_recurse_info_t,
-                             infoCnt: *mut mach_msg_type_number_t)
-     -> kern_return_t;
+    pub fn vm_region_recurse(
+        target_task: vm_map_t,
+        address: *mut vm_address_t,
+        size: *mut vm_size_t,
+        nesting_depth: *mut natural_t,
+        info: vm_region_recurse_info_t,
+        infoCnt: *mut mach_msg_type_number_t,
+    ) -> kern_return_t;
 }
 extern "C" {
-    pub fn vm_region_recurse_64(target_task: vm_map_t,
-                                address: *mut vm_address_t,
-                                size: *mut vm_size_t,
-                                nesting_depth: *mut natural_t,
-                                info: vm_region_recurse_info_t,
-                                infoCnt: *mut mach_msg_type_number_t)
-     -> kern_return_t;
+    pub fn vm_region_recurse_64(
+        target_task: vm_map_t,
+        address: *mut vm_address_t,
+        size: *mut vm_size_t,
+        nesting_depth: *mut natural_t,
+        info: vm_region_recurse_info_t,
+        infoCnt: *mut mach_msg_type_number_t,
+    ) -> kern_return_t;
 }
 extern "C" {
-    pub fn mach_vm_region_info_64(task: vm_map_t, address: vm_address_t,
-                                  region: *mut vm_info_region_64_t,
-                                  objects: *mut vm_info_object_array_t,
-                                  objectsCnt: *mut mach_msg_type_number_t)
-     -> kern_return_t;
+    pub fn mach_vm_region_info_64(
+        task: vm_map_t,
+        address: vm_address_t,
+        region: *mut vm_info_region_64_t,
+        objects: *mut vm_info_object_array_t,
+        objectsCnt: *mut mach_msg_type_number_t,
+    ) -> kern_return_t;
 }
 extern "C" {
-    pub fn vm_region_64(target_task: vm_map_t, address: *mut vm_address_t,
-                        size: *mut vm_size_t, flavor: vm_region_flavor_t,
-                        info: vm_region_info_t,
-                        infoCnt: *mut mach_msg_type_number_t,
-                        object_name: *mut mach_port_t) -> kern_return_t;
+    pub fn vm_region_64(
+        target_task: vm_map_t,
+        address: *mut vm_address_t,
+        size: *mut vm_size_t,
+        flavor: vm_region_flavor_t,
+        info: vm_region_info_t,
+        infoCnt: *mut mach_msg_type_number_t,
+        object_name: *mut mach_port_t,
+    ) -> kern_return_t;
 }
 extern "C" {
-    pub fn mach_make_memory_entry_64(target_task: vm_map_t,
-                                     size: *mut memory_object_size_t,
-                                     offset: memory_object_offset_t,
-                                     permission: vm_prot_t,
-                                     object_handle: *mut mach_port_t,
-                                     parent_entry: mem_entry_name_port_t)
-     -> kern_return_t;
+    pub fn mach_make_memory_entry_64(
+        target_task: vm_map_t,
+        size: *mut memory_object_size_t,
+        offset: memory_object_offset_t,
+        permission: vm_prot_t,
+        object_handle: *mut mach_port_t,
+        parent_entry: mem_entry_name_port_t,
+    ) -> kern_return_t;
 }
 extern "C" {
-    pub fn vm_map_64(target_task: vm_map_t, address: *mut vm_address_t,
-                     size: vm_size_t, mask: vm_address_t,
-                     flags: ::libc::c_int, object: mem_entry_name_port_t,
-                     offset: memory_object_offset_t, copy: boolean_t,
-                     cur_protection: vm_prot_t, max_protection: vm_prot_t,
-                     inheritance: vm_inherit_t) -> kern_return_t;
+    pub fn vm_map_64(
+        target_task: vm_map_t,
+        address: *mut vm_address_t,
+        size: vm_size_t,
+        mask: vm_address_t,
+        flags: ::libc::c_int,
+        object: mem_entry_name_port_t,
+        offset: memory_object_offset_t,
+        copy: boolean_t,
+        cur_protection: vm_prot_t,
+        max_protection: vm_prot_t,
+        inheritance: vm_inherit_t,
+    ) -> kern_return_t;
 }
 extern "C" {
-    pub fn vm_purgable_control(target_task: vm_map_t, address: vm_address_t,
-                               control: vm_purgable_t,
-                               state: *mut ::libc::c_int) -> kern_return_t;
+    pub fn vm_purgable_control(
+        target_task: vm_map_t,
+        address: vm_address_t,
+        control: vm_purgable_t,
+        state: *mut ::libc::c_int,
+    ) -> kern_return_t;
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -10099,7 +11133,9 @@ pub struct __Request__vm_region_t {
     pub infoCnt: mach_msg_type_number_t,
 }
 impl Clone for __Request__vm_region_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -10111,7 +11147,9 @@ pub struct __Request__vm_allocate_t {
     pub flags: ::libc::c_int,
 }
 impl Clone for __Request__vm_allocate_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -10122,7 +11160,9 @@ pub struct __Request__vm_deallocate_t {
     pub size: vm_size_t,
 }
 impl Clone for __Request__vm_deallocate_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -10135,7 +11175,9 @@ pub struct __Request__vm_protect_t {
     pub new_protection: vm_prot_t,
 }
 impl Clone for __Request__vm_protect_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -10147,7 +11189,9 @@ pub struct __Request__vm_inherit_t {
     pub new_inheritance: vm_inherit_t,
 }
 impl Clone for __Request__vm_inherit_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -10158,7 +11202,9 @@ pub struct __Request__vm_read_t {
     pub size: vm_size_t,
 }
 impl Clone for __Request__vm_read_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -10169,7 +11215,9 @@ pub struct __Request__vm_read_list_t {
     pub count: natural_t,
 }
 impl Clone for __Request__vm_read_list_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -10182,7 +11230,9 @@ pub struct __Request__vm_write_t {
     pub dataCnt: mach_msg_type_number_t,
 }
 impl Clone for __Request__vm_write_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -10194,7 +11244,9 @@ pub struct __Request__vm_copy_t {
     pub dest_address: vm_address_t,
 }
 impl Clone for __Request__vm_copy_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -10206,7 +11258,9 @@ pub struct __Request__vm_read_overwrite_t {
     pub data: vm_address_t,
 }
 impl Clone for __Request__vm_read_overwrite_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -10218,7 +11272,9 @@ pub struct __Request__vm_msync_t {
     pub sync_flags: vm_sync_t,
 }
 impl Clone for __Request__vm_msync_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -10230,7 +11286,9 @@ pub struct __Request__vm_behavior_set_t {
     pub new_behavior: vm_behavior_t,
 }
 impl Clone for __Request__vm_behavior_set_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -10250,7 +11308,9 @@ pub struct __Request__vm_map_t {
     pub inheritance: vm_inherit_t,
 }
 impl Clone for __Request__vm_map_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -10263,7 +11323,9 @@ pub struct __Request__vm_machine_attribute_t {
     pub value: vm_machine_attribute_val_t,
 }
 impl Clone for __Request__vm_machine_attribute_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -10281,7 +11343,9 @@ pub struct __Request__vm_remap_t {
     pub inheritance: vm_inherit_t,
 }
 impl Clone for __Request__vm_remap_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -10291,7 +11355,9 @@ pub struct __Request__task_wire_t {
     pub must_wire: boolean_t,
 }
 impl Clone for __Request__task_wire_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -10305,7 +11371,9 @@ pub struct __Request__mach_make_memory_entry_t {
     pub permission: vm_prot_t,
 }
 impl Clone for __Request__mach_make_memory_entry_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -10315,7 +11383,9 @@ pub struct __Request__vm_map_page_query_t {
     pub offset: vm_offset_t,
 }
 impl Clone for __Request__vm_map_page_query_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -10325,7 +11395,9 @@ pub struct __Request__mach_vm_region_info_t {
     pub address: vm_address_t,
 }
 impl Clone for __Request__mach_vm_region_info_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -10333,7 +11405,9 @@ pub struct __Request__vm_mapped_pages_info_t {
     pub Head: mach_msg_header_t,
 }
 impl Clone for __Request__vm_mapped_pages_info_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -10345,7 +11419,9 @@ pub struct __Request__vm_region_recurse_t {
     pub infoCnt: mach_msg_type_number_t,
 }
 impl Clone for __Request__vm_region_recurse_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -10357,7 +11433,9 @@ pub struct __Request__vm_region_recurse_64_t {
     pub infoCnt: mach_msg_type_number_t,
 }
 impl Clone for __Request__vm_region_recurse_64_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -10367,7 +11445,9 @@ pub struct __Request__mach_vm_region_info_64_t {
     pub address: vm_address_t,
 }
 impl Clone for __Request__mach_vm_region_info_64_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -10379,7 +11459,9 @@ pub struct __Request__vm_region_64_t {
     pub infoCnt: mach_msg_type_number_t,
 }
 impl Clone for __Request__vm_region_64_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -10393,7 +11475,9 @@ pub struct __Request__mach_make_memory_entry_64_t {
     pub permission: vm_prot_t,
 }
 impl Clone for __Request__mach_make_memory_entry_64_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -10413,7 +11497,9 @@ pub struct __Request__vm_map_64_t {
     pub inheritance: vm_inherit_t,
 }
 impl Clone for __Request__vm_map_64_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -10425,7 +11511,9 @@ pub struct __Request__vm_purgable_control_t {
     pub state: ::libc::c_int,
 }
 impl Clone for __Request__vm_purgable_control_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -10460,7 +11548,9 @@ pub union __RequestUnion__vm_map_subsystem {
     _bindgen_union_align: [u32; 1033usize],
 }
 impl Clone for __RequestUnion__vm_map_subsystem {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -10475,7 +11565,9 @@ pub struct __Reply__vm_region_t {
     pub info: [::libc::c_int; 10usize],
 }
 impl Clone for __Reply__vm_region_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -10486,7 +11578,9 @@ pub struct __Reply__vm_allocate_t {
     pub address: vm_address_t,
 }
 impl Clone for __Reply__vm_allocate_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -10496,7 +11590,9 @@ pub struct __Reply__vm_deallocate_t {
     pub RetCode: kern_return_t,
 }
 impl Clone for __Reply__vm_deallocate_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -10506,7 +11602,9 @@ pub struct __Reply__vm_protect_t {
     pub RetCode: kern_return_t,
 }
 impl Clone for __Reply__vm_protect_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -10516,7 +11614,9 @@ pub struct __Reply__vm_inherit_t {
     pub RetCode: kern_return_t,
 }
 impl Clone for __Reply__vm_inherit_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -10528,7 +11628,9 @@ pub struct __Reply__vm_read_t {
     pub dataCnt: mach_msg_type_number_t,
 }
 impl Clone for __Reply__vm_read_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -10539,7 +11641,9 @@ pub struct __Reply__vm_read_list_t {
     pub data_list: vm_read_entry_t,
 }
 impl Clone for __Reply__vm_read_list_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -10549,7 +11653,9 @@ pub struct __Reply__vm_write_t {
     pub RetCode: kern_return_t,
 }
 impl Clone for __Reply__vm_write_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -10559,7 +11665,9 @@ pub struct __Reply__vm_copy_t {
     pub RetCode: kern_return_t,
 }
 impl Clone for __Reply__vm_copy_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -10570,7 +11678,9 @@ pub struct __Reply__vm_read_overwrite_t {
     pub outsize: vm_size_t,
 }
 impl Clone for __Reply__vm_read_overwrite_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -10580,7 +11690,9 @@ pub struct __Reply__vm_msync_t {
     pub RetCode: kern_return_t,
 }
 impl Clone for __Reply__vm_msync_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -10590,7 +11702,9 @@ pub struct __Reply__vm_behavior_set_t {
     pub RetCode: kern_return_t,
 }
 impl Clone for __Reply__vm_behavior_set_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -10601,7 +11715,9 @@ pub struct __Reply__vm_map_t {
     pub address: vm_address_t,
 }
 impl Clone for __Reply__vm_map_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -10612,7 +11728,9 @@ pub struct __Reply__vm_machine_attribute_t {
     pub value: vm_machine_attribute_val_t,
 }
 impl Clone for __Reply__vm_machine_attribute_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -10625,7 +11743,9 @@ pub struct __Reply__vm_remap_t {
     pub max_protection: vm_prot_t,
 }
 impl Clone for __Reply__vm_remap_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -10635,7 +11755,9 @@ pub struct __Reply__task_wire_t {
     pub RetCode: kern_return_t,
 }
 impl Clone for __Reply__task_wire_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -10647,7 +11769,9 @@ pub struct __Reply__mach_make_memory_entry_t {
     pub size: vm_size_t,
 }
 impl Clone for __Reply__mach_make_memory_entry_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -10659,7 +11783,9 @@ pub struct __Reply__vm_map_page_query_t {
     pub ref_count: integer_t,
 }
 impl Clone for __Reply__vm_map_page_query_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -10672,7 +11798,9 @@ pub struct __Reply__mach_vm_region_info_t {
     pub objectsCnt: mach_msg_type_number_t,
 }
 impl Clone for __Reply__mach_vm_region_info_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -10684,7 +11812,9 @@ pub struct __Reply__vm_mapped_pages_info_t {
     pub pagesCnt: mach_msg_type_number_t,
 }
 impl Clone for __Reply__vm_mapped_pages_info_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -10699,7 +11829,9 @@ pub struct __Reply__vm_region_recurse_t {
     pub info: [::libc::c_int; 19usize],
 }
 impl Clone for __Reply__vm_region_recurse_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -10714,7 +11846,9 @@ pub struct __Reply__vm_region_recurse_64_t {
     pub info: [::libc::c_int; 19usize],
 }
 impl Clone for __Reply__vm_region_recurse_64_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -10727,7 +11861,9 @@ pub struct __Reply__mach_vm_region_info_64_t {
     pub objectsCnt: mach_msg_type_number_t,
 }
 impl Clone for __Reply__mach_vm_region_info_64_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -10742,7 +11878,9 @@ pub struct __Reply__vm_region_64_t {
     pub info: [::libc::c_int; 10usize],
 }
 impl Clone for __Reply__vm_region_64_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -10754,7 +11892,9 @@ pub struct __Reply__mach_make_memory_entry_64_t {
     pub size: memory_object_size_t,
 }
 impl Clone for __Reply__mach_make_memory_entry_64_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -10765,7 +11905,9 @@ pub struct __Reply__vm_map_64_t {
     pub address: vm_address_t,
 }
 impl Clone for __Reply__vm_map_64_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -10776,7 +11918,9 @@ pub struct __Reply__vm_purgable_control_t {
     pub state: ::libc::c_int,
 }
 impl Clone for __Reply__vm_purgable_control_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -10811,210 +11955,281 @@ pub union __ReplyUnion__vm_map_subsystem {
     _bindgen_union_align: [u32; 1033usize],
 }
 impl Clone for __ReplyUnion__vm_map_subsystem {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 extern "C" {
-    pub fn mach_port_names(task: ipc_space_t,
-                           names: *mut mach_port_name_array_t,
-                           namesCnt: *mut mach_msg_type_number_t,
-                           types: *mut mach_port_type_array_t,
-                           typesCnt: *mut mach_msg_type_number_t)
-     -> kern_return_t;
+    pub fn mach_port_names(
+        task: ipc_space_t,
+        names: *mut mach_port_name_array_t,
+        namesCnt: *mut mach_msg_type_number_t,
+        types: *mut mach_port_type_array_t,
+        typesCnt: *mut mach_msg_type_number_t,
+    ) -> kern_return_t;
 }
 extern "C" {
-    pub fn mach_port_type(task: ipc_space_t, name: mach_port_name_t,
-                          ptype: *mut mach_port_type_t) -> kern_return_t;
+    pub fn mach_port_type(
+        task: ipc_space_t,
+        name: mach_port_name_t,
+        ptype: *mut mach_port_type_t,
+    ) -> kern_return_t;
 }
 extern "C" {
-    pub fn mach_port_rename(task: ipc_space_t, old_name: mach_port_name_t,
-                            new_name: mach_port_name_t) -> kern_return_t;
+    pub fn mach_port_rename(
+        task: ipc_space_t,
+        old_name: mach_port_name_t,
+        new_name: mach_port_name_t,
+    ) -> kern_return_t;
 }
 extern "C" {
-    pub fn mach_port_allocate_name(task: ipc_space_t,
-                                   right: mach_port_right_t,
-                                   name: mach_port_name_t) -> kern_return_t;
+    pub fn mach_port_allocate_name(
+        task: ipc_space_t,
+        right: mach_port_right_t,
+        name: mach_port_name_t,
+    ) -> kern_return_t;
 }
 extern "C" {
-    pub fn mach_port_allocate(task: ipc_space_t, right: mach_port_right_t,
-                              name: *mut mach_port_name_t) -> kern_return_t;
+    pub fn mach_port_allocate(
+        task: ipc_space_t,
+        right: mach_port_right_t,
+        name: *mut mach_port_name_t,
+    ) -> kern_return_t;
 }
 extern "C" {
-    pub fn mach_port_destroy(task: ipc_space_t, name: mach_port_name_t)
-     -> kern_return_t;
+    pub fn mach_port_destroy(task: ipc_space_t, name: mach_port_name_t) -> kern_return_t;
 }
 extern "C" {
-    pub fn mach_port_deallocate(task: ipc_space_t, name: mach_port_name_t)
-     -> kern_return_t;
+    pub fn mach_port_deallocate(task: ipc_space_t, name: mach_port_name_t) -> kern_return_t;
 }
 extern "C" {
-    pub fn mach_port_get_refs(task: ipc_space_t, name: mach_port_name_t,
-                              right: mach_port_right_t,
-                              refs: *mut mach_port_urefs_t) -> kern_return_t;
+    pub fn mach_port_get_refs(
+        task: ipc_space_t,
+        name: mach_port_name_t,
+        right: mach_port_right_t,
+        refs: *mut mach_port_urefs_t,
+    ) -> kern_return_t;
 }
 extern "C" {
-    pub fn mach_port_mod_refs(task: ipc_space_t, name: mach_port_name_t,
-                              right: mach_port_right_t,
-                              delta: mach_port_delta_t) -> kern_return_t;
+    pub fn mach_port_mod_refs(
+        task: ipc_space_t,
+        name: mach_port_name_t,
+        right: mach_port_right_t,
+        delta: mach_port_delta_t,
+    ) -> kern_return_t;
 }
 extern "C" {
-    pub fn mach_port_peek(task: ipc_space_t, name: mach_port_name_t,
-                          trailer_type: mach_msg_trailer_type_t,
-                          request_seqnop: *mut mach_port_seqno_t,
-                          msg_sizep: *mut mach_msg_size_t,
-                          msg_idp: *mut mach_msg_id_t,
-                          trailer_infop: mach_msg_trailer_info_t,
-                          trailer_infopCnt: *mut mach_msg_type_number_t)
-     -> kern_return_t;
+    pub fn mach_port_peek(
+        task: ipc_space_t,
+        name: mach_port_name_t,
+        trailer_type: mach_msg_trailer_type_t,
+        request_seqnop: *mut mach_port_seqno_t,
+        msg_sizep: *mut mach_msg_size_t,
+        msg_idp: *mut mach_msg_id_t,
+        trailer_infop: mach_msg_trailer_info_t,
+        trailer_infopCnt: *mut mach_msg_type_number_t,
+    ) -> kern_return_t;
 }
 extern "C" {
-    pub fn mach_port_set_mscount(task: ipc_space_t, name: mach_port_name_t,
-                                 mscount: mach_port_mscount_t)
-     -> kern_return_t;
+    pub fn mach_port_set_mscount(
+        task: ipc_space_t,
+        name: mach_port_name_t,
+        mscount: mach_port_mscount_t,
+    ) -> kern_return_t;
 }
 extern "C" {
-    pub fn mach_port_get_set_status(task: ipc_space_t, name: mach_port_name_t,
-                                    members: *mut mach_port_name_array_t,
-                                    membersCnt: *mut mach_msg_type_number_t)
-     -> kern_return_t;
+    pub fn mach_port_get_set_status(
+        task: ipc_space_t,
+        name: mach_port_name_t,
+        members: *mut mach_port_name_array_t,
+        membersCnt: *mut mach_msg_type_number_t,
+    ) -> kern_return_t;
 }
 extern "C" {
-    pub fn mach_port_move_member(task: ipc_space_t, member: mach_port_name_t,
-                                 after: mach_port_name_t) -> kern_return_t;
+    pub fn mach_port_move_member(
+        task: ipc_space_t,
+        member: mach_port_name_t,
+        after: mach_port_name_t,
+    ) -> kern_return_t;
 }
 extern "C" {
-    pub fn mach_port_request_notification(task: ipc_space_t,
-                                          name: mach_port_name_t,
-                                          msgid: mach_msg_id_t,
-                                          sync: mach_port_mscount_t,
-                                          notify: mach_port_t,
-                                          notifyPoly: mach_msg_type_name_t,
-                                          previous: *mut mach_port_t)
-     -> kern_return_t;
+    pub fn mach_port_request_notification(
+        task: ipc_space_t,
+        name: mach_port_name_t,
+        msgid: mach_msg_id_t,
+        sync: mach_port_mscount_t,
+        notify: mach_port_t,
+        notifyPoly: mach_msg_type_name_t,
+        previous: *mut mach_port_t,
+    ) -> kern_return_t;
 }
 extern "C" {
-    pub fn mach_port_insert_right(task: ipc_space_t, name: mach_port_name_t,
-                                  poly: mach_port_t,
-                                  polyPoly: mach_msg_type_name_t)
-     -> kern_return_t;
+    pub fn mach_port_insert_right(
+        task: ipc_space_t,
+        name: mach_port_name_t,
+        poly: mach_port_t,
+        polyPoly: mach_msg_type_name_t,
+    ) -> kern_return_t;
 }
 extern "C" {
-    pub fn mach_port_extract_right(task: ipc_space_t, name: mach_port_name_t,
-                                   msgt_name: mach_msg_type_name_t,
-                                   poly: *mut mach_port_t,
-                                   polyPoly: *mut mach_msg_type_name_t)
-     -> kern_return_t;
+    pub fn mach_port_extract_right(
+        task: ipc_space_t,
+        name: mach_port_name_t,
+        msgt_name: mach_msg_type_name_t,
+        poly: *mut mach_port_t,
+        polyPoly: *mut mach_msg_type_name_t,
+    ) -> kern_return_t;
 }
 extern "C" {
-    pub fn mach_port_set_seqno(task: ipc_space_t, name: mach_port_name_t,
-                               seqno: mach_port_seqno_t) -> kern_return_t;
+    pub fn mach_port_set_seqno(
+        task: ipc_space_t,
+        name: mach_port_name_t,
+        seqno: mach_port_seqno_t,
+    ) -> kern_return_t;
 }
 extern "C" {
-    pub fn mach_port_get_attributes(task: ipc_space_t, name: mach_port_name_t,
-                                    flavor: mach_port_flavor_t,
-                                    port_info_out: mach_port_info_t,
-                                    port_info_outCnt:
-                                        *mut mach_msg_type_number_t)
-     -> kern_return_t;
+    pub fn mach_port_get_attributes(
+        task: ipc_space_t,
+        name: mach_port_name_t,
+        flavor: mach_port_flavor_t,
+        port_info_out: mach_port_info_t,
+        port_info_outCnt: *mut mach_msg_type_number_t,
+    ) -> kern_return_t;
 }
 extern "C" {
-    pub fn mach_port_set_attributes(task: ipc_space_t, name: mach_port_name_t,
-                                    flavor: mach_port_flavor_t,
-                                    port_info: mach_port_info_t,
-                                    port_infoCnt: mach_msg_type_number_t)
-     -> kern_return_t;
+    pub fn mach_port_set_attributes(
+        task: ipc_space_t,
+        name: mach_port_name_t,
+        flavor: mach_port_flavor_t,
+        port_info: mach_port_info_t,
+        port_infoCnt: mach_msg_type_number_t,
+    ) -> kern_return_t;
 }
 extern "C" {
-    pub fn mach_port_allocate_qos(task: ipc_space_t, right: mach_port_right_t,
-                                  qos: *mut mach_port_qos_t,
-                                  name: *mut mach_port_name_t)
-     -> kern_return_t;
+    pub fn mach_port_allocate_qos(
+        task: ipc_space_t,
+        right: mach_port_right_t,
+        qos: *mut mach_port_qos_t,
+        name: *mut mach_port_name_t,
+    ) -> kern_return_t;
 }
 extern "C" {
-    pub fn mach_port_allocate_full(task: ipc_space_t,
-                                   right: mach_port_right_t,
-                                   proto: mach_port_t,
-                                   qos: *mut mach_port_qos_t,
-                                   name: *mut mach_port_name_t)
-     -> kern_return_t;
+    pub fn mach_port_allocate_full(
+        task: ipc_space_t,
+        right: mach_port_right_t,
+        proto: mach_port_t,
+        qos: *mut mach_port_qos_t,
+        name: *mut mach_port_name_t,
+    ) -> kern_return_t;
 }
 extern "C" {
-    pub fn task_set_port_space(task: ipc_space_t,
-                               table_entries: ::libc::c_int) -> kern_return_t;
+    pub fn task_set_port_space(task: ipc_space_t, table_entries: ::libc::c_int) -> kern_return_t;
 }
 extern "C" {
-    pub fn mach_port_get_srights(task: ipc_space_t, name: mach_port_name_t,
-                                 srights: *mut mach_port_rights_t)
-     -> kern_return_t;
+    pub fn mach_port_get_srights(
+        task: ipc_space_t,
+        name: mach_port_name_t,
+        srights: *mut mach_port_rights_t,
+    ) -> kern_return_t;
 }
 extern "C" {
-    pub fn mach_port_space_info(task: ipc_space_t,
-                                space_info: *mut ipc_info_space_t,
-                                table_info: *mut ipc_info_name_array_t,
-                                table_infoCnt: *mut mach_msg_type_number_t,
-                                tree_info: *mut ipc_info_tree_name_array_t,
-                                tree_infoCnt: *mut mach_msg_type_number_t)
-     -> kern_return_t;
+    pub fn mach_port_space_info(
+        task: ipc_space_t,
+        space_info: *mut ipc_info_space_t,
+        table_info: *mut ipc_info_name_array_t,
+        table_infoCnt: *mut mach_msg_type_number_t,
+        tree_info: *mut ipc_info_tree_name_array_t,
+        tree_infoCnt: *mut mach_msg_type_number_t,
+    ) -> kern_return_t;
 }
 extern "C" {
-    pub fn mach_port_dnrequest_info(task: ipc_space_t, name: mach_port_name_t,
-                                    dnr_total: *mut ::libc::c_uint,
-                                    dnr_used: *mut ::libc::c_uint)
-     -> kern_return_t;
+    pub fn mach_port_dnrequest_info(
+        task: ipc_space_t,
+        name: mach_port_name_t,
+        dnr_total: *mut ::libc::c_uint,
+        dnr_used: *mut ::libc::c_uint,
+    ) -> kern_return_t;
 }
 extern "C" {
-    pub fn mach_port_kernel_object(task: ipc_space_t, name: mach_port_name_t,
-                                   object_type: *mut ::libc::c_uint,
-                                   object_addr: *mut ::libc::c_uint)
-     -> kern_return_t;
+    pub fn mach_port_kernel_object(
+        task: ipc_space_t,
+        name: mach_port_name_t,
+        object_type: *mut ::libc::c_uint,
+        object_addr: *mut ::libc::c_uint,
+    ) -> kern_return_t;
 }
 extern "C" {
-    pub fn mach_port_insert_member(task: ipc_space_t, name: mach_port_name_t,
-                                   pset: mach_port_name_t) -> kern_return_t;
+    pub fn mach_port_insert_member(
+        task: ipc_space_t,
+        name: mach_port_name_t,
+        pset: mach_port_name_t,
+    ) -> kern_return_t;
 }
 extern "C" {
-    pub fn mach_port_extract_member(task: ipc_space_t, name: mach_port_name_t,
-                                    pset: mach_port_name_t) -> kern_return_t;
+    pub fn mach_port_extract_member(
+        task: ipc_space_t,
+        name: mach_port_name_t,
+        pset: mach_port_name_t,
+    ) -> kern_return_t;
 }
 extern "C" {
-    pub fn mach_port_get_context(task: ipc_space_t, name: mach_port_name_t,
-                                 context: *mut mach_port_context_t)
-     -> kern_return_t;
+    pub fn mach_port_get_context(
+        task: ipc_space_t,
+        name: mach_port_name_t,
+        context: *mut mach_port_context_t,
+    ) -> kern_return_t;
 }
 extern "C" {
-    pub fn mach_port_set_context(task: ipc_space_t, name: mach_port_name_t,
-                                 context: mach_port_context_t)
-     -> kern_return_t;
+    pub fn mach_port_set_context(
+        task: ipc_space_t,
+        name: mach_port_name_t,
+        context: mach_port_context_t,
+    ) -> kern_return_t;
 }
 extern "C" {
-    pub fn mach_port_kobject(task: ipc_space_t, name: mach_port_name_t,
-                             object_type: *mut natural_t,
-                             object_addr: *mut mach_vm_address_t)
-     -> kern_return_t;
+    pub fn mach_port_kobject(
+        task: ipc_space_t,
+        name: mach_port_name_t,
+        object_type: *mut natural_t,
+        object_addr: *mut mach_vm_address_t,
+    ) -> kern_return_t;
 }
 extern "C" {
-    pub fn mach_port_construct(task: ipc_space_t,
-                               options: mach_port_options_ptr_t,
-                               context: mach_port_context_t,
-                               name: *mut mach_port_name_t) -> kern_return_t;
+    pub fn mach_port_construct(
+        task: ipc_space_t,
+        options: mach_port_options_ptr_t,
+        context: mach_port_context_t,
+        name: *mut mach_port_name_t,
+    ) -> kern_return_t;
 }
 extern "C" {
-    pub fn mach_port_destruct(task: ipc_space_t, name: mach_port_name_t,
-                              srdelta: mach_port_delta_t,
-                              guard: mach_port_context_t) -> kern_return_t;
+    pub fn mach_port_destruct(
+        task: ipc_space_t,
+        name: mach_port_name_t,
+        srdelta: mach_port_delta_t,
+        guard: mach_port_context_t,
+    ) -> kern_return_t;
 }
 extern "C" {
-    pub fn mach_port_guard(task: ipc_space_t, name: mach_port_name_t,
-                           guard: mach_port_context_t, strict: boolean_t)
-     -> kern_return_t;
+    pub fn mach_port_guard(
+        task: ipc_space_t,
+        name: mach_port_name_t,
+        guard: mach_port_context_t,
+        strict: boolean_t,
+    ) -> kern_return_t;
 }
 extern "C" {
-    pub fn mach_port_unguard(task: ipc_space_t, name: mach_port_name_t,
-                             guard: mach_port_context_t) -> kern_return_t;
+    pub fn mach_port_unguard(
+        task: ipc_space_t,
+        name: mach_port_name_t,
+        guard: mach_port_context_t,
+    ) -> kern_return_t;
 }
 extern "C" {
-    pub fn mach_port_space_basic_info(task: ipc_space_t,
-                                      basic_info: *mut ipc_info_space_basic_t)
-     -> kern_return_t;
+    pub fn mach_port_space_basic_info(
+        task: ipc_space_t,
+        basic_info: *mut ipc_info_space_basic_t,
+    ) -> kern_return_t;
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -11022,7 +12237,9 @@ pub struct __Request__mach_port_names_t {
     pub Head: mach_msg_header_t,
 }
 impl Clone for __Request__mach_port_names_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -11032,7 +12249,9 @@ pub struct __Request__mach_port_type_t {
     pub name: mach_port_name_t,
 }
 impl Clone for __Request__mach_port_type_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -11043,7 +12262,9 @@ pub struct __Request__mach_port_rename_t {
     pub new_name: mach_port_name_t,
 }
 impl Clone for __Request__mach_port_rename_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -11054,7 +12275,9 @@ pub struct __Request__mach_port_allocate_name_t {
     pub name: mach_port_name_t,
 }
 impl Clone for __Request__mach_port_allocate_name_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -11064,7 +12287,9 @@ pub struct __Request__mach_port_allocate_t {
     pub right: mach_port_right_t,
 }
 impl Clone for __Request__mach_port_allocate_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -11074,7 +12299,9 @@ pub struct __Request__mach_port_destroy_t {
     pub name: mach_port_name_t,
 }
 impl Clone for __Request__mach_port_destroy_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -11084,7 +12311,9 @@ pub struct __Request__mach_port_deallocate_t {
     pub name: mach_port_name_t,
 }
 impl Clone for __Request__mach_port_deallocate_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -11095,7 +12324,9 @@ pub struct __Request__mach_port_get_refs_t {
     pub right: mach_port_right_t,
 }
 impl Clone for __Request__mach_port_get_refs_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -11107,7 +12338,9 @@ pub struct __Request__mach_port_mod_refs_t {
     pub delta: mach_port_delta_t,
 }
 impl Clone for __Request__mach_port_mod_refs_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -11120,7 +12353,9 @@ pub struct __Request__mach_port_peek_t {
     pub trailer_infopCnt: mach_msg_type_number_t,
 }
 impl Clone for __Request__mach_port_peek_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -11131,7 +12366,9 @@ pub struct __Request__mach_port_set_mscount_t {
     pub mscount: mach_port_mscount_t,
 }
 impl Clone for __Request__mach_port_set_mscount_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -11141,7 +12378,9 @@ pub struct __Request__mach_port_get_set_status_t {
     pub name: mach_port_name_t,
 }
 impl Clone for __Request__mach_port_get_set_status_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -11152,7 +12391,9 @@ pub struct __Request__mach_port_move_member_t {
     pub after: mach_port_name_t,
 }
 impl Clone for __Request__mach_port_move_member_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -11166,7 +12407,9 @@ pub struct __Request__mach_port_request_notification_t {
     pub sync: mach_port_mscount_t,
 }
 impl Clone for __Request__mach_port_request_notification_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -11178,7 +12421,9 @@ pub struct __Request__mach_port_insert_right_t {
     pub name: mach_port_name_t,
 }
 impl Clone for __Request__mach_port_insert_right_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -11189,7 +12434,9 @@ pub struct __Request__mach_port_extract_right_t {
     pub msgt_name: mach_msg_type_name_t,
 }
 impl Clone for __Request__mach_port_extract_right_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -11200,7 +12447,9 @@ pub struct __Request__mach_port_set_seqno_t {
     pub seqno: mach_port_seqno_t,
 }
 impl Clone for __Request__mach_port_set_seqno_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -11212,7 +12461,9 @@ pub struct __Request__mach_port_get_attributes_t {
     pub port_info_outCnt: mach_msg_type_number_t,
 }
 impl Clone for __Request__mach_port_get_attributes_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -11225,7 +12476,9 @@ pub struct __Request__mach_port_set_attributes_t {
     pub port_info: [integer_t; 17usize],
 }
 impl Clone for __Request__mach_port_set_attributes_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -11236,7 +12489,9 @@ pub struct __Request__mach_port_allocate_qos_t {
     pub qos: mach_port_qos_t,
 }
 impl Clone for __Request__mach_port_allocate_qos_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -11250,7 +12505,9 @@ pub struct __Request__mach_port_allocate_full_t {
     pub name: mach_port_name_t,
 }
 impl Clone for __Request__mach_port_allocate_full_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -11260,7 +12517,9 @@ pub struct __Request__task_set_port_space_t {
     pub table_entries: ::libc::c_int,
 }
 impl Clone for __Request__task_set_port_space_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -11270,7 +12529,9 @@ pub struct __Request__mach_port_get_srights_t {
     pub name: mach_port_name_t,
 }
 impl Clone for __Request__mach_port_get_srights_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -11278,7 +12539,9 @@ pub struct __Request__mach_port_space_info_t {
     pub Head: mach_msg_header_t,
 }
 impl Clone for __Request__mach_port_space_info_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -11288,7 +12551,9 @@ pub struct __Request__mach_port_dnrequest_info_t {
     pub name: mach_port_name_t,
 }
 impl Clone for __Request__mach_port_dnrequest_info_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -11298,7 +12563,9 @@ pub struct __Request__mach_port_kernel_object_t {
     pub name: mach_port_name_t,
 }
 impl Clone for __Request__mach_port_kernel_object_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -11309,7 +12576,9 @@ pub struct __Request__mach_port_insert_member_t {
     pub pset: mach_port_name_t,
 }
 impl Clone for __Request__mach_port_insert_member_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -11320,7 +12589,9 @@ pub struct __Request__mach_port_extract_member_t {
     pub pset: mach_port_name_t,
 }
 impl Clone for __Request__mach_port_extract_member_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -11330,7 +12601,9 @@ pub struct __Request__mach_port_get_context_t {
     pub name: mach_port_name_t,
 }
 impl Clone for __Request__mach_port_get_context_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -11341,7 +12614,9 @@ pub struct __Request__mach_port_set_context_t {
     pub context: mach_port_context_t,
 }
 impl Clone for __Request__mach_port_set_context_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -11351,7 +12626,9 @@ pub struct __Request__mach_port_kobject_t {
     pub name: mach_port_name_t,
 }
 impl Clone for __Request__mach_port_kobject_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -11363,7 +12640,9 @@ pub struct __Request__mach_port_construct_t {
     pub context: mach_port_context_t,
 }
 impl Clone for __Request__mach_port_construct_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -11375,7 +12654,9 @@ pub struct __Request__mach_port_destruct_t {
     pub guard: mach_port_context_t,
 }
 impl Clone for __Request__mach_port_destruct_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -11387,7 +12668,9 @@ pub struct __Request__mach_port_guard_t {
     pub strict: boolean_t,
 }
 impl Clone for __Request__mach_port_guard_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -11398,7 +12681,9 @@ pub struct __Request__mach_port_unguard_t {
     pub guard: mach_port_context_t,
 }
 impl Clone for __Request__mach_port_unguard_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -11406,7 +12691,9 @@ pub struct __Request__mach_port_space_basic_info_t {
     pub Head: mach_msg_header_t,
 }
 impl Clone for __Request__mach_port_space_basic_info_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -11450,7 +12737,9 @@ pub union __RequestUnion__mach_port_subsystem {
     _bindgen_union_align: [u32; 28usize],
 }
 impl Clone for __RequestUnion__mach_port_subsystem {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -11464,7 +12753,9 @@ pub struct __Reply__mach_port_names_t {
     pub typesCnt: mach_msg_type_number_t,
 }
 impl Clone for __Reply__mach_port_names_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -11475,7 +12766,9 @@ pub struct __Reply__mach_port_type_t {
     pub ptype: mach_port_type_t,
 }
 impl Clone for __Reply__mach_port_type_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -11485,7 +12778,9 @@ pub struct __Reply__mach_port_rename_t {
     pub RetCode: kern_return_t,
 }
 impl Clone for __Reply__mach_port_rename_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -11495,7 +12790,9 @@ pub struct __Reply__mach_port_allocate_name_t {
     pub RetCode: kern_return_t,
 }
 impl Clone for __Reply__mach_port_allocate_name_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -11506,7 +12803,9 @@ pub struct __Reply__mach_port_allocate_t {
     pub name: mach_port_name_t,
 }
 impl Clone for __Reply__mach_port_allocate_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -11516,7 +12815,9 @@ pub struct __Reply__mach_port_destroy_t {
     pub RetCode: kern_return_t,
 }
 impl Clone for __Reply__mach_port_destroy_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -11526,7 +12827,9 @@ pub struct __Reply__mach_port_deallocate_t {
     pub RetCode: kern_return_t,
 }
 impl Clone for __Reply__mach_port_deallocate_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -11537,7 +12840,9 @@ pub struct __Reply__mach_port_get_refs_t {
     pub refs: mach_port_urefs_t,
 }
 impl Clone for __Reply__mach_port_get_refs_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -11547,7 +12852,9 @@ pub struct __Reply__mach_port_mod_refs_t {
     pub RetCode: kern_return_t,
 }
 impl Clone for __Reply__mach_port_mod_refs_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -11562,7 +12869,9 @@ pub struct __Reply__mach_port_peek_t {
     pub trailer_infop: [::libc::c_char; 68usize],
 }
 impl Clone for __Reply__mach_port_peek_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -11572,7 +12881,9 @@ pub struct __Reply__mach_port_set_mscount_t {
     pub RetCode: kern_return_t,
 }
 impl Clone for __Reply__mach_port_set_mscount_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -11584,7 +12895,9 @@ pub struct __Reply__mach_port_get_set_status_t {
     pub membersCnt: mach_msg_type_number_t,
 }
 impl Clone for __Reply__mach_port_get_set_status_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -11594,7 +12907,9 @@ pub struct __Reply__mach_port_move_member_t {
     pub RetCode: kern_return_t,
 }
 impl Clone for __Reply__mach_port_move_member_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -11604,7 +12919,9 @@ pub struct __Reply__mach_port_request_notification_t {
     pub previous: mach_msg_port_descriptor_t,
 }
 impl Clone for __Reply__mach_port_request_notification_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -11614,7 +12931,9 @@ pub struct __Reply__mach_port_insert_right_t {
     pub RetCode: kern_return_t,
 }
 impl Clone for __Reply__mach_port_insert_right_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -11624,7 +12943,9 @@ pub struct __Reply__mach_port_extract_right_t {
     pub poly: mach_msg_port_descriptor_t,
 }
 impl Clone for __Reply__mach_port_extract_right_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -11634,7 +12955,9 @@ pub struct __Reply__mach_port_set_seqno_t {
     pub RetCode: kern_return_t,
 }
 impl Clone for __Reply__mach_port_set_seqno_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -11646,7 +12969,9 @@ pub struct __Reply__mach_port_get_attributes_t {
     pub port_info_out: [integer_t; 17usize],
 }
 impl Clone for __Reply__mach_port_get_attributes_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -11656,7 +12981,9 @@ pub struct __Reply__mach_port_set_attributes_t {
     pub RetCode: kern_return_t,
 }
 impl Clone for __Reply__mach_port_set_attributes_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -11668,7 +12995,9 @@ pub struct __Reply__mach_port_allocate_qos_t {
     pub name: mach_port_name_t,
 }
 impl Clone for __Reply__mach_port_allocate_qos_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -11680,7 +13009,9 @@ pub struct __Reply__mach_port_allocate_full_t {
     pub name: mach_port_name_t,
 }
 impl Clone for __Reply__mach_port_allocate_full_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -11690,7 +13021,9 @@ pub struct __Reply__task_set_port_space_t {
     pub RetCode: kern_return_t,
 }
 impl Clone for __Reply__task_set_port_space_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -11701,7 +13034,9 @@ pub struct __Reply__mach_port_get_srights_t {
     pub srights: mach_port_rights_t,
 }
 impl Clone for __Reply__mach_port_get_srights_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -11716,7 +13051,9 @@ pub struct __Reply__mach_port_space_info_t {
     pub tree_infoCnt: mach_msg_type_number_t,
 }
 impl Clone for __Reply__mach_port_space_info_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -11728,7 +13065,9 @@ pub struct __Reply__mach_port_dnrequest_info_t {
     pub dnr_used: ::libc::c_uint,
 }
 impl Clone for __Reply__mach_port_dnrequest_info_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -11740,7 +13079,9 @@ pub struct __Reply__mach_port_kernel_object_t {
     pub object_addr: ::libc::c_uint,
 }
 impl Clone for __Reply__mach_port_kernel_object_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -11750,7 +13091,9 @@ pub struct __Reply__mach_port_insert_member_t {
     pub RetCode: kern_return_t,
 }
 impl Clone for __Reply__mach_port_insert_member_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -11760,7 +13103,9 @@ pub struct __Reply__mach_port_extract_member_t {
     pub RetCode: kern_return_t,
 }
 impl Clone for __Reply__mach_port_extract_member_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -11771,7 +13116,9 @@ pub struct __Reply__mach_port_get_context_t {
     pub context: mach_port_context_t,
 }
 impl Clone for __Reply__mach_port_get_context_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -11781,7 +13128,9 @@ pub struct __Reply__mach_port_set_context_t {
     pub RetCode: kern_return_t,
 }
 impl Clone for __Reply__mach_port_set_context_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -11793,7 +13142,9 @@ pub struct __Reply__mach_port_kobject_t {
     pub object_addr: mach_vm_address_t,
 }
 impl Clone for __Reply__mach_port_kobject_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -11804,7 +13155,9 @@ pub struct __Reply__mach_port_construct_t {
     pub name: mach_port_name_t,
 }
 impl Clone for __Reply__mach_port_construct_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -11814,7 +13167,9 @@ pub struct __Reply__mach_port_destruct_t {
     pub RetCode: kern_return_t,
 }
 impl Clone for __Reply__mach_port_destruct_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -11824,7 +13179,9 @@ pub struct __Reply__mach_port_guard_t {
     pub RetCode: kern_return_t,
 }
 impl Clone for __Reply__mach_port_guard_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -11834,7 +13191,9 @@ pub struct __Reply__mach_port_unguard_t {
     pub RetCode: kern_return_t,
 }
 impl Clone for __Reply__mach_port_unguard_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -11845,7 +13204,9 @@ pub struct __Reply__mach_port_space_basic_info_t {
     pub basic_info: ipc_info_space_basic_t,
 }
 impl Clone for __Reply__mach_port_space_basic_info_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -11889,7 +13250,9 @@ pub union __ReplyUnion__mach_port_subsystem {
     _bindgen_union_align: [u32; 30usize],
 }
 impl Clone for __ReplyUnion__mach_port_subsystem {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 extern "C" {
     #[link_name = "vm_page_size"]
@@ -11924,137 +13287,160 @@ extern "C" {
     pub fn mach_thread_self() -> mach_port_t;
 }
 extern "C" {
-    pub fn host_page_size(arg1: host_t, arg2: *mut vm_size_t)
-     -> kern_return_t;
+    pub fn host_page_size(arg1: host_t, arg2: *mut vm_size_t) -> kern_return_t;
 }
 extern "C" {
     #[link_name = "mach_task_self_"]
     pub static mut mach_task_self_: mach_port_t;
 }
 extern "C" {
-    pub fn clock_sleep_trap(clock_name: mach_port_name_t,
-                            sleep_type: sleep_type_t,
-                            sleep_sec: ::libc::c_int,
-                            sleep_nsec: ::libc::c_int,
-                            wakeup_time: *mut mach_timespec_t)
-     -> kern_return_t;
+    pub fn clock_sleep_trap(
+        clock_name: mach_port_name_t,
+        sleep_type: sleep_type_t,
+        sleep_sec: ::libc::c_int,
+        sleep_nsec: ::libc::c_int,
+        wakeup_time: *mut mach_timespec_t,
+    ) -> kern_return_t;
 }
 extern "C" {
-    pub fn _kernelrpc_mach_vm_allocate_trap(target: mach_port_name_t,
-                                            addr: *mut mach_vm_offset_t,
-                                            size: mach_vm_size_t,
-                                            flags: ::libc::c_int)
-     -> kern_return_t;
+    pub fn _kernelrpc_mach_vm_allocate_trap(
+        target: mach_port_name_t,
+        addr: *mut mach_vm_offset_t,
+        size: mach_vm_size_t,
+        flags: ::libc::c_int,
+    ) -> kern_return_t;
 }
 extern "C" {
-    pub fn _kernelrpc_mach_vm_deallocate_trap(target: mach_port_name_t,
-                                              address: mach_vm_address_t,
-                                              size: mach_vm_size_t)
-     -> kern_return_t;
+    pub fn _kernelrpc_mach_vm_deallocate_trap(
+        target: mach_port_name_t,
+        address: mach_vm_address_t,
+        size: mach_vm_size_t,
+    ) -> kern_return_t;
 }
 extern "C" {
-    pub fn _kernelrpc_mach_vm_protect_trap(target: mach_port_name_t,
-                                           address: mach_vm_address_t,
-                                           size: mach_vm_size_t,
-                                           set_maximum: boolean_t,
-                                           new_protection: vm_prot_t)
-     -> kern_return_t;
+    pub fn _kernelrpc_mach_vm_protect_trap(
+        target: mach_port_name_t,
+        address: mach_vm_address_t,
+        size: mach_vm_size_t,
+        set_maximum: boolean_t,
+        new_protection: vm_prot_t,
+    ) -> kern_return_t;
 }
 extern "C" {
-    pub fn _kernelrpc_mach_vm_map_trap(target: mach_port_name_t,
-                                       address: *mut mach_vm_offset_t,
-                                       size: mach_vm_size_t,
-                                       mask: mach_vm_offset_t,
-                                       flags: ::libc::c_int,
-                                       cur_protection: vm_prot_t)
-     -> kern_return_t;
+    pub fn _kernelrpc_mach_vm_map_trap(
+        target: mach_port_name_t,
+        address: *mut mach_vm_offset_t,
+        size: mach_vm_size_t,
+        mask: mach_vm_offset_t,
+        flags: ::libc::c_int,
+        cur_protection: vm_prot_t,
+    ) -> kern_return_t;
 }
 extern "C" {
-    pub fn _kernelrpc_mach_port_allocate_trap(target: mach_port_name_t,
-                                              right: mach_port_right_t,
-                                              name: *mut mach_port_name_t)
-     -> kern_return_t;
+    pub fn _kernelrpc_mach_port_allocate_trap(
+        target: mach_port_name_t,
+        right: mach_port_right_t,
+        name: *mut mach_port_name_t,
+    ) -> kern_return_t;
 }
 extern "C" {
-    pub fn _kernelrpc_mach_port_destroy_trap(target: mach_port_name_t,
-                                             name: mach_port_name_t)
-     -> kern_return_t;
+    pub fn _kernelrpc_mach_port_destroy_trap(
+        target: mach_port_name_t,
+        name: mach_port_name_t,
+    ) -> kern_return_t;
 }
 extern "C" {
-    pub fn _kernelrpc_mach_port_deallocate_trap(target: mach_port_name_t,
-                                                name: mach_port_name_t)
-     -> kern_return_t;
+    pub fn _kernelrpc_mach_port_deallocate_trap(
+        target: mach_port_name_t,
+        name: mach_port_name_t,
+    ) -> kern_return_t;
 }
 extern "C" {
-    pub fn _kernelrpc_mach_port_mod_refs_trap(target: mach_port_name_t,
-                                              name: mach_port_name_t,
-                                              right: mach_port_right_t,
-                                              delta: mach_port_delta_t)
-     -> kern_return_t;
+    pub fn _kernelrpc_mach_port_mod_refs_trap(
+        target: mach_port_name_t,
+        name: mach_port_name_t,
+        right: mach_port_right_t,
+        delta: mach_port_delta_t,
+    ) -> kern_return_t;
 }
 extern "C" {
-    pub fn _kernelrpc_mach_port_move_member_trap(target: mach_port_name_t,
-                                                 member: mach_port_name_t,
-                                                 after: mach_port_name_t)
-     -> kern_return_t;
+    pub fn _kernelrpc_mach_port_move_member_trap(
+        target: mach_port_name_t,
+        member: mach_port_name_t,
+        after: mach_port_name_t,
+    ) -> kern_return_t;
 }
 extern "C" {
-    pub fn _kernelrpc_mach_port_insert_right_trap(target: mach_port_name_t,
-                                                  name: mach_port_name_t,
-                                                  poly: mach_port_name_t,
-                                                  polyPoly:
-                                                      mach_msg_type_name_t)
-     -> kern_return_t;
+    pub fn _kernelrpc_mach_port_insert_right_trap(
+        target: mach_port_name_t,
+        name: mach_port_name_t,
+        poly: mach_port_name_t,
+        polyPoly: mach_msg_type_name_t,
+    ) -> kern_return_t;
 }
 extern "C" {
-    pub fn _kernelrpc_mach_port_insert_member_trap(target: mach_port_name_t,
-                                                   name: mach_port_name_t,
-                                                   pset: mach_port_name_t)
-     -> kern_return_t;
+    pub fn _kernelrpc_mach_port_insert_member_trap(
+        target: mach_port_name_t,
+        name: mach_port_name_t,
+        pset: mach_port_name_t,
+    ) -> kern_return_t;
 }
 extern "C" {
-    pub fn _kernelrpc_mach_port_extract_member_trap(target: mach_port_name_t,
-                                                    name: mach_port_name_t,
-                                                    pset: mach_port_name_t)
-     -> kern_return_t;
+    pub fn _kernelrpc_mach_port_extract_member_trap(
+        target: mach_port_name_t,
+        name: mach_port_name_t,
+        pset: mach_port_name_t,
+    ) -> kern_return_t;
 }
 extern "C" {
-    pub fn _kernelrpc_mach_port_construct_trap(target: mach_port_name_t,
-                                               options:
-                                                   *mut mach_port_options_t,
-                                               context: u64,
-                                               name: *mut mach_port_name_t)
-     -> kern_return_t;
+    pub fn _kernelrpc_mach_port_construct_trap(
+        target: mach_port_name_t,
+        options: *mut mach_port_options_t,
+        context: u64,
+        name: *mut mach_port_name_t,
+    ) -> kern_return_t;
 }
 extern "C" {
-    pub fn _kernelrpc_mach_port_destruct_trap(target: mach_port_name_t,
-                                              name: mach_port_name_t,
-                                              srdelta: mach_port_delta_t,
-                                              guard: u64) -> kern_return_t;
+    pub fn _kernelrpc_mach_port_destruct_trap(
+        target: mach_port_name_t,
+        name: mach_port_name_t,
+        srdelta: mach_port_delta_t,
+        guard: u64,
+    ) -> kern_return_t;
 }
 extern "C" {
-    pub fn _kernelrpc_mach_port_guard_trap(target: mach_port_name_t,
-                                           name: mach_port_name_t, guard: u64,
-                                           strict: boolean_t)
-     -> kern_return_t;
+    pub fn _kernelrpc_mach_port_guard_trap(
+        target: mach_port_name_t,
+        name: mach_port_name_t,
+        guard: u64,
+        strict: boolean_t,
+    ) -> kern_return_t;
 }
 extern "C" {
-    pub fn _kernelrpc_mach_port_unguard_trap(target: mach_port_name_t,
-                                             name: mach_port_name_t,
-                                             guard: u64) -> kern_return_t;
+    pub fn _kernelrpc_mach_port_unguard_trap(
+        target: mach_port_name_t,
+        name: mach_port_name_t,
+        guard: u64,
+    ) -> kern_return_t;
 }
 extern "C" {
-    pub fn macx_swapon(filename: u64, flags: ::libc::c_int,
-                       size: ::libc::c_int, priority: ::libc::c_int)
-     -> kern_return_t;
+    pub fn macx_swapon(
+        filename: u64,
+        flags: ::libc::c_int,
+        size: ::libc::c_int,
+        priority: ::libc::c_int,
+    ) -> kern_return_t;
 }
 extern "C" {
     pub fn macx_swapoff(filename: u64, flags: ::libc::c_int) -> kern_return_t;
 }
 extern "C" {
-    pub fn macx_triggers(hi_water: ::libc::c_int, low_water: ::libc::c_int,
-                         flags: ::libc::c_int, alert_port: mach_port_t)
-     -> kern_return_t;
+    pub fn macx_triggers(
+        hi_water: ::libc::c_int,
+        low_water: ::libc::c_int,
+        flags: ::libc::c_int,
+        alert_port: mach_port_t,
+    ) -> kern_return_t;
 }
 extern "C" {
     pub fn macx_backing_store_suspend(suspend: boolean_t) -> kern_return_t;
@@ -12069,24 +13455,31 @@ extern "C" {
     pub fn swtch() -> boolean_t;
 }
 extern "C" {
-    pub fn thread_switch(thread_name: mach_port_name_t, option: ::libc::c_int,
-                         option_time: mach_msg_timeout_t) -> kern_return_t;
+    pub fn thread_switch(
+        thread_name: mach_port_name_t,
+        option: ::libc::c_int,
+        option_time: mach_msg_timeout_t,
+    ) -> kern_return_t;
 }
 extern "C" {
     pub fn task_self_trap() -> mach_port_name_t;
 }
 extern "C" {
-    pub fn task_for_pid(target_tport: mach_port_name_t, pid: ::libc::c_int,
-                        t: *mut mach_port_name_t) -> kern_return_t;
+    pub fn task_for_pid(
+        target_tport: mach_port_name_t,
+        pid: ::libc::c_int,
+        t: *mut mach_port_name_t,
+    ) -> kern_return_t;
 }
 extern "C" {
-    pub fn task_name_for_pid(target_tport: mach_port_name_t,
-                             pid: ::libc::c_int, tn: *mut mach_port_name_t)
-     -> kern_return_t;
+    pub fn task_name_for_pid(
+        target_tport: mach_port_name_t,
+        pid: ::libc::c_int,
+        tn: *mut mach_port_name_t,
+    ) -> kern_return_t;
 }
 extern "C" {
-    pub fn pid_for_task(t: mach_port_name_t, x: *mut ::libc::c_int)
-     -> kern_return_t;
+    pub fn pid_for_task(t: mach_port_name_t, x: *mut ::libc::c_int) -> kern_return_t;
 }
 extern "C" {
     #[link_name = "bootstrap_port"]
@@ -12094,189 +13487,199 @@ extern "C" {
 }
 extern "C" {
     #[link_name = "vprintf_stderr_func"]
-    pub static mut vprintf_stderr_func:
-               ::std::option::Option<unsafe extern "C" fn(format:
-                                                              *const ::libc::c_char,
-                                                          ap:
-                                                              *mut __va_list_tag)
-                                         -> ::libc::c_int>;
+    pub static mut vprintf_stderr_func: ::std::option::Option<
+        unsafe extern "C" fn(format: *const ::libc::c_char, ap: *mut __va_list_tag)
+            -> ::libc::c_int,
+    >;
 }
 extern "C" {
-    pub fn host_info(host: host_t, flavor: host_flavor_t,
-                     host_info_out: host_info_t,
-                     host_info_outCnt: *mut mach_msg_type_number_t)
-     -> kern_return_t;
+    pub fn host_info(
+        host: host_t,
+        flavor: host_flavor_t,
+        host_info_out: host_info_t,
+        host_info_outCnt: *mut mach_msg_type_number_t,
+    ) -> kern_return_t;
 }
 extern "C" {
-    pub fn host_kernel_version(host: host_t,
-                               kernel_version: *mut ::libc::c_char)
-     -> kern_return_t;
+    pub fn host_kernel_version(host: host_t, kernel_version: *mut ::libc::c_char) -> kern_return_t;
 }
 extern "C" {
-    pub fn _host_page_size(host: host_t, out_page_size: *mut vm_size_t)
-     -> kern_return_t;
+    pub fn _host_page_size(host: host_t, out_page_size: *mut vm_size_t) -> kern_return_t;
 }
 extern "C" {
-    pub fn mach_memory_object_memory_entry(host: host_t, internal: boolean_t,
-                                           size: vm_size_t,
-                                           permission: vm_prot_t,
-                                           pager: memory_object_t,
-                                           entry_handle: *mut mach_port_t)
-     -> kern_return_t;
+    pub fn mach_memory_object_memory_entry(
+        host: host_t,
+        internal: boolean_t,
+        size: vm_size_t,
+        permission: vm_prot_t,
+        pager: memory_object_t,
+        entry_handle: *mut mach_port_t,
+    ) -> kern_return_t;
 }
 extern "C" {
-    pub fn host_processor_info(host: host_t, flavor: processor_flavor_t,
-                               out_processor_count: *mut natural_t,
-                               out_processor_info:
-                                   *mut processor_info_array_t,
-                               out_processor_infoCnt:
-                                   *mut mach_msg_type_number_t)
-     -> kern_return_t;
+    pub fn host_processor_info(
+        host: host_t,
+        flavor: processor_flavor_t,
+        out_processor_count: *mut natural_t,
+        out_processor_info: *mut processor_info_array_t,
+        out_processor_infoCnt: *mut mach_msg_type_number_t,
+    ) -> kern_return_t;
 }
 extern "C" {
-    pub fn host_get_io_master(host: host_t, io_master: *mut io_master_t)
-     -> kern_return_t;
+    pub fn host_get_io_master(host: host_t, io_master: *mut io_master_t) -> kern_return_t;
 }
 extern "C" {
-    pub fn host_get_clock_service(host: host_t, clock_id: clock_id_t,
-                                  clock_serv: *mut clock_serv_t)
-     -> kern_return_t;
+    pub fn host_get_clock_service(
+        host: host_t,
+        clock_id: clock_id_t,
+        clock_serv: *mut clock_serv_t,
+    ) -> kern_return_t;
 }
 extern "C" {
-    pub fn kmod_get_info(host: host_t, modules: *mut kmod_args_t,
-                         modulesCnt: *mut mach_msg_type_number_t)
-     -> kern_return_t;
+    pub fn kmod_get_info(
+        host: host_t,
+        modules: *mut kmod_args_t,
+        modulesCnt: *mut mach_msg_type_number_t,
+    ) -> kern_return_t;
 }
 extern "C" {
-    pub fn host_zone_info(host: host_priv_t, names: *mut zone_name_array_t,
-                          namesCnt: *mut mach_msg_type_number_t,
-                          info: *mut zone_info_array_t,
-                          infoCnt: *mut mach_msg_type_number_t)
-     -> kern_return_t;
+    pub fn host_zone_info(
+        host: host_priv_t,
+        names: *mut zone_name_array_t,
+        namesCnt: *mut mach_msg_type_number_t,
+        info: *mut zone_info_array_t,
+        infoCnt: *mut mach_msg_type_number_t,
+    ) -> kern_return_t;
 }
 extern "C" {
-    pub fn host_virtual_physical_table_info(host: host_t,
-                                            info:
-                                                *mut hash_info_bucket_array_t,
-                                            infoCnt:
-                                                *mut mach_msg_type_number_t)
-     -> kern_return_t;
+    pub fn host_virtual_physical_table_info(
+        host: host_t,
+        info: *mut hash_info_bucket_array_t,
+        infoCnt: *mut mach_msg_type_number_t,
+    ) -> kern_return_t;
 }
 extern "C" {
-    pub fn processor_set_default(host: host_t,
-                                 default_set: *mut processor_set_name_t)
-     -> kern_return_t;
+    pub fn processor_set_default(
+        host: host_t,
+        default_set: *mut processor_set_name_t,
+    ) -> kern_return_t;
 }
 extern "C" {
-    pub fn processor_set_create(host: host_t, new_set: *mut processor_set_t,
-                                new_name: *mut processor_set_name_t)
-     -> kern_return_t;
+    pub fn processor_set_create(
+        host: host_t,
+        new_set: *mut processor_set_t,
+        new_name: *mut processor_set_name_t,
+    ) -> kern_return_t;
 }
 extern "C" {
-    pub fn mach_memory_object_memory_entry_64(host: host_t,
-                                              internal: boolean_t,
-                                              size: memory_object_size_t,
-                                              permission: vm_prot_t,
-                                              pager: memory_object_t,
-                                              entry_handle: *mut mach_port_t)
-     -> kern_return_t;
+    pub fn mach_memory_object_memory_entry_64(
+        host: host_t,
+        internal: boolean_t,
+        size: memory_object_size_t,
+        permission: vm_prot_t,
+        pager: memory_object_t,
+        entry_handle: *mut mach_port_t,
+    ) -> kern_return_t;
 }
 extern "C" {
-    pub fn host_statistics(host_priv: host_t, flavor: host_flavor_t,
-                           host_info_out: host_info_t,
-                           host_info_outCnt: *mut mach_msg_type_number_t)
-     -> kern_return_t;
+    pub fn host_statistics(
+        host_priv: host_t,
+        flavor: host_flavor_t,
+        host_info_out: host_info_t,
+        host_info_outCnt: *mut mach_msg_type_number_t,
+    ) -> kern_return_t;
 }
 extern "C" {
-    pub fn host_request_notification(host: host_t, notify_type: host_flavor_t,
-                                     notify_port: mach_port_t)
-     -> kern_return_t;
+    pub fn host_request_notification(
+        host: host_t,
+        notify_type: host_flavor_t,
+        notify_port: mach_port_t,
+    ) -> kern_return_t;
 }
 extern "C" {
-    pub fn host_lockgroup_info(host: host_t,
-                               lockgroup_info: *mut lockgroup_info_array_t,
-                               lockgroup_infoCnt: *mut mach_msg_type_number_t)
-     -> kern_return_t;
+    pub fn host_lockgroup_info(
+        host: host_t,
+        lockgroup_info: *mut lockgroup_info_array_t,
+        lockgroup_infoCnt: *mut mach_msg_type_number_t,
+    ) -> kern_return_t;
 }
 extern "C" {
-    pub fn host_statistics64(host_priv: host_t, flavor: host_flavor_t,
-                             host_info64_out: host_info64_t,
-                             host_info64_outCnt: *mut mach_msg_type_number_t)
-     -> kern_return_t;
+    pub fn host_statistics64(
+        host_priv: host_t,
+        flavor: host_flavor_t,
+        host_info64_out: host_info64_t,
+        host_info64_outCnt: *mut mach_msg_type_number_t,
+    ) -> kern_return_t;
 }
 extern "C" {
-    pub fn mach_zone_info(host: host_priv_t,
-                          names: *mut mach_zone_name_array_t,
-                          namesCnt: *mut mach_msg_type_number_t,
-                          info: *mut mach_zone_info_array_t,
-                          infoCnt: *mut mach_msg_type_number_t)
-     -> kern_return_t;
+    pub fn mach_zone_info(
+        host: host_priv_t,
+        names: *mut mach_zone_name_array_t,
+        namesCnt: *mut mach_msg_type_number_t,
+        info: *mut mach_zone_info_array_t,
+        infoCnt: *mut mach_msg_type_number_t,
+    ) -> kern_return_t;
 }
 extern "C" {
-    pub fn host_create_mach_voucher(host: host_t,
-                                    recipes:
-                                        mach_voucher_attr_raw_recipe_array_t,
-                                    recipesCnt: mach_msg_type_number_t,
-                                    voucher: *mut ipc_voucher_t)
-     -> kern_return_t;
+    pub fn host_create_mach_voucher(
+        host: host_t,
+        recipes: mach_voucher_attr_raw_recipe_array_t,
+        recipesCnt: mach_msg_type_number_t,
+        voucher: *mut ipc_voucher_t,
+    ) -> kern_return_t;
 }
 extern "C" {
-    pub fn host_register_mach_voucher_attr_manager(host: host_t,
-                                                   attr_manager:
-                                                       mach_voucher_attr_manager_t,
-                                                   default_value:
-                                                       mach_voucher_attr_value_handle_t,
-                                                   new_key:
-                                                       *mut mach_voucher_attr_key_t,
-                                                   new_attr_control:
-                                                       *mut ipc_voucher_attr_control_t)
-     -> kern_return_t;
+    pub fn host_register_mach_voucher_attr_manager(
+        host: host_t,
+        attr_manager: mach_voucher_attr_manager_t,
+        default_value: mach_voucher_attr_value_handle_t,
+        new_key: *mut mach_voucher_attr_key_t,
+        new_attr_control: *mut ipc_voucher_attr_control_t,
+    ) -> kern_return_t;
 }
 extern "C" {
-    pub fn host_register_well_known_mach_voucher_attr_manager(host: host_t,
-                                                              attr_manager:
-                                                                  mach_voucher_attr_manager_t,
-                                                              default_value:
-                                                                  mach_voucher_attr_value_handle_t,
-                                                              key:
-                                                                  mach_voucher_attr_key_t,
-                                                              new_attr_control:
-                                                                  *mut ipc_voucher_attr_control_t)
-     -> kern_return_t;
+    pub fn host_register_well_known_mach_voucher_attr_manager(
+        host: host_t,
+        attr_manager: mach_voucher_attr_manager_t,
+        default_value: mach_voucher_attr_value_handle_t,
+        key: mach_voucher_attr_key_t,
+        new_attr_control: *mut ipc_voucher_attr_control_t,
+    ) -> kern_return_t;
 }
 extern "C" {
-    pub fn host_set_atm_diagnostic_flag(host_priv: host_priv_t,
-                                        diagnostic_flag: u32)
-     -> kern_return_t;
+    pub fn host_set_atm_diagnostic_flag(
+        host_priv: host_priv_t,
+        diagnostic_flag: u32,
+    ) -> kern_return_t;
 }
 extern "C" {
-    pub fn host_get_atm_diagnostic_flag(host: host_t,
-                                        diagnostic_flag: *mut u32)
-     -> kern_return_t;
+    pub fn host_get_atm_diagnostic_flag(host: host_t, diagnostic_flag: *mut u32) -> kern_return_t;
 }
 extern "C" {
-    pub fn mach_memory_info(host: host_priv_t,
-                            names: *mut mach_zone_name_array_t,
-                            namesCnt: *mut mach_msg_type_number_t,
-                            info: *mut mach_zone_info_array_t,
-                            infoCnt: *mut mach_msg_type_number_t,
-                            memory_info: *mut mach_memory_info_array_t,
-                            memory_infoCnt: *mut mach_msg_type_number_t)
-     -> kern_return_t;
+    pub fn mach_memory_info(
+        host: host_priv_t,
+        names: *mut mach_zone_name_array_t,
+        namesCnt: *mut mach_msg_type_number_t,
+        info: *mut mach_zone_info_array_t,
+        infoCnt: *mut mach_msg_type_number_t,
+        memory_info: *mut mach_memory_info_array_t,
+        memory_infoCnt: *mut mach_msg_type_number_t,
+    ) -> kern_return_t;
 }
 extern "C" {
-    pub fn host_set_multiuser_config_flags(host_priv: host_priv_t,
-                                           multiuser_flags: u32)
-     -> kern_return_t;
+    pub fn host_set_multiuser_config_flags(
+        host_priv: host_priv_t,
+        multiuser_flags: u32,
+    ) -> kern_return_t;
 }
 extern "C" {
-    pub fn host_get_multiuser_config_flags(host: host_t,
-                                           multiuser_flags: *mut u32)
-     -> kern_return_t;
+    pub fn host_get_multiuser_config_flags(
+        host: host_t,
+        multiuser_flags: *mut u32,
+    ) -> kern_return_t;
 }
 extern "C" {
-    pub fn host_check_multiuser_mode(host: host_t, multiuser_mode: *mut u32)
-     -> kern_return_t;
+    pub fn host_check_multiuser_mode(host: host_t, multiuser_mode: *mut u32) -> kern_return_t;
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -12287,7 +13690,9 @@ pub struct __Request__host_info_t {
     pub host_info_outCnt: mach_msg_type_number_t,
 }
 impl Clone for __Request__host_info_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -12295,7 +13700,9 @@ pub struct __Request__host_kernel_version_t {
     pub Head: mach_msg_header_t,
 }
 impl Clone for __Request__host_kernel_version_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -12303,7 +13710,9 @@ pub struct __Request___host_page_size_t {
     pub Head: mach_msg_header_t,
 }
 impl Clone for __Request___host_page_size_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -12317,7 +13726,9 @@ pub struct __Request__mach_memory_object_memory_entry_t {
     pub permission: vm_prot_t,
 }
 impl Clone for __Request__mach_memory_object_memory_entry_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -12327,7 +13738,9 @@ pub struct __Request__host_processor_info_t {
     pub flavor: processor_flavor_t,
 }
 impl Clone for __Request__host_processor_info_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -12335,7 +13748,9 @@ pub struct __Request__host_get_io_master_t {
     pub Head: mach_msg_header_t,
 }
 impl Clone for __Request__host_get_io_master_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -12345,7 +13760,9 @@ pub struct __Request__host_get_clock_service_t {
     pub clock_id: clock_id_t,
 }
 impl Clone for __Request__host_get_clock_service_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -12353,7 +13770,9 @@ pub struct __Request__kmod_get_info_t {
     pub Head: mach_msg_header_t,
 }
 impl Clone for __Request__kmod_get_info_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -12361,7 +13780,9 @@ pub struct __Request__host_zone_info_t {
     pub Head: mach_msg_header_t,
 }
 impl Clone for __Request__host_zone_info_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -12369,7 +13790,9 @@ pub struct __Request__host_virtual_physical_table_info_t {
     pub Head: mach_msg_header_t,
 }
 impl Clone for __Request__host_virtual_physical_table_info_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -12377,7 +13800,9 @@ pub struct __Request__processor_set_default_t {
     pub Head: mach_msg_header_t,
 }
 impl Clone for __Request__processor_set_default_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -12385,7 +13810,9 @@ pub struct __Request__processor_set_create_t {
     pub Head: mach_msg_header_t,
 }
 impl Clone for __Request__processor_set_create_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -12399,7 +13826,9 @@ pub struct __Request__mach_memory_object_memory_entry_64_t {
     pub permission: vm_prot_t,
 }
 impl Clone for __Request__mach_memory_object_memory_entry_64_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -12410,7 +13839,9 @@ pub struct __Request__host_statistics_t {
     pub host_info_outCnt: mach_msg_type_number_t,
 }
 impl Clone for __Request__host_statistics_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -12422,7 +13853,9 @@ pub struct __Request__host_request_notification_t {
     pub notify_type: host_flavor_t,
 }
 impl Clone for __Request__host_request_notification_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -12430,7 +13863,9 @@ pub struct __Request__host_lockgroup_info_t {
     pub Head: mach_msg_header_t,
 }
 impl Clone for __Request__host_lockgroup_info_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -12441,7 +13876,9 @@ pub struct __Request__host_statistics64_t {
     pub host_info64_outCnt: mach_msg_type_number_t,
 }
 impl Clone for __Request__host_statistics64_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -12449,7 +13886,9 @@ pub struct __Request__mach_zone_info_t {
     pub Head: mach_msg_header_t,
 }
 impl Clone for __Request__mach_zone_info_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -12460,7 +13899,9 @@ pub struct __Request__host_create_mach_voucher_t {
     pub recipes: [u8; 5120usize],
 }
 impl Clone for __Request__host_create_mach_voucher_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -12472,7 +13913,9 @@ pub struct __Request__host_register_mach_voucher_attr_manager_t {
     pub default_value: mach_voucher_attr_value_handle_t,
 }
 impl Clone for __Request__host_register_mach_voucher_attr_manager_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -12484,9 +13927,10 @@ pub struct __Request__host_register_well_known_mach_voucher_attr_manager_t {
     pub default_value: mach_voucher_attr_value_handle_t,
     pub key: mach_voucher_attr_key_t,
 }
-impl Clone for __Request__host_register_well_known_mach_voucher_attr_manager_t
- {
-    fn clone(&self) -> Self { *self }
+impl Clone for __Request__host_register_well_known_mach_voucher_attr_manager_t {
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -12496,7 +13940,9 @@ pub struct __Request__host_set_atm_diagnostic_flag_t {
     pub diagnostic_flag: u32,
 }
 impl Clone for __Request__host_set_atm_diagnostic_flag_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -12504,7 +13950,9 @@ pub struct __Request__host_get_atm_diagnostic_flag_t {
     pub Head: mach_msg_header_t,
 }
 impl Clone for __Request__host_get_atm_diagnostic_flag_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -12512,7 +13960,9 @@ pub struct __Request__mach_memory_info_t {
     pub Head: mach_msg_header_t,
 }
 impl Clone for __Request__mach_memory_info_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -12522,7 +13972,9 @@ pub struct __Request__host_set_multiuser_config_flags_t {
     pub multiuser_flags: u32,
 }
 impl Clone for __Request__host_set_multiuser_config_flags_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -12530,7 +13982,9 @@ pub struct __Request__host_get_multiuser_config_flags_t {
     pub Head: mach_msg_header_t,
 }
 impl Clone for __Request__host_get_multiuser_config_flags_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -12538,7 +13992,9 @@ pub struct __Request__host_check_multiuser_mode_t {
     pub Head: mach_msg_header_t,
 }
 impl Clone for __Request__host_check_multiuser_mode_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -12562,8 +14018,10 @@ pub union __RequestUnion__mach_host_subsystem {
     pub Request_host_statistics64: __Request__host_statistics64_t,
     pub Request_mach_zone_info: __Request__mach_zone_info_t,
     pub Request_host_create_mach_voucher: __Request__host_create_mach_voucher_t,
-    pub Request_host_register_mach_voucher_attr_manager: __Request__host_register_mach_voucher_attr_manager_t,
-    pub Request_host_register_well_known_mach_voucher_attr_manager: __Request__host_register_well_known_mach_voucher_attr_manager_t,
+    pub Request_host_register_mach_voucher_attr_manager:
+        __Request__host_register_mach_voucher_attr_manager_t,
+    pub Request_host_register_well_known_mach_voucher_attr_manager:
+        __Request__host_register_well_known_mach_voucher_attr_manager_t,
     pub Request_host_set_atm_diagnostic_flag: __Request__host_set_atm_diagnostic_flag_t,
     pub Request_host_get_atm_diagnostic_flag: __Request__host_get_atm_diagnostic_flag_t,
     pub Request_mach_memory_info: __Request__mach_memory_info_t,
@@ -12573,7 +14031,9 @@ pub union __RequestUnion__mach_host_subsystem {
     _bindgen_union_align: [u32; 1289usize],
 }
 impl Clone for __RequestUnion__mach_host_subsystem {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -12585,7 +14045,9 @@ pub struct __Reply__host_info_t {
     pub host_info_out: [integer_t; 68usize],
 }
 impl Clone for __Reply__host_info_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -12598,7 +14060,9 @@ pub struct __Reply__host_kernel_version_t {
     pub kernel_version: [::libc::c_char; 512usize],
 }
 impl Clone for __Reply__host_kernel_version_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -12609,7 +14073,9 @@ pub struct __Reply___host_page_size_t {
     pub out_page_size: vm_size_t,
 }
 impl Clone for __Reply___host_page_size_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -12619,7 +14085,9 @@ pub struct __Reply__mach_memory_object_memory_entry_t {
     pub entry_handle: mach_msg_port_descriptor_t,
 }
 impl Clone for __Reply__mach_memory_object_memory_entry_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -12632,7 +14100,9 @@ pub struct __Reply__host_processor_info_t {
     pub out_processor_infoCnt: mach_msg_type_number_t,
 }
 impl Clone for __Reply__host_processor_info_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -12642,7 +14112,9 @@ pub struct __Reply__host_get_io_master_t {
     pub io_master: mach_msg_port_descriptor_t,
 }
 impl Clone for __Reply__host_get_io_master_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -12652,7 +14124,9 @@ pub struct __Reply__host_get_clock_service_t {
     pub clock_serv: mach_msg_port_descriptor_t,
 }
 impl Clone for __Reply__host_get_clock_service_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -12664,7 +14138,9 @@ pub struct __Reply__kmod_get_info_t {
     pub modulesCnt: mach_msg_type_number_t,
 }
 impl Clone for __Reply__kmod_get_info_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -12678,7 +14154,9 @@ pub struct __Reply__host_zone_info_t {
     pub infoCnt: mach_msg_type_number_t,
 }
 impl Clone for __Reply__host_zone_info_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -12690,7 +14168,9 @@ pub struct __Reply__host_virtual_physical_table_info_t {
     pub infoCnt: mach_msg_type_number_t,
 }
 impl Clone for __Reply__host_virtual_physical_table_info_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -12700,7 +14180,9 @@ pub struct __Reply__processor_set_default_t {
     pub default_set: mach_msg_port_descriptor_t,
 }
 impl Clone for __Reply__processor_set_default_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -12711,7 +14193,9 @@ pub struct __Reply__processor_set_create_t {
     pub new_name: mach_msg_port_descriptor_t,
 }
 impl Clone for __Reply__processor_set_create_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -12721,7 +14205,9 @@ pub struct __Reply__mach_memory_object_memory_entry_64_t {
     pub entry_handle: mach_msg_port_descriptor_t,
 }
 impl Clone for __Reply__mach_memory_object_memory_entry_64_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -12733,7 +14219,9 @@ pub struct __Reply__host_statistics_t {
     pub host_info_out: [integer_t; 68usize],
 }
 impl Clone for __Reply__host_statistics_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -12743,7 +14231,9 @@ pub struct __Reply__host_request_notification_t {
     pub RetCode: kern_return_t,
 }
 impl Clone for __Reply__host_request_notification_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -12755,7 +14245,9 @@ pub struct __Reply__host_lockgroup_info_t {
     pub lockgroup_infoCnt: mach_msg_type_number_t,
 }
 impl Clone for __Reply__host_lockgroup_info_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -12767,7 +14259,9 @@ pub struct __Reply__host_statistics64_t {
     pub host_info64_out: [integer_t; 256usize],
 }
 impl Clone for __Reply__host_statistics64_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -12781,7 +14275,9 @@ pub struct __Reply__mach_zone_info_t {
     pub infoCnt: mach_msg_type_number_t,
 }
 impl Clone for __Reply__mach_zone_info_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -12791,7 +14287,9 @@ pub struct __Reply__host_create_mach_voucher_t {
     pub voucher: mach_msg_port_descriptor_t,
 }
 impl Clone for __Reply__host_create_mach_voucher_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -12803,7 +14301,9 @@ pub struct __Reply__host_register_mach_voucher_attr_manager_t {
     pub new_key: mach_voucher_attr_key_t,
 }
 impl Clone for __Reply__host_register_mach_voucher_attr_manager_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -12813,7 +14313,9 @@ pub struct __Reply__host_register_well_known_mach_voucher_attr_manager_t {
     pub new_attr_control: mach_msg_port_descriptor_t,
 }
 impl Clone for __Reply__host_register_well_known_mach_voucher_attr_manager_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -12823,7 +14325,9 @@ pub struct __Reply__host_set_atm_diagnostic_flag_t {
     pub RetCode: kern_return_t,
 }
 impl Clone for __Reply__host_set_atm_diagnostic_flag_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -12834,7 +14338,9 @@ pub struct __Reply__host_get_atm_diagnostic_flag_t {
     pub diagnostic_flag: u32,
 }
 impl Clone for __Reply__host_get_atm_diagnostic_flag_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -12850,7 +14356,9 @@ pub struct __Reply__mach_memory_info_t {
     pub memory_infoCnt: mach_msg_type_number_t,
 }
 impl Clone for __Reply__mach_memory_info_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -12860,7 +14368,9 @@ pub struct __Reply__host_set_multiuser_config_flags_t {
     pub RetCode: kern_return_t,
 }
 impl Clone for __Reply__host_set_multiuser_config_flags_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -12871,7 +14381,9 @@ pub struct __Reply__host_get_multiuser_config_flags_t {
     pub multiuser_flags: u32,
 }
 impl Clone for __Reply__host_get_multiuser_config_flags_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -12882,7 +14394,9 @@ pub struct __Reply__host_check_multiuser_mode_t {
     pub multiuser_mode: u32,
 }
 impl Clone for __Reply__host_check_multiuser_mode_t {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -12906,8 +14420,10 @@ pub union __ReplyUnion__mach_host_subsystem {
     pub Reply_host_statistics64: __Reply__host_statistics64_t,
     pub Reply_mach_zone_info: __Reply__mach_zone_info_t,
     pub Reply_host_create_mach_voucher: __Reply__host_create_mach_voucher_t,
-    pub Reply_host_register_mach_voucher_attr_manager: __Reply__host_register_mach_voucher_attr_manager_t,
-    pub Reply_host_register_well_known_mach_voucher_attr_manager: __Reply__host_register_well_known_mach_voucher_attr_manager_t,
+    pub Reply_host_register_mach_voucher_attr_manager:
+        __Reply__host_register_mach_voucher_attr_manager_t,
+    pub Reply_host_register_well_known_mach_voucher_attr_manager:
+        __Reply__host_register_well_known_mach_voucher_attr_manager_t,
     pub Reply_host_set_atm_diagnostic_flag: __Reply__host_set_atm_diagnostic_flag_t,
     pub Reply_host_get_atm_diagnostic_flag: __Reply__host_get_atm_diagnostic_flag_t,
     pub Reply_mach_memory_info: __Reply__mach_memory_info_t,
@@ -12917,7 +14433,9 @@ pub union __ReplyUnion__mach_host_subsystem {
     _bindgen_union_align: [u32; 266usize],
 }
 impl Clone for __ReplyUnion__mach_host_subsystem {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 pub type routine_arg_type = ::libc::c_uint;
 pub type routine_arg_offset = ::libc::c_uint;
@@ -12931,7 +14449,9 @@ pub struct rpc_routine_arg_descriptor {
     pub offset: routine_arg_offset,
 }
 impl Clone for rpc_routine_arg_descriptor {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 pub type rpc_routine_arg_descriptor_t = *mut rpc_routine_arg_descriptor;
 #[repr(C)]
@@ -12945,7 +14465,9 @@ pub struct rpc_routine_descriptor {
     pub max_reply_msg: ::libc::c_uint,
 }
 impl Clone for rpc_routine_descriptor {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 pub type rpc_routine_descriptor_t = *mut rpc_routine_descriptor;
 #[repr(C)]
@@ -12955,7 +14477,9 @@ pub struct rpc_signature {
     pub rad: [rpc_routine_arg_descriptor; 1usize],
 }
 impl Clone for rpc_signature {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -12969,15 +14493,15 @@ pub struct rpc_subsystem {
     pub arg_descriptor: [rpc_routine_arg_descriptor; 1usize],
 }
 impl Clone for rpc_subsystem {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 pub type rpc_subsystem_t = *mut rpc_subsystem;
 pub type mach_error_t = kern_return_t;
-pub type mach_error_fn_t =
-    ::std::option::Option<unsafe extern "C" fn() -> mach_error_t>;
+pub type mach_error_fn_t = ::std::option::Option<unsafe extern "C" fn() -> mach_error_t>;
 extern "C" {
-    pub fn mach_error_string(error_value: mach_error_t)
-     -> *mut ::libc::c_char;
+    pub fn mach_error_string(error_value: mach_error_t) -> *mut ::libc::c_char;
 }
 extern "C" {
     pub fn mach_error(str: *const ::libc::c_char, error_value: mach_error_t);
@@ -12992,74 +14516,74 @@ extern "C" {
     pub fn panic(arg1: *const ::libc::c_char, ...);
 }
 extern "C" {
-    pub fn safe_gets(arg1: *mut ::libc::c_char, arg2: *mut ::libc::c_char,
-                     arg3: ::libc::c_int);
+    pub fn safe_gets(arg1: *mut ::libc::c_char, arg2: *mut ::libc::c_char, arg3: ::libc::c_int);
 }
 extern "C" {
-    pub fn slot_name(arg1: cpu_type_t, arg2: cpu_subtype_t,
-                     arg3: *mut *mut ::libc::c_char,
-                     arg4: *mut *mut ::libc::c_char);
+    pub fn slot_name(
+        arg1: cpu_type_t,
+        arg2: cpu_subtype_t,
+        arg3: *mut *mut ::libc::c_char,
+        arg4: *mut *mut ::libc::c_char,
+    );
 }
 extern "C" {
-    pub fn mig_reply_setup(arg1: *mut mach_msg_header_t,
-                           arg2: *mut mach_msg_header_t);
+    pub fn mig_reply_setup(arg1: *mut mach_msg_header_t, arg2: *mut mach_msg_header_t);
 }
 extern "C" {
     pub fn mach_msg_destroy(arg1: *mut mach_msg_header_t);
 }
 extern "C" {
-    pub fn mach_msg_receive(arg1: *mut mach_msg_header_t)
-     -> mach_msg_return_t;
+    pub fn mach_msg_receive(arg1: *mut mach_msg_header_t) -> mach_msg_return_t;
 }
 extern "C" {
     pub fn mach_msg_send(arg1: *mut mach_msg_header_t) -> mach_msg_return_t;
 }
 extern "C" {
-    pub fn mach_msg_server_once(arg1:
-                                    ::std::option::Option<unsafe extern "C" fn(arg1:
-                                                                                   *mut mach_msg_header_t,
-                                                                               arg2:
-                                                                                   *mut mach_msg_header_t)
-                                                              -> boolean_t>,
-                                arg2: mach_msg_size_t, arg3: mach_port_t,
-                                arg4: mach_msg_options_t)
-     -> mach_msg_return_t;
+    pub fn mach_msg_server_once(
+        arg1: ::std::option::Option<
+            unsafe extern "C" fn(arg1: *mut mach_msg_header_t, arg2: *mut mach_msg_header_t)
+                -> boolean_t,
+        >,
+        arg2: mach_msg_size_t,
+        arg3: mach_port_t,
+        arg4: mach_msg_options_t,
+    ) -> mach_msg_return_t;
 }
 extern "C" {
-    pub fn mach_msg_server(arg1:
-                               ::std::option::Option<unsafe extern "C" fn(arg1:
-                                                                              *mut mach_msg_header_t,
-                                                                          arg2:
-                                                                              *mut mach_msg_header_t)
-                                                         -> boolean_t>,
-                           arg2: mach_msg_size_t, arg3: mach_port_t,
-                           arg4: mach_msg_options_t) -> mach_msg_return_t;
+    pub fn mach_msg_server(
+        arg1: ::std::option::Option<
+            unsafe extern "C" fn(arg1: *mut mach_msg_header_t, arg2: *mut mach_msg_header_t)
+                -> boolean_t,
+        >,
+        arg2: mach_msg_size_t,
+        arg3: mach_port_t,
+        arg4: mach_msg_options_t,
+    ) -> mach_msg_return_t;
 }
 extern "C" {
-    pub fn mach_msg_server_importance(arg1:
-                                          ::std::option::Option<unsafe extern "C" fn(arg1:
-                                                                                         *mut mach_msg_header_t,
-                                                                                     arg2:
-                                                                                         *mut mach_msg_header_t)
-                                                                    ->
-                                                                        boolean_t>,
-                                      arg2: mach_msg_size_t,
-                                      arg3: mach_port_t,
-                                      arg4: mach_msg_options_t)
-     -> mach_msg_return_t;
+    pub fn mach_msg_server_importance(
+        arg1: ::std::option::Option<
+            unsafe extern "C" fn(arg1: *mut mach_msg_header_t, arg2: *mut mach_msg_header_t)
+                -> boolean_t,
+        >,
+        arg2: mach_msg_size_t,
+        arg3: mach_port_t,
+        arg4: mach_msg_options_t,
+    ) -> mach_msg_return_t;
 }
 extern "C" {
-    pub fn clock_get_res(arg1: mach_port_t, arg2: *mut clock_res_t)
-     -> kern_return_t;
+    pub fn clock_get_res(arg1: mach_port_t, arg2: *mut clock_res_t) -> kern_return_t;
 }
 extern "C" {
-    pub fn clock_set_res(arg1: mach_port_t, arg2: clock_res_t)
-     -> kern_return_t;
+    pub fn clock_set_res(arg1: mach_port_t, arg2: clock_res_t) -> kern_return_t;
 }
 extern "C" {
-    pub fn clock_sleep(arg1: mach_port_t, arg2: ::libc::c_int,
-                       arg3: mach_timespec_t, arg4: *mut mach_timespec_t)
-     -> kern_return_t;
+    pub fn clock_sleep(
+        arg1: mach_port_t,
+        arg2: ::libc::c_int,
+        arg3: mach_timespec_t,
+        arg4: *mut mach_timespec_t,
+    ) -> kern_return_t;
 }
 #[repr(C)]
 #[derive(Debug, Copy, Clone)]
@@ -13074,8 +14598,7 @@ extern "C" {
     pub fn voucher_mach_msg_clear(msg: *mut mach_msg_header_t);
 }
 extern "C" {
-    pub fn voucher_mach_msg_adopt(msg: *mut mach_msg_header_t)
-     -> voucher_mach_msg_state_t;
+    pub fn voucher_mach_msg_adopt(msg: *mut mach_msg_header_t) -> voucher_mach_msg_state_t;
 }
 extern "C" {
     pub fn voucher_mach_msg_revert(state: voucher_mach_msg_state_t);
@@ -13090,5 +14613,7 @@ pub struct __va_list_tag {
     pub reg_save_area: *mut ::libc::c_void,
 }
 impl Clone for __va_list_tag {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }

@@ -1,7 +1,7 @@
 // exports from <IOKit/IOReturn.h>
 
-use libc::c_int;
 use base::KERN_SUCCESS;
+use libc::c_int;
 use mach_sys::kern_return_t;
 
 // sys_iokit

@@ -7,14 +7,15 @@ use core_foundation_sys::string::CFStringRef;
 
 use base::Boolean;
 use hid::base::{IOHIDDeviceRef, IOHIDElementRef};
-use hid::keys::{IOHIDElementCookie, IOHIDElementCollectionType, IOHIDElementType};
+use hid::keys::{IOHIDElementCollectionType, IOHIDElementCookie, IOHIDElementType};
 
 extern "C" {
     pub fn IOHIDElementGetTypeID() -> CFTypeID;
 
-    pub fn IOHIDElementCreateWithDictionary(allocator: CFAllocatorRef,
-                                            dictionary: CFDictionaryRef)
-                                            -> IOHIDElementRef;
+    pub fn IOHIDElementCreateWithDictionary(
+        allocator: CFAllocatorRef,
+        dictionary: CFDictionaryRef,
+    ) -> IOHIDElementRef;
 
     pub fn IOHIDElementGetDevice(element: IOHIDElementRef) -> IOHIDDeviceRef;
 
@@ -74,8 +75,9 @@ extern "C" {
 
     pub fn IOHIDElementGetProperty(element: IOHIDElementRef, key: CFStringRef) -> CFTypeRef;
 
-    pub fn IOHIDElementSetProperty(element: IOHIDElementRef,
-                                   key: CFStringRef,
-                                   property: CFTypeRef)
-                                   -> Boolean;
+    pub fn IOHIDElementSetProperty(
+        element: IOHIDElementRef,
+        key: CFStringRef,
+        property: CFTypeRef,
+    ) -> Boolean;
 }
