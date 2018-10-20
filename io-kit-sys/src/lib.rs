@@ -48,16 +48,14 @@ pub struct IONotificationPort {
 pub type IONotificationPortRef = *mut IONotificationPort;
 
 pub type IOServiceMatchingCallback =
-    Option<unsafe extern "C" fn(refcon: *mut c_void, iterator: io_iterator_t)>;
+    unsafe extern "C" fn(refcon: *mut c_void, iterator: io_iterator_t);
 
-pub type IOServiceInterestCallback = Option<
-    unsafe extern "C" fn(
-        refcon: *mut c_void,
-        service: io_service_t,
-        messageType: u32,
-        messageArgument: *mut c_void,
-    ),
->;
+pub type IOServiceInterestCallback = unsafe extern "C" fn(
+    refcon: *mut c_void,
+    service: io_service_t,
+    messageType: u32,
+    messageArgument: *mut c_void,
+);
 
 extern "C" {
     #[link_name = "kIOMasterPortDefault"]
@@ -547,25 +545,21 @@ extern "C" {
     ) -> kern_return_t;
 }
 
-pub type IOAsyncCallback0 = Option<unsafe extern "C" fn(refcon: *mut c_void, result: IOReturn)>;
+pub type IOAsyncCallback0 = unsafe extern "C" fn(refcon: *mut c_void, result: IOReturn);
 
 pub type IOAsyncCallback1 =
-    Option<unsafe extern "C" fn(refcon: *mut c_void, result: IOReturn, arg0: *mut c_void)>;
+    unsafe extern "C" fn(refcon: *mut c_void, result: IOReturn, arg0: *mut c_void);
 
-pub type IOAsyncCallback2 = Option<
-    unsafe extern "C" fn(
-        refcon: *mut c_void,
-        result: IOReturn,
-        arg0: *mut c_void,
-        arg1: *mut c_void,
-    ),
->;
+pub type IOAsyncCallback2 = unsafe extern "C" fn(
+    refcon: *mut c_void,
+    result: IOReturn,
+    arg0: *mut c_void,
+    arg1: *mut c_void,
+);
 
-pub type IOAsyncCallback = Option<
-    unsafe extern "C" fn(
-        refcon: *mut c_void,
-        result: IOReturn,
-        args: *mut *mut c_void,
-        numArgs: u32,
-    ),
->;
+pub type IOAsyncCallback = unsafe extern "C" fn(
+    refcon: *mut c_void,
+    result: IOReturn,
+    args: *mut *mut c_void,
+    numArgs: u32,
+);
