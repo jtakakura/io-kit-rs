@@ -46,7 +46,7 @@ impl Iterator for IOIterator {
 
     fn next(&mut self) -> Option<IOObject> {
         unsafe {
-            let result = IOIteratorNext(self.as_concrete_io_object_t());
+            let result = IOIteratorNext(self.as_io_object_t());
 
             if result != 0 {
                 Some(IOObject(result))
@@ -59,11 +59,11 @@ impl Iterator for IOIterator {
 
 impl IOIterator {
     pub fn reset(&self) {
-        unsafe { IOIteratorReset(self.as_concrete_io_object_t()) }
+        unsafe { IOIteratorReset(self.as_io_object_t()) }
     }
 
     pub fn is_valid(&self) -> bool {
-        unsafe { IOIteratorIsValid(self.as_concrete_io_object_t()) != 0 }
+        unsafe { IOIteratorIsValid(self.as_io_object_t()) != 0 }
     }
 }
 
@@ -91,7 +91,7 @@ impl IOService {
     pub fn get_matching_service(matching: CFDictionary) -> Option<IOService> {
         unsafe {
             let result =
-                IOServiceGetMatchingService(kIOMasterPortDefault, matching.as_concrete_TypeRef());
+                IOServiceGetMatchingService(kIOMasterPortDefault, matching.as_CFTypeRef() as _);
 
             if result != 0 {
                 Some(IOService(result))
@@ -107,7 +107,7 @@ impl IOService {
 
             let result = IOServiceGetMatchingServices(
                 kIOMasterPortDefault,
-                matching.as_concrete_TypeRef(),
+                matching.as_CFTypeRef() as _,
                 &mut io_iterator_t,
             );
 
@@ -205,7 +205,7 @@ pub trait TIOObject<concrete_io_object_t> {
 
     fn copy_superclass_for_class(&self, class_name: CFString) -> Option<CFString> {
         unsafe {
-            let result = IOObjectCopySuperclassForClass(class_name.as_concrete_TypeRef());
+            let result = IOObjectCopySuperclassForClass(class_name.as_CFTypeRef() as _);
 
             if result.is_null() {
                 None
@@ -217,7 +217,7 @@ pub trait TIOObject<concrete_io_object_t> {
 
     fn copy_bundle_identifier_for_class(&self, class_name: CFString) -> Option<CFString> {
         unsafe {
-            let result = IOObjectCopyBundleIdentifierForClass(class_name.as_concrete_TypeRef());
+            let result = IOObjectCopyBundleIdentifierForClass(class_name.as_CFTypeRef() as _);
 
             if result.is_null() {
                 None

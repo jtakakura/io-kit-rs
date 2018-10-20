@@ -25,7 +25,7 @@ impl IOHIDDevice {
 
     pub fn create(service: IOService) -> Option<IOHIDDevice> {
         unsafe {
-            let result = IOHIDDeviceCreate(kCFAllocatorDefault, service.as_concrete_io_object_t());
+            let result = IOHIDDeviceCreate(kCFAllocatorDefault, service.as_io_object_t());
 
             if result.is_null() {
                 None
