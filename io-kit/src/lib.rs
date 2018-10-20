@@ -8,7 +8,8 @@ extern crate libc;
 
 extern crate io_kit_sys;
 
+pub use io_kit_sys::ret;
+
 pub mod base;
 pub mod hid;
 pub mod mach;
-pub mod ret;

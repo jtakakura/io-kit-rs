@@ -42,7 +42,7 @@ impl IOHIDDevice {
             if result == kIOReturnSuccess {
                 Ok(())
             } else {
-                Err(IOReturn::from(result))
+                Err(result)
             }
         }
     }
@@ -54,7 +54,7 @@ impl IOHIDDevice {
             if result == kIOReturnSuccess {
                 Ok(())
             } else {
-                Err(IOReturn::from(result))
+                Err(result)
             }
         }
     }
