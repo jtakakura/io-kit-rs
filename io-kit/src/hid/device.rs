@@ -2,7 +2,7 @@ use libc::c_char;
 
 use core_foundation::base::{kCFAllocatorDefault, CFRelease, CFType, CFTypeID, TCFType};
 
-use io_kit_sys::hid::base::IOHIDDeviceRef;
+pub use io_kit_sys::hid::base::IOHIDDeviceRef;
 pub use io_kit_sys::hid::device::*;
 use io_kit_sys::hid::keys::kIOHIDOptionsTypeNone;
 use io_kit_sys::CFSTR;

@@ -1,6 +1,6 @@
 use core_foundation::base::{CFRelease, TCFType};
 
-use io_kit_sys::hid::base::IOHIDElementRef;
+pub use io_kit_sys::hid::base::IOHIDElementRef;
 pub use io_kit_sys::hid::element::*;
 
 pub struct IOHIDElement(IOHIDElementRef);
