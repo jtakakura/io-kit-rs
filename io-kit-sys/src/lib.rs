@@ -12,6 +12,7 @@ pub mod ret;
 pub mod types;
 
 pub mod hid;
+pub mod usb;
 
 use core_foundation_sys::base::{CFAllocatorRef, CFTypeRef};
 use core_foundation_sys::dictionary::{CFDictionaryRef, CFMutableDictionaryRef};
