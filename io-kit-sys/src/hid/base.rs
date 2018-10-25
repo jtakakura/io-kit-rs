@@ -2,7 +2,7 @@
 
 use core_foundation_sys::base::CFIndex;
 use core_foundation_sys::dictionary::CFDictionaryRef;
-use libc::c_void;
+use std::os::raw::c_void;
 
 use hid::keys::IOHIDReportType;
 use ret::IOReturn;

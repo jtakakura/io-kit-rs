@@ -39,946 +39,946 @@ impl<T> ::std::clone::Clone for __IncompleteArrayField<T> {
     }
 }
 impl<T> ::std::marker::Copy for __IncompleteArrayField<T> {}
-pub const __WORDSIZE: ::libc::c_uint = 64;
-pub const __DARWIN_ONLY_64_BIT_INO_T: ::libc::c_uint = 0;
-pub const __DARWIN_ONLY_VERS_1050: ::libc::c_uint = 0;
-pub const __DARWIN_ONLY_UNIX_CONFORMANCE: ::libc::c_uint = 1;
-pub const __DARWIN_UNIX03: ::libc::c_uint = 1;
-pub const __DARWIN_64_BIT_INO_T: ::libc::c_uint = 1;
-pub const __DARWIN_VERS_1050: ::libc::c_uint = 1;
-pub const __DARWIN_NON_CANCELABLE: ::libc::c_uint = 0;
+pub const __WORDSIZE: ::std::os::raw::c_uint = 64;
+pub const __DARWIN_ONLY_64_BIT_INO_T: ::std::os::raw::c_uint = 0;
+pub const __DARWIN_ONLY_VERS_1050: ::std::os::raw::c_uint = 0;
+pub const __DARWIN_ONLY_UNIX_CONFORMANCE: ::std::os::raw::c_uint = 1;
+pub const __DARWIN_UNIX03: ::std::os::raw::c_uint = 1;
+pub const __DARWIN_64_BIT_INO_T: ::std::os::raw::c_uint = 1;
+pub const __DARWIN_VERS_1050: ::std::os::raw::c_uint = 1;
+pub const __DARWIN_NON_CANCELABLE: ::std::os::raw::c_uint = 0;
 pub const __DARWIN_SUF_64_BIT_INO_T: &'static [u8; 9usize] = b"$INODE64\x00";
 pub const __DARWIN_SUF_1050: &'static [u8; 6usize] = b"$1050\x00";
 pub const __DARWIN_SUF_EXTSN: &'static [u8; 14usize] = b"$DARWIN_EXTSN\x00";
-pub const __DARWIN_C_ANSI: ::libc::c_uint = 4096;
-pub const __DARWIN_C_FULL: ::libc::c_uint = 900000;
-pub const __DARWIN_C_LEVEL: ::libc::c_uint = 900000;
-pub const __STDC_WANT_LIB_EXT1__: ::libc::c_uint = 1;
-pub const _DARWIN_FEATURE_64_BIT_INODE: ::libc::c_uint = 1;
-pub const _DARWIN_FEATURE_ONLY_UNIX_CONFORMANCE: ::libc::c_uint = 1;
-pub const _DARWIN_FEATURE_UNIX_CONFORMANCE: ::libc::c_uint = 3;
-pub const __PTHREAD_SIZE__: ::libc::c_uint = 8176;
-pub const __PTHREAD_ATTR_SIZE__: ::libc::c_uint = 56;
-pub const __PTHREAD_MUTEXATTR_SIZE__: ::libc::c_uint = 8;
-pub const __PTHREAD_MUTEX_SIZE__: ::libc::c_uint = 56;
-pub const __PTHREAD_CONDATTR_SIZE__: ::libc::c_uint = 8;
-pub const __PTHREAD_COND_SIZE__: ::libc::c_uint = 40;
-pub const __PTHREAD_ONCE_SIZE__: ::libc::c_uint = 8;
-pub const __PTHREAD_RWLOCK_SIZE__: ::libc::c_uint = 192;
-pub const __PTHREAD_RWLOCKATTR_SIZE__: ::libc::c_uint = 16;
-pub const INT8_MAX: ::libc::c_uint = 127;
-pub const INT16_MAX: ::libc::c_uint = 32767;
-pub const INT32_MAX: ::libc::c_uint = 2147483647;
-pub const INT64_MAX: ::libc::c_ulonglong = 9223372036854775807;
-pub const INT8_MIN: ::libc::c_int = -128;
-pub const INT16_MIN: ::libc::c_int = -32768;
-pub const INT32_MIN: ::libc::c_int = -2147483648;
-pub const INT64_MIN: ::libc::c_longlong = -9223372036854775808;
-pub const UINT8_MAX: ::libc::c_uint = 255;
-pub const UINT16_MAX: ::libc::c_uint = 65535;
-pub const UINT32_MAX: ::libc::c_uint = 4294967295;
-pub const UINT64_MAX: ::libc::c_int = -1;
-pub const INT_LEAST8_MIN: ::libc::c_int = -128;
-pub const INT_LEAST16_MIN: ::libc::c_int = -32768;
-pub const INT_LEAST32_MIN: ::libc::c_int = -2147483648;
-pub const INT_LEAST64_MIN: ::libc::c_longlong = -9223372036854775808;
-pub const INT_LEAST8_MAX: ::libc::c_uint = 127;
-pub const INT_LEAST16_MAX: ::libc::c_uint = 32767;
-pub const INT_LEAST32_MAX: ::libc::c_uint = 2147483647;
-pub const INT_LEAST64_MAX: ::libc::c_ulonglong = 9223372036854775807;
-pub const UINT_LEAST8_MAX: ::libc::c_uint = 255;
-pub const UINT_LEAST16_MAX: ::libc::c_uint = 65535;
-pub const UINT_LEAST32_MAX: ::libc::c_uint = 4294967295;
-pub const UINT_LEAST64_MAX: ::libc::c_int = -1;
-pub const INT_FAST8_MIN: ::libc::c_int = -128;
-pub const INT_FAST16_MIN: ::libc::c_int = -32768;
-pub const INT_FAST32_MIN: ::libc::c_int = -2147483648;
-pub const INT_FAST64_MIN: ::libc::c_longlong = -9223372036854775808;
-pub const INT_FAST8_MAX: ::libc::c_uint = 127;
-pub const INT_FAST16_MAX: ::libc::c_uint = 32767;
-pub const INT_FAST32_MAX: ::libc::c_uint = 2147483647;
-pub const INT_FAST64_MAX: ::libc::c_ulonglong = 9223372036854775807;
-pub const UINT_FAST8_MAX: ::libc::c_uint = 255;
-pub const UINT_FAST16_MAX: ::libc::c_uint = 65535;
-pub const UINT_FAST32_MAX: ::libc::c_uint = 4294967295;
-pub const UINT_FAST64_MAX: ::libc::c_int = -1;
-pub const INTPTR_MIN: ::libc::c_longlong = -9223372036854775808;
-pub const INTPTR_MAX: ::libc::c_ulonglong = 9223372036854775807;
-pub const UINTPTR_MAX: ::libc::c_int = -1;
-pub const INTMAX_MIN: ::libc::c_longlong = -9223372036854775808;
-pub const INTMAX_MAX: ::libc::c_ulonglong = 9223372036854775807;
-pub const UINTMAX_MAX: ::libc::c_int = -1;
-pub const PTRDIFF_MIN: ::libc::c_longlong = -9223372036854775808;
-pub const PTRDIFF_MAX: ::libc::c_ulonglong = 9223372036854775807;
-pub const SIZE_MAX: ::libc::c_int = -1;
-pub const RSIZE_MAX: ::libc::c_int = -1;
-pub const WINT_MIN: ::libc::c_int = -2147483648;
-pub const WINT_MAX: ::libc::c_uint = 2147483647;
-pub const SIG_ATOMIC_MIN: ::libc::c_int = -2147483648;
-pub const SIG_ATOMIC_MAX: ::libc::c_uint = 2147483647;
-pub const TRUE: ::libc::c_uint = 1;
-pub const FALSE: ::libc::c_uint = 0;
-pub const BYTE_SIZE: ::libc::c_uint = 8;
-pub const I386_PGBYTES: ::libc::c_uint = 4096;
-pub const I386_PGSHIFT: ::libc::c_uint = 12;
-pub const PAGE_SIZE: ::libc::c_uint = 4096;
-pub const PAGE_SHIFT: ::libc::c_uint = 12;
-pub const PAGE_MASK: ::libc::c_uint = 4095;
-pub const PAGE_MAX_SHIFT: ::libc::c_uint = 12;
-pub const PAGE_MAX_SIZE: ::libc::c_uint = 4096;
-pub const PAGE_MAX_MASK: ::libc::c_uint = 4095;
-pub const PAGE_MIN_SHIFT: ::libc::c_uint = 12;
-pub const PAGE_MIN_SIZE: ::libc::c_uint = 4096;
-pub const PAGE_MIN_MASK: ::libc::c_uint = 4095;
-pub const I386_LPGBYTES: ::libc::c_uint = 2097152;
-pub const I386_LPGSHIFT: ::libc::c_uint = 21;
-pub const I386_LPGMASK: ::libc::c_uint = 2097151;
-pub const MACH_PORT_NULL: ::libc::c_uint = 0;
-pub const MACH_PORT_TYPE_DNREQUEST: ::libc::c_uint = 2147483648;
-pub const MACH_PORT_TYPE_SPREQUEST: ::libc::c_uint = 1073741824;
-pub const MACH_PORT_TYPE_SPREQUEST_DELAYED: ::libc::c_uint = 536870912;
-pub const MACH_PORT_SRIGHTS_NONE: ::libc::c_uint = 0;
-pub const MACH_PORT_SRIGHTS_PRESENT: ::libc::c_uint = 1;
-pub const MACH_PORT_QLIMIT_ZERO: ::libc::c_uint = 0;
-pub const MACH_PORT_QLIMIT_BASIC: ::libc::c_uint = 5;
-pub const MACH_PORT_QLIMIT_SMALL: ::libc::c_uint = 16;
-pub const MACH_PORT_QLIMIT_LARGE: ::libc::c_uint = 1024;
-pub const MACH_PORT_QLIMIT_KERNEL: ::libc::c_uint = 65534;
-pub const MACH_PORT_QLIMIT_MIN: ::libc::c_uint = 0;
-pub const MACH_PORT_QLIMIT_DEFAULT: ::libc::c_uint = 5;
-pub const MACH_PORT_QLIMIT_MAX: ::libc::c_uint = 1024;
-pub const MACH_PORT_STATUS_FLAG_TEMPOWNER: ::libc::c_uint = 1;
-pub const MACH_PORT_STATUS_FLAG_GUARDED: ::libc::c_uint = 2;
-pub const MACH_PORT_STATUS_FLAG_STRICT_GUARD: ::libc::c_uint = 4;
-pub const MACH_PORT_STATUS_FLAG_IMP_DONATION: ::libc::c_uint = 8;
-pub const MACH_PORT_STATUS_FLAG_REVIVE: ::libc::c_uint = 16;
-pub const MACH_PORT_STATUS_FLAG_TASKPTR: ::libc::c_uint = 32;
-pub const MACH_PORT_LIMITS_INFO: ::libc::c_uint = 1;
-pub const MACH_PORT_RECEIVE_STATUS: ::libc::c_uint = 2;
-pub const MACH_PORT_DNREQUESTS_SIZE: ::libc::c_uint = 3;
-pub const MACH_PORT_TEMPOWNER: ::libc::c_uint = 4;
-pub const MACH_PORT_IMPORTANCE_RECEIVER: ::libc::c_uint = 5;
-pub const MACH_PORT_DENAP_RECEIVER: ::libc::c_uint = 6;
-pub const MACH_PORT_INFO_EXT: ::libc::c_uint = 7;
-pub const MACH_PORT_DNREQUESTS_SIZE_COUNT: ::libc::c_uint = 1;
-pub const MPO_CONTEXT_AS_GUARD: ::libc::c_uint = 1;
-pub const MPO_QLIMIT: ::libc::c_uint = 2;
-pub const MPO_TEMPOWNER: ::libc::c_uint = 4;
-pub const MPO_IMPORTANCE_RECEIVER: ::libc::c_uint = 8;
-pub const MPO_INSERT_SEND_RIGHT: ::libc::c_uint = 16;
-pub const MPO_STRICT: ::libc::c_uint = 32;
-pub const MPO_DENAP_RECEIVER: ::libc::c_uint = 64;
-pub const GUARD_TYPE_MACH_PORT: ::libc::c_uint = 1;
-pub const PPNUM_MAX: ::libc::c_uint = 4294967295;
-pub const __MAC_10_0: ::libc::c_uint = 1000;
-pub const __MAC_10_1: ::libc::c_uint = 1010;
-pub const __MAC_10_2: ::libc::c_uint = 1020;
-pub const __MAC_10_3: ::libc::c_uint = 1030;
-pub const __MAC_10_4: ::libc::c_uint = 1040;
-pub const __MAC_10_5: ::libc::c_uint = 1050;
-pub const __MAC_10_6: ::libc::c_uint = 1060;
-pub const __MAC_10_7: ::libc::c_uint = 1070;
-pub const __MAC_10_8: ::libc::c_uint = 1080;
-pub const __MAC_10_9: ::libc::c_uint = 1090;
-pub const __MAC_10_10: ::libc::c_uint = 101000;
-pub const __MAC_10_10_2: ::libc::c_uint = 101002;
-pub const __MAC_10_10_3: ::libc::c_uint = 101003;
-pub const __MAC_10_11: ::libc::c_uint = 101100;
-pub const __MAC_10_11_2: ::libc::c_uint = 101102;
-pub const __MAC_10_11_3: ::libc::c_uint = 101103;
-pub const __MAC_10_11_4: ::libc::c_uint = 101104;
-pub const __IPHONE_2_0: ::libc::c_uint = 20000;
-pub const __IPHONE_2_1: ::libc::c_uint = 20100;
-pub const __IPHONE_2_2: ::libc::c_uint = 20200;
-pub const __IPHONE_3_0: ::libc::c_uint = 30000;
-pub const __IPHONE_3_1: ::libc::c_uint = 30100;
-pub const __IPHONE_3_2: ::libc::c_uint = 30200;
-pub const __IPHONE_4_0: ::libc::c_uint = 40000;
-pub const __IPHONE_4_1: ::libc::c_uint = 40100;
-pub const __IPHONE_4_2: ::libc::c_uint = 40200;
-pub const __IPHONE_4_3: ::libc::c_uint = 40300;
-pub const __IPHONE_5_0: ::libc::c_uint = 50000;
-pub const __IPHONE_5_1: ::libc::c_uint = 50100;
-pub const __IPHONE_6_0: ::libc::c_uint = 60000;
-pub const __IPHONE_6_1: ::libc::c_uint = 60100;
-pub const __IPHONE_7_0: ::libc::c_uint = 70000;
-pub const __IPHONE_7_1: ::libc::c_uint = 70100;
-pub const __IPHONE_8_0: ::libc::c_uint = 80000;
-pub const __IPHONE_8_1: ::libc::c_uint = 80100;
-pub const __IPHONE_8_2: ::libc::c_uint = 80200;
-pub const __IPHONE_8_3: ::libc::c_uint = 80300;
-pub const __IPHONE_8_4: ::libc::c_uint = 80400;
-pub const __IPHONE_9_0: ::libc::c_uint = 90000;
-pub const __IPHONE_9_1: ::libc::c_uint = 90100;
-pub const __IPHONE_9_2: ::libc::c_uint = 90200;
-pub const __IPHONE_9_3: ::libc::c_uint = 90300;
-pub const __TVOS_9_0: ::libc::c_uint = 90000;
-pub const __TVOS_9_1: ::libc::c_uint = 90100;
-pub const __TVOS_9_2: ::libc::c_uint = 90200;
-pub const __WATCHOS_1_0: ::libc::c_uint = 10000;
-pub const __WATCHOS_2_0: ::libc::c_uint = 20000;
-pub const __MAC_OS_X_VERSION_MAX_ALLOWED: ::libc::c_uint = 101104;
-pub const MACH_MSGH_BITS_ZERO: ::libc::c_uint = 0;
-pub const MACH_MSGH_BITS_REMOTE_MASK: ::libc::c_uint = 31;
-pub const MACH_MSGH_BITS_LOCAL_MASK: ::libc::c_uint = 7936;
-pub const MACH_MSGH_BITS_VOUCHER_MASK: ::libc::c_uint = 2031616;
-pub const MACH_MSGH_BITS_PORTS_MASK: ::libc::c_uint = 2039583;
-pub const MACH_MSGH_BITS_COMPLEX: ::libc::c_uint = 2147483648;
-pub const MACH_MSGH_BITS_USER: ::libc::c_uint = 2149523231;
-pub const MACH_MSGH_BITS_RAISEIMP: ::libc::c_uint = 536870912;
-pub const MACH_MSGH_BITS_DENAP: ::libc::c_uint = 536870912;
-pub const MACH_MSGH_BITS_IMPHOLDASRT: ::libc::c_uint = 268435456;
-pub const MACH_MSGH_BITS_DENAPHOLDASRT: ::libc::c_uint = 268435456;
-pub const MACH_MSGH_BITS_CIRCULAR: ::libc::c_uint = 268435456;
-pub const MACH_MSGH_BITS_USED: ::libc::c_uint = 2954829599;
-pub const MACH_MSG_TYPE_MOVE_RECEIVE: ::libc::c_uint = 16;
-pub const MACH_MSG_TYPE_MOVE_SEND: ::libc::c_uint = 17;
-pub const MACH_MSG_TYPE_MOVE_SEND_ONCE: ::libc::c_uint = 18;
-pub const MACH_MSG_TYPE_COPY_SEND: ::libc::c_uint = 19;
-pub const MACH_MSG_TYPE_MAKE_SEND: ::libc::c_uint = 20;
-pub const MACH_MSG_TYPE_MAKE_SEND_ONCE: ::libc::c_uint = 21;
-pub const MACH_MSG_TYPE_COPY_RECEIVE: ::libc::c_uint = 22;
-pub const MACH_MSG_TYPE_DISPOSE_RECEIVE: ::libc::c_uint = 24;
-pub const MACH_MSG_TYPE_DISPOSE_SEND: ::libc::c_uint = 25;
-pub const MACH_MSG_TYPE_DISPOSE_SEND_ONCE: ::libc::c_uint = 26;
-pub const MACH_MSG_PHYSICAL_COPY: ::libc::c_uint = 0;
-pub const MACH_MSG_VIRTUAL_COPY: ::libc::c_uint = 1;
-pub const MACH_MSG_ALLOCATE: ::libc::c_uint = 2;
-pub const MACH_MSG_OVERWRITE: ::libc::c_uint = 3;
-pub const MACH_MSG_PORT_DESCRIPTOR: ::libc::c_uint = 0;
-pub const MACH_MSG_OOL_DESCRIPTOR: ::libc::c_uint = 1;
-pub const MACH_MSG_OOL_PORTS_DESCRIPTOR: ::libc::c_uint = 2;
-pub const MACH_MSG_OOL_VOLATILE_DESCRIPTOR: ::libc::c_uint = 3;
-pub const MACH_MSG_TRAILER_FORMAT_0: ::libc::c_uint = 0;
-pub const MACH_MSGH_KIND_NORMAL: ::libc::c_uint = 0;
-pub const MACH_MSGH_KIND_NOTIFICATION: ::libc::c_uint = 1;
-pub const MACH_MSG_TYPE_PORT_NONE: ::libc::c_uint = 0;
-pub const MACH_MSG_TYPE_PORT_NAME: ::libc::c_uint = 15;
-pub const MACH_MSG_TYPE_PORT_RECEIVE: ::libc::c_uint = 16;
-pub const MACH_MSG_TYPE_PORT_SEND: ::libc::c_uint = 17;
-pub const MACH_MSG_TYPE_PORT_SEND_ONCE: ::libc::c_uint = 18;
-pub const MACH_MSG_TYPE_LAST: ::libc::c_uint = 22;
-pub const MACH_MSG_OPTION_NONE: ::libc::c_uint = 0;
-pub const MACH_SEND_MSG: ::libc::c_uint = 1;
-pub const MACH_RCV_MSG: ::libc::c_uint = 2;
-pub const MACH_RCV_LARGE: ::libc::c_uint = 4;
-pub const MACH_RCV_LARGE_IDENTITY: ::libc::c_uint = 8;
-pub const MACH_SEND_TIMEOUT: ::libc::c_uint = 16;
-pub const MACH_SEND_INTERRUPT: ::libc::c_uint = 64;
-pub const MACH_SEND_NOTIFY: ::libc::c_uint = 128;
-pub const MACH_SEND_ALWAYS: ::libc::c_uint = 65536;
-pub const MACH_SEND_TRAILER: ::libc::c_uint = 131072;
-pub const MACH_SEND_NOIMPORTANCE: ::libc::c_uint = 262144;
-pub const MACH_SEND_NODENAP: ::libc::c_uint = 262144;
-pub const MACH_SEND_IMPORTANCE: ::libc::c_uint = 524288;
-pub const MACH_RCV_TIMEOUT: ::libc::c_uint = 256;
-pub const MACH_RCV_NOTIFY: ::libc::c_uint = 512;
-pub const MACH_RCV_INTERRUPT: ::libc::c_uint = 1024;
-pub const MACH_RCV_VOUCHER: ::libc::c_uint = 2048;
-pub const MACH_RCV_OVERWRITE: ::libc::c_uint = 4096;
-pub const MACH_RCV_TRAILER_NULL: ::libc::c_uint = 0;
-pub const MACH_RCV_TRAILER_SEQNO: ::libc::c_uint = 1;
-pub const MACH_RCV_TRAILER_SENDER: ::libc::c_uint = 2;
-pub const MACH_RCV_TRAILER_AUDIT: ::libc::c_uint = 3;
-pub const MACH_RCV_TRAILER_CTX: ::libc::c_uint = 4;
-pub const MACH_RCV_TRAILER_AV: ::libc::c_uint = 7;
-pub const MACH_RCV_TRAILER_LABELS: ::libc::c_uint = 8;
-pub const MACH_RCV_TRAILER_MASK: ::libc::c_uint = 251658240;
-pub const MACH_MSG_SUCCESS: ::libc::c_uint = 0;
-pub const MACH_MSG_MASK: ::libc::c_uint = 15872;
-pub const MACH_MSG_IPC_SPACE: ::libc::c_uint = 8192;
-pub const MACH_MSG_VM_SPACE: ::libc::c_uint = 4096;
-pub const MACH_MSG_IPC_KERNEL: ::libc::c_uint = 2048;
-pub const MACH_MSG_VM_KERNEL: ::libc::c_uint = 1024;
-pub const MACH_SEND_IN_PROGRESS: ::libc::c_uint = 268435457;
-pub const MACH_SEND_INVALID_DATA: ::libc::c_uint = 268435458;
-pub const MACH_SEND_INVALID_DEST: ::libc::c_uint = 268435459;
-pub const MACH_SEND_TIMED_OUT: ::libc::c_uint = 268435460;
-pub const MACH_SEND_INVALID_VOUCHER: ::libc::c_uint = 268435461;
-pub const MACH_SEND_INTERRUPTED: ::libc::c_uint = 268435463;
-pub const MACH_SEND_MSG_TOO_SMALL: ::libc::c_uint = 268435464;
-pub const MACH_SEND_INVALID_REPLY: ::libc::c_uint = 268435465;
-pub const MACH_SEND_INVALID_RIGHT: ::libc::c_uint = 268435466;
-pub const MACH_SEND_INVALID_NOTIFY: ::libc::c_uint = 268435467;
-pub const MACH_SEND_INVALID_MEMORY: ::libc::c_uint = 268435468;
-pub const MACH_SEND_NO_BUFFER: ::libc::c_uint = 268435469;
-pub const MACH_SEND_TOO_LARGE: ::libc::c_uint = 268435470;
-pub const MACH_SEND_INVALID_TYPE: ::libc::c_uint = 268435471;
-pub const MACH_SEND_INVALID_HEADER: ::libc::c_uint = 268435472;
-pub const MACH_SEND_INVALID_TRAILER: ::libc::c_uint = 268435473;
-pub const MACH_SEND_INVALID_RT_OOL_SIZE: ::libc::c_uint = 268435477;
-pub const MACH_RCV_IN_PROGRESS: ::libc::c_uint = 268451841;
-pub const MACH_RCV_INVALID_NAME: ::libc::c_uint = 268451842;
-pub const MACH_RCV_TIMED_OUT: ::libc::c_uint = 268451843;
-pub const MACH_RCV_TOO_LARGE: ::libc::c_uint = 268451844;
-pub const MACH_RCV_INTERRUPTED: ::libc::c_uint = 268451845;
-pub const MACH_RCV_PORT_CHANGED: ::libc::c_uint = 268451846;
-pub const MACH_RCV_INVALID_NOTIFY: ::libc::c_uint = 268451847;
-pub const MACH_RCV_INVALID_DATA: ::libc::c_uint = 268451848;
-pub const MACH_RCV_PORT_DIED: ::libc::c_uint = 268451849;
-pub const MACH_RCV_IN_SET: ::libc::c_uint = 268451850;
-pub const MACH_RCV_HEADER_ERROR: ::libc::c_uint = 268451851;
-pub const MACH_RCV_BODY_ERROR: ::libc::c_uint = 268451852;
-pub const MACH_RCV_INVALID_TYPE: ::libc::c_uint = 268451853;
-pub const MACH_RCV_SCATTER_SMALL: ::libc::c_uint = 268451854;
-pub const MACH_RCV_INVALID_TRAILER: ::libc::c_uint = 268451855;
-pub const MACH_RCV_IN_PROGRESS_TIMED: ::libc::c_uint = 268451857;
-pub const VM_PAGE_QUERY_PAGE_PRESENT: ::libc::c_uint = 1;
-pub const VM_PAGE_QUERY_PAGE_FICTITIOUS: ::libc::c_uint = 2;
-pub const VM_PAGE_QUERY_PAGE_REF: ::libc::c_uint = 4;
-pub const VM_PAGE_QUERY_PAGE_DIRTY: ::libc::c_uint = 8;
-pub const VM_PAGE_QUERY_PAGE_PAGED_OUT: ::libc::c_uint = 16;
-pub const VM_PAGE_QUERY_PAGE_COPIED: ::libc::c_uint = 32;
-pub const VM_PAGE_QUERY_PAGE_SPECULATIVE: ::libc::c_uint = 64;
-pub const VM_PAGE_QUERY_PAGE_EXTERNAL: ::libc::c_uint = 128;
-pub const VM_PAGE_QUERY_PAGE_CS_VALIDATED: ::libc::c_uint = 256;
-pub const VM_PAGE_QUERY_PAGE_CS_TAINTED: ::libc::c_uint = 512;
-pub const VM_PAGE_QUERY_PAGE_CS_NX: ::libc::c_uint = 1024;
-pub const VM_FLAGS_FIXED: ::libc::c_uint = 0;
-pub const VM_FLAGS_ANYWHERE: ::libc::c_uint = 1;
-pub const VM_FLAGS_PURGABLE: ::libc::c_uint = 2;
-pub const VM_FLAGS_NO_CACHE: ::libc::c_uint = 16;
-pub const VM_FLAGS_RESILIENT_CODESIGN: ::libc::c_uint = 32;
-pub const VM_FLAGS_RESILIENT_MEDIA: ::libc::c_uint = 64;
-pub const VM_FLAGS_OVERWRITE: ::libc::c_uint = 16384;
-pub const VM_FLAGS_SUPERPAGE_MASK: ::libc::c_uint = 458752;
-pub const VM_FLAGS_RETURN_DATA_ADDR: ::libc::c_uint = 1048576;
-pub const VM_FLAGS_RETURN_4K_DATA_ADDR: ::libc::c_uint = 8388608;
-pub const VM_FLAGS_ALIAS_MASK: ::libc::c_uint = 4278190080;
-pub const VM_FLAGS_USER_ALLOCATE: ::libc::c_uint = 4278665235;
-pub const VM_FLAGS_USER_MAP: ::libc::c_uint = 4288102419;
-pub const VM_FLAGS_USER_REMAP: ::libc::c_uint = 1064993;
-pub const VM_FLAGS_SUPERPAGE_SHIFT: ::libc::c_uint = 16;
-pub const SUPERPAGE_NONE: ::libc::c_uint = 0;
-pub const SUPERPAGE_SIZE_ANY: ::libc::c_uint = 1;
-pub const VM_FLAGS_SUPERPAGE_NONE: ::libc::c_uint = 0;
-pub const VM_FLAGS_SUPERPAGE_SIZE_ANY: ::libc::c_uint = 65536;
-pub const SUPERPAGE_SIZE_2MB: ::libc::c_uint = 2;
-pub const VM_FLAGS_SUPERPAGE_SIZE_2MB: ::libc::c_uint = 131072;
-pub const VM_MEMORY_MALLOC: ::libc::c_uint = 1;
-pub const VM_MEMORY_MALLOC_SMALL: ::libc::c_uint = 2;
-pub const VM_MEMORY_MALLOC_LARGE: ::libc::c_uint = 3;
-pub const VM_MEMORY_MALLOC_HUGE: ::libc::c_uint = 4;
-pub const VM_MEMORY_SBRK: ::libc::c_uint = 5;
-pub const VM_MEMORY_REALLOC: ::libc::c_uint = 6;
-pub const VM_MEMORY_MALLOC_TINY: ::libc::c_uint = 7;
-pub const VM_MEMORY_MALLOC_LARGE_REUSABLE: ::libc::c_uint = 8;
-pub const VM_MEMORY_MALLOC_LARGE_REUSED: ::libc::c_uint = 9;
-pub const VM_MEMORY_ANALYSIS_TOOL: ::libc::c_uint = 10;
-pub const VM_MEMORY_MALLOC_NANO: ::libc::c_uint = 11;
-pub const VM_MEMORY_MACH_MSG: ::libc::c_uint = 20;
-pub const VM_MEMORY_IOKIT: ::libc::c_uint = 21;
-pub const VM_MEMORY_STACK: ::libc::c_uint = 30;
-pub const VM_MEMORY_GUARD: ::libc::c_uint = 31;
-pub const VM_MEMORY_SHARED_PMAP: ::libc::c_uint = 32;
-pub const VM_MEMORY_DYLIB: ::libc::c_uint = 33;
-pub const VM_MEMORY_OBJC_DISPATCHERS: ::libc::c_uint = 34;
-pub const VM_MEMORY_UNSHARED_PMAP: ::libc::c_uint = 35;
-pub const VM_MEMORY_APPKIT: ::libc::c_uint = 40;
-pub const VM_MEMORY_FOUNDATION: ::libc::c_uint = 41;
-pub const VM_MEMORY_COREGRAPHICS: ::libc::c_uint = 42;
-pub const VM_MEMORY_CORESERVICES: ::libc::c_uint = 43;
-pub const VM_MEMORY_CARBON: ::libc::c_uint = 43;
-pub const VM_MEMORY_JAVA: ::libc::c_uint = 44;
-pub const VM_MEMORY_COREDATA: ::libc::c_uint = 45;
-pub const VM_MEMORY_COREDATA_OBJECTIDS: ::libc::c_uint = 46;
-pub const VM_MEMORY_ATS: ::libc::c_uint = 50;
-pub const VM_MEMORY_LAYERKIT: ::libc::c_uint = 51;
-pub const VM_MEMORY_CGIMAGE: ::libc::c_uint = 52;
-pub const VM_MEMORY_TCMALLOC: ::libc::c_uint = 53;
-pub const VM_MEMORY_COREGRAPHICS_DATA: ::libc::c_uint = 54;
-pub const VM_MEMORY_COREGRAPHICS_SHARED: ::libc::c_uint = 55;
-pub const VM_MEMORY_COREGRAPHICS_FRAMEBUFFERS: ::libc::c_uint = 56;
-pub const VM_MEMORY_COREGRAPHICS_BACKINGSTORES: ::libc::c_uint = 57;
-pub const VM_MEMORY_COREGRAPHICS_MISC: ::libc::c_uint = 42;
-pub const VM_MEMORY_DYLD: ::libc::c_uint = 60;
-pub const VM_MEMORY_DYLD_MALLOC: ::libc::c_uint = 61;
-pub const VM_MEMORY_SQLITE: ::libc::c_uint = 62;
-pub const VM_MEMORY_JAVASCRIPT_CORE: ::libc::c_uint = 63;
-pub const VM_MEMORY_JAVASCRIPT_JIT_EXECUTABLE_ALLOCATOR: ::libc::c_uint = 64;
-pub const VM_MEMORY_JAVASCRIPT_JIT_REGISTER_FILE: ::libc::c_uint = 65;
-pub const VM_MEMORY_GLSL: ::libc::c_uint = 66;
-pub const VM_MEMORY_OPENCL: ::libc::c_uint = 67;
-pub const VM_MEMORY_COREIMAGE: ::libc::c_uint = 68;
-pub const VM_MEMORY_WEBCORE_PURGEABLE_BUFFERS: ::libc::c_uint = 69;
-pub const VM_MEMORY_IMAGEIO: ::libc::c_uint = 70;
-pub const VM_MEMORY_COREPROFILE: ::libc::c_uint = 71;
-pub const VM_MEMORY_ASSETSD: ::libc::c_uint = 72;
-pub const VM_MEMORY_OS_ALLOC_ONCE: ::libc::c_uint = 73;
-pub const VM_MEMORY_LIBDISPATCH: ::libc::c_uint = 74;
-pub const VM_MEMORY_ACCELERATE: ::libc::c_uint = 75;
-pub const VM_MEMORY_COREUI: ::libc::c_uint = 76;
-pub const VM_MEMORY_COREUIFILE: ::libc::c_uint = 77;
-pub const VM_MEMORY_GENEALOGY: ::libc::c_uint = 78;
-pub const VM_MEMORY_RAWCAMERA: ::libc::c_uint = 79;
-pub const VM_MEMORY_CORPSEINFO: ::libc::c_uint = 80;
-pub const VM_MEMORY_ASL: ::libc::c_uint = 81;
-pub const VM_MEMORY_APPLICATION_SPECIFIC_1: ::libc::c_uint = 240;
-pub const VM_MEMORY_APPLICATION_SPECIFIC_16: ::libc::c_uint = 255;
-pub const CPU_STATE_MAX: ::libc::c_uint = 4;
-pub const CPU_STATE_USER: ::libc::c_uint = 0;
-pub const CPU_STATE_SYSTEM: ::libc::c_uint = 1;
-pub const CPU_STATE_IDLE: ::libc::c_uint = 2;
-pub const CPU_STATE_NICE: ::libc::c_uint = 3;
-pub const CPU_ARCH_MASK: ::libc::c_uint = 4278190080;
-pub const CPU_ARCH_ABI64: ::libc::c_uint = 16777216;
-pub const CPU_SUBTYPE_MASK: ::libc::c_uint = 4278190080;
-pub const CPU_SUBTYPE_LIB64: ::libc::c_uint = 2147483648;
-pub const CPU_SUBTYPE_INTEL_FAMILY_MAX: ::libc::c_uint = 15;
-pub const CPU_SUBTYPE_INTEL_MODEL_ALL: ::libc::c_uint = 0;
-pub const CPUFAMILY_UNKNOWN: ::libc::c_uint = 0;
-pub const CPUFAMILY_POWERPC_G3: ::libc::c_uint = 3471054153;
-pub const CPUFAMILY_POWERPC_G4: ::libc::c_uint = 2009171118;
-pub const CPUFAMILY_POWERPC_G5: ::libc::c_uint = 3983988906;
-pub const CPUFAMILY_INTEL_6_13: ::libc::c_uint = 2855483691;
-pub const CPUFAMILY_INTEL_YONAH: ::libc::c_uint = 1943433984;
-pub const CPUFAMILY_INTEL_MEROM: ::libc::c_uint = 1114597871;
-pub const CPUFAMILY_INTEL_PENRYN: ::libc::c_uint = 2028621756;
-pub const CPUFAMILY_INTEL_NEHALEM: ::libc::c_uint = 1801080018;
-pub const CPUFAMILY_INTEL_WESTMERE: ::libc::c_uint = 1463508716;
-pub const CPUFAMILY_INTEL_SANDYBRIDGE: ::libc::c_uint = 1418770316;
-pub const CPUFAMILY_INTEL_IVYBRIDGE: ::libc::c_uint = 526772277;
-pub const CPUFAMILY_INTEL_HASWELL: ::libc::c_uint = 280134364;
-pub const CPUFAMILY_INTEL_BROADWELL: ::libc::c_uint = 1479463068;
-pub const CPUFAMILY_INTEL_SKYLAKE: ::libc::c_uint = 939270559;
-pub const CPUFAMILY_ARM_9: ::libc::c_uint = 3878847406;
-pub const CPUFAMILY_ARM_11: ::libc::c_uint = 2415272152;
-pub const CPUFAMILY_ARM_XSCALE: ::libc::c_uint = 1404044789;
-pub const CPUFAMILY_ARM_12: ::libc::c_uint = 3172666089;
-pub const CPUFAMILY_ARM_13: ::libc::c_uint = 214503012;
-pub const CPUFAMILY_ARM_14: ::libc::c_uint = 2517073649;
-pub const CPUFAMILY_ARM_15: ::libc::c_uint = 2823887818;
-pub const CPUFAMILY_ARM_SWIFT: ::libc::c_uint = 506291073;
-pub const CPUFAMILY_ARM_CYCLONE: ::libc::c_uint = 933271106;
-pub const CPUFAMILY_ARM_TYPHOON: ::libc::c_uint = 747742334;
-pub const CPUFAMILY_ARM_TWISTER: ::libc::c_uint = 2465937352;
-pub const CPUFAMILY_INTEL_6_14: ::libc::c_uint = 1943433984;
-pub const CPUFAMILY_INTEL_6_15: ::libc::c_uint = 1114597871;
-pub const CPUFAMILY_INTEL_6_23: ::libc::c_uint = 2028621756;
-pub const CPUFAMILY_INTEL_6_26: ::libc::c_uint = 1801080018;
-pub const CPUFAMILY_INTEL_CORE: ::libc::c_uint = 1943433984;
-pub const CPUFAMILY_INTEL_CORE2: ::libc::c_uint = 1114597871;
-pub const TIME_MICROS_MAX: ::libc::c_uint = 1000000;
-pub const HOST_INFO_MAX: ::libc::c_uint = 1024;
-pub const KERNEL_VERSION_MAX: ::libc::c_uint = 512;
-pub const KERNEL_BOOT_INFO_MAX: ::libc::c_uint = 4096;
-pub const HOST_BASIC_INFO: ::libc::c_uint = 1;
-pub const HOST_SCHED_INFO: ::libc::c_uint = 3;
-pub const HOST_RESOURCE_SIZES: ::libc::c_uint = 4;
-pub const HOST_PRIORITY_INFO: ::libc::c_uint = 5;
-pub const HOST_SEMAPHORE_TRAPS: ::libc::c_uint = 7;
-pub const HOST_MACH_MSG_TRAP: ::libc::c_uint = 8;
-pub const HOST_VM_PURGABLE: ::libc::c_uint = 9;
-pub const HOST_DEBUG_INFO_INTERNAL: ::libc::c_uint = 10;
-pub const HOST_LOAD_INFO: ::libc::c_uint = 1;
-pub const HOST_VM_INFO: ::libc::c_uint = 2;
-pub const HOST_CPU_LOAD_INFO: ::libc::c_uint = 3;
-pub const HOST_VM_INFO64: ::libc::c_uint = 4;
-pub const HOST_EXTMOD_INFO64: ::libc::c_uint = 5;
-pub const HOST_EXPIRED_TASK_INFO: ::libc::c_uint = 6;
-pub const HOST_NOTIFY_CALENDAR_CHANGE: ::libc::c_uint = 0;
-pub const HOST_NOTIFY_TYPE_MAX: ::libc::c_uint = 0;
-pub const HOST_CALENDAR_CHANGED_REPLYID: ::libc::c_uint = 950;
-pub const HOST_SECURITY_PORT: ::libc::c_uint = 0;
-pub const HOST_PORT: ::libc::c_uint = 1;
-pub const HOST_PRIV_PORT: ::libc::c_uint = 2;
-pub const HOST_IO_MASTER_PORT: ::libc::c_uint = 3;
-pub const HOST_MAX_SPECIAL_KERNEL_PORT: ::libc::c_uint = 7;
-pub const HOST_DYNAMIC_PAGER_PORT: ::libc::c_uint = 8;
-pub const HOST_AUDIT_CONTROL_PORT: ::libc::c_uint = 9;
-pub const HOST_USER_NOTIFICATION_PORT: ::libc::c_uint = 10;
-pub const HOST_AUTOMOUNTD_PORT: ::libc::c_uint = 11;
-pub const HOST_LOCKD_PORT: ::libc::c_uint = 12;
-pub const HOST_SEATBELT_PORT: ::libc::c_uint = 14;
-pub const HOST_KEXTD_PORT: ::libc::c_uint = 15;
-pub const HOST_CHUD_PORT: ::libc::c_uint = 16;
-pub const HOST_UNFREED_PORT: ::libc::c_uint = 17;
-pub const HOST_AMFID_PORT: ::libc::c_uint = 18;
-pub const HOST_GSSD_PORT: ::libc::c_uint = 19;
-pub const HOST_TELEMETRY_PORT: ::libc::c_uint = 20;
-pub const HOST_ATM_NOTIFICATION_PORT: ::libc::c_uint = 21;
-pub const HOST_COALITION_PORT: ::libc::c_uint = 22;
-pub const HOST_SYSDIAGNOSE_PORT: ::libc::c_uint = 23;
-pub const HOST_XPC_EXCEPTION_PORT: ::libc::c_uint = 24;
-pub const HOST_CONTAINERD_PORT: ::libc::c_uint = 25;
-pub const HOST_MAX_SPECIAL_PORT: ::libc::c_uint = 25;
-pub const HOST_LOCAL_NODE: ::libc::c_int = -1;
-pub const VM_PROT_MEMORY_TAG_MASK: ::libc::c_uint = 4278190080;
-pub const VM_PROT_MEMORY_TAG_SHIFT: ::libc::c_uint = 24;
-pub const MEMORY_OBJECT_COPY_NONE: ::libc::c_uint = 0;
-pub const MEMORY_OBJECT_COPY_CALL: ::libc::c_uint = 1;
-pub const MEMORY_OBJECT_COPY_DELAY: ::libc::c_uint = 2;
-pub const MEMORY_OBJECT_COPY_TEMPORARY: ::libc::c_uint = 3;
-pub const MEMORY_OBJECT_COPY_SYMMETRIC: ::libc::c_uint = 4;
-pub const MEMORY_OBJECT_COPY_INVALID: ::libc::c_uint = 5;
-pub const MEMORY_OBJECT_RETURN_NONE: ::libc::c_uint = 0;
-pub const MEMORY_OBJECT_RETURN_DIRTY: ::libc::c_uint = 1;
-pub const MEMORY_OBJECT_RETURN_ALL: ::libc::c_uint = 2;
-pub const MEMORY_OBJECT_RETURN_ANYTHING: ::libc::c_uint = 3;
-pub const MEMORY_OBJECT_DATA_FLUSH: ::libc::c_uint = 1;
-pub const MEMORY_OBJECT_DATA_NO_CHANGE: ::libc::c_uint = 2;
-pub const MEMORY_OBJECT_DATA_PURGE: ::libc::c_uint = 4;
-pub const MEMORY_OBJECT_COPY_SYNC: ::libc::c_uint = 8;
-pub const MEMORY_OBJECT_DATA_SYNC: ::libc::c_uint = 16;
-pub const MEMORY_OBJECT_IO_SYNC: ::libc::c_uint = 32;
-pub const MEMORY_OBJECT_DATA_FLUSH_ALL: ::libc::c_uint = 64;
-pub const MEMORY_OBJECT_INFO_MAX: ::libc::c_uint = 1024;
-pub const MEMORY_OBJECT_PERFORMANCE_INFO: ::libc::c_uint = 11;
-pub const MEMORY_OBJECT_ATTRIBUTE_INFO: ::libc::c_uint = 14;
-pub const MEMORY_OBJECT_BEHAVIOR_INFO: ::libc::c_uint = 15;
-pub const MEMORY_OBJECT_TERMINATE_IDLE: ::libc::c_uint = 1;
-pub const MEMORY_OBJECT_RESPECT_CACHE: ::libc::c_uint = 2;
-pub const MEMORY_OBJECT_RELEASE_NO_OP: ::libc::c_uint = 4;
-pub const MAP_MEM_NOOP: ::libc::c_uint = 0;
-pub const MAP_MEM_COPYBACK: ::libc::c_uint = 1;
-pub const MAP_MEM_IO: ::libc::c_uint = 2;
-pub const MAP_MEM_WTHRU: ::libc::c_uint = 3;
-pub const MAP_MEM_WCOMB: ::libc::c_uint = 4;
-pub const MAP_MEM_INNERWBACK: ::libc::c_uint = 5;
-pub const MAP_MEM_ONLY: ::libc::c_uint = 65536;
-pub const MAP_MEM_NAMED_CREATE: ::libc::c_uint = 131072;
-pub const MAP_MEM_PURGABLE: ::libc::c_uint = 262144;
-pub const MAP_MEM_NAMED_REUSE: ::libc::c_uint = 524288;
-pub const MAP_MEM_USE_DATA_ADDR: ::libc::c_uint = 1048576;
-pub const MAP_MEM_VM_COPY: ::libc::c_uint = 2097152;
-pub const MAP_MEM_VM_SHARE: ::libc::c_uint = 4194304;
-pub const MAP_MEM_4K_DATA_ADDR: ::libc::c_uint = 8388608;
-pub const EXC_TYPES_COUNT: ::libc::c_uint = 14;
-pub const EXCEPTION_CODE_MAX: ::libc::c_uint = 2;
-pub const EXC_I386_INVOP: ::libc::c_uint = 1;
-pub const EXC_I386_DIV: ::libc::c_uint = 1;
-pub const EXC_I386_INTO: ::libc::c_uint = 2;
-pub const EXC_I386_NOEXT: ::libc::c_uint = 3;
-pub const EXC_I386_EXTOVR: ::libc::c_uint = 4;
-pub const EXC_I386_EXTERR: ::libc::c_uint = 5;
-pub const EXC_I386_EMERR: ::libc::c_uint = 6;
-pub const EXC_I386_BOUND: ::libc::c_uint = 7;
-pub const EXC_I386_SSEEXTERR: ::libc::c_uint = 8;
-pub const EXC_I386_SGL: ::libc::c_uint = 1;
-pub const EXC_I386_BPT: ::libc::c_uint = 2;
-pub const EXC_I386_DIVERR: ::libc::c_uint = 0;
-pub const EXC_I386_SGLSTP: ::libc::c_uint = 1;
-pub const EXC_I386_NMIFLT: ::libc::c_uint = 2;
-pub const EXC_I386_BPTFLT: ::libc::c_uint = 3;
-pub const EXC_I386_INTOFLT: ::libc::c_uint = 4;
-pub const EXC_I386_BOUNDFLT: ::libc::c_uint = 5;
-pub const EXC_I386_INVOPFLT: ::libc::c_uint = 6;
-pub const EXC_I386_NOEXTFLT: ::libc::c_uint = 7;
-pub const EXC_I386_DBLFLT: ::libc::c_uint = 8;
-pub const EXC_I386_EXTOVRFLT: ::libc::c_uint = 9;
-pub const EXC_I386_INVTSSFLT: ::libc::c_uint = 10;
-pub const EXC_I386_SEGNPFLT: ::libc::c_uint = 11;
-pub const EXC_I386_STKFLT: ::libc::c_uint = 12;
-pub const EXC_I386_GPFLT: ::libc::c_uint = 13;
-pub const EXC_I386_PGFLT: ::libc::c_uint = 14;
-pub const EXC_I386_EXTERRFLT: ::libc::c_uint = 16;
-pub const EXC_I386_ALIGNFLT: ::libc::c_uint = 17;
-pub const EXC_I386_ENDPERR: ::libc::c_uint = 33;
-pub const EXC_I386_ENOEXTFLT: ::libc::c_uint = 32;
-pub const EXC_MASK_MACHINE: ::libc::c_uint = 0;
-pub const EXC_BAD_ACCESS: ::libc::c_uint = 1;
-pub const EXC_BAD_INSTRUCTION: ::libc::c_uint = 2;
-pub const EXC_ARITHMETIC: ::libc::c_uint = 3;
-pub const EXC_EMULATION: ::libc::c_uint = 4;
-pub const EXC_SOFTWARE: ::libc::c_uint = 5;
-pub const EXC_BREAKPOINT: ::libc::c_uint = 6;
-pub const EXC_SYSCALL: ::libc::c_uint = 7;
-pub const EXC_MACH_SYSCALL: ::libc::c_uint = 8;
-pub const EXC_RPC_ALERT: ::libc::c_uint = 9;
-pub const EXC_CRASH: ::libc::c_uint = 10;
-pub const EXC_RESOURCE: ::libc::c_uint = 11;
-pub const EXC_GUARD: ::libc::c_uint = 12;
-pub const EXC_CORPSE_NOTIFY: ::libc::c_uint = 13;
-pub const EXCEPTION_DEFAULT: ::libc::c_uint = 1;
-pub const EXCEPTION_STATE: ::libc::c_uint = 2;
-pub const EXCEPTION_STATE_IDENTITY: ::libc::c_uint = 3;
-pub const MACH_EXCEPTION_CODES: ::libc::c_uint = 2147483648;
-pub const EXC_MASK_BAD_ACCESS: ::libc::c_uint = 2;
-pub const EXC_MASK_BAD_INSTRUCTION: ::libc::c_uint = 4;
-pub const EXC_MASK_ARITHMETIC: ::libc::c_uint = 8;
-pub const EXC_MASK_EMULATION: ::libc::c_uint = 16;
-pub const EXC_MASK_SOFTWARE: ::libc::c_uint = 32;
-pub const EXC_MASK_BREAKPOINT: ::libc::c_uint = 64;
-pub const EXC_MASK_SYSCALL: ::libc::c_uint = 128;
-pub const EXC_MASK_MACH_SYSCALL: ::libc::c_uint = 256;
-pub const EXC_MASK_RPC_ALERT: ::libc::c_uint = 512;
-pub const EXC_MASK_CRASH: ::libc::c_uint = 1024;
-pub const EXC_MASK_RESOURCE: ::libc::c_uint = 2048;
-pub const EXC_MASK_GUARD: ::libc::c_uint = 4096;
-pub const EXC_MASK_CORPSE_NOTIFY: ::libc::c_uint = 8192;
-pub const EXC_MASK_ALL: ::libc::c_uint = 7166;
-pub const FIRST_EXCEPTION: ::libc::c_uint = 1;
-pub const EXC_SOFT_SIGNAL: ::libc::c_uint = 65539;
-pub const EXC_MACF_MIN: ::libc::c_uint = 131072;
-pub const EXC_MACF_MAX: ::libc::c_uint = 196607;
-pub const FP_PREC_24B: ::libc::c_uint = 0;
-pub const FP_PREC_53B: ::libc::c_uint = 2;
-pub const FP_PREC_64B: ::libc::c_uint = 3;
-pub const FP_RND_NEAR: ::libc::c_uint = 0;
-pub const FP_RND_DOWN: ::libc::c_uint = 1;
-pub const FP_RND_UP: ::libc::c_uint = 2;
-pub const FP_CHOP: ::libc::c_uint = 3;
-pub const FP_STATE_BYTES: ::libc::c_uint = 512;
-pub const FPC_IE: ::libc::c_uint = 1;
-pub const FPC_IM: ::libc::c_uint = 1;
-pub const FPC_DE: ::libc::c_uint = 2;
-pub const FPC_DM: ::libc::c_uint = 2;
-pub const FPC_ZE: ::libc::c_uint = 4;
-pub const FPC_ZM: ::libc::c_uint = 4;
-pub const FPC_OE: ::libc::c_uint = 8;
-pub const FPC_OM: ::libc::c_uint = 8;
-pub const FPC_UE: ::libc::c_uint = 16;
-pub const FPC_PE: ::libc::c_uint = 32;
-pub const FPC_PC: ::libc::c_uint = 768;
-pub const FPC_PC_24: ::libc::c_uint = 0;
-pub const FPC_PC_53: ::libc::c_uint = 512;
-pub const FPC_PC_64: ::libc::c_uint = 768;
-pub const FPC_RC: ::libc::c_uint = 3072;
-pub const FPC_RC_RN: ::libc::c_uint = 0;
-pub const FPC_RC_RD: ::libc::c_uint = 1024;
-pub const FPC_RC_RU: ::libc::c_uint = 2048;
-pub const FPC_RC_CHOP: ::libc::c_uint = 3072;
-pub const FPC_IC: ::libc::c_uint = 4096;
-pub const FPC_IC_PROJ: ::libc::c_uint = 0;
-pub const FPC_IC_AFF: ::libc::c_uint = 4096;
-pub const FPS_IE: ::libc::c_uint = 1;
-pub const FPS_DE: ::libc::c_uint = 2;
-pub const FPS_ZE: ::libc::c_uint = 4;
-pub const FPS_OE: ::libc::c_uint = 8;
-pub const FPS_UE: ::libc::c_uint = 16;
-pub const FPS_PE: ::libc::c_uint = 32;
-pub const FPS_SF: ::libc::c_uint = 64;
-pub const FPS_ES: ::libc::c_uint = 128;
-pub const FPS_C0: ::libc::c_uint = 256;
-pub const FPS_C1: ::libc::c_uint = 512;
-pub const FPS_C2: ::libc::c_uint = 1024;
-pub const FPS_TOS: ::libc::c_uint = 14336;
-pub const FPS_TOS_SHIFT: ::libc::c_uint = 11;
-pub const FPS_C3: ::libc::c_uint = 16384;
-pub const FPS_BUSY: ::libc::c_uint = 32768;
-pub const FP_NO: ::libc::c_uint = 0;
-pub const FP_SOFT: ::libc::c_uint = 1;
-pub const FP_287: ::libc::c_uint = 2;
-pub const FP_387: ::libc::c_uint = 3;
-pub const FP_FXSR: ::libc::c_uint = 4;
-pub const I386_THREAD_STATE_MAX: ::libc::c_uint = 224;
-pub const THREAD_STATE_MAX: ::libc::c_uint = 224;
-pub const EFL_CF: ::libc::c_uint = 1;
-pub const EFL_PF: ::libc::c_uint = 4;
-pub const EFL_AF: ::libc::c_uint = 16;
-pub const EFL_ZF: ::libc::c_uint = 64;
-pub const EFL_SF: ::libc::c_uint = 128;
-pub const EFL_TF: ::libc::c_uint = 256;
-pub const EFL_IF: ::libc::c_uint = 512;
-pub const EFL_DF: ::libc::c_uint = 1024;
-pub const EFL_OF: ::libc::c_uint = 2048;
-pub const EFL_IOPL: ::libc::c_uint = 12288;
-pub const EFL_IOPL_KERNEL: ::libc::c_uint = 0;
-pub const EFL_IOPL_USER: ::libc::c_uint = 12288;
-pub const EFL_NT: ::libc::c_uint = 16384;
-pub const EFL_RF: ::libc::c_uint = 65536;
-pub const EFL_VM: ::libc::c_uint = 131072;
-pub const EFL_AC: ::libc::c_uint = 262144;
-pub const EFL_VIF: ::libc::c_uint = 524288;
-pub const EFL_VIP: ::libc::c_uint = 1048576;
-pub const EFL_ID: ::libc::c_uint = 2097152;
-pub const EFL_CLR: ::libc::c_uint = 4294475816;
-pub const EFL_SET: ::libc::c_uint = 2;
-pub const EFL_USER_SET: ::libc::c_uint = 512;
-pub const EFL_USER_CLEAR: ::libc::c_uint = 94208;
-pub const i386_THREAD_STATE: ::libc::c_uint = 1;
-pub const i386_FLOAT_STATE: ::libc::c_uint = 2;
-pub const i386_EXCEPTION_STATE: ::libc::c_uint = 3;
-pub const x86_THREAD_STATE32: ::libc::c_uint = 1;
-pub const x86_FLOAT_STATE32: ::libc::c_uint = 2;
-pub const x86_EXCEPTION_STATE32: ::libc::c_uint = 3;
-pub const x86_THREAD_STATE64: ::libc::c_uint = 4;
-pub const x86_FLOAT_STATE64: ::libc::c_uint = 5;
-pub const x86_EXCEPTION_STATE64: ::libc::c_uint = 6;
-pub const x86_THREAD_STATE: ::libc::c_uint = 7;
-pub const x86_FLOAT_STATE: ::libc::c_uint = 8;
-pub const x86_EXCEPTION_STATE: ::libc::c_uint = 9;
-pub const x86_DEBUG_STATE32: ::libc::c_uint = 10;
-pub const x86_DEBUG_STATE64: ::libc::c_uint = 11;
-pub const x86_DEBUG_STATE: ::libc::c_uint = 12;
-pub const THREAD_STATE_NONE: ::libc::c_uint = 13;
-pub const x86_AVX_STATE32: ::libc::c_uint = 16;
-pub const x86_AVX_STATE64: ::libc::c_uint = 17;
-pub const x86_AVX_STATE: ::libc::c_uint = 18;
-pub const THREAD_MACHINE_STATE_MAX: ::libc::c_uint = 224;
-pub const USER_CODE_SELECTOR: ::libc::c_uint = 23;
-pub const USER_DATA_SELECTOR: ::libc::c_uint = 31;
-pub const KERN_CODE_SELECTOR: ::libc::c_uint = 8;
-pub const KERN_DATA_SELECTOR: ::libc::c_uint = 16;
-pub const MACHINE_THREAD_STATE: ::libc::c_uint = 7;
-pub const THREAD_STATE_FLAVOR_LIST: ::libc::c_uint = 0;
-pub const THREAD_STATE_FLAVOR_LIST_NEW: ::libc::c_uint = 128;
-pub const THREAD_STATE_FLAVOR_LIST_10_9: ::libc::c_uint = 129;
-pub const MACH_VOUCHER_IMPORTANCE_ATTR_ADD_EXTERNAL: ::libc::c_uint = 1;
-pub const MACH_VOUCHER_IMPORTANCE_ATTR_DROP_EXTERNAL: ::libc::c_uint = 2;
-pub const PROCESSOR_INFO_MAX: ::libc::c_uint = 1024;
-pub const PROCESSOR_SET_INFO_MAX: ::libc::c_uint = 1024;
-pub const PROCESSOR_BASIC_INFO: ::libc::c_uint = 1;
-pub const PROCESSOR_CPU_LOAD_INFO: ::libc::c_uint = 2;
-pub const PROCESSOR_PM_REGS_INFO: ::libc::c_uint = 268435457;
-pub const PROCESSOR_TEMPERATURE: ::libc::c_uint = 268435458;
-pub const LOAD_SCALE: ::libc::c_uint = 1000;
-pub const PROCESSOR_SET_BASIC_INFO: ::libc::c_uint = 5;
-pub const PROCESSOR_SET_LOAD_INFO: ::libc::c_uint = 4;
-pub const POLICY_NULL: ::libc::c_uint = 0;
-pub const POLICY_TIMESHARE: ::libc::c_uint = 1;
-pub const POLICY_RR: ::libc::c_uint = 2;
-pub const POLICY_FIFO: ::libc::c_uint = 4;
-pub const POLICYCLASS_FIXEDPRI: ::libc::c_uint = 6;
-pub const TASK_INFO_MAX: ::libc::c_uint = 1024;
-pub const TASK_BASIC_INFO_32: ::libc::c_uint = 4;
-pub const TASK_BASIC2_INFO_32: ::libc::c_uint = 6;
-pub const TASK_BASIC_INFO_64: ::libc::c_uint = 5;
-pub const TASK_BASIC_INFO: ::libc::c_uint = 5;
-pub const TASK_EVENTS_INFO: ::libc::c_uint = 2;
-pub const TASK_THREAD_TIMES_INFO: ::libc::c_uint = 3;
-pub const TASK_ABSOLUTETIME_INFO: ::libc::c_uint = 1;
-pub const TASK_KERNELMEMORY_INFO: ::libc::c_uint = 7;
-pub const TASK_SECURITY_TOKEN: ::libc::c_uint = 13;
-pub const TASK_AUDIT_TOKEN: ::libc::c_uint = 15;
-pub const TASK_AFFINITY_TAG_INFO: ::libc::c_uint = 16;
-pub const TASK_DYLD_INFO: ::libc::c_uint = 17;
-pub const TASK_DYLD_ALL_IMAGE_INFO_32: ::libc::c_uint = 0;
-pub const TASK_DYLD_ALL_IMAGE_INFO_64: ::libc::c_uint = 1;
-pub const TASK_EXTMOD_INFO: ::libc::c_uint = 19;
-pub const MACH_TASK_BASIC_INFO: ::libc::c_uint = 20;
-pub const TASK_POWER_INFO: ::libc::c_uint = 21;
-pub const TASK_VM_INFO: ::libc::c_uint = 22;
-pub const TASK_VM_INFO_PURGEABLE: ::libc::c_uint = 23;
-pub const TASK_TRACE_MEMORY_INFO: ::libc::c_uint = 24;
-pub const TASK_WAIT_STATE_INFO: ::libc::c_uint = 25;
-pub const TASK_POWER_INFO_V2: ::libc::c_uint = 26;
-pub const TASK_VM_INFO_PURGEABLE_ACCOUNT: ::libc::c_uint = 27;
-pub const TASK_FLAGS_INFO: ::libc::c_uint = 28;
-pub const TF_LP64: ::libc::c_uint = 1;
-pub const TASK_DEBUG_INFO_INTERNAL: ::libc::c_uint = 29;
-pub const TASK_SCHED_TIMESHARE_INFO: ::libc::c_uint = 10;
-pub const TASK_SCHED_RR_INFO: ::libc::c_uint = 11;
-pub const TASK_SCHED_FIFO_INFO: ::libc::c_uint = 12;
-pub const TASK_SCHED_INFO: ::libc::c_uint = 14;
-pub const TASK_CATEGORY_POLICY: ::libc::c_uint = 1;
-pub const TASK_SUPPRESSION_POLICY: ::libc::c_uint = 3;
-pub const TASK_POLICY_STATE: ::libc::c_uint = 4;
-pub const TASK_BASE_QOS_POLICY: ::libc::c_uint = 8;
-pub const TASK_OVERRIDE_QOS_POLICY: ::libc::c_uint = 9;
-pub const TASK_BASE_LATENCY_QOS_POLICY: ::libc::c_uint = 10;
-pub const TASK_BASE_THROUGHPUT_QOS_POLICY: ::libc::c_uint = 11;
-pub const PROC_FLAG_DARWINBG: ::libc::c_uint = 32768;
-pub const PROC_FLAG_EXT_DARWINBG: ::libc::c_uint = 65536;
-pub const PROC_FLAG_IOS_APPLEDAEMON: ::libc::c_uint = 131072;
-pub const PROC_FLAG_IOS_IMPPROMOTION: ::libc::c_uint = 524288;
-pub const PROC_FLAG_ADAPTIVE: ::libc::c_uint = 1048576;
-pub const PROC_FLAG_ADAPTIVE_IMPORTANT: ::libc::c_uint = 2097152;
-pub const PROC_FLAG_IMPORTANCE_DONOR: ::libc::c_uint = 4194304;
-pub const PROC_FLAG_SUPPRESSED: ::libc::c_uint = 8388608;
-pub const PROC_FLAG_APPLICATION: ::libc::c_uint = 16777216;
-pub const PROC_FLAG_IOS_APPLICATION: ::libc::c_uint = 16777216;
-pub const TASK_KERNEL_PORT: ::libc::c_uint = 1;
-pub const TASK_HOST_PORT: ::libc::c_uint = 2;
-pub const TASK_NAME_PORT: ::libc::c_uint = 3;
-pub const TASK_BOOTSTRAP_PORT: ::libc::c_uint = 4;
-pub const TASK_SEATBELT_PORT: ::libc::c_uint = 7;
-pub const TASK_ACCESS_PORT: ::libc::c_uint = 9;
-pub const TASK_DEBUG_CONTROL_PORT: ::libc::c_uint = 10;
-pub const THREAD_INFO_MAX: ::libc::c_uint = 32;
-pub const THREAD_BASIC_INFO: ::libc::c_uint = 3;
-pub const THREAD_IDENTIFIER_INFO: ::libc::c_uint = 4;
-pub const TH_USAGE_SCALE: ::libc::c_uint = 1000;
-pub const TH_STATE_RUNNING: ::libc::c_uint = 1;
-pub const TH_STATE_STOPPED: ::libc::c_uint = 2;
-pub const TH_STATE_WAITING: ::libc::c_uint = 3;
-pub const TH_STATE_UNINTERRUPTIBLE: ::libc::c_uint = 4;
-pub const TH_STATE_HALTED: ::libc::c_uint = 5;
-pub const TH_FLAGS_SWAPPED: ::libc::c_uint = 1;
-pub const TH_FLAGS_IDLE: ::libc::c_uint = 2;
-pub const TH_FLAGS_GLOBAL_FORCED_IDLE: ::libc::c_uint = 4;
-pub const THREAD_EXTENDED_INFO: ::libc::c_uint = 5;
-pub const MAXTHREADNAMESIZE: ::libc::c_uint = 64;
-pub const THREAD_DEBUG_INFO_INTERNAL: ::libc::c_uint = 6;
-pub const IO_NUM_PRIORITIES: ::libc::c_uint = 4;
-pub const THREAD_SCHED_TIMESHARE_INFO: ::libc::c_uint = 10;
-pub const THREAD_SCHED_RR_INFO: ::libc::c_uint = 11;
-pub const THREAD_SCHED_FIFO_INFO: ::libc::c_uint = 12;
-pub const THREAD_STANDARD_POLICY: ::libc::c_uint = 1;
-pub const THREAD_STANDARD_POLICY_COUNT: ::libc::c_uint = 0;
-pub const THREAD_EXTENDED_POLICY: ::libc::c_uint = 1;
-pub const THREAD_TIME_CONSTRAINT_POLICY: ::libc::c_uint = 2;
-pub const THREAD_PRECEDENCE_POLICY: ::libc::c_uint = 3;
-pub const THREAD_AFFINITY_POLICY: ::libc::c_uint = 4;
-pub const THREAD_AFFINITY_TAG_NULL: ::libc::c_uint = 0;
-pub const THREAD_BACKGROUND_POLICY: ::libc::c_uint = 5;
-pub const THREAD_LATENCY_QOS_POLICY: ::libc::c_uint = 7;
-pub const THREAD_THROUGHPUT_QOS_POLICY: ::libc::c_uint = 8;
-pub const THREAD_KERNEL_PORT: ::libc::c_uint = 1;
-pub const SYSTEM_CLOCK: ::libc::c_uint = 0;
-pub const CALENDAR_CLOCK: ::libc::c_uint = 1;
-pub const REALTIME_CLOCK: ::libc::c_uint = 0;
-pub const CLOCK_GET_TIME_RES: ::libc::c_uint = 1;
-pub const CLOCK_ALARM_CURRES: ::libc::c_uint = 3;
-pub const CLOCK_ALARM_MINRES: ::libc::c_uint = 4;
-pub const CLOCK_ALARM_MAXRES: ::libc::c_uint = 5;
-pub const NSEC_PER_USEC: ::libc::c_uint = 1000;
-pub const USEC_PER_SEC: ::libc::c_uint = 1000000;
-pub const NSEC_PER_SEC: ::libc::c_uint = 1000000000;
-pub const NSEC_PER_MSEC: ::libc::c_uint = 1000000;
-pub const ALRMTYPE: ::libc::c_uint = 255;
-pub const TIME_ABSOLUTE: ::libc::c_uint = 0;
-pub const TIME_RELATIVE: ::libc::c_uint = 1;
-pub const MATTR_CACHE: ::libc::c_uint = 1;
-pub const MATTR_MIGRATE: ::libc::c_uint = 2;
-pub const MATTR_REPLICATE: ::libc::c_uint = 4;
-pub const MATTR_VAL_OFF: ::libc::c_uint = 0;
-pub const MATTR_VAL_ON: ::libc::c_uint = 1;
-pub const MATTR_VAL_GET: ::libc::c_uint = 2;
-pub const MATTR_VAL_CACHE_FLUSH: ::libc::c_uint = 6;
-pub const MATTR_VAL_DCACHE_FLUSH: ::libc::c_uint = 7;
-pub const MATTR_VAL_ICACHE_FLUSH: ::libc::c_uint = 8;
-pub const MATTR_VAL_CACHE_SYNC: ::libc::c_uint = 9;
-pub const MATTR_VAL_GET_INFO: ::libc::c_uint = 10;
-pub const VM_PURGABLE_NO_AGING_SHIFT: ::libc::c_uint = 16;
-pub const VM_PURGABLE_NO_AGING_MASK: ::libc::c_uint = 65536;
-pub const VM_PURGABLE_NO_AGING: ::libc::c_uint = 65536;
-pub const VM_PURGABLE_DEBUG_SHIFT: ::libc::c_uint = 12;
-pub const VM_PURGABLE_DEBUG_MASK: ::libc::c_uint = 12288;
-pub const VM_PURGABLE_DEBUG_EMPTY: ::libc::c_uint = 4096;
-pub const VM_PURGABLE_DEBUG_FAULT: ::libc::c_uint = 8192;
-pub const VM_VOLATILE_GROUP_SHIFT: ::libc::c_uint = 8;
-pub const VM_VOLATILE_GROUP_MASK: ::libc::c_uint = 1792;
-pub const VM_VOLATILE_GROUP_0: ::libc::c_uint = 0;
-pub const VM_VOLATILE_GROUP_1: ::libc::c_uint = 256;
-pub const VM_VOLATILE_GROUP_2: ::libc::c_uint = 512;
-pub const VM_VOLATILE_GROUP_3: ::libc::c_uint = 768;
-pub const VM_VOLATILE_GROUP_4: ::libc::c_uint = 1024;
-pub const VM_VOLATILE_GROUP_5: ::libc::c_uint = 1280;
-pub const VM_VOLATILE_GROUP_6: ::libc::c_uint = 1536;
-pub const VM_VOLATILE_GROUP_7: ::libc::c_uint = 1792;
-pub const VM_PURGABLE_BEHAVIOR_SHIFT: ::libc::c_uint = 6;
-pub const VM_PURGABLE_BEHAVIOR_MASK: ::libc::c_uint = 64;
-pub const VM_PURGABLE_BEHAVIOR_FIFO: ::libc::c_uint = 0;
-pub const VM_PURGABLE_BEHAVIOR_LIFO: ::libc::c_uint = 64;
-pub const VM_PURGABLE_ORDERING_SHIFT: ::libc::c_uint = 5;
-pub const VM_PURGABLE_ORDERING_MASK: ::libc::c_uint = 32;
-pub const VM_PURGABLE_ORDERING_OBSOLETE: ::libc::c_uint = 32;
-pub const VM_PURGABLE_ORDERING_NORMAL: ::libc::c_uint = 0;
-pub const VM_VOLATILE_ORDER_SHIFT: ::libc::c_uint = 4;
-pub const VM_VOLATILE_ORDER_MASK: ::libc::c_uint = 16;
-pub const VM_VOLATILE_MAKE_FIRST_IN_GROUP: ::libc::c_uint = 16;
-pub const VM_VOLATILE_MAKE_LAST_IN_GROUP: ::libc::c_uint = 0;
-pub const VM_PURGABLE_STATE_MIN: ::libc::c_uint = 0;
-pub const VM_PURGABLE_STATE_MAX: ::libc::c_uint = 3;
-pub const VM_PURGABLE_STATE_MASK: ::libc::c_uint = 3;
-pub const VM_PURGABLE_NONVOLATILE: ::libc::c_uint = 0;
-pub const VM_PURGABLE_VOLATILE: ::libc::c_uint = 1;
-pub const VM_PURGABLE_EMPTY: ::libc::c_uint = 2;
-pub const VM_PURGABLE_DENY: ::libc::c_uint = 3;
-pub const VM_PURGABLE_ALL_MASKS: ::libc::c_uint = 79731;
-pub const VM_REGION_INFO_MAX: ::libc::c_uint = 1024;
-pub const VM_REGION_BASIC_INFO_64: ::libc::c_uint = 9;
-pub const VM_REGION_BASIC_INFO: ::libc::c_uint = 10;
-pub const SM_COW: ::libc::c_uint = 1;
-pub const SM_PRIVATE: ::libc::c_uint = 2;
-pub const SM_EMPTY: ::libc::c_uint = 3;
-pub const SM_SHARED: ::libc::c_uint = 4;
-pub const SM_TRUESHARED: ::libc::c_uint = 5;
-pub const SM_PRIVATE_ALIASED: ::libc::c_uint = 6;
-pub const SM_SHARED_ALIASED: ::libc::c_uint = 7;
-pub const SM_LARGE_PAGE: ::libc::c_uint = 8;
-pub const VM_REGION_EXTENDED_INFO: ::libc::c_uint = 13;
-pub const VM_REGION_TOP_INFO: ::libc::c_uint = 12;
-pub const VM_MAP_ENTRY_MAX: ::libc::c_uint = 256;
-pub const VM_PAGE_INFO_BASIC: ::libc::c_uint = 1;
-pub const KMOD_MAX_NAME: ::libc::c_uint = 64;
-pub const KMOD_RETURN_SUCCESS: ::libc::c_uint = 0;
-pub const KMOD_RETURN_FAILURE: ::libc::c_uint = 5;
-pub const KMOD_INFO_VERSION: ::libc::c_uint = 1;
-pub const __DARWIN_WCHAR_MIN: ::libc::c_int = -2147483648;
-pub const _FORTIFY_SOURCE: ::libc::c_uint = 2;
-pub const _USE_FORTIFY_LEVEL: ::libc::c_uint = 2;
-pub const __HAS_FIXED_CHK_PROTOTYPES: ::libc::c_uint = 1;
-pub const NDR_PROTOCOL_2_0: ::libc::c_uint = 0;
-pub const NDR_INT_BIG_ENDIAN: ::libc::c_uint = 0;
-pub const NDR_INT_LITTLE_ENDIAN: ::libc::c_uint = 1;
-pub const NDR_FLOAT_IEEE: ::libc::c_uint = 0;
-pub const NDR_FLOAT_VAX: ::libc::c_uint = 1;
-pub const NDR_FLOAT_CRAY: ::libc::c_uint = 2;
-pub const NDR_FLOAT_IBM: ::libc::c_uint = 3;
-pub const NDR_CHAR_ASCII: ::libc::c_uint = 0;
-pub const NDR_CHAR_EBCDIC: ::libc::c_uint = 1;
-pub const __NDR_convert__: ::libc::c_uint = 0;
-pub const __NDR_convert__int_rep__: ::libc::c_uint = 0;
-pub const __NDR_convert__char_rep__: ::libc::c_uint = 0;
-pub const __NDR_convert__float_rep__: ::libc::c_uint = 0;
-pub const MACH_NOTIFY_FIRST: ::libc::c_uint = 64;
-pub const MACH_NOTIFY_PORT_DELETED: ::libc::c_uint = 65;
-pub const MACH_NOTIFY_SEND_POSSIBLE: ::libc::c_uint = 66;
-pub const MACH_NOTIFY_PORT_DESTROYED: ::libc::c_uint = 69;
-pub const MACH_NOTIFY_NO_SENDERS: ::libc::c_uint = 70;
-pub const MACH_NOTIFY_SEND_ONCE: ::libc::c_uint = 71;
-pub const MACH_NOTIFY_DEAD_NAME: ::libc::c_uint = 72;
-pub const MACH_NOTIFY_LAST: ::libc::c_uint = 77;
-pub const __MigTypeCheck: ::libc::c_uint = 1;
-pub const __MigPackStructs: ::libc::c_uint = 1;
-pub const MIG_TYPE_ERROR: ::libc::c_int = -300;
-pub const MIG_REPLY_MISMATCH: ::libc::c_int = -301;
-pub const MIG_REMOTE_ERROR: ::libc::c_int = -302;
-pub const MIG_BAD_ID: ::libc::c_int = -303;
-pub const MIG_BAD_ARGUMENTS: ::libc::c_int = -304;
-pub const MIG_NO_REPLY: ::libc::c_int = -305;
-pub const MIG_EXCEPTION: ::libc::c_int = -306;
-pub const MIG_ARRAY_TOO_LARGE: ::libc::c_int = -307;
-pub const MIG_SERVER_DIED: ::libc::c_int = -308;
-pub const MIG_TRAILER_ERROR: ::libc::c_int = -309;
-pub const clock_priv_MSG_COUNT: ::libc::c_uint = 2;
-pub const host_priv_MSG_COUNT: ::libc::c_uint = 26;
-pub const ZONE_NAME_MAX_LEN: ::libc::c_uint = 80;
-pub const MACH_ZONE_NAME_MAX_LEN: ::libc::c_uint = 80;
-pub const LOCKGROUP_MAX_NAME: ::libc::c_uint = 64;
-pub const LOCKGROUP_ATTR_STAT: ::libc::c_uint = 1;
-pub const MACH_CORE_FILEHEADER_SIGNATURE: ::libc::c_ulonglong = 27973006578180435;
-pub const host_security_MSG_COUNT: ::libc::c_uint = 2;
-pub const lock_set_MSG_COUNT: ::libc::c_uint = 6;
-pub const processor_MSG_COUNT: ::libc::c_uint = 6;
-pub const processor_set_MSG_COUNT: ::libc::c_uint = 10;
-pub const SYNC_POLICY_FIFO: ::libc::c_uint = 0;
-pub const SYNC_POLICY_FIXED_PRIORITY: ::libc::c_uint = 1;
-pub const SYNC_POLICY_REVERSED: ::libc::c_uint = 2;
-pub const SYNC_POLICY_ORDER_MASK: ::libc::c_uint = 3;
-pub const SYNC_POLICY_LIFO: ::libc::c_uint = 2;
-pub const SYNC_POLICY_MAX: ::libc::c_uint = 7;
-pub const task_MSG_COUNT: ::libc::c_uint = 42;
-pub const thread_act_MSG_COUNT: ::libc::c_uint = 28;
-pub const vm_map_MSG_COUNT: ::libc::c_uint = 31;
-pub const mach_port_MSG_COUNT: ::libc::c_uint = 36;
-pub const _MACH_INIT_: ::libc::c_uint = 1;
-pub const __GNUC_VA_LIST: ::libc::c_uint = 1;
-pub const _QUAD_HIGHWORD: ::libc::c_uint = 1;
-pub const _QUAD_LOWWORD: ::libc::c_uint = 0;
-pub const __DARWIN_LITTLE_ENDIAN: ::libc::c_uint = 1234;
-pub const __DARWIN_BIG_ENDIAN: ::libc::c_uint = 4321;
-pub const __DARWIN_PDP_ENDIAN: ::libc::c_uint = 3412;
-pub const __DARWIN_BYTE_ORDER: ::libc::c_uint = 1234;
-pub const LITTLE_ENDIAN: ::libc::c_uint = 1234;
-pub const BIG_ENDIAN: ::libc::c_uint = 4321;
-pub const PDP_ENDIAN: ::libc::c_uint = 3412;
-pub const BYTE_ORDER: ::libc::c_uint = 1234;
-pub const NAME_SERVER_SLOT: ::libc::c_uint = 0;
-pub const ENVIRONMENT_SLOT: ::libc::c_uint = 1;
-pub const SERVICE_SLOT: ::libc::c_uint = 2;
-pub const MACH_PORTS_SLOTS_USED: ::libc::c_uint = 3;
-pub const mach_host_MSG_COUNT: ::libc::c_uint = 31;
-pub const SWITCH_OPTION_NONE: ::libc::c_uint = 0;
-pub const SWITCH_OPTION_DEPRESS: ::libc::c_uint = 1;
-pub const SWITCH_OPTION_WAIT: ::libc::c_uint = 2;
-pub const RPC_SIGBUF_SIZE: ::libc::c_uint = 8;
-pub const _MACH_ERROR_: ::libc::c_uint = 1;
-pub const code_emask: ::libc::c_uint = 16383;
-pub const err_max_system: ::libc::c_uint = 63;
-pub const VOUCHER_MACH_MSG_API_VERSION: ::libc::c_uint = 20140205;
+pub const __DARWIN_C_ANSI: ::std::os::raw::c_uint = 4096;
+pub const __DARWIN_C_FULL: ::std::os::raw::c_uint = 900000;
+pub const __DARWIN_C_LEVEL: ::std::os::raw::c_uint = 900000;
+pub const __STDC_WANT_LIB_EXT1__: ::std::os::raw::c_uint = 1;
+pub const _DARWIN_FEATURE_64_BIT_INODE: ::std::os::raw::c_uint = 1;
+pub const _DARWIN_FEATURE_ONLY_UNIX_CONFORMANCE: ::std::os::raw::c_uint = 1;
+pub const _DARWIN_FEATURE_UNIX_CONFORMANCE: ::std::os::raw::c_uint = 3;
+pub const __PTHREAD_SIZE__: ::std::os::raw::c_uint = 8176;
+pub const __PTHREAD_ATTR_SIZE__: ::std::os::raw::c_uint = 56;
+pub const __PTHREAD_MUTEXATTR_SIZE__: ::std::os::raw::c_uint = 8;
+pub const __PTHREAD_MUTEX_SIZE__: ::std::os::raw::c_uint = 56;
+pub const __PTHREAD_CONDATTR_SIZE__: ::std::os::raw::c_uint = 8;
+pub const __PTHREAD_COND_SIZE__: ::std::os::raw::c_uint = 40;
+pub const __PTHREAD_ONCE_SIZE__: ::std::os::raw::c_uint = 8;
+pub const __PTHREAD_RWLOCK_SIZE__: ::std::os::raw::c_uint = 192;
+pub const __PTHREAD_RWLOCKATTR_SIZE__: ::std::os::raw::c_uint = 16;
+pub const INT8_MAX: ::std::os::raw::c_uint = 127;
+pub const INT16_MAX: ::std::os::raw::c_uint = 32767;
+pub const INT32_MAX: ::std::os::raw::c_uint = 2147483647;
+pub const INT64_MAX: ::std::os::raw::c_ulonglong = 9223372036854775807;
+pub const INT8_MIN: ::std::os::raw::c_int = -128;
+pub const INT16_MIN: ::std::os::raw::c_int = -32768;
+pub const INT32_MIN: ::std::os::raw::c_int = -2147483648;
+pub const INT64_MIN: ::std::os::raw::c_longlong = -9223372036854775808;
+pub const UINT8_MAX: ::std::os::raw::c_uint = 255;
+pub const UINT16_MAX: ::std::os::raw::c_uint = 65535;
+pub const UINT32_MAX: ::std::os::raw::c_uint = 4294967295;
+pub const UINT64_MAX: ::std::os::raw::c_int = -1;
+pub const INT_LEAST8_MIN: ::std::os::raw::c_int = -128;
+pub const INT_LEAST16_MIN: ::std::os::raw::c_int = -32768;
+pub const INT_LEAST32_MIN: ::std::os::raw::c_int = -2147483648;
+pub const INT_LEAST64_MIN: ::std::os::raw::c_longlong = -9223372036854775808;
+pub const INT_LEAST8_MAX: ::std::os::raw::c_uint = 127;
+pub const INT_LEAST16_MAX: ::std::os::raw::c_uint = 32767;
+pub const INT_LEAST32_MAX: ::std::os::raw::c_uint = 2147483647;
+pub const INT_LEAST64_MAX: ::std::os::raw::c_ulonglong = 9223372036854775807;
+pub const UINT_LEAST8_MAX: ::std::os::raw::c_uint = 255;
+pub const UINT_LEAST16_MAX: ::std::os::raw::c_uint = 65535;
+pub const UINT_LEAST32_MAX: ::std::os::raw::c_uint = 4294967295;
+pub const UINT_LEAST64_MAX: ::std::os::raw::c_int = -1;
+pub const INT_FAST8_MIN: ::std::os::raw::c_int = -128;
+pub const INT_FAST16_MIN: ::std::os::raw::c_int = -32768;
+pub const INT_FAST32_MIN: ::std::os::raw::c_int = -2147483648;
+pub const INT_FAST64_MIN: ::std::os::raw::c_longlong = -9223372036854775808;
+pub const INT_FAST8_MAX: ::std::os::raw::c_uint = 127;
+pub const INT_FAST16_MAX: ::std::os::raw::c_uint = 32767;
+pub const INT_FAST32_MAX: ::std::os::raw::c_uint = 2147483647;
+pub const INT_FAST64_MAX: ::std::os::raw::c_ulonglong = 9223372036854775807;
+pub const UINT_FAST8_MAX: ::std::os::raw::c_uint = 255;
+pub const UINT_FAST16_MAX: ::std::os::raw::c_uint = 65535;
+pub const UINT_FAST32_MAX: ::std::os::raw::c_uint = 4294967295;
+pub const UINT_FAST64_MAX: ::std::os::raw::c_int = -1;
+pub const INTPTR_MIN: ::std::os::raw::c_longlong = -9223372036854775808;
+pub const INTPTR_MAX: ::std::os::raw::c_ulonglong = 9223372036854775807;
+pub const UINTPTR_MAX: ::std::os::raw::c_int = -1;
+pub const INTMAX_MIN: ::std::os::raw::c_longlong = -9223372036854775808;
+pub const INTMAX_MAX: ::std::os::raw::c_ulonglong = 9223372036854775807;
+pub const UINTMAX_MAX: ::std::os::raw::c_int = -1;
+pub const PTRDIFF_MIN: ::std::os::raw::c_longlong = -9223372036854775808;
+pub const PTRDIFF_MAX: ::std::os::raw::c_ulonglong = 9223372036854775807;
+pub const SIZE_MAX: ::std::os::raw::c_int = -1;
+pub const RSIZE_MAX: ::std::os::raw::c_int = -1;
+pub const WINT_MIN: ::std::os::raw::c_int = -2147483648;
+pub const WINT_MAX: ::std::os::raw::c_uint = 2147483647;
+pub const SIG_ATOMIC_MIN: ::std::os::raw::c_int = -2147483648;
+pub const SIG_ATOMIC_MAX: ::std::os::raw::c_uint = 2147483647;
+pub const TRUE: ::std::os::raw::c_uint = 1;
+pub const FALSE: ::std::os::raw::c_uint = 0;
+pub const BYTE_SIZE: ::std::os::raw::c_uint = 8;
+pub const I386_PGBYTES: ::std::os::raw::c_uint = 4096;
+pub const I386_PGSHIFT: ::std::os::raw::c_uint = 12;
+pub const PAGE_SIZE: ::std::os::raw::c_uint = 4096;
+pub const PAGE_SHIFT: ::std::os::raw::c_uint = 12;
+pub const PAGE_MASK: ::std::os::raw::c_uint = 4095;
+pub const PAGE_MAX_SHIFT: ::std::os::raw::c_uint = 12;
+pub const PAGE_MAX_SIZE: ::std::os::raw::c_uint = 4096;
+pub const PAGE_MAX_MASK: ::std::os::raw::c_uint = 4095;
+pub const PAGE_MIN_SHIFT: ::std::os::raw::c_uint = 12;
+pub const PAGE_MIN_SIZE: ::std::os::raw::c_uint = 4096;
+pub const PAGE_MIN_MASK: ::std::os::raw::c_uint = 4095;
+pub const I386_LPGBYTES: ::std::os::raw::c_uint = 2097152;
+pub const I386_LPGSHIFT: ::std::os::raw::c_uint = 21;
+pub const I386_LPGMASK: ::std::os::raw::c_uint = 2097151;
+pub const MACH_PORT_NULL: ::std::os::raw::c_uint = 0;
+pub const MACH_PORT_TYPE_DNREQUEST: ::std::os::raw::c_uint = 2147483648;
+pub const MACH_PORT_TYPE_SPREQUEST: ::std::os::raw::c_uint = 1073741824;
+pub const MACH_PORT_TYPE_SPREQUEST_DELAYED: ::std::os::raw::c_uint = 536870912;
+pub const MACH_PORT_SRIGHTS_NONE: ::std::os::raw::c_uint = 0;
+pub const MACH_PORT_SRIGHTS_PRESENT: ::std::os::raw::c_uint = 1;
+pub const MACH_PORT_QLIMIT_ZERO: ::std::os::raw::c_uint = 0;
+pub const MACH_PORT_QLIMIT_BASIC: ::std::os::raw::c_uint = 5;
+pub const MACH_PORT_QLIMIT_SMALL: ::std::os::raw::c_uint = 16;
+pub const MACH_PORT_QLIMIT_LARGE: ::std::os::raw::c_uint = 1024;
+pub const MACH_PORT_QLIMIT_KERNEL: ::std::os::raw::c_uint = 65534;
+pub const MACH_PORT_QLIMIT_MIN: ::std::os::raw::c_uint = 0;
+pub const MACH_PORT_QLIMIT_DEFAULT: ::std::os::raw::c_uint = 5;
+pub const MACH_PORT_QLIMIT_MAX: ::std::os::raw::c_uint = 1024;
+pub const MACH_PORT_STATUS_FLAG_TEMPOWNER: ::std::os::raw::c_uint = 1;
+pub const MACH_PORT_STATUS_FLAG_GUARDED: ::std::os::raw::c_uint = 2;
+pub const MACH_PORT_STATUS_FLAG_STRICT_GUARD: ::std::os::raw::c_uint = 4;
+pub const MACH_PORT_STATUS_FLAG_IMP_DONATION: ::std::os::raw::c_uint = 8;
+pub const MACH_PORT_STATUS_FLAG_REVIVE: ::std::os::raw::c_uint = 16;
+pub const MACH_PORT_STATUS_FLAG_TASKPTR: ::std::os::raw::c_uint = 32;
+pub const MACH_PORT_LIMITS_INFO: ::std::os::raw::c_uint = 1;
+pub const MACH_PORT_RECEIVE_STATUS: ::std::os::raw::c_uint = 2;
+pub const MACH_PORT_DNREQUESTS_SIZE: ::std::os::raw::c_uint = 3;
+pub const MACH_PORT_TEMPOWNER: ::std::os::raw::c_uint = 4;
+pub const MACH_PORT_IMPORTANCE_RECEIVER: ::std::os::raw::c_uint = 5;
+pub const MACH_PORT_DENAP_RECEIVER: ::std::os::raw::c_uint = 6;
+pub const MACH_PORT_INFO_EXT: ::std::os::raw::c_uint = 7;
+pub const MACH_PORT_DNREQUESTS_SIZE_COUNT: ::std::os::raw::c_uint = 1;
+pub const MPO_CONTEXT_AS_GUARD: ::std::os::raw::c_uint = 1;
+pub const MPO_QLIMIT: ::std::os::raw::c_uint = 2;
+pub const MPO_TEMPOWNER: ::std::os::raw::c_uint = 4;
+pub const MPO_IMPORTANCE_RECEIVER: ::std::os::raw::c_uint = 8;
+pub const MPO_INSERT_SEND_RIGHT: ::std::os::raw::c_uint = 16;
+pub const MPO_STRICT: ::std::os::raw::c_uint = 32;
+pub const MPO_DENAP_RECEIVER: ::std::os::raw::c_uint = 64;
+pub const GUARD_TYPE_MACH_PORT: ::std::os::raw::c_uint = 1;
+pub const PPNUM_MAX: ::std::os::raw::c_uint = 4294967295;
+pub const __MAC_10_0: ::std::os::raw::c_uint = 1000;
+pub const __MAC_10_1: ::std::os::raw::c_uint = 1010;
+pub const __MAC_10_2: ::std::os::raw::c_uint = 1020;
+pub const __MAC_10_3: ::std::os::raw::c_uint = 1030;
+pub const __MAC_10_4: ::std::os::raw::c_uint = 1040;
+pub const __MAC_10_5: ::std::os::raw::c_uint = 1050;
+pub const __MAC_10_6: ::std::os::raw::c_uint = 1060;
+pub const __MAC_10_7: ::std::os::raw::c_uint = 1070;
+pub const __MAC_10_8: ::std::os::raw::c_uint = 1080;
+pub const __MAC_10_9: ::std::os::raw::c_uint = 1090;
+pub const __MAC_10_10: ::std::os::raw::c_uint = 101000;
+pub const __MAC_10_10_2: ::std::os::raw::c_uint = 101002;
+pub const __MAC_10_10_3: ::std::os::raw::c_uint = 101003;
+pub const __MAC_10_11: ::std::os::raw::c_uint = 101100;
+pub const __MAC_10_11_2: ::std::os::raw::c_uint = 101102;
+pub const __MAC_10_11_3: ::std::os::raw::c_uint = 101103;
+pub const __MAC_10_11_4: ::std::os::raw::c_uint = 101104;
+pub const __IPHONE_2_0: ::std::os::raw::c_uint = 20000;
+pub const __IPHONE_2_1: ::std::os::raw::c_uint = 20100;
+pub const __IPHONE_2_2: ::std::os::raw::c_uint = 20200;
+pub const __IPHONE_3_0: ::std::os::raw::c_uint = 30000;
+pub const __IPHONE_3_1: ::std::os::raw::c_uint = 30100;
+pub const __IPHONE_3_2: ::std::os::raw::c_uint = 30200;
+pub const __IPHONE_4_0: ::std::os::raw::c_uint = 40000;
+pub const __IPHONE_4_1: ::std::os::raw::c_uint = 40100;
+pub const __IPHONE_4_2: ::std::os::raw::c_uint = 40200;
+pub const __IPHONE_4_3: ::std::os::raw::c_uint = 40300;
+pub const __IPHONE_5_0: ::std::os::raw::c_uint = 50000;
+pub const __IPHONE_5_1: ::std::os::raw::c_uint = 50100;
+pub const __IPHONE_6_0: ::std::os::raw::c_uint = 60000;
+pub const __IPHONE_6_1: ::std::os::raw::c_uint = 60100;
+pub const __IPHONE_7_0: ::std::os::raw::c_uint = 70000;
+pub const __IPHONE_7_1: ::std::os::raw::c_uint = 70100;
+pub const __IPHONE_8_0: ::std::os::raw::c_uint = 80000;
+pub const __IPHONE_8_1: ::std::os::raw::c_uint = 80100;
+pub const __IPHONE_8_2: ::std::os::raw::c_uint = 80200;
+pub const __IPHONE_8_3: ::std::os::raw::c_uint = 80300;
+pub const __IPHONE_8_4: ::std::os::raw::c_uint = 80400;
+pub const __IPHONE_9_0: ::std::os::raw::c_uint = 90000;
+pub const __IPHONE_9_1: ::std::os::raw::c_uint = 90100;
+pub const __IPHONE_9_2: ::std::os::raw::c_uint = 90200;
+pub const __IPHONE_9_3: ::std::os::raw::c_uint = 90300;
+pub const __TVOS_9_0: ::std::os::raw::c_uint = 90000;
+pub const __TVOS_9_1: ::std::os::raw::c_uint = 90100;
+pub const __TVOS_9_2: ::std::os::raw::c_uint = 90200;
+pub const __WATCHOS_1_0: ::std::os::raw::c_uint = 10000;
+pub const __WATCHOS_2_0: ::std::os::raw::c_uint = 20000;
+pub const __MAC_OS_X_VERSION_MAX_ALLOWED: ::std::os::raw::c_uint = 101104;
+pub const MACH_MSGH_BITS_ZERO: ::std::os::raw::c_uint = 0;
+pub const MACH_MSGH_BITS_REMOTE_MASK: ::std::os::raw::c_uint = 31;
+pub const MACH_MSGH_BITS_LOCAL_MASK: ::std::os::raw::c_uint = 7936;
+pub const MACH_MSGH_BITS_VOUCHER_MASK: ::std::os::raw::c_uint = 2031616;
+pub const MACH_MSGH_BITS_PORTS_MASK: ::std::os::raw::c_uint = 2039583;
+pub const MACH_MSGH_BITS_COMPLEX: ::std::os::raw::c_uint = 2147483648;
+pub const MACH_MSGH_BITS_USER: ::std::os::raw::c_uint = 2149523231;
+pub const MACH_MSGH_BITS_RAISEIMP: ::std::os::raw::c_uint = 536870912;
+pub const MACH_MSGH_BITS_DENAP: ::std::os::raw::c_uint = 536870912;
+pub const MACH_MSGH_BITS_IMPHOLDASRT: ::std::os::raw::c_uint = 268435456;
+pub const MACH_MSGH_BITS_DENAPHOLDASRT: ::std::os::raw::c_uint = 268435456;
+pub const MACH_MSGH_BITS_CIRCULAR: ::std::os::raw::c_uint = 268435456;
+pub const MACH_MSGH_BITS_USED: ::std::os::raw::c_uint = 2954829599;
+pub const MACH_MSG_TYPE_MOVE_RECEIVE: ::std::os::raw::c_uint = 16;
+pub const MACH_MSG_TYPE_MOVE_SEND: ::std::os::raw::c_uint = 17;
+pub const MACH_MSG_TYPE_MOVE_SEND_ONCE: ::std::os::raw::c_uint = 18;
+pub const MACH_MSG_TYPE_COPY_SEND: ::std::os::raw::c_uint = 19;
+pub const MACH_MSG_TYPE_MAKE_SEND: ::std::os::raw::c_uint = 20;
+pub const MACH_MSG_TYPE_MAKE_SEND_ONCE: ::std::os::raw::c_uint = 21;
+pub const MACH_MSG_TYPE_COPY_RECEIVE: ::std::os::raw::c_uint = 22;
+pub const MACH_MSG_TYPE_DISPOSE_RECEIVE: ::std::os::raw::c_uint = 24;
+pub const MACH_MSG_TYPE_DISPOSE_SEND: ::std::os::raw::c_uint = 25;
+pub const MACH_MSG_TYPE_DISPOSE_SEND_ONCE: ::std::os::raw::c_uint = 26;
+pub const MACH_MSG_PHYSICAL_COPY: ::std::os::raw::c_uint = 0;
+pub const MACH_MSG_VIRTUAL_COPY: ::std::os::raw::c_uint = 1;
+pub const MACH_MSG_ALLOCATE: ::std::os::raw::c_uint = 2;
+pub const MACH_MSG_OVERWRITE: ::std::os::raw::c_uint = 3;
+pub const MACH_MSG_PORT_DESCRIPTOR: ::std::os::raw::c_uint = 0;
+pub const MACH_MSG_OOL_DESCRIPTOR: ::std::os::raw::c_uint = 1;
+pub const MACH_MSG_OOL_PORTS_DESCRIPTOR: ::std::os::raw::c_uint = 2;
+pub const MACH_MSG_OOL_VOLATILE_DESCRIPTOR: ::std::os::raw::c_uint = 3;
+pub const MACH_MSG_TRAILER_FORMAT_0: ::std::os::raw::c_uint = 0;
+pub const MACH_MSGH_KIND_NORMAL: ::std::os::raw::c_uint = 0;
+pub const MACH_MSGH_KIND_NOTIFICATION: ::std::os::raw::c_uint = 1;
+pub const MACH_MSG_TYPE_PORT_NONE: ::std::os::raw::c_uint = 0;
+pub const MACH_MSG_TYPE_PORT_NAME: ::std::os::raw::c_uint = 15;
+pub const MACH_MSG_TYPE_PORT_RECEIVE: ::std::os::raw::c_uint = 16;
+pub const MACH_MSG_TYPE_PORT_SEND: ::std::os::raw::c_uint = 17;
+pub const MACH_MSG_TYPE_PORT_SEND_ONCE: ::std::os::raw::c_uint = 18;
+pub const MACH_MSG_TYPE_LAST: ::std::os::raw::c_uint = 22;
+pub const MACH_MSG_OPTION_NONE: ::std::os::raw::c_uint = 0;
+pub const MACH_SEND_MSG: ::std::os::raw::c_uint = 1;
+pub const MACH_RCV_MSG: ::std::os::raw::c_uint = 2;
+pub const MACH_RCV_LARGE: ::std::os::raw::c_uint = 4;
+pub const MACH_RCV_LARGE_IDENTITY: ::std::os::raw::c_uint = 8;
+pub const MACH_SEND_TIMEOUT: ::std::os::raw::c_uint = 16;
+pub const MACH_SEND_INTERRUPT: ::std::os::raw::c_uint = 64;
+pub const MACH_SEND_NOTIFY: ::std::os::raw::c_uint = 128;
+pub const MACH_SEND_ALWAYS: ::std::os::raw::c_uint = 65536;
+pub const MACH_SEND_TRAILER: ::std::os::raw::c_uint = 131072;
+pub const MACH_SEND_NOIMPORTANCE: ::std::os::raw::c_uint = 262144;
+pub const MACH_SEND_NODENAP: ::std::os::raw::c_uint = 262144;
+pub const MACH_SEND_IMPORTANCE: ::std::os::raw::c_uint = 524288;
+pub const MACH_RCV_TIMEOUT: ::std::os::raw::c_uint = 256;
+pub const MACH_RCV_NOTIFY: ::std::os::raw::c_uint = 512;
+pub const MACH_RCV_INTERRUPT: ::std::os::raw::c_uint = 1024;
+pub const MACH_RCV_VOUCHER: ::std::os::raw::c_uint = 2048;
+pub const MACH_RCV_OVERWRITE: ::std::os::raw::c_uint = 4096;
+pub const MACH_RCV_TRAILER_NULL: ::std::os::raw::c_uint = 0;
+pub const MACH_RCV_TRAILER_SEQNO: ::std::os::raw::c_uint = 1;
+pub const MACH_RCV_TRAILER_SENDER: ::std::os::raw::c_uint = 2;
+pub const MACH_RCV_TRAILER_AUDIT: ::std::os::raw::c_uint = 3;
+pub const MACH_RCV_TRAILER_CTX: ::std::os::raw::c_uint = 4;
+pub const MACH_RCV_TRAILER_AV: ::std::os::raw::c_uint = 7;
+pub const MACH_RCV_TRAILER_LABELS: ::std::os::raw::c_uint = 8;
+pub const MACH_RCV_TRAILER_MASK: ::std::os::raw::c_uint = 251658240;
+pub const MACH_MSG_SUCCESS: ::std::os::raw::c_uint = 0;
+pub const MACH_MSG_MASK: ::std::os::raw::c_uint = 15872;
+pub const MACH_MSG_IPC_SPACE: ::std::os::raw::c_uint = 8192;
+pub const MACH_MSG_VM_SPACE: ::std::os::raw::c_uint = 4096;
+pub const MACH_MSG_IPC_KERNEL: ::std::os::raw::c_uint = 2048;
+pub const MACH_MSG_VM_KERNEL: ::std::os::raw::c_uint = 1024;
+pub const MACH_SEND_IN_PROGRESS: ::std::os::raw::c_uint = 268435457;
+pub const MACH_SEND_INVALID_DATA: ::std::os::raw::c_uint = 268435458;
+pub const MACH_SEND_INVALID_DEST: ::std::os::raw::c_uint = 268435459;
+pub const MACH_SEND_TIMED_OUT: ::std::os::raw::c_uint = 268435460;
+pub const MACH_SEND_INVALID_VOUCHER: ::std::os::raw::c_uint = 268435461;
+pub const MACH_SEND_INTERRUPTED: ::std::os::raw::c_uint = 268435463;
+pub const MACH_SEND_MSG_TOO_SMALL: ::std::os::raw::c_uint = 268435464;
+pub const MACH_SEND_INVALID_REPLY: ::std::os::raw::c_uint = 268435465;
+pub const MACH_SEND_INVALID_RIGHT: ::std::os::raw::c_uint = 268435466;
+pub const MACH_SEND_INVALID_NOTIFY: ::std::os::raw::c_uint = 268435467;
+pub const MACH_SEND_INVALID_MEMORY: ::std::os::raw::c_uint = 268435468;
+pub const MACH_SEND_NO_BUFFER: ::std::os::raw::c_uint = 268435469;
+pub const MACH_SEND_TOO_LARGE: ::std::os::raw::c_uint = 268435470;
+pub const MACH_SEND_INVALID_TYPE: ::std::os::raw::c_uint = 268435471;
+pub const MACH_SEND_INVALID_HEADER: ::std::os::raw::c_uint = 268435472;
+pub const MACH_SEND_INVALID_TRAILER: ::std::os::raw::c_uint = 268435473;
+pub const MACH_SEND_INVALID_RT_OOL_SIZE: ::std::os::raw::c_uint = 268435477;
+pub const MACH_RCV_IN_PROGRESS: ::std::os::raw::c_uint = 268451841;
+pub const MACH_RCV_INVALID_NAME: ::std::os::raw::c_uint = 268451842;
+pub const MACH_RCV_TIMED_OUT: ::std::os::raw::c_uint = 268451843;
+pub const MACH_RCV_TOO_LARGE: ::std::os::raw::c_uint = 268451844;
+pub const MACH_RCV_INTERRUPTED: ::std::os::raw::c_uint = 268451845;
+pub const MACH_RCV_PORT_CHANGED: ::std::os::raw::c_uint = 268451846;
+pub const MACH_RCV_INVALID_NOTIFY: ::std::os::raw::c_uint = 268451847;
+pub const MACH_RCV_INVALID_DATA: ::std::os::raw::c_uint = 268451848;
+pub const MACH_RCV_PORT_DIED: ::std::os::raw::c_uint = 268451849;
+pub const MACH_RCV_IN_SET: ::std::os::raw::c_uint = 268451850;
+pub const MACH_RCV_HEADER_ERROR: ::std::os::raw::c_uint = 268451851;
+pub const MACH_RCV_BODY_ERROR: ::std::os::raw::c_uint = 268451852;
+pub const MACH_RCV_INVALID_TYPE: ::std::os::raw::c_uint = 268451853;
+pub const MACH_RCV_SCATTER_SMALL: ::std::os::raw::c_uint = 268451854;
+pub const MACH_RCV_INVALID_TRAILER: ::std::os::raw::c_uint = 268451855;
+pub const MACH_RCV_IN_PROGRESS_TIMED: ::std::os::raw::c_uint = 268451857;
+pub const VM_PAGE_QUERY_PAGE_PRESENT: ::std::os::raw::c_uint = 1;
+pub const VM_PAGE_QUERY_PAGE_FICTITIOUS: ::std::os::raw::c_uint = 2;
+pub const VM_PAGE_QUERY_PAGE_REF: ::std::os::raw::c_uint = 4;
+pub const VM_PAGE_QUERY_PAGE_DIRTY: ::std::os::raw::c_uint = 8;
+pub const VM_PAGE_QUERY_PAGE_PAGED_OUT: ::std::os::raw::c_uint = 16;
+pub const VM_PAGE_QUERY_PAGE_COPIED: ::std::os::raw::c_uint = 32;
+pub const VM_PAGE_QUERY_PAGE_SPECULATIVE: ::std::os::raw::c_uint = 64;
+pub const VM_PAGE_QUERY_PAGE_EXTERNAL: ::std::os::raw::c_uint = 128;
+pub const VM_PAGE_QUERY_PAGE_CS_VALIDATED: ::std::os::raw::c_uint = 256;
+pub const VM_PAGE_QUERY_PAGE_CS_TAINTED: ::std::os::raw::c_uint = 512;
+pub const VM_PAGE_QUERY_PAGE_CS_NX: ::std::os::raw::c_uint = 1024;
+pub const VM_FLAGS_FIXED: ::std::os::raw::c_uint = 0;
+pub const VM_FLAGS_ANYWHERE: ::std::os::raw::c_uint = 1;
+pub const VM_FLAGS_PURGABLE: ::std::os::raw::c_uint = 2;
+pub const VM_FLAGS_NO_CACHE: ::std::os::raw::c_uint = 16;
+pub const VM_FLAGS_RESILIENT_CODESIGN: ::std::os::raw::c_uint = 32;
+pub const VM_FLAGS_RESILIENT_MEDIA: ::std::os::raw::c_uint = 64;
+pub const VM_FLAGS_OVERWRITE: ::std::os::raw::c_uint = 16384;
+pub const VM_FLAGS_SUPERPAGE_MASK: ::std::os::raw::c_uint = 458752;
+pub const VM_FLAGS_RETURN_DATA_ADDR: ::std::os::raw::c_uint = 1048576;
+pub const VM_FLAGS_RETURN_4K_DATA_ADDR: ::std::os::raw::c_uint = 8388608;
+pub const VM_FLAGS_ALIAS_MASK: ::std::os::raw::c_uint = 4278190080;
+pub const VM_FLAGS_USER_ALLOCATE: ::std::os::raw::c_uint = 4278665235;
+pub const VM_FLAGS_USER_MAP: ::std::os::raw::c_uint = 4288102419;
+pub const VM_FLAGS_USER_REMAP: ::std::os::raw::c_uint = 1064993;
+pub const VM_FLAGS_SUPERPAGE_SHIFT: ::std::os::raw::c_uint = 16;
+pub const SUPERPAGE_NONE: ::std::os::raw::c_uint = 0;
+pub const SUPERPAGE_SIZE_ANY: ::std::os::raw::c_uint = 1;
+pub const VM_FLAGS_SUPERPAGE_NONE: ::std::os::raw::c_uint = 0;
+pub const VM_FLAGS_SUPERPAGE_SIZE_ANY: ::std::os::raw::c_uint = 65536;
+pub const SUPERPAGE_SIZE_2MB: ::std::os::raw::c_uint = 2;
+pub const VM_FLAGS_SUPERPAGE_SIZE_2MB: ::std::os::raw::c_uint = 131072;
+pub const VM_MEMORY_MALLOC: ::std::os::raw::c_uint = 1;
+pub const VM_MEMORY_MALLOC_SMALL: ::std::os::raw::c_uint = 2;
+pub const VM_MEMORY_MALLOC_LARGE: ::std::os::raw::c_uint = 3;
+pub const VM_MEMORY_MALLOC_HUGE: ::std::os::raw::c_uint = 4;
+pub const VM_MEMORY_SBRK: ::std::os::raw::c_uint = 5;
+pub const VM_MEMORY_REALLOC: ::std::os::raw::c_uint = 6;
+pub const VM_MEMORY_MALLOC_TINY: ::std::os::raw::c_uint = 7;
+pub const VM_MEMORY_MALLOC_LARGE_REUSABLE: ::std::os::raw::c_uint = 8;
+pub const VM_MEMORY_MALLOC_LARGE_REUSED: ::std::os::raw::c_uint = 9;
+pub const VM_MEMORY_ANALYSIS_TOOL: ::std::os::raw::c_uint = 10;
+pub const VM_MEMORY_MALLOC_NANO: ::std::os::raw::c_uint = 11;
+pub const VM_MEMORY_MACH_MSG: ::std::os::raw::c_uint = 20;
+pub const VM_MEMORY_IOKIT: ::std::os::raw::c_uint = 21;
+pub const VM_MEMORY_STACK: ::std::os::raw::c_uint = 30;
+pub const VM_MEMORY_GUARD: ::std::os::raw::c_uint = 31;
+pub const VM_MEMORY_SHARED_PMAP: ::std::os::raw::c_uint = 32;
+pub const VM_MEMORY_DYLIB: ::std::os::raw::c_uint = 33;
+pub const VM_MEMORY_OBJC_DISPATCHERS: ::std::os::raw::c_uint = 34;
+pub const VM_MEMORY_UNSHARED_PMAP: ::std::os::raw::c_uint = 35;
+pub const VM_MEMORY_APPKIT: ::std::os::raw::c_uint = 40;
+pub const VM_MEMORY_FOUNDATION: ::std::os::raw::c_uint = 41;
+pub const VM_MEMORY_COREGRAPHICS: ::std::os::raw::c_uint = 42;
+pub const VM_MEMORY_CORESERVICES: ::std::os::raw::c_uint = 43;
+pub const VM_MEMORY_CARBON: ::std::os::raw::c_uint = 43;
+pub const VM_MEMORY_JAVA: ::std::os::raw::c_uint = 44;
+pub const VM_MEMORY_COREDATA: ::std::os::raw::c_uint = 45;
+pub const VM_MEMORY_COREDATA_OBJECTIDS: ::std::os::raw::c_uint = 46;
+pub const VM_MEMORY_ATS: ::std::os::raw::c_uint = 50;
+pub const VM_MEMORY_LAYERKIT: ::std::os::raw::c_uint = 51;
+pub const VM_MEMORY_CGIMAGE: ::std::os::raw::c_uint = 52;
+pub const VM_MEMORY_TCMALLOC: ::std::os::raw::c_uint = 53;
+pub const VM_MEMORY_COREGRAPHICS_DATA: ::std::os::raw::c_uint = 54;
+pub const VM_MEMORY_COREGRAPHICS_SHARED: ::std::os::raw::c_uint = 55;
+pub const VM_MEMORY_COREGRAPHICS_FRAMEBUFFERS: ::std::os::raw::c_uint = 56;
+pub const VM_MEMORY_COREGRAPHICS_BACKINGSTORES: ::std::os::raw::c_uint = 57;
+pub const VM_MEMORY_COREGRAPHICS_MISC: ::std::os::raw::c_uint = 42;
+pub const VM_MEMORY_DYLD: ::std::os::raw::c_uint = 60;
+pub const VM_MEMORY_DYLD_MALLOC: ::std::os::raw::c_uint = 61;
+pub const VM_MEMORY_SQLITE: ::std::os::raw::c_uint = 62;
+pub const VM_MEMORY_JAVASCRIPT_CORE: ::std::os::raw::c_uint = 63;
+pub const VM_MEMORY_JAVASCRIPT_JIT_EXECUTABLE_ALLOCATOR: ::std::os::raw::c_uint = 64;
+pub const VM_MEMORY_JAVASCRIPT_JIT_REGISTER_FILE: ::std::os::raw::c_uint = 65;
+pub const VM_MEMORY_GLSL: ::std::os::raw::c_uint = 66;
+pub const VM_MEMORY_OPENCL: ::std::os::raw::c_uint = 67;
+pub const VM_MEMORY_COREIMAGE: ::std::os::raw::c_uint = 68;
+pub const VM_MEMORY_WEBCORE_PURGEABLE_BUFFERS: ::std::os::raw::c_uint = 69;
+pub const VM_MEMORY_IMAGEIO: ::std::os::raw::c_uint = 70;
+pub const VM_MEMORY_COREPROFILE: ::std::os::raw::c_uint = 71;
+pub const VM_MEMORY_ASSETSD: ::std::os::raw::c_uint = 72;
+pub const VM_MEMORY_OS_ALLOC_ONCE: ::std::os::raw::c_uint = 73;
+pub const VM_MEMORY_LIBDISPATCH: ::std::os::raw::c_uint = 74;
+pub const VM_MEMORY_ACCELERATE: ::std::os::raw::c_uint = 75;
+pub const VM_MEMORY_COREUI: ::std::os::raw::c_uint = 76;
+pub const VM_MEMORY_COREUIFILE: ::std::os::raw::c_uint = 77;
+pub const VM_MEMORY_GENEALOGY: ::std::os::raw::c_uint = 78;
+pub const VM_MEMORY_RAWCAMERA: ::std::os::raw::c_uint = 79;
+pub const VM_MEMORY_CORPSEINFO: ::std::os::raw::c_uint = 80;
+pub const VM_MEMORY_ASL: ::std::os::raw::c_uint = 81;
+pub const VM_MEMORY_APPLICATION_SPECIFIC_1: ::std::os::raw::c_uint = 240;
+pub const VM_MEMORY_APPLICATION_SPECIFIC_16: ::std::os::raw::c_uint = 255;
+pub const CPU_STATE_MAX: ::std::os::raw::c_uint = 4;
+pub const CPU_STATE_USER: ::std::os::raw::c_uint = 0;
+pub const CPU_STATE_SYSTEM: ::std::os::raw::c_uint = 1;
+pub const CPU_STATE_IDLE: ::std::os::raw::c_uint = 2;
+pub const CPU_STATE_NICE: ::std::os::raw::c_uint = 3;
+pub const CPU_ARCH_MASK: ::std::os::raw::c_uint = 4278190080;
+pub const CPU_ARCH_ABI64: ::std::os::raw::c_uint = 16777216;
+pub const CPU_SUBTYPE_MASK: ::std::os::raw::c_uint = 4278190080;
+pub const CPU_SUBTYPE_LIB64: ::std::os::raw::c_uint = 2147483648;
+pub const CPU_SUBTYPE_INTEL_FAMILY_MAX: ::std::os::raw::c_uint = 15;
+pub const CPU_SUBTYPE_INTEL_MODEL_ALL: ::std::os::raw::c_uint = 0;
+pub const CPUFAMILY_UNKNOWN: ::std::os::raw::c_uint = 0;
+pub const CPUFAMILY_POWERPC_G3: ::std::os::raw::c_uint = 3471054153;
+pub const CPUFAMILY_POWERPC_G4: ::std::os::raw::c_uint = 2009171118;
+pub const CPUFAMILY_POWERPC_G5: ::std::os::raw::c_uint = 3983988906;
+pub const CPUFAMILY_INTEL_6_13: ::std::os::raw::c_uint = 2855483691;
+pub const CPUFAMILY_INTEL_YONAH: ::std::os::raw::c_uint = 1943433984;
+pub const CPUFAMILY_INTEL_MEROM: ::std::os::raw::c_uint = 1114597871;
+pub const CPUFAMILY_INTEL_PENRYN: ::std::os::raw::c_uint = 2028621756;
+pub const CPUFAMILY_INTEL_NEHALEM: ::std::os::raw::c_uint = 1801080018;
+pub const CPUFAMILY_INTEL_WESTMERE: ::std::os::raw::c_uint = 1463508716;
+pub const CPUFAMILY_INTEL_SANDYBRIDGE: ::std::os::raw::c_uint = 1418770316;
+pub const CPUFAMILY_INTEL_IVYBRIDGE: ::std::os::raw::c_uint = 526772277;
+pub const CPUFAMILY_INTEL_HASWELL: ::std::os::raw::c_uint = 280134364;
+pub const CPUFAMILY_INTEL_BROADWELL: ::std::os::raw::c_uint = 1479463068;
+pub const CPUFAMILY_INTEL_SKYLAKE: ::std::os::raw::c_uint = 939270559;
+pub const CPUFAMILY_ARM_9: ::std::os::raw::c_uint = 3878847406;
+pub const CPUFAMILY_ARM_11: ::std::os::raw::c_uint = 2415272152;
+pub const CPUFAMILY_ARM_XSCALE: ::std::os::raw::c_uint = 1404044789;
+pub const CPUFAMILY_ARM_12: ::std::os::raw::c_uint = 3172666089;
+pub const CPUFAMILY_ARM_13: ::std::os::raw::c_uint = 214503012;
+pub const CPUFAMILY_ARM_14: ::std::os::raw::c_uint = 2517073649;
+pub const CPUFAMILY_ARM_15: ::std::os::raw::c_uint = 2823887818;
+pub const CPUFAMILY_ARM_SWIFT: ::std::os::raw::c_uint = 506291073;
+pub const CPUFAMILY_ARM_CYCLONE: ::std::os::raw::c_uint = 933271106;
+pub const CPUFAMILY_ARM_TYPHOON: ::std::os::raw::c_uint = 747742334;
+pub const CPUFAMILY_ARM_TWISTER: ::std::os::raw::c_uint = 2465937352;
+pub const CPUFAMILY_INTEL_6_14: ::std::os::raw::c_uint = 1943433984;
+pub const CPUFAMILY_INTEL_6_15: ::std::os::raw::c_uint = 1114597871;
+pub const CPUFAMILY_INTEL_6_23: ::std::os::raw::c_uint = 2028621756;
+pub const CPUFAMILY_INTEL_6_26: ::std::os::raw::c_uint = 1801080018;
+pub const CPUFAMILY_INTEL_CORE: ::std::os::raw::c_uint = 1943433984;
+pub const CPUFAMILY_INTEL_CORE2: ::std::os::raw::c_uint = 1114597871;
+pub const TIME_MICROS_MAX: ::std::os::raw::c_uint = 1000000;
+pub const HOST_INFO_MAX: ::std::os::raw::c_uint = 1024;
+pub const KERNEL_VERSION_MAX: ::std::os::raw::c_uint = 512;
+pub const KERNEL_BOOT_INFO_MAX: ::std::os::raw::c_uint = 4096;
+pub const HOST_BASIC_INFO: ::std::os::raw::c_uint = 1;
+pub const HOST_SCHED_INFO: ::std::os::raw::c_uint = 3;
+pub const HOST_RESOURCE_SIZES: ::std::os::raw::c_uint = 4;
+pub const HOST_PRIORITY_INFO: ::std::os::raw::c_uint = 5;
+pub const HOST_SEMAPHORE_TRAPS: ::std::os::raw::c_uint = 7;
+pub const HOST_MACH_MSG_TRAP: ::std::os::raw::c_uint = 8;
+pub const HOST_VM_PURGABLE: ::std::os::raw::c_uint = 9;
+pub const HOST_DEBUG_INFO_INTERNAL: ::std::os::raw::c_uint = 10;
+pub const HOST_LOAD_INFO: ::std::os::raw::c_uint = 1;
+pub const HOST_VM_INFO: ::std::os::raw::c_uint = 2;
+pub const HOST_CPU_LOAD_INFO: ::std::os::raw::c_uint = 3;
+pub const HOST_VM_INFO64: ::std::os::raw::c_uint = 4;
+pub const HOST_EXTMOD_INFO64: ::std::os::raw::c_uint = 5;
+pub const HOST_EXPIRED_TASK_INFO: ::std::os::raw::c_uint = 6;
+pub const HOST_NOTIFY_CALENDAR_CHANGE: ::std::os::raw::c_uint = 0;
+pub const HOST_NOTIFY_TYPE_MAX: ::std::os::raw::c_uint = 0;
+pub const HOST_CALENDAR_CHANGED_REPLYID: ::std::os::raw::c_uint = 950;
+pub const HOST_SECURITY_PORT: ::std::os::raw::c_uint = 0;
+pub const HOST_PORT: ::std::os::raw::c_uint = 1;
+pub const HOST_PRIV_PORT: ::std::os::raw::c_uint = 2;
+pub const HOST_IO_MASTER_PORT: ::std::os::raw::c_uint = 3;
+pub const HOST_MAX_SPECIAL_KERNEL_PORT: ::std::os::raw::c_uint = 7;
+pub const HOST_DYNAMIC_PAGER_PORT: ::std::os::raw::c_uint = 8;
+pub const HOST_AUDIT_CONTROL_PORT: ::std::os::raw::c_uint = 9;
+pub const HOST_USER_NOTIFICATION_PORT: ::std::os::raw::c_uint = 10;
+pub const HOST_AUTOMOUNTD_PORT: ::std::os::raw::c_uint = 11;
+pub const HOST_LOCKD_PORT: ::std::os::raw::c_uint = 12;
+pub const HOST_SEATBELT_PORT: ::std::os::raw::c_uint = 14;
+pub const HOST_KEXTD_PORT: ::std::os::raw::c_uint = 15;
+pub const HOST_CHUD_PORT: ::std::os::raw::c_uint = 16;
+pub const HOST_UNFREED_PORT: ::std::os::raw::c_uint = 17;
+pub const HOST_AMFID_PORT: ::std::os::raw::c_uint = 18;
+pub const HOST_GSSD_PORT: ::std::os::raw::c_uint = 19;
+pub const HOST_TELEMETRY_PORT: ::std::os::raw::c_uint = 20;
+pub const HOST_ATM_NOTIFICATION_PORT: ::std::os::raw::c_uint = 21;
+pub const HOST_COALITION_PORT: ::std::os::raw::c_uint = 22;
+pub const HOST_SYSDIAGNOSE_PORT: ::std::os::raw::c_uint = 23;
+pub const HOST_XPC_EXCEPTION_PORT: ::std::os::raw::c_uint = 24;
+pub const HOST_CONTAINERD_PORT: ::std::os::raw::c_uint = 25;
+pub const HOST_MAX_SPECIAL_PORT: ::std::os::raw::c_uint = 25;
+pub const HOST_LOCAL_NODE: ::std::os::raw::c_int = -1;
+pub const VM_PROT_MEMORY_TAG_MASK: ::std::os::raw::c_uint = 4278190080;
+pub const VM_PROT_MEMORY_TAG_SHIFT: ::std::os::raw::c_uint = 24;
+pub const MEMORY_OBJECT_COPY_NONE: ::std::os::raw::c_uint = 0;
+pub const MEMORY_OBJECT_COPY_CALL: ::std::os::raw::c_uint = 1;
+pub const MEMORY_OBJECT_COPY_DELAY: ::std::os::raw::c_uint = 2;
+pub const MEMORY_OBJECT_COPY_TEMPORARY: ::std::os::raw::c_uint = 3;
+pub const MEMORY_OBJECT_COPY_SYMMETRIC: ::std::os::raw::c_uint = 4;
+pub const MEMORY_OBJECT_COPY_INVALID: ::std::os::raw::c_uint = 5;
+pub const MEMORY_OBJECT_RETURN_NONE: ::std::os::raw::c_uint = 0;
+pub const MEMORY_OBJECT_RETURN_DIRTY: ::std::os::raw::c_uint = 1;
+pub const MEMORY_OBJECT_RETURN_ALL: ::std::os::raw::c_uint = 2;
+pub const MEMORY_OBJECT_RETURN_ANYTHING: ::std::os::raw::c_uint = 3;
+pub const MEMORY_OBJECT_DATA_FLUSH: ::std::os::raw::c_uint = 1;
+pub const MEMORY_OBJECT_DATA_NO_CHANGE: ::std::os::raw::c_uint = 2;
+pub const MEMORY_OBJECT_DATA_PURGE: ::std::os::raw::c_uint = 4;
+pub const MEMORY_OBJECT_COPY_SYNC: ::std::os::raw::c_uint = 8;
+pub const MEMORY_OBJECT_DATA_SYNC: ::std::os::raw::c_uint = 16;
+pub const MEMORY_OBJECT_IO_SYNC: ::std::os::raw::c_uint = 32;
+pub const MEMORY_OBJECT_DATA_FLUSH_ALL: ::std::os::raw::c_uint = 64;
+pub const MEMORY_OBJECT_INFO_MAX: ::std::os::raw::c_uint = 1024;
+pub const MEMORY_OBJECT_PERFORMANCE_INFO: ::std::os::raw::c_uint = 11;
+pub const MEMORY_OBJECT_ATTRIBUTE_INFO: ::std::os::raw::c_uint = 14;
+pub const MEMORY_OBJECT_BEHAVIOR_INFO: ::std::os::raw::c_uint = 15;
+pub const MEMORY_OBJECT_TERMINATE_IDLE: ::std::os::raw::c_uint = 1;
+pub const MEMORY_OBJECT_RESPECT_CACHE: ::std::os::raw::c_uint = 2;
+pub const MEMORY_OBJECT_RELEASE_NO_OP: ::std::os::raw::c_uint = 4;
+pub const MAP_MEM_NOOP: ::std::os::raw::c_uint = 0;
+pub const MAP_MEM_COPYBACK: ::std::os::raw::c_uint = 1;
+pub const MAP_MEM_IO: ::std::os::raw::c_uint = 2;
+pub const MAP_MEM_WTHRU: ::std::os::raw::c_uint = 3;
+pub const MAP_MEM_WCOMB: ::std::os::raw::c_uint = 4;
+pub const MAP_MEM_INNERWBACK: ::std::os::raw::c_uint = 5;
+pub const MAP_MEM_ONLY: ::std::os::raw::c_uint = 65536;
+pub const MAP_MEM_NAMED_CREATE: ::std::os::raw::c_uint = 131072;
+pub const MAP_MEM_PURGABLE: ::std::os::raw::c_uint = 262144;
+pub const MAP_MEM_NAMED_REUSE: ::std::os::raw::c_uint = 524288;
+pub const MAP_MEM_USE_DATA_ADDR: ::std::os::raw::c_uint = 1048576;
+pub const MAP_MEM_VM_COPY: ::std::os::raw::c_uint = 2097152;
+pub const MAP_MEM_VM_SHARE: ::std::os::raw::c_uint = 4194304;
+pub const MAP_MEM_4K_DATA_ADDR: ::std::os::raw::c_uint = 8388608;
+pub const EXC_TYPES_COUNT: ::std::os::raw::c_uint = 14;
+pub const EXCEPTION_CODE_MAX: ::std::os::raw::c_uint = 2;
+pub const EXC_I386_INVOP: ::std::os::raw::c_uint = 1;
+pub const EXC_I386_DIV: ::std::os::raw::c_uint = 1;
+pub const EXC_I386_INTO: ::std::os::raw::c_uint = 2;
+pub const EXC_I386_NOEXT: ::std::os::raw::c_uint = 3;
+pub const EXC_I386_EXTOVR: ::std::os::raw::c_uint = 4;
+pub const EXC_I386_EXTERR: ::std::os::raw::c_uint = 5;
+pub const EXC_I386_EMERR: ::std::os::raw::c_uint = 6;
+pub const EXC_I386_BOUND: ::std::os::raw::c_uint = 7;
+pub const EXC_I386_SSEEXTERR: ::std::os::raw::c_uint = 8;
+pub const EXC_I386_SGL: ::std::os::raw::c_uint = 1;
+pub const EXC_I386_BPT: ::std::os::raw::c_uint = 2;
+pub const EXC_I386_DIVERR: ::std::os::raw::c_uint = 0;
+pub const EXC_I386_SGLSTP: ::std::os::raw::c_uint = 1;
+pub const EXC_I386_NMIFLT: ::std::os::raw::c_uint = 2;
+pub const EXC_I386_BPTFLT: ::std::os::raw::c_uint = 3;
+pub const EXC_I386_INTOFLT: ::std::os::raw::c_uint = 4;
+pub const EXC_I386_BOUNDFLT: ::std::os::raw::c_uint = 5;
+pub const EXC_I386_INVOPFLT: ::std::os::raw::c_uint = 6;
+pub const EXC_I386_NOEXTFLT: ::std::os::raw::c_uint = 7;
+pub const EXC_I386_DBLFLT: ::std::os::raw::c_uint = 8;
+pub const EXC_I386_EXTOVRFLT: ::std::os::raw::c_uint = 9;
+pub const EXC_I386_INVTSSFLT: ::std::os::raw::c_uint = 10;
+pub const EXC_I386_SEGNPFLT: ::std::os::raw::c_uint = 11;
+pub const EXC_I386_STKFLT: ::std::os::raw::c_uint = 12;
+pub const EXC_I386_GPFLT: ::std::os::raw::c_uint = 13;
+pub const EXC_I386_PGFLT: ::std::os::raw::c_uint = 14;
+pub const EXC_I386_EXTERRFLT: ::std::os::raw::c_uint = 16;
+pub const EXC_I386_ALIGNFLT: ::std::os::raw::c_uint = 17;
+pub const EXC_I386_ENDPERR: ::std::os::raw::c_uint = 33;
+pub const EXC_I386_ENOEXTFLT: ::std::os::raw::c_uint = 32;
+pub const EXC_MASK_MACHINE: ::std::os::raw::c_uint = 0;
+pub const EXC_BAD_ACCESS: ::std::os::raw::c_uint = 1;
+pub const EXC_BAD_INSTRUCTION: ::std::os::raw::c_uint = 2;
+pub const EXC_ARITHMETIC: ::std::os::raw::c_uint = 3;
+pub const EXC_EMULATION: ::std::os::raw::c_uint = 4;
+pub const EXC_SOFTWARE: ::std::os::raw::c_uint = 5;
+pub const EXC_BREAKPOINT: ::std::os::raw::c_uint = 6;
+pub const EXC_SYSCALL: ::std::os::raw::c_uint = 7;
+pub const EXC_MACH_SYSCALL: ::std::os::raw::c_uint = 8;
+pub const EXC_RPC_ALERT: ::std::os::raw::c_uint = 9;
+pub const EXC_CRASH: ::std::os::raw::c_uint = 10;
+pub const EXC_RESOURCE: ::std::os::raw::c_uint = 11;
+pub const EXC_GUARD: ::std::os::raw::c_uint = 12;
+pub const EXC_CORPSE_NOTIFY: ::std::os::raw::c_uint = 13;
+pub const EXCEPTION_DEFAULT: ::std::os::raw::c_uint = 1;
+pub const EXCEPTION_STATE: ::std::os::raw::c_uint = 2;
+pub const EXCEPTION_STATE_IDENTITY: ::std::os::raw::c_uint = 3;
+pub const MACH_EXCEPTION_CODES: ::std::os::raw::c_uint = 2147483648;
+pub const EXC_MASK_BAD_ACCESS: ::std::os::raw::c_uint = 2;
+pub const EXC_MASK_BAD_INSTRUCTION: ::std::os::raw::c_uint = 4;
+pub const EXC_MASK_ARITHMETIC: ::std::os::raw::c_uint = 8;
+pub const EXC_MASK_EMULATION: ::std::os::raw::c_uint = 16;
+pub const EXC_MASK_SOFTWARE: ::std::os::raw::c_uint = 32;
+pub const EXC_MASK_BREAKPOINT: ::std::os::raw::c_uint = 64;
+pub const EXC_MASK_SYSCALL: ::std::os::raw::c_uint = 128;
+pub const EXC_MASK_MACH_SYSCALL: ::std::os::raw::c_uint = 256;
+pub const EXC_MASK_RPC_ALERT: ::std::os::raw::c_uint = 512;
+pub const EXC_MASK_CRASH: ::std::os::raw::c_uint = 1024;
+pub const EXC_MASK_RESOURCE: ::std::os::raw::c_uint = 2048;
+pub const EXC_MASK_GUARD: ::std::os::raw::c_uint = 4096;
+pub const EXC_MASK_CORPSE_NOTIFY: ::std::os::raw::c_uint = 8192;
+pub const EXC_MASK_ALL: ::std::os::raw::c_uint = 7166;
+pub const FIRST_EXCEPTION: ::std::os::raw::c_uint = 1;
+pub const EXC_SOFT_SIGNAL: ::std::os::raw::c_uint = 65539;
+pub const EXC_MACF_MIN: ::std::os::raw::c_uint = 131072;
+pub const EXC_MACF_MAX: ::std::os::raw::c_uint = 196607;
+pub const FP_PREC_24B: ::std::os::raw::c_uint = 0;
+pub const FP_PREC_53B: ::std::os::raw::c_uint = 2;
+pub const FP_PREC_64B: ::std::os::raw::c_uint = 3;
+pub const FP_RND_NEAR: ::std::os::raw::c_uint = 0;
+pub const FP_RND_DOWN: ::std::os::raw::c_uint = 1;
+pub const FP_RND_UP: ::std::os::raw::c_uint = 2;
+pub const FP_CHOP: ::std::os::raw::c_uint = 3;
+pub const FP_STATE_BYTES: ::std::os::raw::c_uint = 512;
+pub const FPC_IE: ::std::os::raw::c_uint = 1;
+pub const FPC_IM: ::std::os::raw::c_uint = 1;
+pub const FPC_DE: ::std::os::raw::c_uint = 2;
+pub const FPC_DM: ::std::os::raw::c_uint = 2;
+pub const FPC_ZE: ::std::os::raw::c_uint = 4;
+pub const FPC_ZM: ::std::os::raw::c_uint = 4;
+pub const FPC_OE: ::std::os::raw::c_uint = 8;
+pub const FPC_OM: ::std::os::raw::c_uint = 8;
+pub const FPC_UE: ::std::os::raw::c_uint = 16;
+pub const FPC_PE: ::std::os::raw::c_uint = 32;
+pub const FPC_PC: ::std::os::raw::c_uint = 768;
+pub const FPC_PC_24: ::std::os::raw::c_uint = 0;
+pub const FPC_PC_53: ::std::os::raw::c_uint = 512;
+pub const FPC_PC_64: ::std::os::raw::c_uint = 768;
+pub const FPC_RC: ::std::os::raw::c_uint = 3072;
+pub const FPC_RC_RN: ::std::os::raw::c_uint = 0;
+pub const FPC_RC_RD: ::std::os::raw::c_uint = 1024;
+pub const FPC_RC_RU: ::std::os::raw::c_uint = 2048;
+pub const FPC_RC_CHOP: ::std::os::raw::c_uint = 3072;
+pub const FPC_IC: ::std::os::raw::c_uint = 4096;
+pub const FPC_IC_PROJ: ::std::os::raw::c_uint = 0;
+pub const FPC_IC_AFF: ::std::os::raw::c_uint = 4096;
+pub const FPS_IE: ::std::os::raw::c_uint = 1;
+pub const FPS_DE: ::std::os::raw::c_uint = 2;
+pub const FPS_ZE: ::std::os::raw::c_uint = 4;
+pub const FPS_OE: ::std::os::raw::c_uint = 8;
+pub const FPS_UE: ::std::os::raw::c_uint = 16;
+pub const FPS_PE: ::std::os::raw::c_uint = 32;
+pub const FPS_SF: ::std::os::raw::c_uint = 64;
+pub const FPS_ES: ::std::os::raw::c_uint = 128;
+pub const FPS_C0: ::std::os::raw::c_uint = 256;
+pub const FPS_C1: ::std::os::raw::c_uint = 512;
+pub const FPS_C2: ::std::os::raw::c_uint = 1024;
+pub const FPS_TOS: ::std::os::raw::c_uint = 14336;
+pub const FPS_TOS_SHIFT: ::std::os::raw::c_uint = 11;
+pub const FPS_C3: ::std::os::raw::c_uint = 16384;
+pub const FPS_BUSY: ::std::os::raw::c_uint = 32768;
+pub const FP_NO: ::std::os::raw::c_uint = 0;
+pub const FP_SOFT: ::std::os::raw::c_uint = 1;
+pub const FP_287: ::std::os::raw::c_uint = 2;
+pub const FP_387: ::std::os::raw::c_uint = 3;
+pub const FP_FXSR: ::std::os::raw::c_uint = 4;
+pub const I386_THREAD_STATE_MAX: ::std::os::raw::c_uint = 224;
+pub const THREAD_STATE_MAX: ::std::os::raw::c_uint = 224;
+pub const EFL_CF: ::std::os::raw::c_uint = 1;
+pub const EFL_PF: ::std::os::raw::c_uint = 4;
+pub const EFL_AF: ::std::os::raw::c_uint = 16;
+pub const EFL_ZF: ::std::os::raw::c_uint = 64;
+pub const EFL_SF: ::std::os::raw::c_uint = 128;
+pub const EFL_TF: ::std::os::raw::c_uint = 256;
+pub const EFL_IF: ::std::os::raw::c_uint = 512;
+pub const EFL_DF: ::std::os::raw::c_uint = 1024;
+pub const EFL_OF: ::std::os::raw::c_uint = 2048;
+pub const EFL_IOPL: ::std::os::raw::c_uint = 12288;
+pub const EFL_IOPL_KERNEL: ::std::os::raw::c_uint = 0;
+pub const EFL_IOPL_USER: ::std::os::raw::c_uint = 12288;
+pub const EFL_NT: ::std::os::raw::c_uint = 16384;
+pub const EFL_RF: ::std::os::raw::c_uint = 65536;
+pub const EFL_VM: ::std::os::raw::c_uint = 131072;
+pub const EFL_AC: ::std::os::raw::c_uint = 262144;
+pub const EFL_VIF: ::std::os::raw::c_uint = 524288;
+pub const EFL_VIP: ::std::os::raw::c_uint = 1048576;
+pub const EFL_ID: ::std::os::raw::c_uint = 2097152;
+pub const EFL_CLR: ::std::os::raw::c_uint = 4294475816;
+pub const EFL_SET: ::std::os::raw::c_uint = 2;
+pub const EFL_USER_SET: ::std::os::raw::c_uint = 512;
+pub const EFL_USER_CLEAR: ::std::os::raw::c_uint = 94208;
+pub const i386_THREAD_STATE: ::std::os::raw::c_uint = 1;
+pub const i386_FLOAT_STATE: ::std::os::raw::c_uint = 2;
+pub const i386_EXCEPTION_STATE: ::std::os::raw::c_uint = 3;
+pub const x86_THREAD_STATE32: ::std::os::raw::c_uint = 1;
+pub const x86_FLOAT_STATE32: ::std::os::raw::c_uint = 2;
+pub const x86_EXCEPTION_STATE32: ::std::os::raw::c_uint = 3;
+pub const x86_THREAD_STATE64: ::std::os::raw::c_uint = 4;
+pub const x86_FLOAT_STATE64: ::std::os::raw::c_uint = 5;
+pub const x86_EXCEPTION_STATE64: ::std::os::raw::c_uint = 6;
+pub const x86_THREAD_STATE: ::std::os::raw::c_uint = 7;
+pub const x86_FLOAT_STATE: ::std::os::raw::c_uint = 8;
+pub const x86_EXCEPTION_STATE: ::std::os::raw::c_uint = 9;
+pub const x86_DEBUG_STATE32: ::std::os::raw::c_uint = 10;
+pub const x86_DEBUG_STATE64: ::std::os::raw::c_uint = 11;
+pub const x86_DEBUG_STATE: ::std::os::raw::c_uint = 12;
+pub const THREAD_STATE_NONE: ::std::os::raw::c_uint = 13;
+pub const x86_AVX_STATE32: ::std::os::raw::c_uint = 16;
+pub const x86_AVX_STATE64: ::std::os::raw::c_uint = 17;
+pub const x86_AVX_STATE: ::std::os::raw::c_uint = 18;
+pub const THREAD_MACHINE_STATE_MAX: ::std::os::raw::c_uint = 224;
+pub const USER_CODE_SELECTOR: ::std::os::raw::c_uint = 23;
+pub const USER_DATA_SELECTOR: ::std::os::raw::c_uint = 31;
+pub const KERN_CODE_SELECTOR: ::std::os::raw::c_uint = 8;
+pub const KERN_DATA_SELECTOR: ::std::os::raw::c_uint = 16;
+pub const MACHINE_THREAD_STATE: ::std::os::raw::c_uint = 7;
+pub const THREAD_STATE_FLAVOR_LIST: ::std::os::raw::c_uint = 0;
+pub const THREAD_STATE_FLAVOR_LIST_NEW: ::std::os::raw::c_uint = 128;
+pub const THREAD_STATE_FLAVOR_LIST_10_9: ::std::os::raw::c_uint = 129;
+pub const MACH_VOUCHER_IMPORTANCE_ATTR_ADD_EXTERNAL: ::std::os::raw::c_uint = 1;
+pub const MACH_VOUCHER_IMPORTANCE_ATTR_DROP_EXTERNAL: ::std::os::raw::c_uint = 2;
+pub const PROCESSOR_INFO_MAX: ::std::os::raw::c_uint = 1024;
+pub const PROCESSOR_SET_INFO_MAX: ::std::os::raw::c_uint = 1024;
+pub const PROCESSOR_BASIC_INFO: ::std::os::raw::c_uint = 1;
+pub const PROCESSOR_CPU_LOAD_INFO: ::std::os::raw::c_uint = 2;
+pub const PROCESSOR_PM_REGS_INFO: ::std::os::raw::c_uint = 268435457;
+pub const PROCESSOR_TEMPERATURE: ::std::os::raw::c_uint = 268435458;
+pub const LOAD_SCALE: ::std::os::raw::c_uint = 1000;
+pub const PROCESSOR_SET_BASIC_INFO: ::std::os::raw::c_uint = 5;
+pub const PROCESSOR_SET_LOAD_INFO: ::std::os::raw::c_uint = 4;
+pub const POLICY_NULL: ::std::os::raw::c_uint = 0;
+pub const POLICY_TIMESHARE: ::std::os::raw::c_uint = 1;
+pub const POLICY_RR: ::std::os::raw::c_uint = 2;
+pub const POLICY_FIFO: ::std::os::raw::c_uint = 4;
+pub const POLICYCLASS_FIXEDPRI: ::std::os::raw::c_uint = 6;
+pub const TASK_INFO_MAX: ::std::os::raw::c_uint = 1024;
+pub const TASK_BASIC_INFO_32: ::std::os::raw::c_uint = 4;
+pub const TASK_BASIC2_INFO_32: ::std::os::raw::c_uint = 6;
+pub const TASK_BASIC_INFO_64: ::std::os::raw::c_uint = 5;
+pub const TASK_BASIC_INFO: ::std::os::raw::c_uint = 5;
+pub const TASK_EVENTS_INFO: ::std::os::raw::c_uint = 2;
+pub const TASK_THREAD_TIMES_INFO: ::std::os::raw::c_uint = 3;
+pub const TASK_ABSOLUTETIME_INFO: ::std::os::raw::c_uint = 1;
+pub const TASK_KERNELMEMORY_INFO: ::std::os::raw::c_uint = 7;
+pub const TASK_SECURITY_TOKEN: ::std::os::raw::c_uint = 13;
+pub const TASK_AUDIT_TOKEN: ::std::os::raw::c_uint = 15;
+pub const TASK_AFFINITY_TAG_INFO: ::std::os::raw::c_uint = 16;
+pub const TASK_DYLD_INFO: ::std::os::raw::c_uint = 17;
+pub const TASK_DYLD_ALL_IMAGE_INFO_32: ::std::os::raw::c_uint = 0;
+pub const TASK_DYLD_ALL_IMAGE_INFO_64: ::std::os::raw::c_uint = 1;
+pub const TASK_EXTMOD_INFO: ::std::os::raw::c_uint = 19;
+pub const MACH_TASK_BASIC_INFO: ::std::os::raw::c_uint = 20;
+pub const TASK_POWER_INFO: ::std::os::raw::c_uint = 21;
+pub const TASK_VM_INFO: ::std::os::raw::c_uint = 22;
+pub const TASK_VM_INFO_PURGEABLE: ::std::os::raw::c_uint = 23;
+pub const TASK_TRACE_MEMORY_INFO: ::std::os::raw::c_uint = 24;
+pub const TASK_WAIT_STATE_INFO: ::std::os::raw::c_uint = 25;
+pub const TASK_POWER_INFO_V2: ::std::os::raw::c_uint = 26;
+pub const TASK_VM_INFO_PURGEABLE_ACCOUNT: ::std::os::raw::c_uint = 27;
+pub const TASK_FLAGS_INFO: ::std::os::raw::c_uint = 28;
+pub const TF_LP64: ::std::os::raw::c_uint = 1;
+pub const TASK_DEBUG_INFO_INTERNAL: ::std::os::raw::c_uint = 29;
+pub const TASK_SCHED_TIMESHARE_INFO: ::std::os::raw::c_uint = 10;
+pub const TASK_SCHED_RR_INFO: ::std::os::raw::c_uint = 11;
+pub const TASK_SCHED_FIFO_INFO: ::std::os::raw::c_uint = 12;
+pub const TASK_SCHED_INFO: ::std::os::raw::c_uint = 14;
+pub const TASK_CATEGORY_POLICY: ::std::os::raw::c_uint = 1;
+pub const TASK_SUPPRESSION_POLICY: ::std::os::raw::c_uint = 3;
+pub const TASK_POLICY_STATE: ::std::os::raw::c_uint = 4;
+pub const TASK_BASE_QOS_POLICY: ::std::os::raw::c_uint = 8;
+pub const TASK_OVERRIDE_QOS_POLICY: ::std::os::raw::c_uint = 9;
+pub const TASK_BASE_LATENCY_QOS_POLICY: ::std::os::raw::c_uint = 10;
+pub const TASK_BASE_THROUGHPUT_QOS_POLICY: ::std::os::raw::c_uint = 11;
+pub const PROC_FLAG_DARWINBG: ::std::os::raw::c_uint = 32768;
+pub const PROC_FLAG_EXT_DARWINBG: ::std::os::raw::c_uint = 65536;
+pub const PROC_FLAG_IOS_APPLEDAEMON: ::std::os::raw::c_uint = 131072;
+pub const PROC_FLAG_IOS_IMPPROMOTION: ::std::os::raw::c_uint = 524288;
+pub const PROC_FLAG_ADAPTIVE: ::std::os::raw::c_uint = 1048576;
+pub const PROC_FLAG_ADAPTIVE_IMPORTANT: ::std::os::raw::c_uint = 2097152;
+pub const PROC_FLAG_IMPORTANCE_DONOR: ::std::os::raw::c_uint = 4194304;
+pub const PROC_FLAG_SUPPRESSED: ::std::os::raw::c_uint = 8388608;
+pub const PROC_FLAG_APPLICATION: ::std::os::raw::c_uint = 16777216;
+pub const PROC_FLAG_IOS_APPLICATION: ::std::os::raw::c_uint = 16777216;
+pub const TASK_KERNEL_PORT: ::std::os::raw::c_uint = 1;
+pub const TASK_HOST_PORT: ::std::os::raw::c_uint = 2;
+pub const TASK_NAME_PORT: ::std::os::raw::c_uint = 3;
+pub const TASK_BOOTSTRAP_PORT: ::std::os::raw::c_uint = 4;
+pub const TASK_SEATBELT_PORT: ::std::os::raw::c_uint = 7;
+pub const TASK_ACCESS_PORT: ::std::os::raw::c_uint = 9;
+pub const TASK_DEBUG_CONTROL_PORT: ::std::os::raw::c_uint = 10;
+pub const THREAD_INFO_MAX: ::std::os::raw::c_uint = 32;
+pub const THREAD_BASIC_INFO: ::std::os::raw::c_uint = 3;
+pub const THREAD_IDENTIFIER_INFO: ::std::os::raw::c_uint = 4;
+pub const TH_USAGE_SCALE: ::std::os::raw::c_uint = 1000;
+pub const TH_STATE_RUNNING: ::std::os::raw::c_uint = 1;
+pub const TH_STATE_STOPPED: ::std::os::raw::c_uint = 2;
+pub const TH_STATE_WAITING: ::std::os::raw::c_uint = 3;
+pub const TH_STATE_UNINTERRUPTIBLE: ::std::os::raw::c_uint = 4;
+pub const TH_STATE_HALTED: ::std::os::raw::c_uint = 5;
+pub const TH_FLAGS_SWAPPED: ::std::os::raw::c_uint = 1;
+pub const TH_FLAGS_IDLE: ::std::os::raw::c_uint = 2;
+pub const TH_FLAGS_GLOBAL_FORCED_IDLE: ::std::os::raw::c_uint = 4;
+pub const THREAD_EXTENDED_INFO: ::std::os::raw::c_uint = 5;
+pub const MAXTHREADNAMESIZE: ::std::os::raw::c_uint = 64;
+pub const THREAD_DEBUG_INFO_INTERNAL: ::std::os::raw::c_uint = 6;
+pub const IO_NUM_PRIORITIES: ::std::os::raw::c_uint = 4;
+pub const THREAD_SCHED_TIMESHARE_INFO: ::std::os::raw::c_uint = 10;
+pub const THREAD_SCHED_RR_INFO: ::std::os::raw::c_uint = 11;
+pub const THREAD_SCHED_FIFO_INFO: ::std::os::raw::c_uint = 12;
+pub const THREAD_STANDARD_POLICY: ::std::os::raw::c_uint = 1;
+pub const THREAD_STANDARD_POLICY_COUNT: ::std::os::raw::c_uint = 0;
+pub const THREAD_EXTENDED_POLICY: ::std::os::raw::c_uint = 1;
+pub const THREAD_TIME_CONSTRAINT_POLICY: ::std::os::raw::c_uint = 2;
+pub const THREAD_PRECEDENCE_POLICY: ::std::os::raw::c_uint = 3;
+pub const THREAD_AFFINITY_POLICY: ::std::os::raw::c_uint = 4;
+pub const THREAD_AFFINITY_TAG_NULL: ::std::os::raw::c_uint = 0;
+pub const THREAD_BACKGROUND_POLICY: ::std::os::raw::c_uint = 5;
+pub const THREAD_LATENCY_QOS_POLICY: ::std::os::raw::c_uint = 7;
+pub const THREAD_THROUGHPUT_QOS_POLICY: ::std::os::raw::c_uint = 8;
+pub const THREAD_KERNEL_PORT: ::std::os::raw::c_uint = 1;
+pub const SYSTEM_CLOCK: ::std::os::raw::c_uint = 0;
+pub const CALENDAR_CLOCK: ::std::os::raw::c_uint = 1;
+pub const REALTIME_CLOCK: ::std::os::raw::c_uint = 0;
+pub const CLOCK_GET_TIME_RES: ::std::os::raw::c_uint = 1;
+pub const CLOCK_ALARM_CURRES: ::std::os::raw::c_uint = 3;
+pub const CLOCK_ALARM_MINRES: ::std::os::raw::c_uint = 4;
+pub const CLOCK_ALARM_MAXRES: ::std::os::raw::c_uint = 5;
+pub const NSEC_PER_USEC: ::std::os::raw::c_uint = 1000;
+pub const USEC_PER_SEC: ::std::os::raw::c_uint = 1000000;
+pub const NSEC_PER_SEC: ::std::os::raw::c_uint = 1000000000;
+pub const NSEC_PER_MSEC: ::std::os::raw::c_uint = 1000000;
+pub const ALRMTYPE: ::std::os::raw::c_uint = 255;
+pub const TIME_ABSOLUTE: ::std::os::raw::c_uint = 0;
+pub const TIME_RELATIVE: ::std::os::raw::c_uint = 1;
+pub const MATTR_CACHE: ::std::os::raw::c_uint = 1;
+pub const MATTR_MIGRATE: ::std::os::raw::c_uint = 2;
+pub const MATTR_REPLICATE: ::std::os::raw::c_uint = 4;
+pub const MATTR_VAL_OFF: ::std::os::raw::c_uint = 0;
+pub const MATTR_VAL_ON: ::std::os::raw::c_uint = 1;
+pub const MATTR_VAL_GET: ::std::os::raw::c_uint = 2;
+pub const MATTR_VAL_CACHE_FLUSH: ::std::os::raw::c_uint = 6;
+pub const MATTR_VAL_DCACHE_FLUSH: ::std::os::raw::c_uint = 7;
+pub const MATTR_VAL_ICACHE_FLUSH: ::std::os::raw::c_uint = 8;
+pub const MATTR_VAL_CACHE_SYNC: ::std::os::raw::c_uint = 9;
+pub const MATTR_VAL_GET_INFO: ::std::os::raw::c_uint = 10;
+pub const VM_PURGABLE_NO_AGING_SHIFT: ::std::os::raw::c_uint = 16;
+pub const VM_PURGABLE_NO_AGING_MASK: ::std::os::raw::c_uint = 65536;
+pub const VM_PURGABLE_NO_AGING: ::std::os::raw::c_uint = 65536;
+pub const VM_PURGABLE_DEBUG_SHIFT: ::std::os::raw::c_uint = 12;
+pub const VM_PURGABLE_DEBUG_MASK: ::std::os::raw::c_uint = 12288;
+pub const VM_PURGABLE_DEBUG_EMPTY: ::std::os::raw::c_uint = 4096;
+pub const VM_PURGABLE_DEBUG_FAULT: ::std::os::raw::c_uint = 8192;
+pub const VM_VOLATILE_GROUP_SHIFT: ::std::os::raw::c_uint = 8;
+pub const VM_VOLATILE_GROUP_MASK: ::std::os::raw::c_uint = 1792;
+pub const VM_VOLATILE_GROUP_0: ::std::os::raw::c_uint = 0;
+pub const VM_VOLATILE_GROUP_1: ::std::os::raw::c_uint = 256;
+pub const VM_VOLATILE_GROUP_2: ::std::os::raw::c_uint = 512;
+pub const VM_VOLATILE_GROUP_3: ::std::os::raw::c_uint = 768;
+pub const VM_VOLATILE_GROUP_4: ::std::os::raw::c_uint = 1024;
+pub const VM_VOLATILE_GROUP_5: ::std::os::raw::c_uint = 1280;
+pub const VM_VOLATILE_GROUP_6: ::std::os::raw::c_uint = 1536;
+pub const VM_VOLATILE_GROUP_7: ::std::os::raw::c_uint = 1792;
+pub const VM_PURGABLE_BEHAVIOR_SHIFT: ::std::os::raw::c_uint = 6;
+pub const VM_PURGABLE_BEHAVIOR_MASK: ::std::os::raw::c_uint = 64;
+pub const VM_PURGABLE_BEHAVIOR_FIFO: ::std::os::raw::c_uint = 0;
+pub const VM_PURGABLE_BEHAVIOR_LIFO: ::std::os::raw::c_uint = 64;
+pub const VM_PURGABLE_ORDERING_SHIFT: ::std::os::raw::c_uint = 5;
+pub const VM_PURGABLE_ORDERING_MASK: ::std::os::raw::c_uint = 32;
+pub const VM_PURGABLE_ORDERING_OBSOLETE: ::std::os::raw::c_uint = 32;
+pub const VM_PURGABLE_ORDERING_NORMAL: ::std::os::raw::c_uint = 0;
+pub const VM_VOLATILE_ORDER_SHIFT: ::std::os::raw::c_uint = 4;
+pub const VM_VOLATILE_ORDER_MASK: ::std::os::raw::c_uint = 16;
+pub const VM_VOLATILE_MAKE_FIRST_IN_GROUP: ::std::os::raw::c_uint = 16;
+pub const VM_VOLATILE_MAKE_LAST_IN_GROUP: ::std::os::raw::c_uint = 0;
+pub const VM_PURGABLE_STATE_MIN: ::std::os::raw::c_uint = 0;
+pub const VM_PURGABLE_STATE_MAX: ::std::os::raw::c_uint = 3;
+pub const VM_PURGABLE_STATE_MASK: ::std::os::raw::c_uint = 3;
+pub const VM_PURGABLE_NONVOLATILE: ::std::os::raw::c_uint = 0;
+pub const VM_PURGABLE_VOLATILE: ::std::os::raw::c_uint = 1;
+pub const VM_PURGABLE_EMPTY: ::std::os::raw::c_uint = 2;
+pub const VM_PURGABLE_DENY: ::std::os::raw::c_uint = 3;
+pub const VM_PURGABLE_ALL_MASKS: ::std::os::raw::c_uint = 79731;
+pub const VM_REGION_INFO_MAX: ::std::os::raw::c_uint = 1024;
+pub const VM_REGION_BASIC_INFO_64: ::std::os::raw::c_uint = 9;
+pub const VM_REGION_BASIC_INFO: ::std::os::raw::c_uint = 10;
+pub const SM_COW: ::std::os::raw::c_uint = 1;
+pub const SM_PRIVATE: ::std::os::raw::c_uint = 2;
+pub const SM_EMPTY: ::std::os::raw::c_uint = 3;
+pub const SM_SHARED: ::std::os::raw::c_uint = 4;
+pub const SM_TRUESHARED: ::std::os::raw::c_uint = 5;
+pub const SM_PRIVATE_ALIASED: ::std::os::raw::c_uint = 6;
+pub const SM_SHARED_ALIASED: ::std::os::raw::c_uint = 7;
+pub const SM_LARGE_PAGE: ::std::os::raw::c_uint = 8;
+pub const VM_REGION_EXTENDED_INFO: ::std::os::raw::c_uint = 13;
+pub const VM_REGION_TOP_INFO: ::std::os::raw::c_uint = 12;
+pub const VM_MAP_ENTRY_MAX: ::std::os::raw::c_uint = 256;
+pub const VM_PAGE_INFO_BASIC: ::std::os::raw::c_uint = 1;
+pub const KMOD_MAX_NAME: ::std::os::raw::c_uint = 64;
+pub const KMOD_RETURN_SUCCESS: ::std::os::raw::c_uint = 0;
+pub const KMOD_RETURN_FAILURE: ::std::os::raw::c_uint = 5;
+pub const KMOD_INFO_VERSION: ::std::os::raw::c_uint = 1;
+pub const __DARWIN_WCHAR_MIN: ::std::os::raw::c_int = -2147483648;
+pub const _FORTIFY_SOURCE: ::std::os::raw::c_uint = 2;
+pub const _USE_FORTIFY_LEVEL: ::std::os::raw::c_uint = 2;
+pub const __HAS_FIXED_CHK_PROTOTYPES: ::std::os::raw::c_uint = 1;
+pub const NDR_PROTOCOL_2_0: ::std::os::raw::c_uint = 0;
+pub const NDR_INT_BIG_ENDIAN: ::std::os::raw::c_uint = 0;
+pub const NDR_INT_LITTLE_ENDIAN: ::std::os::raw::c_uint = 1;
+pub const NDR_FLOAT_IEEE: ::std::os::raw::c_uint = 0;
+pub const NDR_FLOAT_VAX: ::std::os::raw::c_uint = 1;
+pub const NDR_FLOAT_CRAY: ::std::os::raw::c_uint = 2;
+pub const NDR_FLOAT_IBM: ::std::os::raw::c_uint = 3;
+pub const NDR_CHAR_ASCII: ::std::os::raw::c_uint = 0;
+pub const NDR_CHAR_EBCDIC: ::std::os::raw::c_uint = 1;
+pub const __NDR_convert__: ::std::os::raw::c_uint = 0;
+pub const __NDR_convert__int_rep__: ::std::os::raw::c_uint = 0;
+pub const __NDR_convert__char_rep__: ::std::os::raw::c_uint = 0;
+pub const __NDR_convert__float_rep__: ::std::os::raw::c_uint = 0;
+pub const MACH_NOTIFY_FIRST: ::std::os::raw::c_uint = 64;
+pub const MACH_NOTIFY_PORT_DELETED: ::std::os::raw::c_uint = 65;
+pub const MACH_NOTIFY_SEND_POSSIBLE: ::std::os::raw::c_uint = 66;
+pub const MACH_NOTIFY_PORT_DESTROYED: ::std::os::raw::c_uint = 69;
+pub const MACH_NOTIFY_NO_SENDERS: ::std::os::raw::c_uint = 70;
+pub const MACH_NOTIFY_SEND_ONCE: ::std::os::raw::c_uint = 71;
+pub const MACH_NOTIFY_DEAD_NAME: ::std::os::raw::c_uint = 72;
+pub const MACH_NOTIFY_LAST: ::std::os::raw::c_uint = 77;
+pub const __MigTypeCheck: ::std::os::raw::c_uint = 1;
+pub const __MigPackStructs: ::std::os::raw::c_uint = 1;
+pub const MIG_TYPE_ERROR: ::std::os::raw::c_int = -300;
+pub const MIG_REPLY_MISMATCH: ::std::os::raw::c_int = -301;
+pub const MIG_REMOTE_ERROR: ::std::os::raw::c_int = -302;
+pub const MIG_BAD_ID: ::std::os::raw::c_int = -303;
+pub const MIG_BAD_ARGUMENTS: ::std::os::raw::c_int = -304;
+pub const MIG_NO_REPLY: ::std::os::raw::c_int = -305;
+pub const MIG_EXCEPTION: ::std::os::raw::c_int = -306;
+pub const MIG_ARRAY_TOO_LARGE: ::std::os::raw::c_int = -307;
+pub const MIG_SERVER_DIED: ::std::os::raw::c_int = -308;
+pub const MIG_TRAILER_ERROR: ::std::os::raw::c_int = -309;
+pub const clock_priv_MSG_COUNT: ::std::os::raw::c_uint = 2;
+pub const host_priv_MSG_COUNT: ::std::os::raw::c_uint = 26;
+pub const ZONE_NAME_MAX_LEN: ::std::os::raw::c_uint = 80;
+pub const MACH_ZONE_NAME_MAX_LEN: ::std::os::raw::c_uint = 80;
+pub const LOCKGROUP_MAX_NAME: ::std::os::raw::c_uint = 64;
+pub const LOCKGROUP_ATTR_STAT: ::std::os::raw::c_uint = 1;
+pub const MACH_CORE_FILEHEADER_SIGNATURE: ::std::os::raw::c_ulonglong = 27973006578180435;
+pub const host_security_MSG_COUNT: ::std::os::raw::c_uint = 2;
+pub const lock_set_MSG_COUNT: ::std::os::raw::c_uint = 6;
+pub const processor_MSG_COUNT: ::std::os::raw::c_uint = 6;
+pub const processor_set_MSG_COUNT: ::std::os::raw::c_uint = 10;
+pub const SYNC_POLICY_FIFO: ::std::os::raw::c_uint = 0;
+pub const SYNC_POLICY_FIXED_PRIORITY: ::std::os::raw::c_uint = 1;
+pub const SYNC_POLICY_REVERSED: ::std::os::raw::c_uint = 2;
+pub const SYNC_POLICY_ORDER_MASK: ::std::os::raw::c_uint = 3;
+pub const SYNC_POLICY_LIFO: ::std::os::raw::c_uint = 2;
+pub const SYNC_POLICY_MAX: ::std::os::raw::c_uint = 7;
+pub const task_MSG_COUNT: ::std::os::raw::c_uint = 42;
+pub const thread_act_MSG_COUNT: ::std::os::raw::c_uint = 28;
+pub const vm_map_MSG_COUNT: ::std::os::raw::c_uint = 31;
+pub const mach_port_MSG_COUNT: ::std::os::raw::c_uint = 36;
+pub const _MACH_INIT_: ::std::os::raw::c_uint = 1;
+pub const __GNUC_VA_LIST: ::std::os::raw::c_uint = 1;
+pub const _QUAD_HIGHWORD: ::std::os::raw::c_uint = 1;
+pub const _QUAD_LOWWORD: ::std::os::raw::c_uint = 0;
+pub const __DARWIN_LITTLE_ENDIAN: ::std::os::raw::c_uint = 1234;
+pub const __DARWIN_BIG_ENDIAN: ::std::os::raw::c_uint = 4321;
+pub const __DARWIN_PDP_ENDIAN: ::std::os::raw::c_uint = 3412;
+pub const __DARWIN_BYTE_ORDER: ::std::os::raw::c_uint = 1234;
+pub const LITTLE_ENDIAN: ::std::os::raw::c_uint = 1234;
+pub const BIG_ENDIAN: ::std::os::raw::c_uint = 4321;
+pub const PDP_ENDIAN: ::std::os::raw::c_uint = 3412;
+pub const BYTE_ORDER: ::std::os::raw::c_uint = 1234;
+pub const NAME_SERVER_SLOT: ::std::os::raw::c_uint = 0;
+pub const ENVIRONMENT_SLOT: ::std::os::raw::c_uint = 1;
+pub const SERVICE_SLOT: ::std::os::raw::c_uint = 2;
+pub const MACH_PORTS_SLOTS_USED: ::std::os::raw::c_uint = 3;
+pub const mach_host_MSG_COUNT: ::std::os::raw::c_uint = 31;
+pub const SWITCH_OPTION_NONE: ::std::os::raw::c_uint = 0;
+pub const SWITCH_OPTION_DEPRESS: ::std::os::raw::c_uint = 1;
+pub const SWITCH_OPTION_WAIT: ::std::os::raw::c_uint = 2;
+pub const RPC_SIGBUF_SIZE: ::std::os::raw::c_uint = 8;
+pub const _MACH_ERROR_: ::std::os::raw::c_uint = 1;
+pub const code_emask: ::std::os::raw::c_uint = 16383;
+pub const err_max_system: ::std::os::raw::c_uint = 63;
+pub const VOUCHER_MACH_MSG_API_VERSION: ::std::os::raw::c_uint = 20140205;
 pub type int_least8_t = i8;
 pub type int_least16_t = i16;
 pub type int_least32_t = i32;
@@ -995,22 +995,22 @@ pub type uint_fast8_t = u8;
 pub type uint_fast16_t = u16;
 pub type uint_fast32_t = u32;
 pub type uint_fast64_t = u64;
-pub type __int8_t = ::libc::c_schar;
-pub type __uint8_t = ::libc::c_uchar;
-pub type __int16_t = ::libc::c_short;
-pub type __uint16_t = ::libc::c_ushort;
-pub type __int32_t = ::libc::c_int;
-pub type __uint32_t = ::libc::c_uint;
-pub type __int64_t = ::libc::c_longlong;
-pub type __uint64_t = ::libc::c_ulonglong;
-pub type __darwin_intptr_t = ::libc::c_long;
-pub type __darwin_natural_t = ::libc::c_uint;
-pub type __darwin_ct_rune_t = ::libc::c_int;
+pub type __int8_t = ::std::os::raw::c_schar;
+pub type __uint8_t = ::std::os::raw::c_uchar;
+pub type __int16_t = ::std::os::raw::c_short;
+pub type __uint16_t = ::std::os::raw::c_ushort;
+pub type __int32_t = ::std::os::raw::c_int;
+pub type __uint32_t = ::std::os::raw::c_uint;
+pub type __int64_t = ::std::os::raw::c_longlong;
+pub type __uint64_t = ::std::os::raw::c_ulonglong;
+pub type __darwin_intptr_t = ::std::os::raw::c_long;
+pub type __darwin_natural_t = ::std::os::raw::c_uint;
+pub type __darwin_ct_rune_t = ::std::os::raw::c_int;
 #[repr(C)]
 #[derive(Copy)]
 pub union __mbstate_t {
-    pub __mbstate8: [::libc::c_char; 128usize],
-    pub _mbstateL: ::libc::c_longlong,
+    pub __mbstate8: [::std::os::raw::c_char; 128usize],
+    pub _mbstateL: ::std::os::raw::c_longlong,
     _bindgen_union_align: [u64; 16usize],
 }
 impl Clone for __mbstate_t {
@@ -1019,21 +1019,21 @@ impl Clone for __mbstate_t {
     }
 }
 pub type __darwin_mbstate_t = __mbstate_t;
-pub type __darwin_ptrdiff_t = ::libc::c_long;
-pub type __darwin_size_t = ::libc::c_ulong;
+pub type __darwin_ptrdiff_t = ::std::os::raw::c_long;
+pub type __darwin_size_t = ::std::os::raw::c_ulong;
 pub type __darwin_va_list = __builtin_va_list;
-pub type __darwin_wchar_t = ::libc::c_int;
+pub type __darwin_wchar_t = ::std::os::raw::c_int;
 pub type __darwin_rune_t = __darwin_wchar_t;
-pub type __darwin_wint_t = ::libc::c_int;
-pub type __darwin_clock_t = ::libc::c_ulong;
+pub type __darwin_wint_t = ::std::os::raw::c_int;
+pub type __darwin_clock_t = ::std::os::raw::c_ulong;
 pub type __darwin_socklen_t = __uint32_t;
-pub type __darwin_ssize_t = ::libc::c_long;
-pub type __darwin_time_t = ::libc::c_long;
+pub type __darwin_ssize_t = ::std::os::raw::c_long;
+pub type __darwin_time_t = ::std::os::raw::c_long;
 pub type __darwin_blkcnt_t = __int64_t;
 pub type __darwin_blksize_t = __int32_t;
 pub type __darwin_dev_t = __int32_t;
-pub type __darwin_fsblkcnt_t = ::libc::c_uint;
-pub type __darwin_fsfilcnt_t = ::libc::c_uint;
+pub type __darwin_fsblkcnt_t = ::std::os::raw::c_uint;
+pub type __darwin_fsfilcnt_t = ::std::os::raw::c_uint;
 pub type __darwin_gid_t = __uint32_t;
 pub type __darwin_id_t = __uint32_t;
 pub type __darwin_ino64_t = __uint64_t;
@@ -1047,13 +1047,13 @@ pub type __darwin_sigset_t = __uint32_t;
 pub type __darwin_suseconds_t = __int32_t;
 pub type __darwin_uid_t = __uint32_t;
 pub type __darwin_useconds_t = __uint32_t;
-pub type __darwin_uuid_t = [::libc::c_uchar; 16usize];
-pub type __darwin_uuid_string_t = [::libc::c_char; 37usize];
+pub type __darwin_uuid_t = [::std::os::raw::c_uchar; 16usize];
+pub type __darwin_uuid_string_t = [::std::os::raw::c_char; 37usize];
 #[repr(C)]
 #[derive(Copy)]
 pub struct __darwin_pthread_handler_rec {
-    pub __routine: ::std::option::Option<unsafe extern "C" fn(arg1: *mut ::libc::c_void)>,
-    pub __arg: *mut ::libc::c_void,
+    pub __routine: ::std::option::Option<unsafe extern "C" fn(arg1: *mut ::std::os::raw::c_void)>,
+    pub __arg: *mut ::std::os::raw::c_void,
     pub __next: *mut __darwin_pthread_handler_rec,
 }
 impl Clone for __darwin_pthread_handler_rec {
@@ -1064,8 +1064,8 @@ impl Clone for __darwin_pthread_handler_rec {
 #[repr(C)]
 #[derive(Copy)]
 pub struct _opaque_pthread_attr_t {
-    pub __sig: ::libc::c_long,
-    pub __opaque: [::libc::c_char; 56usize],
+    pub __sig: ::std::os::raw::c_long,
+    pub __opaque: [::std::os::raw::c_char; 56usize],
 }
 impl Clone for _opaque_pthread_attr_t {
     fn clone(&self) -> Self {
@@ -1075,8 +1075,8 @@ impl Clone for _opaque_pthread_attr_t {
 #[repr(C)]
 #[derive(Copy)]
 pub struct _opaque_pthread_cond_t {
-    pub __sig: ::libc::c_long,
-    pub __opaque: [::libc::c_char; 40usize],
+    pub __sig: ::std::os::raw::c_long,
+    pub __opaque: [::std::os::raw::c_char; 40usize],
 }
 impl Clone for _opaque_pthread_cond_t {
     fn clone(&self) -> Self {
@@ -1086,8 +1086,8 @@ impl Clone for _opaque_pthread_cond_t {
 #[repr(C)]
 #[derive(Copy)]
 pub struct _opaque_pthread_condattr_t {
-    pub __sig: ::libc::c_long,
-    pub __opaque: [::libc::c_char; 8usize],
+    pub __sig: ::std::os::raw::c_long,
+    pub __opaque: [::std::os::raw::c_char; 8usize],
 }
 impl Clone for _opaque_pthread_condattr_t {
     fn clone(&self) -> Self {
@@ -1097,8 +1097,8 @@ impl Clone for _opaque_pthread_condattr_t {
 #[repr(C)]
 #[derive(Copy)]
 pub struct _opaque_pthread_mutex_t {
-    pub __sig: ::libc::c_long,
-    pub __opaque: [::libc::c_char; 56usize],
+    pub __sig: ::std::os::raw::c_long,
+    pub __opaque: [::std::os::raw::c_char; 56usize],
 }
 impl Clone for _opaque_pthread_mutex_t {
     fn clone(&self) -> Self {
@@ -1108,8 +1108,8 @@ impl Clone for _opaque_pthread_mutex_t {
 #[repr(C)]
 #[derive(Copy)]
 pub struct _opaque_pthread_mutexattr_t {
-    pub __sig: ::libc::c_long,
-    pub __opaque: [::libc::c_char; 8usize],
+    pub __sig: ::std::os::raw::c_long,
+    pub __opaque: [::std::os::raw::c_char; 8usize],
 }
 impl Clone for _opaque_pthread_mutexattr_t {
     fn clone(&self) -> Self {
@@ -1119,8 +1119,8 @@ impl Clone for _opaque_pthread_mutexattr_t {
 #[repr(C)]
 #[derive(Copy)]
 pub struct _opaque_pthread_once_t {
-    pub __sig: ::libc::c_long,
-    pub __opaque: [::libc::c_char; 8usize],
+    pub __sig: ::std::os::raw::c_long,
+    pub __opaque: [::std::os::raw::c_char; 8usize],
 }
 impl Clone for _opaque_pthread_once_t {
     fn clone(&self) -> Self {
@@ -1130,8 +1130,8 @@ impl Clone for _opaque_pthread_once_t {
 #[repr(C)]
 #[derive(Copy)]
 pub struct _opaque_pthread_rwlock_t {
-    pub __sig: ::libc::c_long,
-    pub __opaque: [::libc::c_char; 192usize],
+    pub __sig: ::std::os::raw::c_long,
+    pub __opaque: [::std::os::raw::c_char; 192usize],
 }
 impl Clone for _opaque_pthread_rwlock_t {
     fn clone(&self) -> Self {
@@ -1141,8 +1141,8 @@ impl Clone for _opaque_pthread_rwlock_t {
 #[repr(C)]
 #[derive(Copy)]
 pub struct _opaque_pthread_rwlockattr_t {
-    pub __sig: ::libc::c_long,
-    pub __opaque: [::libc::c_char; 16usize],
+    pub __sig: ::std::os::raw::c_long,
+    pub __opaque: [::std::os::raw::c_char; 16usize],
 }
 impl Clone for _opaque_pthread_rwlockattr_t {
     fn clone(&self) -> Self {
@@ -1152,9 +1152,9 @@ impl Clone for _opaque_pthread_rwlockattr_t {
 #[repr(C)]
 #[derive(Copy)]
 pub struct _opaque_pthread_t {
-    pub __sig: ::libc::c_long,
+    pub __sig: ::std::os::raw::c_long,
     pub __cleanup_stack: *mut __darwin_pthread_handler_rec,
-    pub __opaque: [::libc::c_char; 8176usize],
+    pub __opaque: [::std::os::raw::c_char; 8176usize],
 }
 impl Clone for _opaque_pthread_t {
     fn clone(&self) -> Self {
@@ -1164,19 +1164,19 @@ impl Clone for _opaque_pthread_t {
 pub type __darwin_pthread_attr_t = _opaque_pthread_attr_t;
 pub type __darwin_pthread_cond_t = _opaque_pthread_cond_t;
 pub type __darwin_pthread_condattr_t = _opaque_pthread_condattr_t;
-pub type __darwin_pthread_key_t = ::libc::c_ulong;
+pub type __darwin_pthread_key_t = ::std::os::raw::c_ulong;
 pub type __darwin_pthread_mutex_t = _opaque_pthread_mutex_t;
 pub type __darwin_pthread_mutexattr_t = _opaque_pthread_mutexattr_t;
 pub type __darwin_pthread_once_t = _opaque_pthread_once_t;
 pub type __darwin_pthread_rwlock_t = _opaque_pthread_rwlock_t;
 pub type __darwin_pthread_rwlockattr_t = _opaque_pthread_rwlockattr_t;
 pub type __darwin_pthread_t = *mut _opaque_pthread_t;
-pub type intmax_t = ::libc::c_long;
-pub type uintmax_t = ::libc::c_ulong;
-pub type boolean_t = ::libc::c_uint;
-pub type kern_return_t = ::libc::c_int;
+pub type intmax_t = ::std::os::raw::c_long;
+pub type uintmax_t = ::std::os::raw::c_ulong;
+pub type boolean_t = ::std::os::raw::c_uint;
+pub type kern_return_t = ::std::os::raw::c_int;
 pub type natural_t = __darwin_natural_t;
-pub type integer_t = ::libc::c_int;
+pub type integer_t = ::std::os::raw::c_int;
 pub type vm_offset_t = usize;
 pub type vm_size_t = usize;
 pub type mach_vm_address_t = u64;
@@ -1199,7 +1199,7 @@ pub type mach_port_seqno_t = natural_t;
 pub type mach_port_mscount_t = natural_t;
 pub type mach_port_msgcount_t = natural_t;
 pub type mach_port_rights_t = natural_t;
-pub type mach_port_srights_t = ::libc::c_uint;
+pub type mach_port_srights_t = ::std::os::raw::c_uint;
 #[repr(C)]
 #[derive(Copy)]
 pub struct mach_port_status {
@@ -1245,7 +1245,7 @@ impl Clone for mach_port_info_ext {
 }
 pub type mach_port_info_ext_t = mach_port_info_ext;
 pub type mach_port_info_t = *mut integer_t;
-pub type mach_port_flavor_t = ::libc::c_int;
+pub type mach_port_flavor_t = ::std::os::raw::c_int;
 #[repr(C)]
 #[derive(Copy)]
 pub struct mach_port_qos {
@@ -1259,7 +1259,7 @@ impl Clone for mach_port_qos {
 }
 impl mach_port_qos {
     #[inline]
-    pub fn name(&self) -> ::libc::c_uint {
+    pub fn name(&self) -> ::std::os::raw::c_uint {
         let mut unit_field_val: u32 = unsafe { ::std::mem::uninitialized() };
         unsafe {
             ::std::ptr::copy_nonoverlapping(
@@ -1273,7 +1273,7 @@ impl mach_port_qos {
         unsafe { ::std::mem::transmute(val as u32) }
     }
     #[inline]
-    pub fn set_name(&mut self, val: ::libc::c_uint) {
+    pub fn set_name(&mut self, val: ::std::os::raw::c_uint) {
         let mask = 1u64 as u32;
         let val = val as u32 as u32;
         let mut unit_field_val: u32 = unsafe { ::std::mem::uninitialized() };
@@ -1295,7 +1295,7 @@ impl mach_port_qos {
         }
     }
     #[inline]
-    pub fn prealloc(&self) -> ::libc::c_uint {
+    pub fn prealloc(&self) -> ::std::os::raw::c_uint {
         let mut unit_field_val: u32 = unsafe { ::std::mem::uninitialized() };
         unsafe {
             ::std::ptr::copy_nonoverlapping(
@@ -1309,7 +1309,7 @@ impl mach_port_qos {
         unsafe { ::std::mem::transmute(val as u32) }
     }
     #[inline]
-    pub fn set_prealloc(&mut self, val: ::libc::c_uint) {
+    pub fn set_prealloc(&mut self, val: ::std::os::raw::c_uint) {
         let mask = 2u64 as u32;
         let val = val as u32 as u32;
         let mut unit_field_val: u32 = unsafe { ::std::mem::uninitialized() };
@@ -1367,7 +1367,7 @@ impl mach_port_qos {
         }
     }
     #[inline]
-    pub fn new_bitfield_1(name: ::libc::c_uint, prealloc: ::libc::c_uint, pad1: boolean_t) -> u32 {
+    pub fn new_bitfield_1(name: ::std::os::raw::c_uint, prealloc: ::std::os::raw::c_uint, pad1: boolean_t) -> u32 {
         ({
             ({ ({ 0 } | ((name as u32 as u32) << 0usize) & (1u64 as u32)) }
                 | ((prealloc as u32 as u32) << 1usize) & (2u64 as u32))
@@ -1409,12 +1409,12 @@ pub type vm_object_size_t = u64;
 pub type upl_t = mach_port_t;
 pub type vm_named_entry_t = mach_port_t;
 pub type mach_msg_timeout_t = natural_t;
-pub type mach_msg_bits_t = ::libc::c_uint;
+pub type mach_msg_bits_t = ::std::os::raw::c_uint;
 pub type mach_msg_size_t = natural_t;
 pub type mach_msg_id_t = integer_t;
-pub type mach_msg_type_name_t = ::libc::c_uint;
-pub type mach_msg_copy_options_t = ::libc::c_uint;
-pub type mach_msg_descriptor_type_t = ::libc::c_uint;
+pub type mach_msg_type_name_t = ::std::os::raw::c_uint;
+pub type mach_msg_copy_options_t = ::std::os::raw::c_uint;
+pub type mach_msg_descriptor_type_t = ::std::os::raw::c_uint;
 #[repr(C)]
 #[derive(Copy)]
 pub struct mach_msg_type_descriptor_t {
@@ -1429,7 +1429,7 @@ impl Clone for mach_msg_type_descriptor_t {
 }
 impl mach_msg_type_descriptor_t {
     #[inline]
-    pub fn pad3(&self) -> ::libc::c_uint {
+    pub fn pad3(&self) -> ::std::os::raw::c_uint {
         let mut unit_field_val: u32 = unsafe { ::std::mem::uninitialized() };
         unsafe {
             ::std::ptr::copy_nonoverlapping(
@@ -1443,7 +1443,7 @@ impl mach_msg_type_descriptor_t {
         unsafe { ::std::mem::transmute(val as u32) }
     }
     #[inline]
-    pub fn set_pad3(&mut self, val: ::libc::c_uint) {
+    pub fn set_pad3(&mut self, val: ::std::os::raw::c_uint) {
         let mask = 16777215u64 as u32;
         let val = val as u32 as u32;
         let mut unit_field_val: u32 = unsafe { ::std::mem::uninitialized() };
@@ -1501,7 +1501,7 @@ impl mach_msg_type_descriptor_t {
         }
     }
     #[inline]
-    pub fn new_bitfield_1(pad3: ::libc::c_uint, type_: mach_msg_descriptor_type_t) -> u32 {
+    pub fn new_bitfield_1(pad3: ::std::os::raw::c_uint, type_: mach_msg_descriptor_type_t) -> u32 {
         ({ ({ 0 } | ((pad3 as u32 as u32) << 0usize) & (16777215u64 as u32)) }
             | ((type_ as u32 as u32) << 24usize) & (4278190080u64 as u32))
     }
@@ -1520,7 +1520,7 @@ impl Clone for mach_msg_port_descriptor_t {
 }
 impl mach_msg_port_descriptor_t {
     #[inline]
-    pub fn pad2(&self) -> ::libc::c_uint {
+    pub fn pad2(&self) -> ::std::os::raw::c_uint {
         let mut unit_field_val: u32 = unsafe { ::std::mem::uninitialized() };
         unsafe {
             ::std::ptr::copy_nonoverlapping(
@@ -1534,7 +1534,7 @@ impl mach_msg_port_descriptor_t {
         unsafe { ::std::mem::transmute(val as u32) }
     }
     #[inline]
-    pub fn set_pad2(&mut self, val: ::libc::c_uint) {
+    pub fn set_pad2(&mut self, val: ::std::os::raw::c_uint) {
         let mask = 65535u64 as u32;
         let val = val as u32 as u32;
         let mut unit_field_val: u32 = unsafe { ::std::mem::uninitialized() };
@@ -1629,7 +1629,7 @@ impl mach_msg_port_descriptor_t {
     }
     #[inline]
     pub fn new_bitfield_1(
-        pad2: ::libc::c_uint,
+        pad2: ::std::os::raw::c_uint,
         disposition: mach_msg_type_name_t,
         type_: mach_msg_descriptor_type_t,
     ) -> u32 {
@@ -1725,7 +1725,7 @@ impl mach_msg_ool_descriptor32_t {
         }
     }
     #[inline]
-    pub fn pad1(&self) -> ::libc::c_uint {
+    pub fn pad1(&self) -> ::std::os::raw::c_uint {
         let mut unit_field_val: u32 = unsafe { ::std::mem::uninitialized() };
         unsafe {
             ::std::ptr::copy_nonoverlapping(
@@ -1739,7 +1739,7 @@ impl mach_msg_ool_descriptor32_t {
         unsafe { ::std::mem::transmute(val as u32) }
     }
     #[inline]
-    pub fn set_pad1(&mut self, val: ::libc::c_uint) {
+    pub fn set_pad1(&mut self, val: ::std::os::raw::c_uint) {
         let mask = 16711680u64 as u32;
         let val = val as u32 as u32;
         let mut unit_field_val: u32 = unsafe { ::std::mem::uninitialized() };
@@ -1800,7 +1800,7 @@ impl mach_msg_ool_descriptor32_t {
     pub fn new_bitfield_1(
         deallocate: boolean_t,
         copy: mach_msg_copy_options_t,
-        pad1: ::libc::c_uint,
+        pad1: ::std::os::raw::c_uint,
         type_: mach_msg_descriptor_type_t,
     ) -> u32 {
         ({
@@ -1897,7 +1897,7 @@ impl mach_msg_ool_descriptor64_t {
         }
     }
     #[inline]
-    pub fn pad1(&self) -> ::libc::c_uint {
+    pub fn pad1(&self) -> ::std::os::raw::c_uint {
         let mut unit_field_val: u32 = unsafe { ::std::mem::uninitialized() };
         unsafe {
             ::std::ptr::copy_nonoverlapping(
@@ -1911,7 +1911,7 @@ impl mach_msg_ool_descriptor64_t {
         unsafe { ::std::mem::transmute(val as u32) }
     }
     #[inline]
-    pub fn set_pad1(&mut self, val: ::libc::c_uint) {
+    pub fn set_pad1(&mut self, val: ::std::os::raw::c_uint) {
         let mask = 16711680u64 as u32;
         let val = val as u32 as u32;
         let mut unit_field_val: u32 = unsafe { ::std::mem::uninitialized() };
@@ -1972,7 +1972,7 @@ impl mach_msg_ool_descriptor64_t {
     pub fn new_bitfield_1(
         deallocate: boolean_t,
         copy: mach_msg_copy_options_t,
-        pad1: ::libc::c_uint,
+        pad1: ::std::os::raw::c_uint,
         type_: mach_msg_descriptor_type_t,
     ) -> u32 {
         ({
@@ -1986,7 +1986,7 @@ impl mach_msg_ool_descriptor64_t {
 #[repr(C)]
 #[derive(Copy)]
 pub struct mach_msg_ool_descriptor_t {
-    pub address: *mut ::libc::c_void,
+    pub address: *mut ::std::os::raw::c_void,
     pub _bitfield_1: [u8; 4usize],
     pub size: mach_msg_size_t,
 }
@@ -2069,7 +2069,7 @@ impl mach_msg_ool_descriptor_t {
         }
     }
     #[inline]
-    pub fn pad1(&self) -> ::libc::c_uint {
+    pub fn pad1(&self) -> ::std::os::raw::c_uint {
         let mut unit_field_val: u32 = unsafe { ::std::mem::uninitialized() };
         unsafe {
             ::std::ptr::copy_nonoverlapping(
@@ -2083,7 +2083,7 @@ impl mach_msg_ool_descriptor_t {
         unsafe { ::std::mem::transmute(val as u32) }
     }
     #[inline]
-    pub fn set_pad1(&mut self, val: ::libc::c_uint) {
+    pub fn set_pad1(&mut self, val: ::std::os::raw::c_uint) {
         let mask = 16711680u64 as u32;
         let val = val as u32 as u32;
         let mut unit_field_val: u32 = unsafe { ::std::mem::uninitialized() };
@@ -2144,7 +2144,7 @@ impl mach_msg_ool_descriptor_t {
     pub fn new_bitfield_1(
         deallocate: boolean_t,
         copy: mach_msg_copy_options_t,
-        pad1: ::libc::c_uint,
+        pad1: ::std::os::raw::c_uint,
         type_: mach_msg_descriptor_type_t,
     ) -> u32 {
         ({
@@ -2502,7 +2502,7 @@ impl mach_msg_ool_ports_descriptor64_t {
 #[repr(C)]
 #[derive(Copy)]
 pub struct mach_msg_ool_ports_descriptor_t {
-    pub address: *mut ::libc::c_void,
+    pub address: *mut ::std::os::raw::c_void,
     pub _bitfield_1: [u8; 4usize],
     pub count: mach_msg_size_t,
 }
@@ -2721,9 +2721,9 @@ impl Clone for mach_msg_base_t {
         *self
     }
 }
-pub type mach_msg_trailer_type_t = ::libc::c_uint;
-pub type mach_msg_trailer_size_t = ::libc::c_uint;
-pub type mach_msg_trailer_info_t = *mut ::libc::c_char;
+pub type mach_msg_trailer_type_t = ::std::os::raw::c_uint;
+pub type mach_msg_trailer_size_t = ::std::os::raw::c_uint;
+pub type mach_msg_trailer_info_t = *mut ::std::os::raw::c_char;
 #[repr(C)]
 #[derive(Copy)]
 pub struct mach_msg_trailer_t {
@@ -2750,7 +2750,7 @@ impl Clone for mach_msg_seqno_trailer_t {
 #[repr(C)]
 #[derive(Copy)]
 pub struct security_token_t {
-    pub val: [::libc::c_uint; 2usize],
+    pub val: [::std::os::raw::c_uint; 2usize],
 }
 impl Clone for security_token_t {
     fn clone(&self) -> Self {
@@ -2773,7 +2773,7 @@ impl Clone for mach_msg_security_trailer_t {
 #[repr(C)]
 #[derive(Copy)]
 pub struct audit_token_t {
-    pub val: [::libc::c_uint; 8usize],
+    pub val: [::std::os::raw::c_uint; 8usize],
 }
 impl Clone for audit_token_t {
     fn clone(&self) -> Self {
@@ -2828,7 +2828,7 @@ pub struct mach_msg_mac_trailer_t {
     pub msgh_sender: security_token_t,
     pub msgh_audit: audit_token_t,
     pub msgh_context: mach_port_context_t,
-    pub msgh_ad: ::libc::c_int,
+    pub msgh_ad: ::std::os::raw::c_int,
     pub msgh_labels: msg_labels_t,
 }
 impl Clone for mach_msg_mac_trailer_t {
@@ -3032,8 +3032,8 @@ pub type time_value_t = time_value;
 pub type host_info_t = *mut integer_t;
 pub type host_info64_t = *mut integer_t;
 pub type host_info_data_t = [integer_t; 1024usize];
-pub type kernel_version_t = [::libc::c_char; 512usize];
-pub type kernel_boot_info_t = [::libc::c_char; 4096usize];
+pub type kernel_version_t = [::std::os::raw::c_char; 512usize];
+pub type kernel_boot_info_t = [::std::os::raw::c_char; 4096usize];
 pub type host_flavor_t = integer_t;
 #[repr(C)]
 #[derive(Copy)]
@@ -3132,23 +3132,23 @@ impl Clone for host_cpu_load_info {
 }
 pub type host_cpu_load_info_data_t = host_cpu_load_info;
 pub type host_cpu_load_info_t = *mut host_cpu_load_info;
-pub type vm_prot_t = ::libc::c_int;
-pub type vm_sync_t = ::libc::c_uint;
-pub type memory_object_offset_t = ::libc::c_ulonglong;
-pub type memory_object_size_t = ::libc::c_ulonglong;
+pub type vm_prot_t = ::std::os::raw::c_int;
+pub type vm_sync_t = ::std::os::raw::c_uint;
+pub type memory_object_offset_t = ::std::os::raw::c_ulonglong;
+pub type memory_object_size_t = ::std::os::raw::c_ulonglong;
 pub type memory_object_cluster_size_t = natural_t;
 pub type memory_object_fault_info_t = *mut natural_t;
-pub type vm_object_id_t = ::libc::c_ulonglong;
+pub type vm_object_id_t = ::std::os::raw::c_ulonglong;
 pub type memory_object_t = mach_port_t;
 pub type memory_object_control_t = mach_port_t;
 pub type memory_object_array_t = *mut memory_object_t;
 pub type memory_object_name_t = mach_port_t;
 pub type memory_object_default_t = mach_port_t;
-pub type memory_object_copy_strategy_t = ::libc::c_int;
-pub type memory_object_return_t = ::libc::c_int;
-pub type memory_object_info_t = *mut ::libc::c_int;
-pub type memory_object_flavor_t = ::libc::c_int;
-pub type memory_object_info_data_t = [::libc::c_int; 1024usize];
+pub type memory_object_copy_strategy_t = ::std::os::raw::c_int;
+pub type memory_object_return_t = ::std::os::raw::c_int;
+pub type memory_object_info_t = *mut ::std::os::raw::c_int;
+pub type memory_object_flavor_t = ::std::os::raw::c_int;
+pub type memory_object_info_data_t = [::std::os::raw::c_int; 1024usize];
 #[repr(C)]
 #[derive(Copy)]
 pub struct memory_object_perf_info {
@@ -3196,22 +3196,22 @@ pub type memory_object_attr_info_data_t = memory_object_attr_info;
 #[repr(C)]
 #[derive(Copy)]
 pub struct __darwin_i386_thread_state {
-    pub __eax: ::libc::c_uint,
-    pub __ebx: ::libc::c_uint,
-    pub __ecx: ::libc::c_uint,
-    pub __edx: ::libc::c_uint,
-    pub __edi: ::libc::c_uint,
-    pub __esi: ::libc::c_uint,
-    pub __ebp: ::libc::c_uint,
-    pub __esp: ::libc::c_uint,
-    pub __ss: ::libc::c_uint,
-    pub __eflags: ::libc::c_uint,
-    pub __eip: ::libc::c_uint,
-    pub __cs: ::libc::c_uint,
-    pub __ds: ::libc::c_uint,
-    pub __es: ::libc::c_uint,
-    pub __fs: ::libc::c_uint,
-    pub __gs: ::libc::c_uint,
+    pub __eax: ::std::os::raw::c_uint,
+    pub __ebx: ::std::os::raw::c_uint,
+    pub __ecx: ::std::os::raw::c_uint,
+    pub __edx: ::std::os::raw::c_uint,
+    pub __edi: ::std::os::raw::c_uint,
+    pub __esi: ::std::os::raw::c_uint,
+    pub __ebp: ::std::os::raw::c_uint,
+    pub __esp: ::std::os::raw::c_uint,
+    pub __ss: ::std::os::raw::c_uint,
+    pub __eflags: ::std::os::raw::c_uint,
+    pub __eip: ::std::os::raw::c_uint,
+    pub __cs: ::std::os::raw::c_uint,
+    pub __ds: ::std::os::raw::c_uint,
+    pub __es: ::std::os::raw::c_uint,
+    pub __fs: ::std::os::raw::c_uint,
+    pub __gs: ::std::os::raw::c_uint,
 }
 impl Clone for __darwin_i386_thread_state {
     fn clone(&self) -> Self {
@@ -3231,7 +3231,7 @@ impl Clone for __darwin_fp_control {
 }
 impl __darwin_fp_control {
     #[inline]
-    pub fn __invalid(&self) -> ::libc::c_ushort {
+    pub fn __invalid(&self) -> ::std::os::raw::c_ushort {
         let mut unit_field_val: u16 = unsafe { ::std::mem::uninitialized() };
         unsafe {
             ::std::ptr::copy_nonoverlapping(
@@ -3245,7 +3245,7 @@ impl __darwin_fp_control {
         unsafe { ::std::mem::transmute(val as u16) }
     }
     #[inline]
-    pub fn set___invalid(&mut self, val: ::libc::c_ushort) {
+    pub fn set___invalid(&mut self, val: ::std::os::raw::c_ushort) {
         let mask = 1u64 as u16;
         let val = val as u16 as u16;
         let mut unit_field_val: u16 = unsafe { ::std::mem::uninitialized() };
@@ -3267,7 +3267,7 @@ impl __darwin_fp_control {
         }
     }
     #[inline]
-    pub fn __denorm(&self) -> ::libc::c_ushort {
+    pub fn __denorm(&self) -> ::std::os::raw::c_ushort {
         let mut unit_field_val: u16 = unsafe { ::std::mem::uninitialized() };
         unsafe {
             ::std::ptr::copy_nonoverlapping(
@@ -3281,7 +3281,7 @@ impl __darwin_fp_control {
         unsafe { ::std::mem::transmute(val as u16) }
     }
     #[inline]
-    pub fn set___denorm(&mut self, val: ::libc::c_ushort) {
+    pub fn set___denorm(&mut self, val: ::std::os::raw::c_ushort) {
         let mask = 2u64 as u16;
         let val = val as u16 as u16;
         let mut unit_field_val: u16 = unsafe { ::std::mem::uninitialized() };
@@ -3303,7 +3303,7 @@ impl __darwin_fp_control {
         }
     }
     #[inline]
-    pub fn __zdiv(&self) -> ::libc::c_ushort {
+    pub fn __zdiv(&self) -> ::std::os::raw::c_ushort {
         let mut unit_field_val: u16 = unsafe { ::std::mem::uninitialized() };
         unsafe {
             ::std::ptr::copy_nonoverlapping(
@@ -3317,7 +3317,7 @@ impl __darwin_fp_control {
         unsafe { ::std::mem::transmute(val as u16) }
     }
     #[inline]
-    pub fn set___zdiv(&mut self, val: ::libc::c_ushort) {
+    pub fn set___zdiv(&mut self, val: ::std::os::raw::c_ushort) {
         let mask = 4u64 as u16;
         let val = val as u16 as u16;
         let mut unit_field_val: u16 = unsafe { ::std::mem::uninitialized() };
@@ -3339,7 +3339,7 @@ impl __darwin_fp_control {
         }
     }
     #[inline]
-    pub fn __ovrfl(&self) -> ::libc::c_ushort {
+    pub fn __ovrfl(&self) -> ::std::os::raw::c_ushort {
         let mut unit_field_val: u16 = unsafe { ::std::mem::uninitialized() };
         unsafe {
             ::std::ptr::copy_nonoverlapping(
@@ -3353,7 +3353,7 @@ impl __darwin_fp_control {
         unsafe { ::std::mem::transmute(val as u16) }
     }
     #[inline]
-    pub fn set___ovrfl(&mut self, val: ::libc::c_ushort) {
+    pub fn set___ovrfl(&mut self, val: ::std::os::raw::c_ushort) {
         let mask = 8u64 as u16;
         let val = val as u16 as u16;
         let mut unit_field_val: u16 = unsafe { ::std::mem::uninitialized() };
@@ -3375,7 +3375,7 @@ impl __darwin_fp_control {
         }
     }
     #[inline]
-    pub fn __undfl(&self) -> ::libc::c_ushort {
+    pub fn __undfl(&self) -> ::std::os::raw::c_ushort {
         let mut unit_field_val: u16 = unsafe { ::std::mem::uninitialized() };
         unsafe {
             ::std::ptr::copy_nonoverlapping(
@@ -3389,7 +3389,7 @@ impl __darwin_fp_control {
         unsafe { ::std::mem::transmute(val as u16) }
     }
     #[inline]
-    pub fn set___undfl(&mut self, val: ::libc::c_ushort) {
+    pub fn set___undfl(&mut self, val: ::std::os::raw::c_ushort) {
         let mask = 16u64 as u16;
         let val = val as u16 as u16;
         let mut unit_field_val: u16 = unsafe { ::std::mem::uninitialized() };
@@ -3411,7 +3411,7 @@ impl __darwin_fp_control {
         }
     }
     #[inline]
-    pub fn __precis(&self) -> ::libc::c_ushort {
+    pub fn __precis(&self) -> ::std::os::raw::c_ushort {
         let mut unit_field_val: u16 = unsafe { ::std::mem::uninitialized() };
         unsafe {
             ::std::ptr::copy_nonoverlapping(
@@ -3425,7 +3425,7 @@ impl __darwin_fp_control {
         unsafe { ::std::mem::transmute(val as u16) }
     }
     #[inline]
-    pub fn set___precis(&mut self, val: ::libc::c_ushort) {
+    pub fn set___precis(&mut self, val: ::std::os::raw::c_ushort) {
         let mask = 32u64 as u16;
         let val = val as u16 as u16;
         let mut unit_field_val: u16 = unsafe { ::std::mem::uninitialized() };
@@ -3447,7 +3447,7 @@ impl __darwin_fp_control {
         }
     }
     #[inline]
-    pub fn __pc(&self) -> ::libc::c_ushort {
+    pub fn __pc(&self) -> ::std::os::raw::c_ushort {
         let mut unit_field_val: u16 = unsafe { ::std::mem::uninitialized() };
         unsafe {
             ::std::ptr::copy_nonoverlapping(
@@ -3461,7 +3461,7 @@ impl __darwin_fp_control {
         unsafe { ::std::mem::transmute(val as u16) }
     }
     #[inline]
-    pub fn set___pc(&mut self, val: ::libc::c_ushort) {
+    pub fn set___pc(&mut self, val: ::std::os::raw::c_ushort) {
         let mask = 768u64 as u16;
         let val = val as u16 as u16;
         let mut unit_field_val: u16 = unsafe { ::std::mem::uninitialized() };
@@ -3483,7 +3483,7 @@ impl __darwin_fp_control {
         }
     }
     #[inline]
-    pub fn __rc(&self) -> ::libc::c_ushort {
+    pub fn __rc(&self) -> ::std::os::raw::c_ushort {
         let mut unit_field_val: u16 = unsafe { ::std::mem::uninitialized() };
         unsafe {
             ::std::ptr::copy_nonoverlapping(
@@ -3497,7 +3497,7 @@ impl __darwin_fp_control {
         unsafe { ::std::mem::transmute(val as u16) }
     }
     #[inline]
-    pub fn set___rc(&mut self, val: ::libc::c_ushort) {
+    pub fn set___rc(&mut self, val: ::std::os::raw::c_ushort) {
         let mask = 3072u64 as u16;
         let val = val as u16 as u16;
         let mut unit_field_val: u16 = unsafe { ::std::mem::uninitialized() };
@@ -3520,14 +3520,14 @@ impl __darwin_fp_control {
     }
     #[inline]
     pub fn new_bitfield_1(
-        __invalid: ::libc::c_ushort,
-        __denorm: ::libc::c_ushort,
-        __zdiv: ::libc::c_ushort,
-        __ovrfl: ::libc::c_ushort,
-        __undfl: ::libc::c_ushort,
-        __precis: ::libc::c_ushort,
-        __pc: ::libc::c_ushort,
-        __rc: ::libc::c_ushort,
+        __invalid: ::std::os::raw::c_ushort,
+        __denorm: ::std::os::raw::c_ushort,
+        __zdiv: ::std::os::raw::c_ushort,
+        __ovrfl: ::std::os::raw::c_ushort,
+        __undfl: ::std::os::raw::c_ushort,
+        __precis: ::std::os::raw::c_ushort,
+        __pc: ::std::os::raw::c_ushort,
+        __rc: ::std::os::raw::c_ushort,
     ) -> u16 {
         ({
             ({
@@ -3560,7 +3560,7 @@ impl Clone for __darwin_fp_status {
 }
 impl __darwin_fp_status {
     #[inline]
-    pub fn __invalid(&self) -> ::libc::c_ushort {
+    pub fn __invalid(&self) -> ::std::os::raw::c_ushort {
         let mut unit_field_val: u16 = unsafe { ::std::mem::uninitialized() };
         unsafe {
             ::std::ptr::copy_nonoverlapping(
@@ -3574,7 +3574,7 @@ impl __darwin_fp_status {
         unsafe { ::std::mem::transmute(val as u16) }
     }
     #[inline]
-    pub fn set___invalid(&mut self, val: ::libc::c_ushort) {
+    pub fn set___invalid(&mut self, val: ::std::os::raw::c_ushort) {
         let mask = 1u64 as u16;
         let val = val as u16 as u16;
         let mut unit_field_val: u16 = unsafe { ::std::mem::uninitialized() };
@@ -3596,7 +3596,7 @@ impl __darwin_fp_status {
         }
     }
     #[inline]
-    pub fn __denorm(&self) -> ::libc::c_ushort {
+    pub fn __denorm(&self) -> ::std::os::raw::c_ushort {
         let mut unit_field_val: u16 = unsafe { ::std::mem::uninitialized() };
         unsafe {
             ::std::ptr::copy_nonoverlapping(
@@ -3610,7 +3610,7 @@ impl __darwin_fp_status {
         unsafe { ::std::mem::transmute(val as u16) }
     }
     #[inline]
-    pub fn set___denorm(&mut self, val: ::libc::c_ushort) {
+    pub fn set___denorm(&mut self, val: ::std::os::raw::c_ushort) {
         let mask = 2u64 as u16;
         let val = val as u16 as u16;
         let mut unit_field_val: u16 = unsafe { ::std::mem::uninitialized() };
@@ -3632,7 +3632,7 @@ impl __darwin_fp_status {
         }
     }
     #[inline]
-    pub fn __zdiv(&self) -> ::libc::c_ushort {
+    pub fn __zdiv(&self) -> ::std::os::raw::c_ushort {
         let mut unit_field_val: u16 = unsafe { ::std::mem::uninitialized() };
         unsafe {
             ::std::ptr::copy_nonoverlapping(
@@ -3646,7 +3646,7 @@ impl __darwin_fp_status {
         unsafe { ::std::mem::transmute(val as u16) }
     }
     #[inline]
-    pub fn set___zdiv(&mut self, val: ::libc::c_ushort) {
+    pub fn set___zdiv(&mut self, val: ::std::os::raw::c_ushort) {
         let mask = 4u64 as u16;
         let val = val as u16 as u16;
         let mut unit_field_val: u16 = unsafe { ::std::mem::uninitialized() };
@@ -3668,7 +3668,7 @@ impl __darwin_fp_status {
         }
     }
     #[inline]
-    pub fn __ovrfl(&self) -> ::libc::c_ushort {
+    pub fn __ovrfl(&self) -> ::std::os::raw::c_ushort {
         let mut unit_field_val: u16 = unsafe { ::std::mem::uninitialized() };
         unsafe {
             ::std::ptr::copy_nonoverlapping(
@@ -3682,7 +3682,7 @@ impl __darwin_fp_status {
         unsafe { ::std::mem::transmute(val as u16) }
     }
     #[inline]
-    pub fn set___ovrfl(&mut self, val: ::libc::c_ushort) {
+    pub fn set___ovrfl(&mut self, val: ::std::os::raw::c_ushort) {
         let mask = 8u64 as u16;
         let val = val as u16 as u16;
         let mut unit_field_val: u16 = unsafe { ::std::mem::uninitialized() };
@@ -3704,7 +3704,7 @@ impl __darwin_fp_status {
         }
     }
     #[inline]
-    pub fn __undfl(&self) -> ::libc::c_ushort {
+    pub fn __undfl(&self) -> ::std::os::raw::c_ushort {
         let mut unit_field_val: u16 = unsafe { ::std::mem::uninitialized() };
         unsafe {
             ::std::ptr::copy_nonoverlapping(
@@ -3718,7 +3718,7 @@ impl __darwin_fp_status {
         unsafe { ::std::mem::transmute(val as u16) }
     }
     #[inline]
-    pub fn set___undfl(&mut self, val: ::libc::c_ushort) {
+    pub fn set___undfl(&mut self, val: ::std::os::raw::c_ushort) {
         let mask = 16u64 as u16;
         let val = val as u16 as u16;
         let mut unit_field_val: u16 = unsafe { ::std::mem::uninitialized() };
@@ -3740,7 +3740,7 @@ impl __darwin_fp_status {
         }
     }
     #[inline]
-    pub fn __precis(&self) -> ::libc::c_ushort {
+    pub fn __precis(&self) -> ::std::os::raw::c_ushort {
         let mut unit_field_val: u16 = unsafe { ::std::mem::uninitialized() };
         unsafe {
             ::std::ptr::copy_nonoverlapping(
@@ -3754,7 +3754,7 @@ impl __darwin_fp_status {
         unsafe { ::std::mem::transmute(val as u16) }
     }
     #[inline]
-    pub fn set___precis(&mut self, val: ::libc::c_ushort) {
+    pub fn set___precis(&mut self, val: ::std::os::raw::c_ushort) {
         let mask = 32u64 as u16;
         let val = val as u16 as u16;
         let mut unit_field_val: u16 = unsafe { ::std::mem::uninitialized() };
@@ -3776,7 +3776,7 @@ impl __darwin_fp_status {
         }
     }
     #[inline]
-    pub fn __stkflt(&self) -> ::libc::c_ushort {
+    pub fn __stkflt(&self) -> ::std::os::raw::c_ushort {
         let mut unit_field_val: u16 = unsafe { ::std::mem::uninitialized() };
         unsafe {
             ::std::ptr::copy_nonoverlapping(
@@ -3790,7 +3790,7 @@ impl __darwin_fp_status {
         unsafe { ::std::mem::transmute(val as u16) }
     }
     #[inline]
-    pub fn set___stkflt(&mut self, val: ::libc::c_ushort) {
+    pub fn set___stkflt(&mut self, val: ::std::os::raw::c_ushort) {
         let mask = 64u64 as u16;
         let val = val as u16 as u16;
         let mut unit_field_val: u16 = unsafe { ::std::mem::uninitialized() };
@@ -3812,7 +3812,7 @@ impl __darwin_fp_status {
         }
     }
     #[inline]
-    pub fn __errsumm(&self) -> ::libc::c_ushort {
+    pub fn __errsumm(&self) -> ::std::os::raw::c_ushort {
         let mut unit_field_val: u16 = unsafe { ::std::mem::uninitialized() };
         unsafe {
             ::std::ptr::copy_nonoverlapping(
@@ -3826,7 +3826,7 @@ impl __darwin_fp_status {
         unsafe { ::std::mem::transmute(val as u16) }
     }
     #[inline]
-    pub fn set___errsumm(&mut self, val: ::libc::c_ushort) {
+    pub fn set___errsumm(&mut self, val: ::std::os::raw::c_ushort) {
         let mask = 128u64 as u16;
         let val = val as u16 as u16;
         let mut unit_field_val: u16 = unsafe { ::std::mem::uninitialized() };
@@ -3848,7 +3848,7 @@ impl __darwin_fp_status {
         }
     }
     #[inline]
-    pub fn __c0(&self) -> ::libc::c_ushort {
+    pub fn __c0(&self) -> ::std::os::raw::c_ushort {
         let mut unit_field_val: u16 = unsafe { ::std::mem::uninitialized() };
         unsafe {
             ::std::ptr::copy_nonoverlapping(
@@ -3862,7 +3862,7 @@ impl __darwin_fp_status {
         unsafe { ::std::mem::transmute(val as u16) }
     }
     #[inline]
-    pub fn set___c0(&mut self, val: ::libc::c_ushort) {
+    pub fn set___c0(&mut self, val: ::std::os::raw::c_ushort) {
         let mask = 256u64 as u16;
         let val = val as u16 as u16;
         let mut unit_field_val: u16 = unsafe { ::std::mem::uninitialized() };
@@ -3884,7 +3884,7 @@ impl __darwin_fp_status {
         }
     }
     #[inline]
-    pub fn __c1(&self) -> ::libc::c_ushort {
+    pub fn __c1(&self) -> ::std::os::raw::c_ushort {
         let mut unit_field_val: u16 = unsafe { ::std::mem::uninitialized() };
         unsafe {
             ::std::ptr::copy_nonoverlapping(
@@ -3898,7 +3898,7 @@ impl __darwin_fp_status {
         unsafe { ::std::mem::transmute(val as u16) }
     }
     #[inline]
-    pub fn set___c1(&mut self, val: ::libc::c_ushort) {
+    pub fn set___c1(&mut self, val: ::std::os::raw::c_ushort) {
         let mask = 512u64 as u16;
         let val = val as u16 as u16;
         let mut unit_field_val: u16 = unsafe { ::std::mem::uninitialized() };
@@ -3920,7 +3920,7 @@ impl __darwin_fp_status {
         }
     }
     #[inline]
-    pub fn __c2(&self) -> ::libc::c_ushort {
+    pub fn __c2(&self) -> ::std::os::raw::c_ushort {
         let mut unit_field_val: u16 = unsafe { ::std::mem::uninitialized() };
         unsafe {
             ::std::ptr::copy_nonoverlapping(
@@ -3934,7 +3934,7 @@ impl __darwin_fp_status {
         unsafe { ::std::mem::transmute(val as u16) }
     }
     #[inline]
-    pub fn set___c2(&mut self, val: ::libc::c_ushort) {
+    pub fn set___c2(&mut self, val: ::std::os::raw::c_ushort) {
         let mask = 1024u64 as u16;
         let val = val as u16 as u16;
         let mut unit_field_val: u16 = unsafe { ::std::mem::uninitialized() };
@@ -3956,7 +3956,7 @@ impl __darwin_fp_status {
         }
     }
     #[inline]
-    pub fn __tos(&self) -> ::libc::c_ushort {
+    pub fn __tos(&self) -> ::std::os::raw::c_ushort {
         let mut unit_field_val: u16 = unsafe { ::std::mem::uninitialized() };
         unsafe {
             ::std::ptr::copy_nonoverlapping(
@@ -3970,7 +3970,7 @@ impl __darwin_fp_status {
         unsafe { ::std::mem::transmute(val as u16) }
     }
     #[inline]
-    pub fn set___tos(&mut self, val: ::libc::c_ushort) {
+    pub fn set___tos(&mut self, val: ::std::os::raw::c_ushort) {
         let mask = 14336u64 as u16;
         let val = val as u16 as u16;
         let mut unit_field_val: u16 = unsafe { ::std::mem::uninitialized() };
@@ -3992,7 +3992,7 @@ impl __darwin_fp_status {
         }
     }
     #[inline]
-    pub fn __c3(&self) -> ::libc::c_ushort {
+    pub fn __c3(&self) -> ::std::os::raw::c_ushort {
         let mut unit_field_val: u16 = unsafe { ::std::mem::uninitialized() };
         unsafe {
             ::std::ptr::copy_nonoverlapping(
@@ -4006,7 +4006,7 @@ impl __darwin_fp_status {
         unsafe { ::std::mem::transmute(val as u16) }
     }
     #[inline]
-    pub fn set___c3(&mut self, val: ::libc::c_ushort) {
+    pub fn set___c3(&mut self, val: ::std::os::raw::c_ushort) {
         let mask = 16384u64 as u16;
         let val = val as u16 as u16;
         let mut unit_field_val: u16 = unsafe { ::std::mem::uninitialized() };
@@ -4028,7 +4028,7 @@ impl __darwin_fp_status {
         }
     }
     #[inline]
-    pub fn __busy(&self) -> ::libc::c_ushort {
+    pub fn __busy(&self) -> ::std::os::raw::c_ushort {
         let mut unit_field_val: u16 = unsafe { ::std::mem::uninitialized() };
         unsafe {
             ::std::ptr::copy_nonoverlapping(
@@ -4042,7 +4042,7 @@ impl __darwin_fp_status {
         unsafe { ::std::mem::transmute(val as u16) }
     }
     #[inline]
-    pub fn set___busy(&mut self, val: ::libc::c_ushort) {
+    pub fn set___busy(&mut self, val: ::std::os::raw::c_ushort) {
         let mask = 32768u64 as u16;
         let val = val as u16 as u16;
         let mut unit_field_val: u16 = unsafe { ::std::mem::uninitialized() };
@@ -4065,20 +4065,20 @@ impl __darwin_fp_status {
     }
     #[inline]
     pub fn new_bitfield_1(
-        __invalid: ::libc::c_ushort,
-        __denorm: ::libc::c_ushort,
-        __zdiv: ::libc::c_ushort,
-        __ovrfl: ::libc::c_ushort,
-        __undfl: ::libc::c_ushort,
-        __precis: ::libc::c_ushort,
-        __stkflt: ::libc::c_ushort,
-        __errsumm: ::libc::c_ushort,
-        __c0: ::libc::c_ushort,
-        __c1: ::libc::c_ushort,
-        __c2: ::libc::c_ushort,
-        __tos: ::libc::c_ushort,
-        __c3: ::libc::c_ushort,
-        __busy: ::libc::c_ushort,
+        __invalid: ::std::os::raw::c_ushort,
+        __denorm: ::std::os::raw::c_ushort,
+        __zdiv: ::std::os::raw::c_ushort,
+        __ovrfl: ::std::os::raw::c_ushort,
+        __undfl: ::std::os::raw::c_ushort,
+        __precis: ::std::os::raw::c_ushort,
+        __stkflt: ::std::os::raw::c_ushort,
+        __errsumm: ::std::os::raw::c_ushort,
+        __c0: ::std::os::raw::c_ushort,
+        __c1: ::std::os::raw::c_ushort,
+        __c2: ::std::os::raw::c_ushort,
+        __tos: ::std::os::raw::c_ushort,
+        __c3: ::std::os::raw::c_ushort,
+        __busy: ::std::os::raw::c_ushort,
     ) -> u16 {
         ({
             ({
@@ -4120,8 +4120,8 @@ pub type __darwin_fp_status_t = __darwin_fp_status;
 #[repr(C)]
 #[derive(Copy)]
 pub struct __darwin_mmst_reg {
-    pub __mmst_reg: [::libc::c_char; 10usize],
-    pub __mmst_rsrv: [::libc::c_char; 6usize],
+    pub __mmst_reg: [::std::os::raw::c_char; 10usize],
+    pub __mmst_rsrv: [::std::os::raw::c_char; 6usize],
 }
 impl Clone for __darwin_mmst_reg {
     fn clone(&self) -> Self {
@@ -4131,7 +4131,7 @@ impl Clone for __darwin_mmst_reg {
 #[repr(C)]
 #[derive(Copy)]
 pub struct __darwin_xmm_reg {
-    pub __xmm_reg: [::libc::c_char; 16usize],
+    pub __xmm_reg: [::std::os::raw::c_char; 16usize],
 }
 impl Clone for __darwin_xmm_reg {
     fn clone(&self) -> Self {
@@ -4141,7 +4141,7 @@ impl Clone for __darwin_xmm_reg {
 #[repr(C)]
 #[derive(Copy)]
 pub struct __darwin_i386_float_state {
-    pub __fpu_reserved: [::libc::c_int; 2usize],
+    pub __fpu_reserved: [::std::os::raw::c_int; 2usize],
     pub __fpu_fcw: __darwin_fp_control,
     pub __fpu_fsw: __darwin_fp_status,
     pub __fpu_ftw: __uint8_t,
@@ -4171,8 +4171,8 @@ pub struct __darwin_i386_float_state {
     pub __fpu_xmm5: __darwin_xmm_reg,
     pub __fpu_xmm6: __darwin_xmm_reg,
     pub __fpu_xmm7: __darwin_xmm_reg,
-    pub __fpu_rsrv4: [::libc::c_char; 224usize],
-    pub __fpu_reserved1: ::libc::c_int,
+    pub __fpu_rsrv4: [::std::os::raw::c_char; 224usize],
+    pub __fpu_reserved1: ::std::os::raw::c_int,
 }
 impl Clone for __darwin_i386_float_state {
     fn clone(&self) -> Self {
@@ -4182,7 +4182,7 @@ impl Clone for __darwin_i386_float_state {
 #[repr(C)]
 #[derive(Copy)]
 pub struct __darwin_i386_avx_state {
-    pub __fpu_reserved: [::libc::c_int; 2usize],
+    pub __fpu_reserved: [::std::os::raw::c_int; 2usize],
     pub __fpu_fcw: __darwin_fp_control,
     pub __fpu_fsw: __darwin_fp_status,
     pub __fpu_ftw: __uint8_t,
@@ -4212,9 +4212,9 @@ pub struct __darwin_i386_avx_state {
     pub __fpu_xmm5: __darwin_xmm_reg,
     pub __fpu_xmm6: __darwin_xmm_reg,
     pub __fpu_xmm7: __darwin_xmm_reg,
-    pub __fpu_rsrv4: [::libc::c_char; 224usize],
-    pub __fpu_reserved1: ::libc::c_int,
-    pub __avx_reserved1: [::libc::c_char; 64usize],
+    pub __fpu_rsrv4: [::std::os::raw::c_char; 224usize],
+    pub __fpu_reserved1: ::std::os::raw::c_int,
+    pub __avx_reserved1: [::std::os::raw::c_char; 64usize],
     pub __fpu_ymmh0: __darwin_xmm_reg,
     pub __fpu_ymmh1: __darwin_xmm_reg,
     pub __fpu_ymmh2: __darwin_xmm_reg,
@@ -4245,14 +4245,14 @@ impl Clone for __darwin_i386_exception_state {
 #[repr(C)]
 #[derive(Copy)]
 pub struct __darwin_x86_debug_state32 {
-    pub __dr0: ::libc::c_uint,
-    pub __dr1: ::libc::c_uint,
-    pub __dr2: ::libc::c_uint,
-    pub __dr3: ::libc::c_uint,
-    pub __dr4: ::libc::c_uint,
-    pub __dr5: ::libc::c_uint,
-    pub __dr6: ::libc::c_uint,
-    pub __dr7: ::libc::c_uint,
+    pub __dr0: ::std::os::raw::c_uint,
+    pub __dr1: ::std::os::raw::c_uint,
+    pub __dr2: ::std::os::raw::c_uint,
+    pub __dr3: ::std::os::raw::c_uint,
+    pub __dr4: ::std::os::raw::c_uint,
+    pub __dr5: ::std::os::raw::c_uint,
+    pub __dr6: ::std::os::raw::c_uint,
+    pub __dr7: ::std::os::raw::c_uint,
 }
 impl Clone for __darwin_x86_debug_state32 {
     fn clone(&self) -> Self {
@@ -4292,7 +4292,7 @@ impl Clone for __darwin_x86_thread_state64 {
 #[repr(C)]
 #[derive(Copy)]
 pub struct __darwin_x86_float_state64 {
-    pub __fpu_reserved: [::libc::c_int; 2usize],
+    pub __fpu_reserved: [::std::os::raw::c_int; 2usize],
     pub __fpu_fcw: __darwin_fp_control,
     pub __fpu_fsw: __darwin_fp_status,
     pub __fpu_ftw: __uint8_t,
@@ -4330,8 +4330,8 @@ pub struct __darwin_x86_float_state64 {
     pub __fpu_xmm13: __darwin_xmm_reg,
     pub __fpu_xmm14: __darwin_xmm_reg,
     pub __fpu_xmm15: __darwin_xmm_reg,
-    pub __fpu_rsrv4: [::libc::c_char; 96usize],
-    pub __fpu_reserved1: ::libc::c_int,
+    pub __fpu_rsrv4: [::std::os::raw::c_char; 96usize],
+    pub __fpu_reserved1: ::std::os::raw::c_int,
 }
 impl Clone for __darwin_x86_float_state64 {
     fn clone(&self) -> Self {
@@ -4341,7 +4341,7 @@ impl Clone for __darwin_x86_float_state64 {
 #[repr(C)]
 #[derive(Copy)]
 pub struct __darwin_x86_avx_state64 {
-    pub __fpu_reserved: [::libc::c_int; 2usize],
+    pub __fpu_reserved: [::std::os::raw::c_int; 2usize],
     pub __fpu_fcw: __darwin_fp_control,
     pub __fpu_fsw: __darwin_fp_status,
     pub __fpu_ftw: __uint8_t,
@@ -4379,9 +4379,9 @@ pub struct __darwin_x86_avx_state64 {
     pub __fpu_xmm13: __darwin_xmm_reg,
     pub __fpu_xmm14: __darwin_xmm_reg,
     pub __fpu_xmm15: __darwin_xmm_reg,
-    pub __fpu_rsrv4: [::libc::c_char; 96usize],
-    pub __fpu_reserved1: ::libc::c_int,
-    pub __avx_reserved1: [::libc::c_char; 64usize],
+    pub __fpu_rsrv4: [::std::os::raw::c_char; 96usize],
+    pub __fpu_reserved1: ::std::os::raw::c_int,
+    pub __avx_reserved1: [::std::os::raw::c_char; 64usize],
     pub __fpu_ymmh0: __darwin_xmm_reg,
     pub __fpu_ymmh1: __darwin_xmm_reg,
     pub __fpu_ymmh2: __darwin_xmm_reg,
@@ -4437,8 +4437,8 @@ impl Clone for __darwin_x86_debug_state64 {
 #[repr(C)]
 #[derive(Copy)]
 pub struct x86_state_hdr {
-    pub flavor: ::libc::c_int,
-    pub count: ::libc::c_int,
+    pub flavor: ::std::os::raw::c_int,
+    pub count: ::std::os::raw::c_int,
 }
 impl Clone for x86_state_hdr {
     fn clone(&self) -> Self {
@@ -4581,15 +4581,15 @@ pub type x86_debug_state_t = x86_debug_state;
 pub type x86_avx_state_t = x86_avx_state;
 pub type thread_state_t = *mut natural_t;
 pub type thread_state_data_t = [natural_t; 224usize];
-pub type thread_state_flavor_t = ::libc::c_int;
+pub type thread_state_flavor_t = ::std::os::raw::c_int;
 pub type thread_state_flavor_array_t = *mut thread_state_flavor_t;
-pub type exception_type_t = ::libc::c_int;
+pub type exception_type_t = ::std::os::raw::c_int;
 pub type exception_data_type_t = integer_t;
 pub type mach_exception_data_type_t = i64;
-pub type exception_behavior_t = ::libc::c_int;
+pub type exception_behavior_t = ::std::os::raw::c_int;
 pub type exception_data_t = *mut exception_data_type_t;
 pub type mach_exception_data_t = *mut mach_exception_data_type_t;
-pub type exception_mask_t = ::libc::c_uint;
+pub type exception_mask_t = ::std::os::raw::c_uint;
 pub type exception_mask_array_t = *mut exception_mask_t;
 pub type exception_behavior_array_t = *mut exception_behavior_t;
 pub type exception_flavor_array_t = *mut thread_state_flavor_t;
@@ -4639,14 +4639,14 @@ pub type processor_info_array_t = *mut integer_t;
 pub type processor_info_data_t = [integer_t; 1024usize];
 pub type processor_set_info_t = *mut integer_t;
 pub type processor_set_info_data_t = [integer_t; 1024usize];
-pub type processor_flavor_t = ::libc::c_int;
+pub type processor_flavor_t = ::std::os::raw::c_int;
 #[repr(C)]
 #[derive(Copy)]
 pub struct processor_basic_info {
     pub cpu_type: cpu_type_t,
     pub cpu_subtype: cpu_subtype_t,
     pub running: boolean_t,
-    pub slot_num: ::libc::c_int,
+    pub slot_num: ::std::os::raw::c_int,
     pub is_master: boolean_t,
 }
 impl Clone for processor_basic_info {
@@ -4659,7 +4659,7 @@ pub type processor_basic_info_t = *mut processor_basic_info;
 #[repr(C)]
 #[derive(Copy)]
 pub struct processor_cpu_load_info {
-    pub cpu_ticks: [::libc::c_uint; 4usize],
+    pub cpu_ticks: [::std::os::raw::c_uint; 4usize],
 }
 impl Clone for processor_cpu_load_info {
     fn clone(&self) -> Self {
@@ -4668,12 +4668,12 @@ impl Clone for processor_cpu_load_info {
 }
 pub type processor_cpu_load_info_data_t = processor_cpu_load_info;
 pub type processor_cpu_load_info_t = *mut processor_cpu_load_info;
-pub type processor_set_flavor_t = ::libc::c_int;
+pub type processor_set_flavor_t = ::std::os::raw::c_int;
 #[repr(C)]
 #[derive(Copy)]
 pub struct processor_set_basic_info {
-    pub processor_count: ::libc::c_int,
-    pub default_policy: ::libc::c_int,
+    pub processor_count: ::std::os::raw::c_int,
+    pub default_policy: ::std::os::raw::c_int,
 }
 impl Clone for processor_set_basic_info {
     fn clone(&self) -> Self {
@@ -4685,8 +4685,8 @@ pub type processor_set_basic_info_t = *mut processor_set_basic_info;
 #[repr(C)]
 #[derive(Copy)]
 pub struct processor_set_load_info {
-    pub task_count: ::libc::c_int,
-    pub thread_count: ::libc::c_int,
+    pub task_count: ::std::os::raw::c_int,
+    pub thread_count: ::std::os::raw::c_int,
     pub load_average: integer_t,
     pub mach_factor: integer_t,
 }
@@ -4697,7 +4697,7 @@ impl Clone for processor_set_load_info {
 }
 pub type processor_set_load_info_data_t = processor_set_load_info;
 pub type processor_set_load_info_t = *mut processor_set_load_info;
-pub type policy_t = ::libc::c_int;
+pub type policy_t = ::std::os::raw::c_int;
 pub type policy_info_t = *mut integer_t;
 pub type policy_base_t = *mut integer_t;
 pub type policy_limit_t = *mut integer_t;
@@ -5008,7 +5008,7 @@ pub type task_dyld_info_t = *mut task_dyld_info;
 #[repr(C)]
 #[derive(Copy)]
 pub struct task_extmod_info {
-    pub task_uuid: [::libc::c_uchar; 16usize],
+    pub task_uuid: [::std::os::raw::c_uchar; 16usize],
     pub extmod_statistics: vm_extmod_statistics_data_t,
 }
 impl Clone for task_extmod_info {
@@ -5216,7 +5216,7 @@ impl Clone for task_qos_policy {
     }
 }
 pub type task_qos_policy_t = *mut task_qos_policy;
-pub type task_special_port_t = ::libc::c_int;
+pub type task_special_port_t = ::std::os::raw::c_int;
 pub type thread_flavor_t = natural_t;
 pub type thread_info_t = *mut integer_t;
 pub type thread_info_data_t = [integer_t; 32usize];
@@ -5266,7 +5266,7 @@ pub struct thread_extended_info {
     pub pth_curpri: i32,
     pub pth_priority: i32,
     pub pth_maxpriority: i32,
-    pub pth_name: [::libc::c_char; 64usize],
+    pub pth_name: [::std::os::raw::c_char; 64usize],
 }
 impl Clone for thread_extended_info {
     fn clone(&self) -> Self {
@@ -5404,16 +5404,16 @@ impl Clone for thread_throughput_qos_policy {
 }
 pub type thread_throughput_qos_policy_data_t = thread_throughput_qos_policy;
 pub type thread_throughput_qos_policy_t = *mut thread_throughput_qos_policy;
-pub type alarm_type_t = ::libc::c_int;
-pub type sleep_type_t = ::libc::c_int;
-pub type clock_id_t = ::libc::c_int;
-pub type clock_flavor_t = ::libc::c_int;
-pub type clock_attr_t = *mut ::libc::c_int;
-pub type clock_res_t = ::libc::c_int;
+pub type alarm_type_t = ::std::os::raw::c_int;
+pub type sleep_type_t = ::std::os::raw::c_int;
+pub type clock_id_t = ::std::os::raw::c_int;
+pub type clock_flavor_t = ::std::os::raw::c_int;
+pub type clock_attr_t = *mut ::std::os::raw::c_int;
+pub type clock_res_t = ::std::os::raw::c_int;
 #[repr(C)]
 #[derive(Copy)]
 pub struct mach_timespec {
-    pub tv_sec: ::libc::c_uint,
+    pub tv_sec: ::std::os::raw::c_uint,
     pub tv_nsec: clock_res_t,
 }
 impl Clone for mach_timespec {
@@ -5422,18 +5422,18 @@ impl Clone for mach_timespec {
     }
 }
 pub type mach_timespec_t = mach_timespec;
-pub type vm_machine_attribute_t = ::libc::c_uint;
-pub type vm_machine_attribute_val_t = ::libc::c_int;
-pub type vm_inherit_t = ::libc::c_uint;
-pub type vm_purgable_t = ::libc::c_int;
-pub type vm_behavior_t = ::libc::c_int;
+pub type vm_machine_attribute_t = ::std::os::raw::c_uint;
+pub type vm_machine_attribute_val_t = ::std::os::raw::c_int;
+pub type vm_inherit_t = ::std::os::raw::c_uint;
+pub type vm_purgable_t = ::std::os::raw::c_int;
+pub type vm_behavior_t = ::std::os::raw::c_int;
 pub type vm32_object_id_t = u32;
-pub type vm_region_info_t = *mut ::libc::c_int;
-pub type vm_region_info_64_t = *mut ::libc::c_int;
-pub type vm_region_recurse_info_t = *mut ::libc::c_int;
-pub type vm_region_recurse_info_64_t = *mut ::libc::c_int;
-pub type vm_region_flavor_t = ::libc::c_int;
-pub type vm_region_info_data_t = [::libc::c_int; 1024usize];
+pub type vm_region_info_t = *mut ::std::os::raw::c_int;
+pub type vm_region_info_64_t = *mut ::std::os::raw::c_int;
+pub type vm_region_recurse_info_t = *mut ::std::os::raw::c_int;
+pub type vm_region_recurse_info_64_t = *mut ::std::os::raw::c_int;
+pub type vm_region_flavor_t = ::std::os::raw::c_int;
+pub type vm_region_info_data_t = [::std::os::raw::c_int; 1024usize];
 #[repr(C)]
 #[derive(Copy)]
 pub struct vm_region_basic_info_64 {
@@ -5444,7 +5444,7 @@ pub struct vm_region_basic_info_64 {
     pub reserved: boolean_t,
     pub offset: memory_object_offset_t,
     pub behavior: vm_behavior_t,
-    pub user_wired_count: ::libc::c_ushort,
+    pub user_wired_count: ::std::os::raw::c_ushort,
 }
 impl Clone for vm_region_basic_info_64 {
     fn clone(&self) -> Self {
@@ -5463,7 +5463,7 @@ pub struct vm_region_basic_info {
     pub reserved: boolean_t,
     pub offset: u32,
     pub behavior: vm_behavior_t,
-    pub user_wired_count: ::libc::c_ushort,
+    pub user_wired_count: ::std::os::raw::c_ushort,
 }
 impl Clone for vm_region_basic_info {
     fn clone(&self) -> Self {
@@ -5476,16 +5476,16 @@ pub type vm_region_basic_info_data_t = vm_region_basic_info;
 #[derive(Copy)]
 pub struct vm_region_extended_info {
     pub protection: vm_prot_t,
-    pub user_tag: ::libc::c_uint,
-    pub pages_resident: ::libc::c_uint,
-    pub pages_shared_now_private: ::libc::c_uint,
-    pub pages_swapped_out: ::libc::c_uint,
-    pub pages_dirtied: ::libc::c_uint,
-    pub ref_count: ::libc::c_uint,
-    pub shadow_depth: ::libc::c_ushort,
-    pub external_pager: ::libc::c_uchar,
-    pub share_mode: ::libc::c_uchar,
-    pub pages_reusable: ::libc::c_uint,
+    pub user_tag: ::std::os::raw::c_uint,
+    pub pages_resident: ::std::os::raw::c_uint,
+    pub pages_shared_now_private: ::std::os::raw::c_uint,
+    pub pages_swapped_out: ::std::os::raw::c_uint,
+    pub pages_dirtied: ::std::os::raw::c_uint,
+    pub ref_count: ::std::os::raw::c_uint,
+    pub shadow_depth: ::std::os::raw::c_ushort,
+    pub external_pager: ::std::os::raw::c_uchar,
+    pub share_mode: ::std::os::raw::c_uchar,
+    pub pages_reusable: ::std::os::raw::c_uint,
 }
 impl Clone for vm_region_extended_info {
     fn clone(&self) -> Self {
@@ -5497,11 +5497,11 @@ pub type vm_region_extended_info_data_t = vm_region_extended_info;
 #[repr(C)]
 #[derive(Copy)]
 pub struct vm_region_top_info {
-    pub obj_id: ::libc::c_uint,
-    pub ref_count: ::libc::c_uint,
-    pub private_pages_resident: ::libc::c_uint,
-    pub shared_pages_resident: ::libc::c_uint,
-    pub share_mode: ::libc::c_uchar,
+    pub obj_id: ::std::os::raw::c_uint,
+    pub ref_count: ::std::os::raw::c_uint,
+    pub private_pages_resident: ::std::os::raw::c_uint,
+    pub shared_pages_resident: ::std::os::raw::c_uint,
+    pub share_mode: ::std::os::raw::c_uchar,
 }
 impl Clone for vm_region_top_info {
     fn clone(&self) -> Self {
@@ -5517,19 +5517,19 @@ pub struct vm_region_submap_info {
     pub max_protection: vm_prot_t,
     pub inheritance: vm_inherit_t,
     pub offset: u32,
-    pub user_tag: ::libc::c_uint,
-    pub pages_resident: ::libc::c_uint,
-    pub pages_shared_now_private: ::libc::c_uint,
-    pub pages_swapped_out: ::libc::c_uint,
-    pub pages_dirtied: ::libc::c_uint,
-    pub ref_count: ::libc::c_uint,
-    pub shadow_depth: ::libc::c_ushort,
-    pub external_pager: ::libc::c_uchar,
-    pub share_mode: ::libc::c_uchar,
+    pub user_tag: ::std::os::raw::c_uint,
+    pub pages_resident: ::std::os::raw::c_uint,
+    pub pages_shared_now_private: ::std::os::raw::c_uint,
+    pub pages_swapped_out: ::std::os::raw::c_uint,
+    pub pages_dirtied: ::std::os::raw::c_uint,
+    pub ref_count: ::std::os::raw::c_uint,
+    pub shadow_depth: ::std::os::raw::c_ushort,
+    pub external_pager: ::std::os::raw::c_uchar,
+    pub share_mode: ::std::os::raw::c_uchar,
     pub is_submap: boolean_t,
     pub behavior: vm_behavior_t,
     pub object_id: vm32_object_id_t,
-    pub user_wired_count: ::libc::c_ushort,
+    pub user_wired_count: ::std::os::raw::c_ushort,
 }
 impl Clone for vm_region_submap_info {
     fn clone(&self) -> Self {
@@ -5545,20 +5545,20 @@ pub struct vm_region_submap_info_64 {
     pub max_protection: vm_prot_t,
     pub inheritance: vm_inherit_t,
     pub offset: memory_object_offset_t,
-    pub user_tag: ::libc::c_uint,
-    pub pages_resident: ::libc::c_uint,
-    pub pages_shared_now_private: ::libc::c_uint,
-    pub pages_swapped_out: ::libc::c_uint,
-    pub pages_dirtied: ::libc::c_uint,
-    pub ref_count: ::libc::c_uint,
-    pub shadow_depth: ::libc::c_ushort,
-    pub external_pager: ::libc::c_uchar,
-    pub share_mode: ::libc::c_uchar,
+    pub user_tag: ::std::os::raw::c_uint,
+    pub pages_resident: ::std::os::raw::c_uint,
+    pub pages_shared_now_private: ::std::os::raw::c_uint,
+    pub pages_swapped_out: ::std::os::raw::c_uint,
+    pub pages_dirtied: ::std::os::raw::c_uint,
+    pub ref_count: ::std::os::raw::c_uint,
+    pub shadow_depth: ::std::os::raw::c_ushort,
+    pub external_pager: ::std::os::raw::c_uchar,
+    pub share_mode: ::std::os::raw::c_uchar,
     pub is_submap: boolean_t,
     pub behavior: vm_behavior_t,
     pub object_id: vm32_object_id_t,
-    pub user_wired_count: ::libc::c_ushort,
-    pub pages_reusable: ::libc::c_uint,
+    pub user_wired_count: ::std::os::raw::c_ushort,
+    pub pages_reusable: ::std::os::raw::c_uint,
 }
 impl Clone for vm_region_submap_info_64 {
     fn clone(&self) -> Self {
@@ -5574,15 +5574,15 @@ pub struct vm_region_submap_short_info_64 {
     pub max_protection: vm_prot_t,
     pub inheritance: vm_inherit_t,
     pub offset: memory_object_offset_t,
-    pub user_tag: ::libc::c_uint,
-    pub ref_count: ::libc::c_uint,
-    pub shadow_depth: ::libc::c_ushort,
-    pub external_pager: ::libc::c_uchar,
-    pub share_mode: ::libc::c_uchar,
+    pub user_tag: ::std::os::raw::c_uint,
+    pub ref_count: ::std::os::raw::c_uint,
+    pub shadow_depth: ::std::os::raw::c_ushort,
+    pub external_pager: ::std::os::raw::c_uchar,
+    pub share_mode: ::std::os::raw::c_uchar,
     pub is_submap: boolean_t,
     pub behavior: vm_behavior_t,
     pub object_id: vm32_object_id_t,
-    pub user_wired_count: ::libc::c_ushort,
+    pub user_wired_count: ::std::os::raw::c_ushort,
 }
 impl Clone for vm_region_submap_short_info_64 {
     fn clone(&self) -> Self {
@@ -5615,18 +5615,18 @@ impl Clone for vm_read_entry {
 }
 pub type mach_vm_read_entry_t = [mach_vm_read_entry; 256usize];
 pub type vm_read_entry_t = [vm_read_entry; 256usize];
-pub type vm_page_info_t = *mut ::libc::c_int;
-pub type vm_page_info_data_t = [::libc::c_int; 0usize];
-pub type vm_page_info_flavor_t = ::libc::c_int;
+pub type vm_page_info_t = *mut ::std::os::raw::c_int;
+pub type vm_page_info_data_t = [::std::os::raw::c_int; 0usize];
+pub type vm_page_info_flavor_t = ::std::os::raw::c_int;
 #[repr(C)]
 #[derive(Copy)]
 pub struct vm_page_info_basic {
-    pub disposition: ::libc::c_int,
-    pub ref_count: ::libc::c_int,
+    pub disposition: ::std::os::raw::c_int,
+    pub ref_count: ::std::os::raw::c_int,
     pub object_id: vm_object_id_t,
     pub offset: memory_object_offset_t,
-    pub depth: ::libc::c_int,
-    pub __pad: ::libc::c_int,
+    pub depth: ::std::os::raw::c_int,
+    pub __pad: ::std::os::raw::c_int,
 }
 impl Clone for vm_page_info_basic {
     fn clone(&self) -> Self {
@@ -5635,15 +5635,15 @@ impl Clone for vm_page_info_basic {
 }
 pub type vm_page_info_basic_t = *mut vm_page_info_basic;
 pub type vm_page_info_basic_data_t = vm_page_info_basic;
-pub type kmod_t = ::libc::c_int;
+pub type kmod_t = ::std::os::raw::c_int;
 #[repr(C)]
 #[derive(Copy)]
 pub struct kmod_info {
     pub next: *mut kmod_info,
     pub info_version: i32,
     pub id: u32,
-    pub name: [::libc::c_char; 64usize],
-    pub version: [::libc::c_char; 64usize],
+    pub name: [::std::os::raw::c_char; 64usize],
+    pub version: [::std::os::raw::c_char; 64usize],
     pub reference_count: i32,
     pub reference_list: *mut kmod_reference_t,
     pub address: vm_address_t,
@@ -5658,10 +5658,10 @@ impl Clone for kmod_info {
     }
 }
 pub type kmod_start_func_t = ::std::option::Option<
-    unsafe extern "C" fn(ki: *mut kmod_info, data: *mut ::libc::c_void) -> kern_return_t,
+    unsafe extern "C" fn(ki: *mut kmod_info, data: *mut ::std::os::raw::c_void) -> kern_return_t,
 >;
 pub type kmod_stop_func_t = ::std::option::Option<
-    unsafe extern "C" fn(ki: *mut kmod_info, data: *mut ::libc::c_void) -> kern_return_t,
+    unsafe extern "C" fn(ki: *mut kmod_info, data: *mut ::std::os::raw::c_void) -> kern_return_t,
 >;
 #[repr(C)]
 #[derive(Copy)]
@@ -5720,8 +5720,8 @@ impl Clone for kmod_info_64_v1 {
     }
 }
 pub type kmod_info_64_v1_t = kmod_info_64_v1;
-pub type kmod_args_t = *mut ::libc::c_void;
-pub type kmod_control_flavor_t = ::libc::c_int;
+pub type kmod_args_t = *mut ::std::os::raw::c_void;
+pub type kmod_control_flavor_t = ::std::os::raw::c_int;
 pub type kmod_info_array_t = *mut kmod_info_t;
 pub type task_t = mach_port_t;
 pub type task_name_t = mach_port_t;
@@ -5785,267 +5785,267 @@ pub type exception_port_arrary_t = exception_handler_array_t;
 pub type ledger_item_t = natural_t;
 pub type ledger_amount_t = i64;
 pub type emulation_vector_t = *mut mach_vm_offset_t;
-pub type user_subsystem_t = *mut ::libc::c_char;
-pub type labelstr_t = *mut ::libc::c_char;
-pub type __darwin_nl_item = ::libc::c_int;
-pub type __darwin_wctrans_t = ::libc::c_int;
+pub type user_subsystem_t = *mut ::std::os::raw::c_char;
+pub type labelstr_t = *mut ::std::os::raw::c_char;
+pub type __darwin_nl_item = ::std::os::raw::c_int;
+pub type __darwin_wctrans_t = ::std::os::raw::c_int;
 pub type __darwin_wctype_t = __uint32_t;
 extern "C" {
     pub fn memchr(
-        arg1: *const ::libc::c_void,
-        arg2: ::libc::c_int,
+        arg1: *const ::std::os::raw::c_void,
+        arg2: ::std::os::raw::c_int,
         arg3: usize,
-    ) -> *mut ::libc::c_void;
+    ) -> *mut ::std::os::raw::c_void;
 }
 extern "C" {
     pub fn memcmp(
-        arg1: *const ::libc::c_void,
-        arg2: *const ::libc::c_void,
+        arg1: *const ::std::os::raw::c_void,
+        arg2: *const ::std::os::raw::c_void,
         arg3: usize,
-    ) -> ::libc::c_int;
+    ) -> ::std::os::raw::c_int;
 }
 extern "C" {
     pub fn memcpy(
-        arg1: *mut ::libc::c_void,
-        arg2: *const ::libc::c_void,
+        arg1: *mut ::std::os::raw::c_void,
+        arg2: *const ::std::os::raw::c_void,
         arg3: usize,
-    ) -> *mut ::libc::c_void;
+    ) -> *mut ::std::os::raw::c_void;
 }
 extern "C" {
     pub fn memmove(
-        arg1: *mut ::libc::c_void,
-        arg2: *const ::libc::c_void,
+        arg1: *mut ::std::os::raw::c_void,
+        arg2: *const ::std::os::raw::c_void,
         arg3: usize,
-    ) -> *mut ::libc::c_void;
+    ) -> *mut ::std::os::raw::c_void;
 }
 extern "C" {
     pub fn memset(
-        arg1: *mut ::libc::c_void,
-        arg2: ::libc::c_int,
+        arg1: *mut ::std::os::raw::c_void,
+        arg2: ::std::os::raw::c_int,
         arg3: usize,
-    ) -> *mut ::libc::c_void;
+    ) -> *mut ::std::os::raw::c_void;
 }
 extern "C" {
-    pub fn strcat(arg1: *mut ::libc::c_char, arg2: *const ::libc::c_char) -> *mut ::libc::c_char;
+    pub fn strcat(arg1: *mut ::std::os::raw::c_char, arg2: *const ::std::os::raw::c_char) -> *mut ::std::os::raw::c_char;
 }
 extern "C" {
-    pub fn strchr(arg1: *const ::libc::c_char, arg2: ::libc::c_int) -> *mut ::libc::c_char;
+    pub fn strchr(arg1: *const ::std::os::raw::c_char, arg2: ::std::os::raw::c_int) -> *mut ::std::os::raw::c_char;
 }
 extern "C" {
-    pub fn strcmp(arg1: *const ::libc::c_char, arg2: *const ::libc::c_char) -> ::libc::c_int;
+    pub fn strcmp(arg1: *const ::std::os::raw::c_char, arg2: *const ::std::os::raw::c_char) -> ::std::os::raw::c_int;
 }
 extern "C" {
-    pub fn strcoll(arg1: *const ::libc::c_char, arg2: *const ::libc::c_char) -> ::libc::c_int;
+    pub fn strcoll(arg1: *const ::std::os::raw::c_char, arg2: *const ::std::os::raw::c_char) -> ::std::os::raw::c_int;
 }
 extern "C" {
-    pub fn strcpy(arg1: *mut ::libc::c_char, arg2: *const ::libc::c_char) -> *mut ::libc::c_char;
+    pub fn strcpy(arg1: *mut ::std::os::raw::c_char, arg2: *const ::std::os::raw::c_char) -> *mut ::std::os::raw::c_char;
 }
 extern "C" {
-    pub fn strcspn(arg1: *const ::libc::c_char, arg2: *const ::libc::c_char) -> ::libc::c_ulong;
+    pub fn strcspn(arg1: *const ::std::os::raw::c_char, arg2: *const ::std::os::raw::c_char) -> ::std::os::raw::c_ulong;
 }
 extern "C" {
-    pub fn strerror(arg1: ::libc::c_int) -> *mut ::libc::c_char;
+    pub fn strerror(arg1: ::std::os::raw::c_int) -> *mut ::std::os::raw::c_char;
 }
 extern "C" {
-    pub fn strlen(arg1: *const ::libc::c_char) -> ::libc::c_ulong;
+    pub fn strlen(arg1: *const ::std::os::raw::c_char) -> ::std::os::raw::c_ulong;
 }
 extern "C" {
     pub fn strncat(
-        arg1: *mut ::libc::c_char,
-        arg2: *const ::libc::c_char,
+        arg1: *mut ::std::os::raw::c_char,
+        arg2: *const ::std::os::raw::c_char,
         arg3: usize,
-    ) -> *mut ::libc::c_char;
+    ) -> *mut ::std::os::raw::c_char;
 }
 extern "C" {
     pub fn strncmp(
-        arg1: *const ::libc::c_char,
-        arg2: *const ::libc::c_char,
+        arg1: *const ::std::os::raw::c_char,
+        arg2: *const ::std::os::raw::c_char,
         arg3: usize,
-    ) -> ::libc::c_int;
+    ) -> ::std::os::raw::c_int;
 }
 extern "C" {
     pub fn strncpy(
-        arg1: *mut ::libc::c_char,
-        arg2: *const ::libc::c_char,
+        arg1: *mut ::std::os::raw::c_char,
+        arg2: *const ::std::os::raw::c_char,
         arg3: usize,
-    ) -> *mut ::libc::c_char;
+    ) -> *mut ::std::os::raw::c_char;
 }
 extern "C" {
-    pub fn strpbrk(arg1: *const ::libc::c_char, arg2: *const ::libc::c_char)
-        -> *mut ::libc::c_char;
+    pub fn strpbrk(arg1: *const ::std::os::raw::c_char, arg2: *const ::std::os::raw::c_char)
+        -> *mut ::std::os::raw::c_char;
 }
 extern "C" {
-    pub fn strrchr(arg1: *const ::libc::c_char, arg2: ::libc::c_int) -> *mut ::libc::c_char;
+    pub fn strrchr(arg1: *const ::std::os::raw::c_char, arg2: ::std::os::raw::c_int) -> *mut ::std::os::raw::c_char;
 }
 extern "C" {
-    pub fn strspn(arg1: *const ::libc::c_char, arg2: *const ::libc::c_char) -> ::libc::c_ulong;
+    pub fn strspn(arg1: *const ::std::os::raw::c_char, arg2: *const ::std::os::raw::c_char) -> ::std::os::raw::c_ulong;
 }
 extern "C" {
-    pub fn strstr(arg1: *const ::libc::c_char, arg2: *const ::libc::c_char) -> *mut ::libc::c_char;
+    pub fn strstr(arg1: *const ::std::os::raw::c_char, arg2: *const ::std::os::raw::c_char) -> *mut ::std::os::raw::c_char;
 }
 extern "C" {
-    pub fn strtok(arg1: *mut ::libc::c_char, arg2: *const ::libc::c_char) -> *mut ::libc::c_char;
+    pub fn strtok(arg1: *mut ::std::os::raw::c_char, arg2: *const ::std::os::raw::c_char) -> *mut ::std::os::raw::c_char;
 }
 extern "C" {
     pub fn strxfrm(
-        arg1: *mut ::libc::c_char,
-        arg2: *const ::libc::c_char,
+        arg1: *mut ::std::os::raw::c_char,
+        arg2: *const ::std::os::raw::c_char,
         arg3: usize,
-    ) -> ::libc::c_ulong;
+    ) -> ::std::os::raw::c_ulong;
 }
 extern "C" {
     pub fn strtok_r(
-        arg1: *mut ::libc::c_char,
-        arg2: *const ::libc::c_char,
-        arg3: *mut *mut ::libc::c_char,
-    ) -> *mut ::libc::c_char;
+        arg1: *mut ::std::os::raw::c_char,
+        arg2: *const ::std::os::raw::c_char,
+        arg3: *mut *mut ::std::os::raw::c_char,
+    ) -> *mut ::std::os::raw::c_char;
 }
 extern "C" {
-    pub fn strerror_r(arg1: ::libc::c_int, arg2: *mut ::libc::c_char, arg3: usize)
-        -> ::libc::c_int;
+    pub fn strerror_r(arg1: ::std::os::raw::c_int, arg2: *mut ::std::os::raw::c_char, arg3: usize)
+        -> ::std::os::raw::c_int;
 }
 extern "C" {
-    pub fn strdup(arg1: *const ::libc::c_char) -> *mut ::libc::c_char;
+    pub fn strdup(arg1: *const ::std::os::raw::c_char) -> *mut ::std::os::raw::c_char;
 }
 extern "C" {
     pub fn memccpy(
-        arg1: *mut ::libc::c_void,
-        arg2: *const ::libc::c_void,
-        arg3: ::libc::c_int,
+        arg1: *mut ::std::os::raw::c_void,
+        arg2: *const ::std::os::raw::c_void,
+        arg3: ::std::os::raw::c_int,
         arg4: usize,
-    ) -> *mut ::libc::c_void;
+    ) -> *mut ::std::os::raw::c_void;
 }
 extern "C" {
-    pub fn stpcpy(arg1: *mut ::libc::c_char, arg2: *const ::libc::c_char) -> *mut ::libc::c_char;
+    pub fn stpcpy(arg1: *mut ::std::os::raw::c_char, arg2: *const ::std::os::raw::c_char) -> *mut ::std::os::raw::c_char;
 }
 extern "C" {
     pub fn stpncpy(
-        arg1: *mut ::libc::c_char,
-        arg2: *const ::libc::c_char,
+        arg1: *mut ::std::os::raw::c_char,
+        arg2: *const ::std::os::raw::c_char,
         arg3: usize,
-    ) -> *mut ::libc::c_char;
+    ) -> *mut ::std::os::raw::c_char;
 }
 extern "C" {
-    pub fn strndup(arg1: *const ::libc::c_char, arg2: usize) -> *mut ::libc::c_char;
+    pub fn strndup(arg1: *const ::std::os::raw::c_char, arg2: usize) -> *mut ::std::os::raw::c_char;
 }
 extern "C" {
-    pub fn strnlen(arg1: *const ::libc::c_char, arg2: usize) -> usize;
+    pub fn strnlen(arg1: *const ::std::os::raw::c_char, arg2: usize) -> usize;
 }
 extern "C" {
-    pub fn strsignal(sig: ::libc::c_int) -> *mut ::libc::c_char;
+    pub fn strsignal(sig: ::std::os::raw::c_int) -> *mut ::std::os::raw::c_char;
 }
 pub type rsize_t = __darwin_size_t;
-pub type errno_t = ::libc::c_int;
+pub type errno_t = ::std::os::raw::c_int;
 extern "C" {
     pub fn memset_s(
-        arg1: *mut ::libc::c_void,
+        arg1: *mut ::std::os::raw::c_void,
         arg2: rsize_t,
-        arg3: ::libc::c_int,
+        arg3: ::std::os::raw::c_int,
         arg4: rsize_t,
     ) -> errno_t;
 }
 extern "C" {
     pub fn memmem(
-        arg1: *const ::libc::c_void,
+        arg1: *const ::std::os::raw::c_void,
         arg2: usize,
-        arg3: *const ::libc::c_void,
+        arg3: *const ::std::os::raw::c_void,
         arg4: usize,
-    ) -> *mut ::libc::c_void;
+    ) -> *mut ::std::os::raw::c_void;
 }
 extern "C" {
-    pub fn memset_pattern4(arg1: *mut ::libc::c_void, arg2: *const ::libc::c_void, arg3: usize);
+    pub fn memset_pattern4(arg1: *mut ::std::os::raw::c_void, arg2: *const ::std::os::raw::c_void, arg3: usize);
 }
 extern "C" {
-    pub fn memset_pattern8(arg1: *mut ::libc::c_void, arg2: *const ::libc::c_void, arg3: usize);
+    pub fn memset_pattern8(arg1: *mut ::std::os::raw::c_void, arg2: *const ::std::os::raw::c_void, arg3: usize);
 }
 extern "C" {
-    pub fn memset_pattern16(arg1: *mut ::libc::c_void, arg2: *const ::libc::c_void, arg3: usize);
+    pub fn memset_pattern16(arg1: *mut ::std::os::raw::c_void, arg2: *const ::std::os::raw::c_void, arg3: usize);
 }
 extern "C" {
     pub fn strcasestr(
-        arg1: *const ::libc::c_char,
-        arg2: *const ::libc::c_char,
-    ) -> *mut ::libc::c_char;
+        arg1: *const ::std::os::raw::c_char,
+        arg2: *const ::std::os::raw::c_char,
+    ) -> *mut ::std::os::raw::c_char;
 }
 extern "C" {
     pub fn strnstr(
-        arg1: *const ::libc::c_char,
-        arg2: *const ::libc::c_char,
+        arg1: *const ::std::os::raw::c_char,
+        arg2: *const ::std::os::raw::c_char,
         arg3: usize,
-    ) -> *mut ::libc::c_char;
+    ) -> *mut ::std::os::raw::c_char;
 }
 extern "C" {
     pub fn strlcat(
-        arg1: *mut ::libc::c_char,
-        arg2: *const ::libc::c_char,
+        arg1: *mut ::std::os::raw::c_char,
+        arg2: *const ::std::os::raw::c_char,
         arg3: usize,
-    ) -> ::libc::c_ulong;
+    ) -> ::std::os::raw::c_ulong;
 }
 extern "C" {
     pub fn strlcpy(
-        arg1: *mut ::libc::c_char,
-        arg2: *const ::libc::c_char,
+        arg1: *mut ::std::os::raw::c_char,
+        arg2: *const ::std::os::raw::c_char,
         arg3: usize,
-    ) -> ::libc::c_ulong;
+    ) -> ::std::os::raw::c_ulong;
 }
 extern "C" {
-    pub fn strmode(arg1: ::libc::c_int, arg2: *mut ::libc::c_char);
+    pub fn strmode(arg1: ::std::os::raw::c_int, arg2: *mut ::std::os::raw::c_char);
 }
 extern "C" {
     pub fn strsep(
-        arg1: *mut *mut ::libc::c_char,
-        arg2: *const ::libc::c_char,
-    ) -> *mut ::libc::c_char;
+        arg1: *mut *mut ::std::os::raw::c_char,
+        arg2: *const ::std::os::raw::c_char,
+    ) -> *mut ::std::os::raw::c_char;
 }
 extern "C" {
-    pub fn swab(arg1: *const ::libc::c_void, arg2: *mut ::libc::c_void, arg3: isize);
+    pub fn swab(arg1: *const ::std::os::raw::c_void, arg2: *mut ::std::os::raw::c_void, arg3: isize);
 }
 extern "C" {
     pub fn bcmp(
-        arg1: *const ::libc::c_void,
-        arg2: *const ::libc::c_void,
+        arg1: *const ::std::os::raw::c_void,
+        arg2: *const ::std::os::raw::c_void,
         arg3: usize,
-    ) -> ::libc::c_int;
+    ) -> ::std::os::raw::c_int;
 }
 extern "C" {
-    pub fn bcopy(arg1: *const ::libc::c_void, arg2: *mut ::libc::c_void, arg3: usize);
+    pub fn bcopy(arg1: *const ::std::os::raw::c_void, arg2: *mut ::std::os::raw::c_void, arg3: usize);
 }
 extern "C" {
-    pub fn bzero(arg1: *mut ::libc::c_void, arg2: usize);
+    pub fn bzero(arg1: *mut ::std::os::raw::c_void, arg2: usize);
 }
 extern "C" {
-    pub fn index(arg1: *const ::libc::c_char, arg2: ::libc::c_int) -> *mut ::libc::c_char;
+    pub fn index(arg1: *const ::std::os::raw::c_char, arg2: ::std::os::raw::c_int) -> *mut ::std::os::raw::c_char;
 }
 extern "C" {
-    pub fn rindex(arg1: *const ::libc::c_char, arg2: ::libc::c_int) -> *mut ::libc::c_char;
+    pub fn rindex(arg1: *const ::std::os::raw::c_char, arg2: ::std::os::raw::c_int) -> *mut ::std::os::raw::c_char;
 }
 extern "C" {
-    pub fn ffs(arg1: ::libc::c_int) -> ::libc::c_int;
+    pub fn ffs(arg1: ::std::os::raw::c_int) -> ::std::os::raw::c_int;
 }
 extern "C" {
-    pub fn strcasecmp(arg1: *const ::libc::c_char, arg2: *const ::libc::c_char) -> ::libc::c_int;
+    pub fn strcasecmp(arg1: *const ::std::os::raw::c_char, arg2: *const ::std::os::raw::c_char) -> ::std::os::raw::c_int;
 }
 extern "C" {
     pub fn strncasecmp(
-        arg1: *const ::libc::c_char,
-        arg2: *const ::libc::c_char,
+        arg1: *const ::std::os::raw::c_char,
+        arg2: *const ::std::os::raw::c_char,
         arg3: usize,
-    ) -> ::libc::c_int;
+    ) -> ::std::os::raw::c_int;
 }
 extern "C" {
-    pub fn ffsl(arg1: ::libc::c_long) -> ::libc::c_int;
+    pub fn ffsl(arg1: ::std::os::raw::c_long) -> ::std::os::raw::c_int;
 }
 extern "C" {
-    pub fn ffsll(arg1: ::libc::c_longlong) -> ::libc::c_int;
+    pub fn ffsll(arg1: ::std::os::raw::c_longlong) -> ::std::os::raw::c_int;
 }
 extern "C" {
-    pub fn fls(arg1: ::libc::c_int) -> ::libc::c_int;
+    pub fn fls(arg1: ::std::os::raw::c_int) -> ::std::os::raw::c_int;
 }
 extern "C" {
-    pub fn flsl(arg1: ::libc::c_long) -> ::libc::c_int;
+    pub fn flsl(arg1: ::std::os::raw::c_long) -> ::std::os::raw::c_int;
 }
 extern "C" {
-    pub fn flsll(arg1: ::libc::c_longlong) -> ::libc::c_int;
+    pub fn flsll(arg1: ::std::os::raw::c_longlong) -> ::std::os::raw::c_int;
 }
 pub const OSUnknownByteOrder: _bindgen_ty_1 = _bindgen_ty_1::OSUnknownByteOrder;
 pub const OSLittleEndian: _bindgen_ty_1 = _bindgen_ty_1::OSLittleEndian;
@@ -6060,14 +6060,14 @@ pub enum _bindgen_ty_1 {
 #[repr(C)]
 #[derive(Copy)]
 pub struct NDR_record_t {
-    pub mig_vers: ::libc::c_uchar,
-    pub if_vers: ::libc::c_uchar,
-    pub reserved1: ::libc::c_uchar,
-    pub mig_encoding: ::libc::c_uchar,
-    pub int_rep: ::libc::c_uchar,
-    pub char_rep: ::libc::c_uchar,
-    pub float_rep: ::libc::c_uchar,
-    pub reserved2: ::libc::c_uchar,
+    pub mig_vers: ::std::os::raw::c_uchar,
+    pub if_vers: ::std::os::raw::c_uchar,
+    pub reserved1: ::std::os::raw::c_uchar,
+    pub mig_encoding: ::std::os::raw::c_uchar,
+    pub int_rep: ::std::os::raw::c_uchar,
+    pub char_rep: ::std::os::raw::c_uchar,
+    pub float_rep: ::std::os::raw::c_uchar,
+    pub reserved2: ::std::os::raw::c_uchar,
 }
 impl Clone for NDR_record_t {
     fn clone(&self) -> Self {
@@ -6170,10 +6170,10 @@ pub type mig_routine_arg_descriptor_t = *mut mach_msg_type_descriptor_t;
 pub struct routine_descriptor {
     pub impl_routine: mig_impl_routine_t,
     pub stub_routine: mig_stub_routine_t,
-    pub argc: ::libc::c_uint,
-    pub descr_count: ::libc::c_uint,
+    pub argc: ::std::os::raw::c_uint,
+    pub descr_count: ::std::os::raw::c_uint,
     pub arg_descr: routine_arg_descriptor_t,
-    pub max_reply_msg: ::libc::c_uint,
+    pub max_reply_msg: ::std::os::raw::c_uint,
 }
 impl Clone for routine_descriptor {
     fn clone(&self) -> Self {
@@ -6202,8 +6202,8 @@ pub type mig_subsystem_t = *mut mig_subsystem;
 #[repr(C)]
 #[derive(Copy)]
 pub struct mig_symtab {
-    pub ms_routine_name: *mut ::libc::c_char,
-    pub ms_routine_number: ::libc::c_int,
+    pub ms_routine_name: *mut ::std::os::raw::c_char,
+    pub ms_routine_number: ::std::os::raw::c_int,
     pub ms_routine: ::std::option::Option<unsafe extern "C" fn()>,
 }
 impl Clone for mig_symtab {
@@ -6223,10 +6223,10 @@ extern "C" {
 }
 extern "C" {
     pub fn mig_strncpy(
-        dest: *mut ::libc::c_char,
-        src: *const ::libc::c_char,
-        len: ::libc::c_int,
-    ) -> ::libc::c_int;
+        dest: *mut ::std::os::raw::c_char,
+        src: *const ::std::os::raw::c_char,
+        len: ::std::os::raw::c_int,
+    ) -> ::std::os::raw::c_int;
 }
 extern "C" {
     pub fn mig_allocate(arg1: *mut vm_address_t, arg2: vm_size_t);
@@ -6276,7 +6276,7 @@ pub struct __Request__clock_set_attributes_t {
     pub NDR: NDR_record_t,
     pub flavor: clock_flavor_t,
     pub clock_attrCnt: mach_msg_type_number_t,
-    pub clock_attr: [::libc::c_int; 1usize],
+    pub clock_attr: [::std::os::raw::c_int; 1usize],
 }
 impl Clone for __Request__clock_set_attributes_t {
     fn clone(&self) -> Self {
@@ -6459,16 +6459,16 @@ pub type vm_info_region_t = vm_info_region;
 pub struct vm_info_object {
     pub vio_object: natural_t,
     pub vio_size: natural_t,
-    pub vio_ref_count: ::libc::c_uint,
-    pub vio_resident_page_count: ::libc::c_uint,
-    pub vio_absent_count: ::libc::c_uint,
+    pub vio_ref_count: ::std::os::raw::c_uint,
+    pub vio_resident_page_count: ::std::os::raw::c_uint,
+    pub vio_absent_count: ::std::os::raw::c_uint,
     pub vio_copy: natural_t,
     pub vio_shadow: natural_t,
     pub vio_shadow_offset: natural_t,
     pub vio_paging_offset: natural_t,
     pub vio_copy_strategy: memory_object_copy_strategy_t,
     pub vio_last_alloc: vm_offset_t,
-    pub vio_paging_in_progress: ::libc::c_uint,
+    pub vio_paging_in_progress: ::std::os::raw::c_uint,
     pub vio_pager_created: boolean_t,
     pub vio_pager_initialized: boolean_t,
     pub vio_pager_ready: boolean_t,
@@ -6489,7 +6489,7 @@ pub type vm_info_object_array_t = *mut vm_info_object_t;
 #[repr(C)]
 #[derive(Copy)]
 pub struct zone_name {
-    pub zn_name: [::libc::c_char; 80usize],
+    pub zn_name: [::std::os::raw::c_char; 80usize],
 }
 impl Clone for zone_name {
     fn clone(&self) -> Self {
@@ -6521,7 +6521,7 @@ pub type zone_info_array_t = *mut zone_info_t;
 #[repr(C)]
 #[derive(Copy)]
 pub struct mach_zone_name {
-    pub mzn_name: [::libc::c_char; 80usize],
+    pub mzn_name: [::std::os::raw::c_char; 80usize],
 }
 impl Clone for mach_zone_name {
     fn clone(&self) -> Self {
@@ -6604,7 +6604,7 @@ pub type hash_info_bucket_array_t = *mut hash_info_bucket_t;
 #[repr(C)]
 #[derive(Copy)]
 pub struct lockgroup_info {
-    pub lockgroup_name: [::libc::c_char; 64usize],
+    pub lockgroup_name: [::std::os::raw::c_char; 64usize],
     pub lockgroup_attr: u64,
     pub lock_spin_cnt: u64,
     pub lock_spin_util_cnt: u64,
@@ -6638,7 +6638,7 @@ impl Clone for lockgroup_info {
 }
 pub type lockgroup_info_t = lockgroup_info;
 pub type lockgroup_info_array_t = *mut lockgroup_info_t;
-pub type symtab_name_t = [::libc::c_char; 32usize];
+pub type symtab_name_t = [::std::os::raw::c_char; 32usize];
 #[repr(C)]
 #[derive(Copy)]
 pub struct mach_core_fileheader {
@@ -6656,11 +6656,11 @@ impl Clone for mach_core_fileheader {
 extern "C" {
     pub fn host_get_boot_info(
         host_priv: host_priv_t,
-        boot_info: *mut ::libc::c_char,
+        boot_info: *mut ::std::os::raw::c_char,
     ) -> kern_return_t;
 }
 extern "C" {
-    pub fn host_reboot(host_priv: host_priv_t, options: ::libc::c_int) -> kern_return_t;
+    pub fn host_reboot(host_priv: host_priv_t, options: ::std::os::raw::c_int) -> kern_return_t;
 }
 extern "C" {
     pub fn host_priv_statistics(
@@ -6699,7 +6699,7 @@ extern "C" {
         task: vm_map_t,
         address: *mut vm_address_t,
         size: vm_size_t,
-        flags: ::libc::c_int,
+        flags: ::std::os::raw::c_int,
     ) -> kern_return_t;
 }
 extern "C" {
@@ -6738,15 +6738,15 @@ extern "C" {
 extern "C" {
     pub fn host_get_special_port(
         host_priv: host_priv_t,
-        node: ::libc::c_int,
-        which: ::libc::c_int,
+        node: ::std::os::raw::c_int,
+        which: ::std::os::raw::c_int,
         port: *mut mach_port_t,
     ) -> kern_return_t;
 }
 extern "C" {
     pub fn host_set_special_port(
         host_priv: host_priv_t,
-        which: ::libc::c_int,
+        which: ::std::os::raw::c_int,
         port: mach_port_t,
     ) -> kern_return_t;
 }
@@ -6847,7 +6847,7 @@ impl Clone for __Request__host_get_boot_info_t {
 pub struct __Request__host_reboot_t {
     pub Head: mach_msg_header_t,
     pub NDR: NDR_record_t,
-    pub options: ::libc::c_int,
+    pub options: ::std::os::raw::c_int,
 }
 impl Clone for __Request__host_reboot_t {
     fn clone(&self) -> Self {
@@ -6920,7 +6920,7 @@ pub struct __Request__vm_allocate_cpm_t {
     pub NDR: NDR_record_t,
     pub address: vm_address_t,
     pub size: vm_size_t,
-    pub flags: ::libc::c_int,
+    pub flags: ::std::os::raw::c_int,
 }
 impl Clone for __Request__vm_allocate_cpm_t {
     fn clone(&self) -> Self {
@@ -6994,8 +6994,8 @@ impl Clone for __Request__kmod_control_t {
 pub struct __Request__host_get_special_port_t {
     pub Head: mach_msg_header_t,
     pub NDR: NDR_record_t,
-    pub node: ::libc::c_int,
-    pub which: ::libc::c_int,
+    pub node: ::std::os::raw::c_int,
+    pub which: ::std::os::raw::c_int,
 }
 impl Clone for __Request__host_get_special_port_t {
     fn clone(&self) -> Self {
@@ -7009,7 +7009,7 @@ pub struct __Request__host_set_special_port_t {
     pub msgh_body: mach_msg_body_t,
     pub port: mach_msg_port_descriptor_t,
     pub NDR: NDR_record_t,
-    pub which: ::libc::c_int,
+    pub which: ::std::os::raw::c_int,
 }
 impl Clone for __Request__host_set_special_port_t {
     fn clone(&self) -> Self {
@@ -7200,7 +7200,7 @@ pub struct __Reply__host_get_boot_info_t {
     pub RetCode: kern_return_t,
     pub boot_infoOffset: mach_msg_type_number_t,
     pub boot_infoCnt: mach_msg_type_number_t,
-    pub boot_info: [::libc::c_char; 4096usize],
+    pub boot_info: [::std::os::raw::c_char; 4096usize],
 }
 impl Clone for __Reply__host_get_boot_info_t {
     fn clone(&self) -> Self {
@@ -7661,29 +7661,29 @@ impl Clone for __ReplyUnion__host_security_subsystem {
     }
 }
 extern "C" {
-    pub fn lock_acquire(lock_set: lock_set_t, lock_id: ::libc::c_int) -> kern_return_t;
+    pub fn lock_acquire(lock_set: lock_set_t, lock_id: ::std::os::raw::c_int) -> kern_return_t;
 }
 extern "C" {
-    pub fn lock_release(lock_set: lock_set_t, lock_id: ::libc::c_int) -> kern_return_t;
+    pub fn lock_release(lock_set: lock_set_t, lock_id: ::std::os::raw::c_int) -> kern_return_t;
 }
 extern "C" {
-    pub fn lock_try(lock_set: lock_set_t, lock_id: ::libc::c_int) -> kern_return_t;
+    pub fn lock_try(lock_set: lock_set_t, lock_id: ::std::os::raw::c_int) -> kern_return_t;
 }
 extern "C" {
-    pub fn lock_make_stable(lock_set: lock_set_t, lock_id: ::libc::c_int) -> kern_return_t;
+    pub fn lock_make_stable(lock_set: lock_set_t, lock_id: ::std::os::raw::c_int) -> kern_return_t;
 }
 extern "C" {
-    pub fn lock_handoff(lock_set: lock_set_t, lock_id: ::libc::c_int) -> kern_return_t;
+    pub fn lock_handoff(lock_set: lock_set_t, lock_id: ::std::os::raw::c_int) -> kern_return_t;
 }
 extern "C" {
-    pub fn lock_handoff_accept(lock_set: lock_set_t, lock_id: ::libc::c_int) -> kern_return_t;
+    pub fn lock_handoff_accept(lock_set: lock_set_t, lock_id: ::std::os::raw::c_int) -> kern_return_t;
 }
 #[repr(C)]
 #[derive(Copy)]
 pub struct __Request__lock_acquire_t {
     pub Head: mach_msg_header_t,
     pub NDR: NDR_record_t,
-    pub lock_id: ::libc::c_int,
+    pub lock_id: ::std::os::raw::c_int,
 }
 impl Clone for __Request__lock_acquire_t {
     fn clone(&self) -> Self {
@@ -7695,7 +7695,7 @@ impl Clone for __Request__lock_acquire_t {
 pub struct __Request__lock_release_t {
     pub Head: mach_msg_header_t,
     pub NDR: NDR_record_t,
-    pub lock_id: ::libc::c_int,
+    pub lock_id: ::std::os::raw::c_int,
 }
 impl Clone for __Request__lock_release_t {
     fn clone(&self) -> Self {
@@ -7707,7 +7707,7 @@ impl Clone for __Request__lock_release_t {
 pub struct __Request__lock_try_t {
     pub Head: mach_msg_header_t,
     pub NDR: NDR_record_t,
-    pub lock_id: ::libc::c_int,
+    pub lock_id: ::std::os::raw::c_int,
 }
 impl Clone for __Request__lock_try_t {
     fn clone(&self) -> Self {
@@ -7719,7 +7719,7 @@ impl Clone for __Request__lock_try_t {
 pub struct __Request__lock_make_stable_t {
     pub Head: mach_msg_header_t,
     pub NDR: NDR_record_t,
-    pub lock_id: ::libc::c_int,
+    pub lock_id: ::std::os::raw::c_int,
 }
 impl Clone for __Request__lock_make_stable_t {
     fn clone(&self) -> Self {
@@ -7731,7 +7731,7 @@ impl Clone for __Request__lock_make_stable_t {
 pub struct __Request__lock_handoff_t {
     pub Head: mach_msg_header_t,
     pub NDR: NDR_record_t,
-    pub lock_id: ::libc::c_int,
+    pub lock_id: ::std::os::raw::c_int,
 }
 impl Clone for __Request__lock_handoff_t {
     fn clone(&self) -> Self {
@@ -7743,7 +7743,7 @@ impl Clone for __Request__lock_handoff_t {
 pub struct __Request__lock_handoff_accept_t {
     pub Head: mach_msg_header_t,
     pub NDR: NDR_record_t,
-    pub lock_id: ::libc::c_int,
+    pub lock_id: ::std::os::raw::c_int,
 }
 impl Clone for __Request__lock_handoff_accept_t {
     fn clone(&self) -> Self {
@@ -8080,20 +8080,20 @@ extern "C" {
 extern "C" {
     pub fn processor_set_max_priority(
         processor_set: processor_set_t,
-        max_priority: ::libc::c_int,
+        max_priority: ::std::os::raw::c_int,
         change_threads: boolean_t,
     ) -> kern_return_t;
 }
 extern "C" {
     pub fn processor_set_policy_enable(
         processor_set: processor_set_t,
-        policy: ::libc::c_int,
+        policy: ::std::os::raw::c_int,
     ) -> kern_return_t;
 }
 extern "C" {
     pub fn processor_set_policy_disable(
         processor_set: processor_set_t,
-        policy: ::libc::c_int,
+        policy: ::std::os::raw::c_int,
         change_threads: boolean_t,
     ) -> kern_return_t;
 }
@@ -8123,7 +8123,7 @@ extern "C" {
 extern "C" {
     pub fn processor_set_stack_usage(
         pset: processor_set_t,
-        ltotal: *mut ::libc::c_uint,
+        ltotal: *mut ::std::os::raw::c_uint,
         space: *mut vm_size_t,
         resident: *mut vm_size_t,
         maxusage: *mut vm_size_t,
@@ -8133,7 +8133,7 @@ extern "C" {
 extern "C" {
     pub fn processor_set_info(
         set_name: processor_set_name_t,
-        flavor: ::libc::c_int,
+        flavor: ::std::os::raw::c_int,
         host: *mut host_t,
         info_out: processor_set_info_t,
         info_outCnt: *mut mach_msg_type_number_t,
@@ -8167,7 +8167,7 @@ impl Clone for __Request__processor_set_destroy_t {
 pub struct __Request__processor_set_max_priority_t {
     pub Head: mach_msg_header_t,
     pub NDR: NDR_record_t,
-    pub max_priority: ::libc::c_int,
+    pub max_priority: ::std::os::raw::c_int,
     pub change_threads: boolean_t,
 }
 impl Clone for __Request__processor_set_max_priority_t {
@@ -8180,7 +8180,7 @@ impl Clone for __Request__processor_set_max_priority_t {
 pub struct __Request__processor_set_policy_enable_t {
     pub Head: mach_msg_header_t,
     pub NDR: NDR_record_t,
-    pub policy: ::libc::c_int,
+    pub policy: ::std::os::raw::c_int,
 }
 impl Clone for __Request__processor_set_policy_enable_t {
     fn clone(&self) -> Self {
@@ -8192,7 +8192,7 @@ impl Clone for __Request__processor_set_policy_enable_t {
 pub struct __Request__processor_set_policy_disable_t {
     pub Head: mach_msg_header_t,
     pub NDR: NDR_record_t,
-    pub policy: ::libc::c_int,
+    pub policy: ::std::os::raw::c_int,
     pub change_threads: boolean_t,
 }
 impl Clone for __Request__processor_set_policy_disable_t {
@@ -8250,7 +8250,7 @@ impl Clone for __Request__processor_set_stack_usage_t {
 pub struct __Request__processor_set_info_t {
     pub Head: mach_msg_header_t,
     pub NDR: NDR_record_t,
-    pub flavor: ::libc::c_int,
+    pub flavor: ::std::os::raw::c_int,
     pub info_outCnt: mach_msg_type_number_t,
 }
 impl Clone for __Request__processor_set_info_t {
@@ -8386,7 +8386,7 @@ pub struct __Reply__processor_set_stack_usage_t {
     pub Head: mach_msg_header_t,
     pub NDR: NDR_record_t,
     pub RetCode: kern_return_t,
-    pub ltotal: ::libc::c_uint,
+    pub ltotal: ::std::os::raw::c_uint,
     pub space: vm_size_t,
     pub resident: vm_size_t,
     pub maxusage: vm_size_t,
@@ -8432,7 +8432,7 @@ impl Clone for __ReplyUnion__processor_set_subsystem {
         *self
     }
 }
-pub type sync_policy_t = ::libc::c_int;
+pub type sync_policy_t = ::std::os::raw::c_int;
 extern "C" {
     pub fn semaphore_signal(semaphore: semaphore_t) -> kern_return_t;
 }
@@ -8520,14 +8520,14 @@ extern "C" {
 extern "C" {
     pub fn task_get_special_port(
         task: task_t,
-        which_port: ::libc::c_int,
+        which_port: ::std::os::raw::c_int,
         special_port: *mut mach_port_t,
     ) -> kern_return_t;
 }
 extern "C" {
     pub fn task_set_special_port(
         task: task_t,
-        which_port: ::libc::c_int,
+        which_port: ::std::os::raw::c_int,
         special_port: mach_port_t,
     ) -> kern_return_t;
 }
@@ -8581,8 +8581,8 @@ extern "C" {
     pub fn lock_set_create(
         task: task_t,
         new_lock_set: *mut lock_set_t,
-        n_ulocks: ::libc::c_int,
-        policy: ::libc::c_int,
+        n_ulocks: ::std::os::raw::c_int,
+        policy: ::std::os::raw::c_int,
     ) -> kern_return_t;
 }
 extern "C" {
@@ -8592,8 +8592,8 @@ extern "C" {
     pub fn semaphore_create(
         task: task_t,
         semaphore: *mut semaphore_t,
-        policy: ::libc::c_int,
-        value: ::libc::c_int,
+        policy: ::std::os::raw::c_int,
+        value: ::std::os::raw::c_int,
     ) -> kern_return_t;
 }
 extern "C" {
@@ -8633,13 +8633,13 @@ extern "C" {
     pub fn task_set_emulation(
         target_port: task_t,
         routine_entry_pt: vm_address_t,
-        routine_number: ::libc::c_int,
+        routine_number: ::std::os::raw::c_int,
     ) -> kern_return_t;
 }
 extern "C" {
     pub fn task_get_emulation_vector(
         task: task_t,
-        vector_start: *mut ::libc::c_int,
+        vector_start: *mut ::std::os::raw::c_int,
         emulation_vector: *mut emulation_vector_t,
         emulation_vectorCnt: *mut mach_msg_type_number_t,
     ) -> kern_return_t;
@@ -8647,7 +8647,7 @@ extern "C" {
 extern "C" {
     pub fn task_set_emulation_vector(
         task: task_t,
-        vector_start: ::libc::c_int,
+        vector_start: ::std::os::raw::c_int,
         emulation_vector: emulation_vector_t,
         emulation_vectorCnt: mach_msg_type_number_t,
     ) -> kern_return_t;
@@ -8715,8 +8715,8 @@ extern "C" {
 extern "C" {
     pub fn task_set_phys_footprint_limit(
         task: task_t,
-        new_limit: ::libc::c_int,
-        old_limit: *mut ::libc::c_int,
+        new_limit: ::std::os::raw::c_int,
+        old_limit: *mut ::std::os::raw::c_int,
     ) -> kern_return_t;
 }
 extern "C" {
@@ -8859,7 +8859,7 @@ impl Clone for __Request__task_resume_t {
 pub struct __Request__task_get_special_port_t {
     pub Head: mach_msg_header_t,
     pub NDR: NDR_record_t,
-    pub which_port: ::libc::c_int,
+    pub which_port: ::std::os::raw::c_int,
 }
 impl Clone for __Request__task_get_special_port_t {
     fn clone(&self) -> Self {
@@ -8873,7 +8873,7 @@ pub struct __Request__task_set_special_port_t {
     pub msgh_body: mach_msg_body_t,
     pub special_port: mach_msg_port_descriptor_t,
     pub NDR: NDR_record_t,
-    pub which_port: ::libc::c_int,
+    pub which_port: ::std::os::raw::c_int,
 }
 impl Clone for __Request__task_set_special_port_t {
     fn clone(&self) -> Self {
@@ -8953,8 +8953,8 @@ impl Clone for __Request__task_swap_exception_ports_t {
 pub struct __Request__lock_set_create_t {
     pub Head: mach_msg_header_t,
     pub NDR: NDR_record_t,
-    pub n_ulocks: ::libc::c_int,
-    pub policy: ::libc::c_int,
+    pub n_ulocks: ::std::os::raw::c_int,
+    pub policy: ::std::os::raw::c_int,
 }
 impl Clone for __Request__lock_set_create_t {
     fn clone(&self) -> Self {
@@ -8978,8 +8978,8 @@ impl Clone for __Request__lock_set_destroy_t {
 pub struct __Request__semaphore_create_t {
     pub Head: mach_msg_header_t,
     pub NDR: NDR_record_t,
-    pub policy: ::libc::c_int,
-    pub value: ::libc::c_int,
+    pub policy: ::std::os::raw::c_int,
+    pub value: ::std::os::raw::c_int,
 }
 impl Clone for __Request__semaphore_create_t {
     fn clone(&self) -> Self {
@@ -9060,7 +9060,7 @@ pub struct __Request__task_set_emulation_t {
     pub Head: mach_msg_header_t,
     pub NDR: NDR_record_t,
     pub routine_entry_pt: vm_address_t,
-    pub routine_number: ::libc::c_int,
+    pub routine_number: ::std::os::raw::c_int,
 }
 impl Clone for __Request__task_set_emulation_t {
     fn clone(&self) -> Self {
@@ -9084,7 +9084,7 @@ pub struct __Request__task_set_emulation_vector_t {
     pub msgh_body: mach_msg_body_t,
     pub emulation_vector: mach_msg_ool_descriptor_t,
     pub NDR: NDR_record_t,
-    pub vector_start: ::libc::c_int,
+    pub vector_start: ::std::os::raw::c_int,
     pub emulation_vectorCnt: mach_msg_type_number_t,
 }
 impl Clone for __Request__task_set_emulation_vector_t {
@@ -9202,7 +9202,7 @@ impl Clone for __Request__task_set_state_t {
 pub struct __Request__task_set_phys_footprint_limit_t {
     pub Head: mach_msg_header_t,
     pub NDR: NDR_record_t,
-    pub new_limit: ::libc::c_int,
+    pub new_limit: ::std::os::raw::c_int,
 }
 impl Clone for __Request__task_set_phys_footprint_limit_t {
     fn clone(&self) -> Self {
@@ -9654,7 +9654,7 @@ pub struct __Reply__task_get_emulation_vector_t {
     pub msgh_body: mach_msg_body_t,
     pub emulation_vector: mach_msg_ool_descriptor_t,
     pub NDR: NDR_record_t,
-    pub vector_start: ::libc::c_int,
+    pub vector_start: ::std::os::raw::c_int,
     pub emulation_vectorCnt: mach_msg_type_number_t,
 }
 impl Clone for __Reply__task_get_emulation_vector_t {
@@ -9782,7 +9782,7 @@ pub struct __Reply__task_set_phys_footprint_limit_t {
     pub Head: mach_msg_header_t,
     pub NDR: NDR_record_t,
     pub RetCode: kern_return_t,
-    pub old_limit: ::libc::c_int,
+    pub old_limit: ::std::os::raw::c_int,
 }
 impl Clone for __Reply__task_set_phys_footprint_limit_t {
     fn clone(&self) -> Self {
@@ -9920,7 +9920,7 @@ extern "C" {
 extern "C" {
     pub fn act_get_state(
         target_act: thread_act_t,
-        flavor: ::libc::c_int,
+        flavor: ::std::os::raw::c_int,
         old_state: thread_state_t,
         old_stateCnt: *mut mach_msg_type_number_t,
     ) -> kern_return_t;
@@ -9928,7 +9928,7 @@ extern "C" {
 extern "C" {
     pub fn act_set_state(
         target_act: thread_act_t,
-        flavor: ::libc::c_int,
+        flavor: ::std::os::raw::c_int,
         new_state: thread_state_t,
         new_stateCnt: mach_msg_type_number_t,
     ) -> kern_return_t;
@@ -9967,14 +9967,14 @@ extern "C" {
 extern "C" {
     pub fn thread_get_special_port(
         thr_act: thread_act_t,
-        which_port: ::libc::c_int,
+        which_port: ::std::os::raw::c_int,
         special_port: *mut mach_port_t,
     ) -> kern_return_t;
 }
 extern "C" {
     pub fn thread_set_special_port(
         thr_act: thread_act_t,
-        which_port: ::libc::c_int,
+        which_port: ::std::os::raw::c_int,
         special_port: mach_port_t,
     ) -> kern_return_t;
 }
@@ -10107,7 +10107,7 @@ impl Clone for __Request__thread_terminate_t {
 pub struct __Request__act_get_state_t {
     pub Head: mach_msg_header_t,
     pub NDR: NDR_record_t,
-    pub flavor: ::libc::c_int,
+    pub flavor: ::std::os::raw::c_int,
     pub old_stateCnt: mach_msg_type_number_t,
 }
 impl Clone for __Request__act_get_state_t {
@@ -10120,7 +10120,7 @@ impl Clone for __Request__act_get_state_t {
 pub struct __Request__act_set_state_t {
     pub Head: mach_msg_header_t,
     pub NDR: NDR_record_t,
-    pub flavor: ::libc::c_int,
+    pub flavor: ::std::os::raw::c_int,
     pub new_stateCnt: mach_msg_type_number_t,
     pub new_state: [natural_t; 224usize],
 }
@@ -10211,7 +10211,7 @@ impl Clone for __Request__thread_depress_abort_t {
 pub struct __Request__thread_get_special_port_t {
     pub Head: mach_msg_header_t,
     pub NDR: NDR_record_t,
-    pub which_port: ::libc::c_int,
+    pub which_port: ::std::os::raw::c_int,
 }
 impl Clone for __Request__thread_get_special_port_t {
     fn clone(&self) -> Self {
@@ -10225,7 +10225,7 @@ pub struct __Request__thread_set_special_port_t {
     pub msgh_body: mach_msg_body_t,
     pub special_port: mach_msg_port_descriptor_t,
     pub NDR: NDR_record_t,
-    pub which_port: ::libc::c_int,
+    pub which_port: ::std::os::raw::c_int,
 }
 impl Clone for __Request__thread_set_special_port_t {
     fn clone(&self) -> Self {
@@ -10890,7 +10890,7 @@ extern "C" {
         target_task: vm_map_t,
         address: *mut vm_address_t,
         size: vm_size_t,
-        flags: ::libc::c_int,
+        flags: ::std::os::raw::c_int,
     ) -> kern_return_t;
 }
 extern "C" {
@@ -10980,7 +10980,7 @@ extern "C" {
         address: *mut vm_address_t,
         size: vm_size_t,
         mask: vm_address_t,
-        flags: ::libc::c_int,
+        flags: ::std::os::raw::c_int,
         object: mem_entry_name_port_t,
         offset: vm_offset_t,
         copy: boolean_t,
@@ -11004,7 +11004,7 @@ extern "C" {
         target_address: *mut vm_address_t,
         size: vm_size_t,
         mask: vm_address_t,
-        flags: ::libc::c_int,
+        flags: ::std::os::raw::c_int,
         src_task: vm_map_t,
         src_address: vm_address_t,
         copy: boolean_t,
@@ -11106,7 +11106,7 @@ extern "C" {
         address: *mut vm_address_t,
         size: vm_size_t,
         mask: vm_address_t,
-        flags: ::libc::c_int,
+        flags: ::std::os::raw::c_int,
         object: mem_entry_name_port_t,
         offset: memory_object_offset_t,
         copy: boolean_t,
@@ -11120,7 +11120,7 @@ extern "C" {
         target_task: vm_map_t,
         address: vm_address_t,
         control: vm_purgable_t,
-        state: *mut ::libc::c_int,
+        state: *mut ::std::os::raw::c_int,
     ) -> kern_return_t;
 }
 #[repr(C)]
@@ -11144,7 +11144,7 @@ pub struct __Request__vm_allocate_t {
     pub NDR: NDR_record_t,
     pub address: vm_address_t,
     pub size: vm_size_t,
-    pub flags: ::libc::c_int,
+    pub flags: ::std::os::raw::c_int,
 }
 impl Clone for __Request__vm_allocate_t {
     fn clone(&self) -> Self {
@@ -11300,7 +11300,7 @@ pub struct __Request__vm_map_t {
     pub address: vm_address_t,
     pub size: vm_size_t,
     pub mask: vm_address_t,
-    pub flags: ::libc::c_int,
+    pub flags: ::std::os::raw::c_int,
     pub offset: vm_offset_t,
     pub copy: boolean_t,
     pub cur_protection: vm_prot_t,
@@ -11337,7 +11337,7 @@ pub struct __Request__vm_remap_t {
     pub target_address: vm_address_t,
     pub size: vm_size_t,
     pub mask: vm_address_t,
-    pub flags: ::libc::c_int,
+    pub flags: ::std::os::raw::c_int,
     pub src_address: vm_address_t,
     pub copy: boolean_t,
     pub inheritance: vm_inherit_t,
@@ -11489,7 +11489,7 @@ pub struct __Request__vm_map_64_t {
     pub address: vm_address_t,
     pub size: vm_size_t,
     pub mask: vm_address_t,
-    pub flags: ::libc::c_int,
+    pub flags: ::std::os::raw::c_int,
     pub offset: memory_object_offset_t,
     pub copy: boolean_t,
     pub cur_protection: vm_prot_t,
@@ -11508,7 +11508,7 @@ pub struct __Request__vm_purgable_control_t {
     pub NDR: NDR_record_t,
     pub address: vm_address_t,
     pub control: vm_purgable_t,
-    pub state: ::libc::c_int,
+    pub state: ::std::os::raw::c_int,
 }
 impl Clone for __Request__vm_purgable_control_t {
     fn clone(&self) -> Self {
@@ -11562,7 +11562,7 @@ pub struct __Reply__vm_region_t {
     pub address: vm_address_t,
     pub size: vm_size_t,
     pub infoCnt: mach_msg_type_number_t,
-    pub info: [::libc::c_int; 10usize],
+    pub info: [::std::os::raw::c_int; 10usize],
 }
 impl Clone for __Reply__vm_region_t {
     fn clone(&self) -> Self {
@@ -11826,7 +11826,7 @@ pub struct __Reply__vm_region_recurse_t {
     pub size: vm_size_t,
     pub nesting_depth: natural_t,
     pub infoCnt: mach_msg_type_number_t,
-    pub info: [::libc::c_int; 19usize],
+    pub info: [::std::os::raw::c_int; 19usize],
 }
 impl Clone for __Reply__vm_region_recurse_t {
     fn clone(&self) -> Self {
@@ -11843,7 +11843,7 @@ pub struct __Reply__vm_region_recurse_64_t {
     pub size: vm_size_t,
     pub nesting_depth: natural_t,
     pub infoCnt: mach_msg_type_number_t,
-    pub info: [::libc::c_int; 19usize],
+    pub info: [::std::os::raw::c_int; 19usize],
 }
 impl Clone for __Reply__vm_region_recurse_64_t {
     fn clone(&self) -> Self {
@@ -11875,7 +11875,7 @@ pub struct __Reply__vm_region_64_t {
     pub address: vm_address_t,
     pub size: vm_size_t,
     pub infoCnt: mach_msg_type_number_t,
-    pub info: [::libc::c_int; 10usize],
+    pub info: [::std::os::raw::c_int; 10usize],
 }
 impl Clone for __Reply__vm_region_64_t {
     fn clone(&self) -> Self {
@@ -11915,7 +11915,7 @@ pub struct __Reply__vm_purgable_control_t {
     pub Head: mach_msg_header_t,
     pub NDR: NDR_record_t,
     pub RetCode: kern_return_t,
-    pub state: ::libc::c_int,
+    pub state: ::std::os::raw::c_int,
 }
 impl Clone for __Reply__vm_purgable_control_t {
     fn clone(&self) -> Self {
@@ -12123,7 +12123,7 @@ extern "C" {
     ) -> kern_return_t;
 }
 extern "C" {
-    pub fn task_set_port_space(task: ipc_space_t, table_entries: ::libc::c_int) -> kern_return_t;
+    pub fn task_set_port_space(task: ipc_space_t, table_entries: ::std::os::raw::c_int) -> kern_return_t;
 }
 extern "C" {
     pub fn mach_port_get_srights(
@@ -12146,16 +12146,16 @@ extern "C" {
     pub fn mach_port_dnrequest_info(
         task: ipc_space_t,
         name: mach_port_name_t,
-        dnr_total: *mut ::libc::c_uint,
-        dnr_used: *mut ::libc::c_uint,
+        dnr_total: *mut ::std::os::raw::c_uint,
+        dnr_used: *mut ::std::os::raw::c_uint,
     ) -> kern_return_t;
 }
 extern "C" {
     pub fn mach_port_kernel_object(
         task: ipc_space_t,
         name: mach_port_name_t,
-        object_type: *mut ::libc::c_uint,
-        object_addr: *mut ::libc::c_uint,
+        object_type: *mut ::std::os::raw::c_uint,
+        object_addr: *mut ::std::os::raw::c_uint,
     ) -> kern_return_t;
 }
 extern "C" {
@@ -12514,7 +12514,7 @@ impl Clone for __Request__mach_port_allocate_full_t {
 pub struct __Request__task_set_port_space_t {
     pub Head: mach_msg_header_t,
     pub NDR: NDR_record_t,
-    pub table_entries: ::libc::c_int,
+    pub table_entries: ::std::os::raw::c_int,
 }
 impl Clone for __Request__task_set_port_space_t {
     fn clone(&self) -> Self {
@@ -12866,7 +12866,7 @@ pub struct __Reply__mach_port_peek_t {
     pub msg_sizep: mach_msg_size_t,
     pub msg_idp: mach_msg_id_t,
     pub trailer_infopCnt: mach_msg_type_number_t,
-    pub trailer_infop: [::libc::c_char; 68usize],
+    pub trailer_infop: [::std::os::raw::c_char; 68usize],
 }
 impl Clone for __Reply__mach_port_peek_t {
     fn clone(&self) -> Self {
@@ -13061,8 +13061,8 @@ pub struct __Reply__mach_port_dnrequest_info_t {
     pub Head: mach_msg_header_t,
     pub NDR: NDR_record_t,
     pub RetCode: kern_return_t,
-    pub dnr_total: ::libc::c_uint,
-    pub dnr_used: ::libc::c_uint,
+    pub dnr_total: ::std::os::raw::c_uint,
+    pub dnr_used: ::std::os::raw::c_uint,
 }
 impl Clone for __Reply__mach_port_dnrequest_info_t {
     fn clone(&self) -> Self {
@@ -13075,8 +13075,8 @@ pub struct __Reply__mach_port_kernel_object_t {
     pub Head: mach_msg_header_t,
     pub NDR: NDR_record_t,
     pub RetCode: kern_return_t,
-    pub object_type: ::libc::c_uint,
-    pub object_addr: ::libc::c_uint,
+    pub object_type: ::std::os::raw::c_uint,
+    pub object_addr: ::std::os::raw::c_uint,
 }
 impl Clone for __Reply__mach_port_kernel_object_t {
     fn clone(&self) -> Self {
@@ -13264,7 +13264,7 @@ extern "C" {
 }
 extern "C" {
     #[link_name = "vm_page_shift"]
-    pub static mut vm_page_shift: ::libc::c_int;
+    pub static mut vm_page_shift: ::std::os::raw::c_int;
 }
 extern "C" {
     #[link_name = "vm_kernel_page_size"]
@@ -13276,7 +13276,7 @@ extern "C" {
 }
 extern "C" {
     #[link_name = "vm_kernel_page_shift"]
-    pub static mut vm_kernel_page_shift: ::libc::c_int;
+    pub static mut vm_kernel_page_shift: ::std::os::raw::c_int;
 }
 pub type va_list = __builtin_va_list;
 pub type __gnuc_va_list = __builtin_va_list;
@@ -13297,8 +13297,8 @@ extern "C" {
     pub fn clock_sleep_trap(
         clock_name: mach_port_name_t,
         sleep_type: sleep_type_t,
-        sleep_sec: ::libc::c_int,
-        sleep_nsec: ::libc::c_int,
+        sleep_sec: ::std::os::raw::c_int,
+        sleep_nsec: ::std::os::raw::c_int,
         wakeup_time: *mut mach_timespec_t,
     ) -> kern_return_t;
 }
@@ -13307,7 +13307,7 @@ extern "C" {
         target: mach_port_name_t,
         addr: *mut mach_vm_offset_t,
         size: mach_vm_size_t,
-        flags: ::libc::c_int,
+        flags: ::std::os::raw::c_int,
     ) -> kern_return_t;
 }
 extern "C" {
@@ -13332,7 +13332,7 @@ extern "C" {
         address: *mut mach_vm_offset_t,
         size: mach_vm_size_t,
         mask: mach_vm_offset_t,
-        flags: ::libc::c_int,
+        flags: ::std::os::raw::c_int,
         cur_protection: vm_prot_t,
     ) -> kern_return_t;
 }
@@ -13426,19 +13426,19 @@ extern "C" {
 extern "C" {
     pub fn macx_swapon(
         filename: u64,
-        flags: ::libc::c_int,
-        size: ::libc::c_int,
-        priority: ::libc::c_int,
+        flags: ::std::os::raw::c_int,
+        size: ::std::os::raw::c_int,
+        priority: ::std::os::raw::c_int,
     ) -> kern_return_t;
 }
 extern "C" {
-    pub fn macx_swapoff(filename: u64, flags: ::libc::c_int) -> kern_return_t;
+    pub fn macx_swapoff(filename: u64, flags: ::std::os::raw::c_int) -> kern_return_t;
 }
 extern "C" {
     pub fn macx_triggers(
-        hi_water: ::libc::c_int,
-        low_water: ::libc::c_int,
-        flags: ::libc::c_int,
+        hi_water: ::std::os::raw::c_int,
+        low_water: ::std::os::raw::c_int,
+        flags: ::std::os::raw::c_int,
         alert_port: mach_port_t,
     ) -> kern_return_t;
 }
@@ -13446,10 +13446,10 @@ extern "C" {
     pub fn macx_backing_store_suspend(suspend: boolean_t) -> kern_return_t;
 }
 extern "C" {
-    pub fn macx_backing_store_recovery(pid: ::libc::c_int) -> kern_return_t;
+    pub fn macx_backing_store_recovery(pid: ::std::os::raw::c_int) -> kern_return_t;
 }
 extern "C" {
-    pub fn swtch_pri(pri: ::libc::c_int) -> boolean_t;
+    pub fn swtch_pri(pri: ::std::os::raw::c_int) -> boolean_t;
 }
 extern "C" {
     pub fn swtch() -> boolean_t;
@@ -13457,7 +13457,7 @@ extern "C" {
 extern "C" {
     pub fn thread_switch(
         thread_name: mach_port_name_t,
-        option: ::libc::c_int,
+        option: ::std::os::raw::c_int,
         option_time: mach_msg_timeout_t,
     ) -> kern_return_t;
 }
@@ -13467,19 +13467,19 @@ extern "C" {
 extern "C" {
     pub fn task_for_pid(
         target_tport: mach_port_name_t,
-        pid: ::libc::c_int,
+        pid: ::std::os::raw::c_int,
         t: *mut mach_port_name_t,
     ) -> kern_return_t;
 }
 extern "C" {
     pub fn task_name_for_pid(
         target_tport: mach_port_name_t,
-        pid: ::libc::c_int,
+        pid: ::std::os::raw::c_int,
         tn: *mut mach_port_name_t,
     ) -> kern_return_t;
 }
 extern "C" {
-    pub fn pid_for_task(t: mach_port_name_t, x: *mut ::libc::c_int) -> kern_return_t;
+    pub fn pid_for_task(t: mach_port_name_t, x: *mut ::std::os::raw::c_int) -> kern_return_t;
 }
 extern "C" {
     #[link_name = "bootstrap_port"]
@@ -13488,8 +13488,8 @@ extern "C" {
 extern "C" {
     #[link_name = "vprintf_stderr_func"]
     pub static mut vprintf_stderr_func: ::std::option::Option<
-        unsafe extern "C" fn(format: *const ::libc::c_char, ap: *mut __va_list_tag)
-            -> ::libc::c_int,
+        unsafe extern "C" fn(format: *const ::std::os::raw::c_char, ap: *mut __va_list_tag)
+            -> ::std::os::raw::c_int,
     >;
 }
 extern "C" {
@@ -13501,7 +13501,7 @@ extern "C" {
     ) -> kern_return_t;
 }
 extern "C" {
-    pub fn host_kernel_version(host: host_t, kernel_version: *mut ::libc::c_char) -> kern_return_t;
+    pub fn host_kernel_version(host: host_t, kernel_version: *mut ::std::os::raw::c_char) -> kern_return_t;
 }
 extern "C" {
     pub fn _host_page_size(host: host_t, out_page_size: *mut vm_size_t) -> kern_return_t;
@@ -14057,7 +14057,7 @@ pub struct __Reply__host_kernel_version_t {
     pub RetCode: kern_return_t,
     pub kernel_versionOffset: mach_msg_type_number_t,
     pub kernel_versionCnt: mach_msg_type_number_t,
-    pub kernel_version: [::libc::c_char; 512usize],
+    pub kernel_version: [::std::os::raw::c_char; 512usize],
 }
 impl Clone for __Reply__host_kernel_version_t {
     fn clone(&self) -> Self {
@@ -14437,9 +14437,9 @@ impl Clone for __ReplyUnion__mach_host_subsystem {
         *self
     }
 }
-pub type routine_arg_type = ::libc::c_uint;
-pub type routine_arg_offset = ::libc::c_uint;
-pub type routine_arg_size = ::libc::c_uint;
+pub type routine_arg_type = ::std::os::raw::c_uint;
+pub type routine_arg_offset = ::std::os::raw::c_uint;
+pub type routine_arg_size = ::std::os::raw::c_uint;
 #[repr(C)]
 #[derive(Copy)]
 pub struct rpc_routine_arg_descriptor {
@@ -14459,10 +14459,10 @@ pub type rpc_routine_arg_descriptor_t = *mut rpc_routine_arg_descriptor;
 pub struct rpc_routine_descriptor {
     pub impl_routine: mig_impl_routine_t,
     pub stub_routine: mig_stub_routine_t,
-    pub argc: ::libc::c_uint,
-    pub descr_count: ::libc::c_uint,
+    pub argc: ::std::os::raw::c_uint,
+    pub descr_count: ::std::os::raw::c_uint,
     pub arg_descr: rpc_routine_arg_descriptor_t,
-    pub max_reply_msg: ::libc::c_uint,
+    pub max_reply_msg: ::std::os::raw::c_uint,
 }
 impl Clone for rpc_routine_descriptor {
     fn clone(&self) -> Self {
@@ -14484,10 +14484,10 @@ impl Clone for rpc_signature {
 #[repr(C)]
 #[derive(Copy)]
 pub struct rpc_subsystem {
-    pub reserved: *mut ::libc::c_void,
+    pub reserved: *mut ::std::os::raw::c_void,
     pub start: mach_msg_id_t,
     pub end: mach_msg_id_t,
-    pub maxsize: ::libc::c_uint,
+    pub maxsize: ::std::os::raw::c_uint,
     pub base_addr: vm_address_t,
     pub routine: [rpc_routine_descriptor; 1usize],
     pub arg_descriptor: [rpc_routine_arg_descriptor; 1usize],
@@ -14501,29 +14501,29 @@ pub type rpc_subsystem_t = *mut rpc_subsystem;
 pub type mach_error_t = kern_return_t;
 pub type mach_error_fn_t = ::std::option::Option<unsafe extern "C" fn() -> mach_error_t>;
 extern "C" {
-    pub fn mach_error_string(error_value: mach_error_t) -> *mut ::libc::c_char;
+    pub fn mach_error_string(error_value: mach_error_t) -> *mut ::std::os::raw::c_char;
 }
 extern "C" {
-    pub fn mach_error(str: *const ::libc::c_char, error_value: mach_error_t);
+    pub fn mach_error(str: *const ::std::os::raw::c_char, error_value: mach_error_t);
 }
 extern "C" {
-    pub fn mach_error_type(error_value: mach_error_t) -> *mut ::libc::c_char;
+    pub fn mach_error_type(error_value: mach_error_t) -> *mut ::std::os::raw::c_char;
 }
 extern "C" {
     pub fn panic_init(arg1: mach_port_t);
 }
 extern "C" {
-    pub fn panic(arg1: *const ::libc::c_char, ...);
+    pub fn panic(arg1: *const ::std::os::raw::c_char, ...);
 }
 extern "C" {
-    pub fn safe_gets(arg1: *mut ::libc::c_char, arg2: *mut ::libc::c_char, arg3: ::libc::c_int);
+    pub fn safe_gets(arg1: *mut ::std::os::raw::c_char, arg2: *mut ::std::os::raw::c_char, arg3: ::std::os::raw::c_int);
 }
 extern "C" {
     pub fn slot_name(
         arg1: cpu_type_t,
         arg2: cpu_subtype_t,
-        arg3: *mut *mut ::libc::c_char,
-        arg4: *mut *mut ::libc::c_char,
+        arg3: *mut *mut ::std::os::raw::c_char,
+        arg4: *mut *mut ::std::os::raw::c_char,
     );
 }
 extern "C" {
@@ -14580,7 +14580,7 @@ extern "C" {
 extern "C" {
     pub fn clock_sleep(
         arg1: mach_port_t,
-        arg2: ::libc::c_int,
+        arg2: ::std::os::raw::c_int,
         arg3: mach_timespec_t,
         arg4: *mut mach_timespec_t,
     ) -> kern_return_t;
@@ -14607,10 +14607,10 @@ pub type __builtin_va_list = [__va_list_tag; 1usize];
 #[repr(C)]
 #[derive(Copy)]
 pub struct __va_list_tag {
-    pub gp_offset: ::libc::c_uint,
-    pub fp_offset: ::libc::c_uint,
-    pub overflow_arg_area: *mut ::libc::c_void,
-    pub reg_save_area: *mut ::libc::c_void,
+    pub gp_offset: ::std::os::raw::c_uint,
+    pub fp_offset: ::std::os::raw::c_uint,
+    pub overflow_arg_area: *mut ::std::os::raw::c_void,
+    pub reg_save_area: *mut ::std::os::raw::c_void,
 }
 impl Clone for __va_list_tag {
     fn clone(&self) -> Self {

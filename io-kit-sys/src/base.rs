@@ -1,5 +1,5 @@
-use libc::c_uchar;
 use mach_sys::kern_return_t;
+use std::os::raw::c_uchar;
 
 // exports from `mach/kern_return.h`
 pub const KERN_SUCCESS: kern_return_t = 0;

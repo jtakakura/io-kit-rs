@@ -3,7 +3,6 @@
 #![allow(non_snake_case)]
 
 extern crate core_foundation_sys;
-extern crate libc;
 
 pub mod base;
 pub mod keys;
@@ -18,7 +17,7 @@ use core_foundation_sys::base::{CFAllocatorRef, CFTypeRef};
 use core_foundation_sys::dictionary::{CFDictionaryRef, CFMutableDictionaryRef};
 use core_foundation_sys::runloop::CFRunLoopSourceRef;
 use core_foundation_sys::string::CFStringRef;
-use libc::{c_char, c_int, c_void};
+use std::os::raw::{c_char, c_int, c_void};
 
 use base::dispatch_queue_t;
 use mach_sys::{
