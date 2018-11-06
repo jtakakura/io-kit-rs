@@ -1,17 +1,14 @@
 use std::ffi::CStr;
 use std::mem;
 
-use libc::c_char;
+use std::os::raw::c_char;
 
 use core_foundation::base::TCFType;
 use core_foundation::dictionary::CFDictionary;
 use core_foundation::string::CFString;
-
-use io_kit_sys::base::*;
 use io_kit_sys::types::{io_iterator_t, io_object_t, io_service_t};
 use io_kit_sys::*;
-
-use mach::KernReturn;
+use mach::kern_return::KERN_SUCCESS;
 
 pub struct IOObject(io_object_t);
 
@@ -101,7 +98,7 @@ impl IOService {
         }
     }
 
-    pub fn get_matching_services(matching: CFDictionary) -> Result<Vec<Self>, KernReturn> {
+    pub fn get_matching_services(matching: CFDictionary) -> Result<Vec<Self>, i32> {
         unsafe {
             let mut io_iterator_t: io_iterator_t = mem::uninitialized();
 
@@ -112,7 +109,7 @@ impl IOService {
             );
 
             if result != KERN_SUCCESS {
-                return Err(KernReturn::from(result));
+                return Err(result);
             }
 
             let mut v: Vec<Self> = Vec::new();
@@ -151,31 +148,31 @@ pub trait TIOObject<concrete_io_object_t> {
     /// Returns the object as a raw `io_object_t`.
     fn as_io_object_t(&self) -> io_object_t;
 
-    fn release(&self) -> Result<(), KernReturn> {
+    fn release(&self) -> Result<(), i32> {
         unsafe {
             let result = IOObjectRelease(self.as_io_object_t());
 
             if result == KERN_SUCCESS {
                 Ok(())
             } else {
-                Err(KernReturn::from(result))
+                Err(result)
             }
         }
     }
 
-    fn retain(&self) -> Result<(), KernReturn> {
+    fn retain(&self) -> Result<(), i32> {
         unsafe {
             let result = IOObjectRetain(self.as_io_object_t());
 
             if result == KERN_SUCCESS {
                 Ok(())
             } else {
-                Err(KernReturn::from(result))
+                Err(result)
             }
         }
     }
 
-    fn get_class(&self) -> Result<String, KernReturn> {
+    fn get_class(&self) -> Result<String, i32> {
         unsafe {
             let mut buf = Vec::<c_char>::with_capacity(128);
 
@@ -186,7 +183,7 @@ pub trait TIOObject<concrete_io_object_t> {
                     CStr::from_ptr(buf.as_ptr()).to_str().unwrap().to_string(),
                 ))
             } else {
-                Err(KernReturn::from(result))
+                Err(result)
             }
         }
     }
