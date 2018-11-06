@@ -1,7 +1,9 @@
 // exports from <IOKit/IOTypes.h>
 
-use mach_sys::{mach_port_t, mach_vm_address_t};
 use std::os::raw::{c_char, c_int, c_uint, c_ulonglong};
+
+use mach::port::mach_port_t;
+use mach::vm_types::mach_vm_address_t;
 
 pub type IOOptionBits = c_uint;
 pub type IOFixed = c_int;
@@ -22,73 +24,57 @@ pub type IOVirtualAddress = mach_vm_address_t;
 #[cfg(any(target_arch = "arm", target_arch = "x86"))]
 pub type IOVirtualAddress = vm_address_t;
 
-#[cfg(
-    all(
-        not(target_arch = "arm"),
-        not(target_arch = "x86"),
-        not(target_arch = "x86_64")
-    )
-)]
+#[cfg(all(
+    not(target_arch = "arm"),
+    not(target_arch = "x86"),
+    not(target_arch = "x86_64")
+))]
 pub type IOByteCount = IOByteCount64;
-#[cfg(
-    any(
-        target_arch = "arm",
-        target_arch = "x86",
-        target_arch = "x86_64"
-    )
-)]
+#[cfg(any(
+    target_arch = "arm",
+    target_arch = "x86",
+    target_arch = "x86_64"
+))]
 pub type IOByteCount = IOByteCount32;
 
 pub type IOLogicalAddress = IOVirtualAddress;
 
-#[cfg(
-    all(
-        not(target_arch = "arm"),
-        not(target_arch = "x86"),
-        not(target_arch = "x86_64")
-    )
-)]
+#[cfg(all(
+    not(target_arch = "arm"),
+    not(target_arch = "x86"),
+    not(target_arch = "x86_64")
+))]
 pub type IOPhysicalAddress = IOPhysicalAddress64;
-#[cfg(
-    all(
-        not(target_arch = "arm"),
-        not(target_arch = "x86"),
-        not(target_arch = "x86_64")
-    )
-)]
+#[cfg(all(
+    not(target_arch = "arm"),
+    not(target_arch = "x86"),
+    not(target_arch = "x86_64")
+))]
 pub type IOPhysicalLength = IOPhysicalLength64;
-#[cfg(
-    all(
-        not(target_arch = "arm"),
-        not(target_arch = "x86"),
-        not(target_arch = "x86_64")
-    )
-)]
+#[cfg(all(
+    not(target_arch = "arm"),
+    not(target_arch = "x86"),
+    not(target_arch = "x86_64")
+))]
 pub const IOPhysSize: c_int = 64;
 
-#[cfg(
-    any(
-        target_arch = "arm",
-        target_arch = "x86",
-        target_arch = "x86_64"
-    )
-)]
+#[cfg(any(
+    target_arch = "arm",
+    target_arch = "x86",
+    target_arch = "x86_64"
+))]
 pub type IOPhysicalAddress = IOPhysicalAddress32;
-#[cfg(
-    any(
-        target_arch = "arm",
-        target_arch = "x86",
-        target_arch = "x86_64"
-    )
-)]
+#[cfg(any(
+    target_arch = "arm",
+    target_arch = "x86",
+    target_arch = "x86_64"
+))]
 pub type IOPhysicalLength = IOPhysicalAddress32;
-#[cfg(
-    any(
-        target_arch = "arm",
-        target_arch = "x86",
-        target_arch = "x86_64"
-    )
-)]
+#[cfg(any(
+    target_arch = "arm",
+    target_arch = "x86",
+    target_arch = "x86_64"
+))]
 pub const IOPhysSize: c_int = 32;
 
 #[repr(C)]

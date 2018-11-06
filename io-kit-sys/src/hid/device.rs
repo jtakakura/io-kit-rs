@@ -1,12 +1,13 @@
 // exports from <IOKit/hid/IOHIDDevice.h>
 
+use std::os::raw::c_void;
+
 use core_foundation_sys::array::CFArrayRef;
 use core_foundation_sys::base::{CFAllocatorRef, CFIndex, CFTypeID, CFTypeRef};
 use core_foundation_sys::date::CFTimeInterval;
 use core_foundation_sys::dictionary::CFDictionaryRef;
 use core_foundation_sys::runloop::CFRunLoopRef;
 use core_foundation_sys::string::CFStringRef;
-use std::os::raw::c_void;
 
 use base::Boolean;
 use hid::base::{

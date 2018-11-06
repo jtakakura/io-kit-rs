@@ -3,27 +3,31 @@
 #![allow(non_snake_case)]
 
 extern crate core_foundation_sys;
+extern crate mach;
 
 pub mod base;
 pub mod keys;
-pub mod mach_sys;
 pub mod ret;
 pub mod types;
 
 pub mod hid;
 pub mod usb;
 
+use std::os::raw::{c_char, c_int, c_void};
+
 use core_foundation_sys::base::{CFAllocatorRef, CFTypeRef};
 use core_foundation_sys::dictionary::{CFDictionaryRef, CFMutableDictionaryRef};
 use core_foundation_sys::runloop::CFRunLoopSourceRef;
 use core_foundation_sys::string::CFStringRef;
-use std::os::raw::{c_char, c_int, c_void};
+use mach::boolean::boolean_t;
+use mach::clock_types::mach_timespec_t;
+use mach::kern_return::kern_return_t;
+use mach::mach_types::task_port_t;
+use mach::message::mach_msg_header_t;
+use mach::port::mach_port_t;
+use mach::vm_types::{mach_vm_address_t, mach_vm_size_t};
 
 use base::dispatch_queue_t;
-use mach_sys::{
-    boolean_t, kern_return_t, mach_msg_header_t, mach_port_t, mach_timespec_t, mach_vm_address_t,
-    mach_vm_size_t, task_port_t,
-};
 use ret::IOReturn;
 use types::{
     io_connect_t, io_iterator_t, io_object_t, io_registry_entry_t, io_service_t, IOOptionBits,
