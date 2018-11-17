@@ -12,6 +12,7 @@ pub mod types;
 
 pub mod hid;
 pub mod ps;
+pub mod pwr_mgt;
 pub mod usb;
 
 use std::os::raw::{c_char, c_int, c_void};
