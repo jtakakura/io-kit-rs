@@ -1,7 +1,11 @@
 language: rust
 rust: stable
 os: osx
+env:
+  - TARGET=x86_64-apple-darwin
+  - TARGET=i686-apple-darwin
 
+install:
+  - rustup target add $TARGET
 script:
-  - cd io-kit
-  - cargo build --verbose
+  - cargo build --verbose --target $TARGET

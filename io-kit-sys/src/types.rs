@@ -3,7 +3,10 @@
 use std::os::raw::{c_char, c_int, c_uint, c_ulonglong};
 
 use mach::port::mach_port_t;
+#[cfg(all(not(target_arch = "arm"), not(target_arch = "x86")))]
 use mach::vm_types::mach_vm_address_t;
+#[cfg(any(target_arch = "arm", target_arch = "x86"))]
+use mach::vm_types::{vm_address_t, mach_vm_size_t};
 
 pub type IOOptionBits = c_uint;
 pub type IOFixed = c_int;
@@ -107,7 +110,7 @@ pub type IOAddressRange = IOVirtualRange;
 #[repr(C)]
 #[derive(Debug, Copy)]
 pub struct IOAddressRange {
-    address: mach_vm_address_t,
+    address: vm_address_t,
     length: mach_vm_size_t,
 }
 #[cfg(any(target_arch = "arm", target_arch = "x86"))]
