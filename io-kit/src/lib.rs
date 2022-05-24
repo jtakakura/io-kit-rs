@@ -3,7 +3,6 @@
 
 #[macro_use(impl_TCFType)]
 extern crate core_foundation;
-extern crate core_foundation_sys;
 extern crate mach;
 
 extern crate io_kit_sys;
