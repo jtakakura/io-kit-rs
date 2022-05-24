@@ -9,15 +9,19 @@ use core_foundation_sys::dictionary::CFDictionaryRef;
 use core_foundation_sys::runloop::CFRunLoopRef;
 use core_foundation_sys::string::CFStringRef;
 
-use base::Boolean;
-use hid::base::{
-    IOHIDCallback, IOHIDDeviceRef, IOHIDElementRef, IOHIDReportCallback,
-    IOHIDReportWithTimeStampCallback, IOHIDValueCallback, IOHIDValueMultipleCallback,
-    IOHIDValueRef,
+use crate::{
+    base::Boolean,
+    hid::{
+        base::{
+            IOHIDCallback, IOHIDDeviceRef, IOHIDElementRef, IOHIDReportCallback,
+            IOHIDReportWithTimeStampCallback, IOHIDValueCallback, IOHIDValueMultipleCallback,
+            IOHIDValueRef,
+        },
+        keys::IOHIDReportType,
+    },
+    ret::IOReturn,
+    types::{io_service_t, IOOptionBits},
 };
-use hid::keys::IOHIDReportType;
-use ret::IOReturn;
-use types::{io_service_t, IOOptionBits};
 
 extern "C" {
     pub fn IOHIDDeviceGetTypeID() -> CFTypeID;

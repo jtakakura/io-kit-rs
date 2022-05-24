@@ -2,8 +2,10 @@
 
 use core_foundation_sys::base::{CFAllocatorRef, CFIndex, CFTypeID};
 
-use hid::base::{IOHIDElementRef, IOHIDValueRef};
-use hid::keys::IOHIDValueScaleType;
+use crate::hid::{
+    base::{IOHIDElementRef, IOHIDValueRef},
+    keys::IOHIDValueScaleType
+};
 
 extern "C" {
     pub fn IOHIDValueGetTypeID() -> CFTypeID;

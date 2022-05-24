@@ -5,9 +5,13 @@ use core_foundation_sys::base::{CFAllocatorRef, CFIndex, CFTypeID, CFTypeRef};
 use core_foundation_sys::dictionary::CFDictionaryRef;
 use core_foundation_sys::string::CFStringRef;
 
-use base::Boolean;
-use hid::base::{IOHIDDeviceRef, IOHIDElementRef};
-use hid::keys::{IOHIDElementCollectionType, IOHIDElementCookie, IOHIDElementType};
+use crate::{
+    base::Boolean,
+    hid::{
+        base::{IOHIDDeviceRef, IOHIDElementRef},
+        keys::{IOHIDElementCollectionType, IOHIDElementCookie, IOHIDElementType},
+    },
+};
 
 extern "C" {
     pub fn IOHIDElementGetTypeID() -> CFTypeID;

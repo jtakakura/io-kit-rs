@@ -9,10 +9,12 @@ use core_foundation_sys::runloop::CFRunLoopRef;
 use core_foundation_sys::set::CFSetRef;
 use core_foundation_sys::string::CFStringRef;
 
-use base::Boolean;
-use hid::base::{IOHIDDeviceCallback, IOHIDReportCallback, IOHIDValueCallback};
-use ret::IOReturn;
-use types::IOOptionBits;
+use crate::{
+    base::Boolean,
+    hid::base::{IOHIDDeviceCallback, IOHIDReportCallback, IOHIDValueCallback},
+    ret::IOReturn,
+    types::IOOptionBits,
+};
 
 pub type IOHIDManagerOptions = IOOptionBits;
 pub const kIOHIDManagerOptionNone: IOHIDManagerOptions = 0x0;

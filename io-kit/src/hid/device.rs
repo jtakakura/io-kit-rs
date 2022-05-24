@@ -7,8 +7,10 @@ pub use io_kit_sys::hid::device::*;
 use io_kit_sys::hid::keys::kIOHIDOptionsTypeNone;
 use io_kit_sys::CFSTR;
 
-use base::{IOService, TIOObject};
-use ret::{kIOReturnSuccess, IOReturn};
+use crate::{
+    base::{IOService, TIOObject},
+    ret::{kIOReturnSuccess, IOReturn},
+};
 
 pub struct IOHIDDevice(IOHIDDeviceRef);
 
