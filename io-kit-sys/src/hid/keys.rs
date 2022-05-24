@@ -243,8 +243,8 @@ pub const kIOHIDValueScaleTypeCalibrated: IOHIDValueScaleType = 0;
 pub const kIOHIDValueScaleTypePhysical: IOHIDValueScaleType = 1;
 
 pub type IOHIDValueOptions = u32;
-pub const kIOHIDValueOptionsFlagRelativeSimple: IOHIDValueOptions = (1 << 0);
-pub const kIOHIDValueOptionsFlagPrevious: IOHIDValueOptions = (1 << 1);
+pub const kIOHIDValueOptionsFlagRelativeSimple: IOHIDValueOptions = 1 << 0;
+pub const kIOHIDValueOptionsFlagPrevious: IOHIDValueOptions = 1 << 1;
 
 pub const kIOHIDDigitizerGestureCharacterStateKey: *const ::std::os::raw::c_char =
     b"DigitizerCharacterGestureState\x00" as *const [u8; 31usize] as *const ::std::os::raw::c_char;

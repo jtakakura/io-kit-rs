@@ -149,23 +149,23 @@ pub const kIOPMDriverAssertionAssertedKey: *const ::std::os::raw::c_char =
     b"Assertions\x00" as *const [u8; 11usize] as *const ::std::os::raw::c_char;
 
 // Root Domain general interest messages
-pub const kClamshellStateBit: u32 = (1 << 0);
-pub const kClamshellSleepBit: u32 = (1 << 1);
-pub const kInflowForciblyEnabledBit: u32 = (1 << 0);
+pub const kClamshellStateBit: u32 = 1 << 0;
+pub const kClamshellSleepBit: u32 = 1 << 1;
+pub const kInflowForciblyEnabledBit: u32 = 1 << 0;
 
 // Power commands issued to root domain
-pub const kIOPMSleepNow: u32 = (1 << 0);
-pub const kIOPMAllowSleep: u32 = (1 << 1);
-pub const kIOPMPreventSleep: u32 = (1 << 2);
-pub const kIOPMPowerButton: u32 = (1 << 3);
-pub const kIOPMClamshellClosed: u32 = (1 << 4);
-pub const kIOPMPowerEmergency: u32 = (1 << 5);
-pub const kIOPMDisableClamshell: u32 = (1 << 6);
-pub const kIOPMEnableClamshell: u32 = (1 << 7);
-pub const kIOPMProcessorSpeedChange: u32 = (1 << 8);
-pub const kIOPMOverTemp: u32 = (1 << 9);
-pub const kIOPMClamshellOpened: u32 = (1 << 10);
-pub const kIOPMDWOverTemp: u32 = (1 << 11);
+pub const kIOPMSleepNow: u32 = 1 << 0;
+pub const kIOPMAllowSleep: u32 = 1 << 1;
+pub const kIOPMPreventSleep: u32 = 1 << 2;
+pub const kIOPMPowerButton: u32 = 1 << 3;
+pub const kIOPMClamshellClosed: u32 = 1 << 4;
+pub const kIOPMPowerEmergency: u32 = 1 << 5;
+pub const kIOPMDisableClamshell: u32 = 1 << 6;
+pub const kIOPMEnableClamshell: u32 = 1 << 7;
+pub const kIOPMProcessorSpeedChange: u32 = 1 << 8;
+pub const kIOPMOverTemp: u32 = 1 << 9;
+pub const kIOPMClamshellOpened: u32 = 1 << 10;
+pub const kIOPMDWOverTemp: u32 = 1 << 11;
 
 // Power Management Return Codes
 pub const kIOPMNoErr: u32 = 0;
@@ -433,9 +433,9 @@ pub const kIOBatteryAmperageKey: *const ::std::os::raw::c_char =
 pub const kIOBatteryCycleCountKey: *const ::std::os::raw::c_char =
     b"Cycle Count\x00" as *const [u8; 12usize] as *const ::std::os::raw::c_char;
 
-pub const kIOBatteryInstalled: u32 = (1 << 2);
-pub const kIOBatteryCharge: u32 = (1 << 1);
-pub const kIOBatteryChargerConnect: u32 = (1 << 0);
+pub const kIOBatteryInstalled: u32 = 1 << 2;
+pub const kIOBatteryCharge: u32 = 1 << 1;
+pub const kIOBatteryChargerConnect: u32 = 1 << 0;
 
 pub const IOPM_POWER_SOURCE_REV: u32 = 2;
 
@@ -443,14 +443,14 @@ pub const IOPM_POWER_SOURCE_REV: u32 = 2;
 pub const kIOPMACInstalled: u32 = kIOBatteryChargerConnect;
 pub const kIOPMBatteryCharging: u32 = kIOBatteryCharge;
 pub const kIOPMBatteryInstalled: u32 = kIOBatteryInstalled;
-pub const kIOPMUPSInstalled: u32 = (1 << 3);
-pub const kIOPMBatteryAtWarn: u32 = (1 << 4);
-pub const kIOPMBatteryDepleted: u32 = (1 << 5);
-pub const kIOPMACnoChargeCapability: u32 = (1 << 6);
-pub const kIOPMRawLowBattery: u32 = (1 << 7);
-pub const kIOPMForceLowSpeed: u32 = (1 << 8);
-pub const kIOPMClosedClamshell: u32 = (1 << 9);
-pub const kIOPMClamshellStateOnWake: u32 = (1 << 10);
+pub const kIOPMUPSInstalled: u32 = 1 << 3;
+pub const kIOPMBatteryAtWarn: u32 = 1 << 4;
+pub const kIOPMBatteryDepleted: u32 = 1 << 5;
+pub const kIOPMACnoChargeCapability: u32 = 1 << 6;
+pub const kIOPMRawLowBattery: u32 = 1 << 7;
+pub const kIOPMForceLowSpeed: u32 = 1 << 8;
+pub const kIOPMClosedClamshell: u32 = 1 << 9;
+pub const kIOPMClamshellStateOnWake: u32 = 1 << 10;
 
 // IOPMSystemCapabilityChangeFlags
 pub const kIOPMSystemCapabilityWillChange: u32 = 0x01;

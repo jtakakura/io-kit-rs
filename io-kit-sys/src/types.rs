@@ -30,11 +30,7 @@ pub type IOVirtualAddress = vm_address_t;
     not(target_arch = "x86_64")
 ))]
 pub type IOByteCount = IOByteCount64;
-#[cfg(any(
-    target_arch = "arm",
-    target_arch = "x86",
-    target_arch = "x86_64"
-))]
+#[cfg(any(target_arch = "arm", target_arch = "x86", target_arch = "x86_64"))]
 pub type IOByteCount = IOByteCount32;
 
 pub type IOLogicalAddress = IOVirtualAddress;
@@ -58,23 +54,11 @@ pub type IOPhysicalLength = IOPhysicalLength64;
 ))]
 pub const IOPhysSize: c_int = 64;
 
-#[cfg(any(
-    target_arch = "arm",
-    target_arch = "x86",
-    target_arch = "x86_64"
-))]
+#[cfg(any(target_arch = "arm", target_arch = "x86", target_arch = "x86_64"))]
 pub type IOPhysicalAddress = IOPhysicalAddress32;
-#[cfg(any(
-    target_arch = "arm",
-    target_arch = "x86",
-    target_arch = "x86_64"
-))]
+#[cfg(any(target_arch = "arm", target_arch = "x86", target_arch = "x86_64"))]
 pub type IOPhysicalLength = IOPhysicalAddress32;
-#[cfg(any(
-    target_arch = "arm",
-    target_arch = "x86",
-    target_arch = "x86_64"
-))]
+#[cfg(any(target_arch = "arm", target_arch = "x86", target_arch = "x86_64"))]
 pub const IOPhysSize: c_int = 32;
 
 #[repr(C)]
@@ -180,7 +164,7 @@ pub const kNanosecondScale: c_int = 1;
 pub const kMicrosecondScale: c_int = 1000;
 pub const kMillisecondScale: c_int = 1000 * 1000;
 pub const kSecondScale: c_int = 1000 * 1000 * 1000;
-pub const kTickScale: c_int = (kSecondScale / 100);
+pub const kTickScale: c_int = kSecondScale / 100;
 
 pub const kIOConnectMethodVarOutputSize: c_int = -3;
 
