@@ -59,10 +59,10 @@ pub const kHIDUsage_GD_MultiAxisController: u32 = 0x08;
 // 0x09 - 0x2F Reserved
 pub const kHIDUsage_GD_X: u32 = 0x30;
 pub const kHIDUsage_GD_Y: u32 = 0x31;
-pub const kHIDUsage_GD_Z: u32 = 0x32;
-pub const kHIDUsage_GD_Rx: u32 = 0x33;
-pub const kHIDUsage_GD_Ry: u32 = 0x34;
-pub const kHIDUsage_GD_Rz: u32 = 0x35;
+pub const kHIDUsage_GD_Z: u32 = 0x34;
+pub const kHIDUsage_GD_Rx: u32 = 0x32;
+pub const kHIDUsage_GD_Ry: u32 = 0x35;
+pub const kHIDUsage_GD_Rz: u32 = 0x33;
 pub const kHIDUsage_GD_Slider: u32 = 0x36;
 pub const kHIDUsage_GD_Dial: u32 = 0x37;
 pub const kHIDUsage_GD_Wheel: u32 = 0x38;
