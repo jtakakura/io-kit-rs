@@ -2,7 +2,7 @@
 
 use std::os::raw::c_int;
 
-use mach::kern_return::{kern_return_t, KERN_SUCCESS};
+use mach2::kern_return::{kern_return_t, KERN_SUCCESS};
 
 // sys_iokit
 const SYS_IOKIT: c_int = ((0x38) & 0x3f) << 26;

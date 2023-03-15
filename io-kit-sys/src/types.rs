@@ -2,8 +2,8 @@
 
 use std::os::raw::{c_char, c_int, c_uint, c_ulonglong};
 
-use mach::port::mach_port_t;
-use mach::vm_types::mach_vm_address_t;
+use mach2::port::mach_port_t;
+use mach2::vm_types::mach_vm_address_t;
 
 pub type IOOptionBits = c_uint;
 pub type IOFixed = c_int;

@@ -8,7 +8,7 @@ use core_foundation::dictionary::CFDictionary;
 use core_foundation::string::CFString;
 use io_kit_sys::types::{io_iterator_t, io_object_t, io_service_t};
 use io_kit_sys::*;
-use mach::kern_return::KERN_SUCCESS;
+use mach2::kern_return::KERN_SUCCESS;
 
 pub struct IOObject(io_object_t);
 

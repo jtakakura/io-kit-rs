@@ -11,4 +11,4 @@ edition = "2018"
 
 [dependencies]
 core-foundation-sys = "0.8.3"
-mach="0.3.2"
+mach2="0.4.1"
