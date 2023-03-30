@@ -10,7 +10,7 @@ edition = "2021"
 
 [dependencies.io-kit-sys]
 path = "../io-kit-sys"
-version = "0.2.0"
+version = "0.3.0"
 
 [dependencies]
 core-foundation = "0.9.3"
