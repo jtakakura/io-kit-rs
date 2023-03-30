@@ -14,4 +14,4 @@ version = "0.2.0"
 
 [dependencies]
 core-foundation = "0.9.3"
-mach="0.3.2"
+mach2="0.4.1"

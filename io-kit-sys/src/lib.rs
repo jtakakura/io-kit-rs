@@ -3,7 +3,7 @@
 #![allow(non_snake_case)]
 
 extern crate core_foundation_sys;
-extern crate mach;
+extern crate mach2;
 
 pub mod base;
 pub mod keys;
@@ -21,13 +21,13 @@ use core_foundation_sys::base::{CFAllocatorRef, CFTypeRef};
 use core_foundation_sys::dictionary::{CFDictionaryRef, CFMutableDictionaryRef};
 use core_foundation_sys::runloop::CFRunLoopSourceRef;
 use core_foundation_sys::string::CFStringRef;
-use mach::boolean::boolean_t;
-use mach::clock_types::mach_timespec_t;
-use mach::kern_return::kern_return_t;
-use mach::mach_types::task_port_t;
-use mach::message::mach_msg_header_t;
-use mach::port::mach_port_t;
-use mach::vm_types::{mach_vm_address_t, mach_vm_size_t};
+use mach2::boolean::boolean_t;
+use mach2::clock_types::mach_timespec_t;
+use mach2::kern_return::kern_return_t;
+use mach2::mach_types::task_port_t;
+use mach2::message::mach_msg_header_t;
+use mach2::port::mach_port_t;
+use mach2::vm_types::{mach_vm_address_t, mach_vm_size_t};
 
 use base::dispatch_queue_t;
 use ret::IOReturn;
