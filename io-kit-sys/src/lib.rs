@@ -404,14 +404,14 @@ pub const kIORegistryIterateParents: u32 = 0x00000002;
 extern "C" {
     pub fn IORegistryCreateIterator(
         masterPort: mach_port_t,
-        plane: *mut c_char,
+        plane: *const c_char,
         options: IOOptionBits,
         iterator: *mut io_iterator_t,
     ) -> kern_return_t;
 
     pub fn IORegistryEntryCreateIterator(
         entry: io_registry_entry_t,
-        plane: *mut c_char,
+        plane: *const c_char,
         options: IOOptionBits,
         iterator: *mut io_iterator_t,
     ) -> kern_return_t;
@@ -430,23 +430,23 @@ extern "C" {
 
     pub fn IORegistryEntryGetNameInPlane(
         entry: io_registry_entry_t,
-        plane: *mut c_char,
+        plane: *const c_char,
         name: *mut c_char,
     ) -> kern_return_t;
 
     pub fn IORegistryEntryGetLocationInPlane(
         entry: io_registry_entry_t,
-        plane: *mut c_char,
+        plane: *const c_char,
         location: *mut c_char,
     ) -> kern_return_t;
 
     pub fn IORegistryEntryGetPath(
         entry: io_registry_entry_t,
-        plane: *mut c_char,
+        plane: *const c_char,
         path: *mut c_char,
     ) -> kern_return_t;
 
-    pub fn IORegistryEntryCopyPath(entry: io_registry_entry_t, plane: *mut c_char) -> CFStringRef;
+    pub fn IORegistryEntryCopyPath(entry: io_registry_entry_t, plane: *const c_char) -> CFStringRef;
 
     pub fn IORegistryEntryGetRegistryEntryID(
         entry: io_registry_entry_t,
@@ -469,7 +469,7 @@ extern "C" {
 
     pub fn IORegistryEntrySearchCFProperty(
         entry: io_registry_entry_t,
-        plane: *mut c_char,
+        plane: *const c_char,
         key: CFStringRef,
         allocator: CFAllocatorRef,
         options: IOOptionBits,
@@ -517,7 +517,7 @@ extern "C" {
 
     pub fn IORegistryEntryGetParentEntry(
         entry: io_registry_entry_t,
-        plane: *mut c_char,
+        plane: *const c_char,
         parent: *mut io_registry_entry_t,
     ) -> kern_return_t;
 
