@@ -500,19 +500,19 @@ extern "C" {
 
     pub fn IORegistryEntryGetChildIterator(
         entry: io_registry_entry_t,
-        plane: *mut c_char,
+        plane: *const c_char,
         iterator: *mut io_iterator_t,
     ) -> kern_return_t;
 
     pub fn IORegistryEntryGetChildEntry(
         entry: io_registry_entry_t,
-        plane: *mut c_char,
+        plane: *const c_char,
         child: *mut io_registry_entry_t,
     ) -> kern_return_t;
 
     pub fn IORegistryEntryGetParentIterator(
         entry: io_registry_entry_t,
-        plane: *mut c_char,
+        plane: *const c_char,
         iterator: *mut io_iterator_t,
     ) -> kern_return_t;
 
@@ -522,7 +522,7 @@ extern "C" {
         parent: *mut io_registry_entry_t,
     ) -> kern_return_t;
 
-    pub fn IORegistryEntryInPlane(entry: io_registry_entry_t, plane: *mut c_char) -> boolean_t;
+    pub fn IORegistryEntryInPlane(entry: io_registry_entry_t, plane: *const c_char) -> boolean_t;
 }
 
 // Matching dictionary creation helpers
