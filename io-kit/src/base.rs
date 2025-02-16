@@ -100,17 +100,19 @@ impl IOService {
 
     pub fn get_matching_services(matching: CFDictionary) -> Result<Vec<Self>, i32> {
         unsafe {
-            let mut io_iterator_t: io_iterator_t = mem::uninitialized();
+            let mut io_iterator_t = mem::MaybeUninit::<io_iterator_t>::uninit();
 
             let result = IOServiceGetMatchingServices(
                 kIOMasterPortDefault,
                 matching.as_CFTypeRef() as _,
-                &mut io_iterator_t,
+                io_iterator_t.as_mut_ptr(),
             );
 
             if result != KERN_SUCCESS {
                 return Err(result);
             }
+
+            let io_iterator_t = io_iterator_t.assume_init();
 
             let mut v: Vec<Self> = Vec::new();
 
