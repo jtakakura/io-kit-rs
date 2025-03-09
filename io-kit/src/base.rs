@@ -6,7 +6,7 @@ use std::os::raw::c_char;
 use core_foundation::base::TCFType;
 use core_foundation::dictionary::CFDictionary;
 use core_foundation::string::CFString;
-use io_kit_sys::types::{io_iterator_t, io_object_t, io_service_t};
+use io_kit_sys::types::{io_iterator_t, io_object_t, io_service_t, io_registry_entry_t};
 use io_kit_sys::*;
 use mach2::kern_return::KERN_SUCCESS;
 
@@ -222,6 +222,34 @@ pub trait TIOObject<concrete_io_object_t> {
                 None
             } else {
                 Some(TCFType::wrap_under_get_rule(result))
+            }
+        }
+    }
+
+    fn parent(&self, plane: *const c_char) -> Result<IOService, i32> {
+        unsafe {
+            let mut parent = mem::MaybeUninit::<io_registry_entry_t>::uninit();
+
+            let result = IORegistryEntryGetParentEntry(self.as_io_object_t(), plane, parent.as_mut_ptr());
+
+            if result == KERN_SUCCESS {
+                Ok(IOService(parent.assume_init()))
+            } else {
+                Err(result)
+            }
+        }
+    }
+
+    fn children(&self, plane: *const c_char) -> Result<IOIterator, i32> {
+        unsafe {
+            let mut it = mem::MaybeUninit::<io_iterator_t>::uninit();
+
+            let result = IORegistryEntryGetChildIterator(self.as_io_object_t(), plane, it.as_mut_ptr());
+
+            if result == KERN_SUCCESS {
+                Ok(IOIterator(it.assume_init()))
+            } else {
+                Err(result)
             }
         }
     }
