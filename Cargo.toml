@@ -1,3 +1,14 @@
 [workspace]
 members = ["io-kit", "io-kit-sys"]
 resolver = "2"
+
+[workspace.package]
+authors = ["Junji Takakura <j.takakura@gmail.com>"]
+edition = "2021"
+license = "MIT OR Apache-2.0"
+repository = "https://github.com/jtakakura/io-kit-rs"
+rust-version = "1.65"
+
+[workspace.dependencies]
+io-kit = { default-features = false, path = "io-kit", version = "0.1" }
+io-kit-sys = { default-features = false, path = "io-kit-sys", version = "0.4" }
