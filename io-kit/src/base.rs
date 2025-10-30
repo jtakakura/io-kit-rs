@@ -6,7 +6,7 @@ use std::os::raw::c_char;
 use core_foundation::base::TCFType;
 use core_foundation::dictionary::CFDictionary;
 use core_foundation::string::CFString;
-use io_kit_sys::types::{io_iterator_t, io_object_t, io_service_t, io_registry_entry_t};
+use io_kit_sys::types::{io_iterator_t, io_object_t, io_registry_entry_t, io_service_t};
 use io_kit_sys::*;
 use mach2::kern_return::KERN_SUCCESS;
 
@@ -181,9 +181,7 @@ pub trait TIOObject<concrete_io_object_t> {
             let result = IOObjectGetClass(self.as_io_object_t(), buf.as_mut_ptr());
 
             if result == KERN_SUCCESS {
-                Ok(String::from(
-                    CStr::from_ptr(buf.as_ptr()).to_str().unwrap().to_string(),
-                ))
+                Ok(CStr::from_ptr(buf.as_ptr()).to_str().unwrap().to_string())
             } else {
                 Err(result)
             }
@@ -226,36 +224,44 @@ pub trait TIOObject<concrete_io_object_t> {
         }
     }
 
-    fn parent(&self, plane: *const c_char) -> Result<IOService, i32> {
-        unsafe {
-            let mut parent = mem::MaybeUninit::<io_registry_entry_t>::uninit();
+    /// Returns the parent IOService for the given plane.
+    /// # Safety
+    /// The caller must ensure that `plane` is a valid, null-terminated C string.
+    unsafe fn parent(&self, plane: *const c_char) -> Result<IOService, i32> {
+        let mut parent = mem::MaybeUninit::<io_registry_entry_t>::uninit();
 
-            let result = IORegistryEntryGetParentEntry(self.as_io_object_t(), plane, parent.as_mut_ptr());
+        let result =
+            IORegistryEntryGetParentEntry(self.as_io_object_t(), plane, parent.as_mut_ptr());
 
-            if result == KERN_SUCCESS {
-                Ok(IOService(parent.assume_init()))
-            } else {
-                Err(result)
-            }
+        if result == KERN_SUCCESS {
+            Ok(IOService(parent.assume_init()))
+        } else {
+            Err(result)
         }
     }
 
-    fn children(&self, plane: *const c_char) -> Result<IOIterator, i32> {
-        unsafe {
-            let mut it = mem::MaybeUninit::<io_iterator_t>::uninit();
+    /// Returns the child IOIterator for the given plane.
+    /// # Safety
+    /// The caller must ensure that `plane` is a valid, null-terminated C string.
+    unsafe fn children(&self, plane: *const c_char) -> Result<IOIterator, i32> {
+        let mut it = mem::MaybeUninit::<io_iterator_t>::uninit();
 
-            let result = IORegistryEntryGetChildIterator(self.as_io_object_t(), plane, it.as_mut_ptr());
+        let result = IORegistryEntryGetChildIterator(self.as_io_object_t(), plane, it.as_mut_ptr());
 
-            if result == KERN_SUCCESS {
-                Ok(IOIterator(it.assume_init()))
-            } else {
-                Err(result)
-            }
+        if result == KERN_SUCCESS {
+            Ok(IOIterator(it.assume_init()))
+        } else {
+            Err(result)
         }
     }
 
-    fn conforms_to(&self, class_name: *mut c_char) -> bool {
-        unsafe { IOObjectConformsTo(self.as_io_object_t(), class_name) != 0 }
+    /// Checks if the object conforms to the given class name.
+    ///
+    /// # Safety
+    ///
+    /// The caller must ensure that `class_name` is a valid, null-terminated C string.
+    unsafe fn conforms_to(&self, class_name: *mut c_char) -> bool {
+        IOObjectConformsTo(self.as_io_object_t(), class_name) != 0
     }
 
     fn is_equal_to(&self, object: &impl TIOObject<concrete_io_object_t>) -> bool {
@@ -275,14 +281,17 @@ pub trait TIOObject<concrete_io_object_t> {
     }
 }
 
-pub fn io_service_matching(name: *const c_char) -> Option<CFDictionary> {
-    unsafe {
-        let result = IOServiceMatching(name);
+/// Returns a matching IOService dictionary for the given name.
+///
+/// # Safety
+///
+/// The caller must ensure that `name` is a valid, null-terminated C string.
+pub unsafe fn io_service_matching(name: *const c_char) -> Option<CFDictionary> {
+    let result = IOServiceMatching(name);
 
-        if result.is_null() {
-            None
-        } else {
-            Some(TCFType::wrap_under_get_rule(result as *const _))
-        }
+    if result.is_null() {
+        None
+    } else {
+        Some(TCFType::wrap_under_get_rule(result as *const _))
     }
 }

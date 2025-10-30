@@ -65,15 +65,18 @@ impl IOHIDDevice {
         unsafe { IOHIDDeviceConformsTo(self.0, usage_page, usage) != 0 }
     }
 
-    pub fn get_property(&self, key: *const c_char) -> Option<CFType> {
-        unsafe {
-            let result = IOHIDDeviceGetProperty(self.0, CFSTR(key));
+    /// Gets a property from the device for the given key.
+    ///
+    /// # Safety
+    ///
+    /// The caller must ensure that `key` is a valid, null-terminated C string.
+    pub unsafe fn get_property(&self, key: *const c_char) -> Option<CFType> {
+        let result = IOHIDDeviceGetProperty(self.0, CFSTR(key));
 
-            if result.is_null() {
-                None
-            } else {
-                Some(TCFType::wrap_under_get_rule(result))
-            }
+        if result.is_null() {
+            None
+        } else {
+            Some(TCFType::wrap_under_get_rule(result))
         }
     }
 }

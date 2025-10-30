@@ -6,7 +6,7 @@ use mach2::kern_return::{kern_return_t, KERN_SUCCESS};
 
 // sys_iokit
 const SYS_IOKIT: c_int = ((0x38) & 0x3f) << 26;
-const SUB_IOKIT_COMMON: c_int = ((0) & 0xfff) << 14;
+const SUB_IOKIT_COMMON: c_int = 0;
 
 // IOReturn
 pub type IOReturn = kern_return_t;

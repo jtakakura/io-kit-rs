@@ -41,8 +41,13 @@ extern "C" {
     fn __CFStringMakeConstantString(cStr: *const c_char) -> CFStringRef;
 }
 
-pub fn CFSTR(cStr: *const c_char) -> CFStringRef {
-    unsafe { __CFStringMakeConstantString(cStr) }
+/// Converts a C string to a constant CFStringRef.
+///
+/// # Safety
+///
+/// The caller must ensure that `cStr` is a valid, null-terminated C string.
+pub unsafe fn CFSTR(cStr: *const c_char) -> CFStringRef {
+    __CFStringMakeConstantString(cStr)
 }
 
 // exports from <IOKit/IOKitLib.h>
