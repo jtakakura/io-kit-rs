@@ -447,7 +447,8 @@ extern "C" {
         path: *mut c_char,
     ) -> kern_return_t;
 
-    pub fn IORegistryEntryCopyPath(entry: io_registry_entry_t, plane: *const c_char) -> CFStringRef;
+    pub fn IORegistryEntryCopyPath(entry: io_registry_entry_t, plane: *const c_char)
+        -> CFStringRef;
 
     pub fn IORegistryEntryGetRegistryEntryID(
         entry: io_registry_entry_t,
@@ -557,16 +558,20 @@ pub type IOAsyncCallback0 = Option<unsafe extern "C" fn(refcon: *mut c_void, res
 pub type IOAsyncCallback1 =
     Option<unsafe extern "C" fn(refcon: *mut c_void, result: IOReturn, arg0: *mut c_void)>;
 
-pub type IOAsyncCallback2 = Option<unsafe extern "C" fn(
-    refcon: *mut c_void,
-    result: IOReturn,
-    arg0: *mut c_void,
-    arg1: *mut c_void,
-)>;
+pub type IOAsyncCallback2 = Option<
+    unsafe extern "C" fn(
+        refcon: *mut c_void,
+        result: IOReturn,
+        arg0: *mut c_void,
+        arg1: *mut c_void,
+    ),
+>;
 
-pub type IOAsyncCallback = Option<unsafe extern "C" fn(
-    refcon: *mut c_void,
-    result: IOReturn,
-    args: *mut *mut c_void,
-    numArgs: u32,
-)>;
+pub type IOAsyncCallback = Option<
+    unsafe extern "C" fn(
+        refcon: *mut c_void,
+        result: IOReturn,
+        args: *mut *mut c_void,
+        numArgs: u32,
+    ),
+>;

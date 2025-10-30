@@ -12,12 +12,9 @@ pub const kIOSerialBSDModemType: *const c_char =
     b"IOSerialStream\0" as *const [u8; 15] as *const c_char;
 pub const kIOSerialBSDRS232Type: *const c_char =
     b"IOSerialStream\0" as *const [u8; 15] as *const c_char;
-pub const kIOTTYDeviceKey: *const c_char =
-    b"IOTTYDevice\0" as *const [u8; 12] as *const c_char;
-pub const kIOTTYBaseNameKey: *const c_char =
-    b"IOTTYBaseName\0" as *const [u8; 14] as *const c_char;
-pub const kIOTTYSuffixKey: *const c_char =
-    b"IOTTYSuffix\0" as *const [u8; 12] as *const c_char;
+pub const kIOTTYDeviceKey: *const c_char = b"IOTTYDevice\0" as *const [u8; 12] as *const c_char;
+pub const kIOTTYBaseNameKey: *const c_char = b"IOTTYBaseName\0" as *const [u8; 14] as *const c_char;
+pub const kIOTTYSuffixKey: *const c_char = b"IOTTYSuffix\0" as *const [u8; 12] as *const c_char;
 pub const kIOCalloutDeviceKey: *const c_char =
     b"IOCalloutDevice\0" as *const [u8; 16] as *const c_char;
 pub const kIODialinDeviceKey: *const c_char =

@@ -36,43 +36,53 @@ pub const kIOHIDTransactionOptionDefaultOutputValue: u32 = 0x0001;
 pub type IOHIDCallback =
     Option<unsafe extern "C" fn(context: *mut c_void, result: IOReturn, sender: *mut c_void)>;
 
-pub type IOHIDReportCallback = Option<unsafe extern "C" fn(
-    context: *mut c_void,
-    result: IOReturn,
-    sender: *mut c_void,
-    type_: IOHIDReportType,
-    reportID: u32,
-    report: *mut u8,
-    reportLength: CFIndex,
-)>;
-pub type IOHIDReportWithTimeStampCallback = Option<unsafe extern "C" fn(
-    context: *mut c_void,
-    result: IOReturn,
-    sender: *mut c_void,
-    type_: IOHIDReportType,
-    reportID: u32,
-    report: *mut u8,
-    reportLength: CFIndex,
-    timeStamp: u64,
-)>;
+pub type IOHIDReportCallback = Option<
+    unsafe extern "C" fn(
+        context: *mut c_void,
+        result: IOReturn,
+        sender: *mut c_void,
+        type_: IOHIDReportType,
+        reportID: u32,
+        report: *mut u8,
+        reportLength: CFIndex,
+    ),
+>;
+pub type IOHIDReportWithTimeStampCallback = Option<
+    unsafe extern "C" fn(
+        context: *mut c_void,
+        result: IOReturn,
+        sender: *mut c_void,
+        type_: IOHIDReportType,
+        reportID: u32,
+        report: *mut u8,
+        reportLength: CFIndex,
+        timeStamp: u64,
+    ),
+>;
 
-pub type IOHIDValueCallback = Option<unsafe extern "C" fn(
-    context: *mut c_void,
-    result: IOReturn,
-    sender: *mut c_void,
-    value: IOHIDValueRef,
-)>;
+pub type IOHIDValueCallback = Option<
+    unsafe extern "C" fn(
+        context: *mut c_void,
+        result: IOReturn,
+        sender: *mut c_void,
+        value: IOHIDValueRef,
+    ),
+>;
 
-pub type IOHIDValueMultipleCallback = Option<unsafe extern "C" fn(
-    context: *mut c_void,
-    result: IOReturn,
-    sender: *mut c_void,
-    multiple: CFDictionaryRef,
-)>;
+pub type IOHIDValueMultipleCallback = Option<
+    unsafe extern "C" fn(
+        context: *mut c_void,
+        result: IOReturn,
+        sender: *mut c_void,
+        multiple: CFDictionaryRef,
+    ),
+>;
 
-pub type IOHIDDeviceCallback = Option<unsafe extern "C" fn(
-    context: *mut c_void,
-    result: IOReturn,
-    sender: *mut c_void,
-    device: IOHIDDeviceRef,
-)>;
+pub type IOHIDDeviceCallback = Option<
+    unsafe extern "C" fn(
+        context: *mut c_void,
+        result: IOReturn,
+        sender: *mut c_void,
+        device: IOHIDDeviceRef,
+    ),
+>;

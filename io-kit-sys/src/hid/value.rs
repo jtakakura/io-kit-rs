@@ -4,7 +4,7 @@ use core_foundation_sys::base::{CFAllocatorRef, CFIndex, CFTypeID};
 
 use crate::hid::{
     base::{IOHIDElementRef, IOHIDValueRef},
-    keys::IOHIDValueScaleType
+    keys::IOHIDValueScaleType,
 };
 
 extern "C" {
