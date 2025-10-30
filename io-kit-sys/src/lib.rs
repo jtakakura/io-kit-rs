@@ -552,21 +552,21 @@ extern "C" {
     ) -> kern_return_t;
 }
 
-pub type IOAsyncCallback0 = unsafe extern "C" fn(refcon: *mut c_void, result: IOReturn);
+pub type IOAsyncCallback0 = Option<unsafe extern "C" fn(refcon: *mut c_void, result: IOReturn)>;
 
 pub type IOAsyncCallback1 =
-    unsafe extern "C" fn(refcon: *mut c_void, result: IOReturn, arg0: *mut c_void);
+    Option<unsafe extern "C" fn(refcon: *mut c_void, result: IOReturn, arg0: *mut c_void)>;
 
-pub type IOAsyncCallback2 = unsafe extern "C" fn(
+pub type IOAsyncCallback2 = Option<unsafe extern "C" fn(
     refcon: *mut c_void,
     result: IOReturn,
     arg0: *mut c_void,
     arg1: *mut c_void,
-);
+)>;
 
-pub type IOAsyncCallback = unsafe extern "C" fn(
+pub type IOAsyncCallback = Option<unsafe extern "C" fn(
     refcon: *mut c_void,
     result: IOReturn,
     args: *mut *mut c_void,
     numArgs: u32,
-);
+)>;

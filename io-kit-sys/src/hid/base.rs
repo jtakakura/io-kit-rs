@@ -34,9 +34,9 @@ pub const kIOHIDTransactionDirectionTypeOutput: u32 = 1;
 pub const kIOHIDTransactionOptionDefaultOutputValue: u32 = 0x0001;
 
 pub type IOHIDCallback =
-    unsafe extern "C" fn(context: *mut c_void, result: IOReturn, sender: *mut c_void);
+    Option<unsafe extern "C" fn(context: *mut c_void, result: IOReturn, sender: *mut c_void)>;
 
-pub type IOHIDReportCallback = unsafe extern "C" fn(
+pub type IOHIDReportCallback = Option<unsafe extern "C" fn(
     context: *mut c_void,
     result: IOReturn,
     sender: *mut c_void,
@@ -44,8 +44,8 @@ pub type IOHIDReportCallback = unsafe extern "C" fn(
     reportID: u32,
     report: *mut u8,
     reportLength: CFIndex,
-);
-pub type IOHIDReportWithTimeStampCallback = unsafe extern "C" fn(
+)>;
+pub type IOHIDReportWithTimeStampCallback = Option<unsafe extern "C" fn(
     context: *mut c_void,
     result: IOReturn,
     sender: *mut c_void,
@@ -54,25 +54,25 @@ pub type IOHIDReportWithTimeStampCallback = unsafe extern "C" fn(
     report: *mut u8,
     reportLength: CFIndex,
     timeStamp: u64,
-);
+)>;
 
-pub type IOHIDValueCallback = unsafe extern "C" fn(
+pub type IOHIDValueCallback = Option<unsafe extern "C" fn(
     context: *mut c_void,
     result: IOReturn,
     sender: *mut c_void,
     value: IOHIDValueRef,
-);
+)>;
 
-pub type IOHIDValueMultipleCallback = unsafe extern "C" fn(
+pub type IOHIDValueMultipleCallback = Option<unsafe extern "C" fn(
     context: *mut c_void,
     result: IOReturn,
     sender: *mut c_void,
     multiple: CFDictionaryRef,
-);
+)>;
 
-pub type IOHIDDeviceCallback = unsafe extern "C" fn(
+pub type IOHIDDeviceCallback = Option<unsafe extern "C" fn(
     context: *mut c_void,
     result: IOReturn,
     sender: *mut c_void,
     device: IOHIDDeviceRef,
-);
+)>;
