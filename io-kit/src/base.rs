@@ -258,7 +258,7 @@ pub trait TIOObject<concrete_io_object_t> {
         unsafe { IOObjectConformsTo(self.as_io_object_t(), class_name) != 0 }
     }
 
-    fn is_equal_to(&self, object: IOObject) -> bool {
+    fn is_equal_to(&self, object: &impl TIOObject<concrete_io_object_t>) -> bool {
         unsafe { IOObjectIsEqualTo(self.as_io_object_t(), object.as_io_object_t()) != 0 }
     }
 
