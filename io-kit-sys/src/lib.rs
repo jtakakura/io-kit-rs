@@ -580,3 +580,58 @@ pub type IOAsyncCallback = Option<
         numArgs: u32,
     ),
 >;
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+    use std::ffi::CString;
+
+    #[test]
+    fn test_cfstr_creates_nonnull_cfstringref() {
+        unsafe {
+            let test_str = CString::new("Test").unwrap();
+            let cf_str = CFSTR(test_str.as_ptr());
+            assert!(!cf_str.is_null());
+        }
+    }
+
+    #[test]
+    fn test_io_master_port_function() {
+        use mach2::kern_return::KERN_SUCCESS;
+        unsafe {
+            let mut master_port: mach_port_t = 0;
+            let result = IOMasterPort(kIOMasterPortDefault, &mut master_port);
+            // IOMasterPort should succeed
+            assert_eq!(result, KERN_SUCCESS);
+        }
+    }
+
+    #[test]
+    fn test_io_service_matching_returns_nonnull() {
+        unsafe {
+            let name = CString::new("IOHIDDevice").unwrap();
+            let matching = IOServiceMatching(name.as_ptr());
+            // IOServiceMatching should return a non-null dictionary
+            assert!(!matching.is_null());
+        }
+    }
+
+    #[test]
+    fn test_io_iterator_type_size() {
+        // Ensure the iterator type has the expected size
+        assert_eq!(std::mem::size_of::<io_iterator_t>(), std::mem::size_of::<u32>());
+    }
+
+    #[test]
+    fn test_io_object_type_size() {
+        // Ensure the object type has the expected size
+        assert_eq!(std::mem::size_of::<io_object_t>(), std::mem::size_of::<u32>());
+    }
+
+    #[test]
+    fn test_kern_success_constant() {
+        use mach2::kern_return::KERN_SUCCESS;
+        // Verify KERN_SUCCESS is 0 as expected
+        assert_eq!(KERN_SUCCESS, 0);
+    }
+}
