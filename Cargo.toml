@@ -3,12 +3,17 @@ members = ["io-kit", "io-kit-sys"]
 resolver = "2"
 
 [workspace.package]
+description = "Bindings to IOKit for macOS"
 authors = ["Junji Takakura <j.takakura@gmail.com>"]
 edition = "2021"
 license = "MIT OR Apache-2.0"
+homepage = "https://github.com/jtakakura/io-kit-rs"
 repository = "https://github.com/jtakakura/io-kit-rs"
 rust-version = "1.65"
+categories = ["api-bindings", "os::macos-apis"]
+keywords = ["iokit", "macos", "ffi", "hid", "usb"]
 
 [workspace.dependencies]
 io-kit = { default-features = false, path = "io-kit", version = "0.1" }
 io-kit-sys = { default-features = false, path = "io-kit-sys", version = "0.4" }
+mach2 = "0.5"
