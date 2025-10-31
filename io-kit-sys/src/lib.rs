@@ -111,7 +111,7 @@ extern "C" {
 
     pub fn IOObjectCopyBundleIdentifierForClass(classname: CFStringRef) -> CFStringRef;
 
-    pub fn IOObjectConformsTo(object: io_object_t, className: *mut c_char) -> boolean_t;
+    pub fn IOObjectConformsTo(object: io_object_t, className: *const c_char) -> boolean_t;
 
     pub fn IOObjectIsEqualTo(object: io_object_t, anObject: io_object_t) -> boolean_t;
 
@@ -146,7 +146,7 @@ extern "C" {
 
     pub fn IOServiceAddNotification(
         masterPort: mach_port_t,
-        notificationType: *mut c_char,
+        notificationType: *const c_char,
         matching: CFDictionaryRef,
         wakePort: mach_port_t,
         reference: usize,
@@ -155,7 +155,7 @@ extern "C" {
 
     pub fn IOServiceAddMatchingNotification(
         notifyPort: IONotificationPortRef,
-        notificationType: *mut c_char,
+        notificationType: *const c_char,
         matching: CFDictionaryRef,
         callback: IOServiceMatchingCallback,
         refCon: *mut c_void,
@@ -165,7 +165,7 @@ extern "C" {
     pub fn IOServiceAddInterestNotification(
         notifyPort: IONotificationPortRef,
         service: io_service_t,
-        interestType: *mut c_char,
+        interestType: *const c_char,
         callback: IOServiceInterestCallback,
         refCon: *mut c_void,
         notification: *mut io_object_t,
@@ -553,7 +553,7 @@ extern "C" {
 
     pub fn IOServiceOFPathToBSDName(
         masterPort: mach_port_t,
-        openFirmwarePath: *mut c_char,
+        openFirmwarePath: *const c_char,
         bsdName: *mut c_char,
     ) -> kern_return_t;
 }

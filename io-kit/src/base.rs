@@ -260,7 +260,7 @@ pub trait TIOObject<concrete_io_object_t> {
     /// # Safety
     ///
     /// The caller must ensure that `class_name` is a valid, null-terminated C string.
-    unsafe fn conforms_to(&self, class_name: *mut c_char) -> bool {
+    unsafe fn conforms_to(&self, class_name: *const c_char) -> bool {
         IOObjectConformsTo(self.as_io_object_t(), class_name) != 0
     }
 
